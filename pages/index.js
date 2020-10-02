@@ -39,10 +39,9 @@ export default function Home() {
       </Head>
 
       <Section title="Hello you. I'm Rajbir.">
-        I like to call myself a: <br />
-        creative addict, <br />
-        visual storyteller, <br />
-        keyboard enthusiast. <br />
+        I like to call myself a creative addict, visual storyteller, and
+        keyboard enthusiast.
+        <br />
         <br />
         Based in Southern California.
       </Section>
@@ -50,7 +49,9 @@ export default function Home() {
         <Button colorScheme="teal" variant="solid" onClick={onCopy}>
           {hasCopied ? "Copied!" : "Email"}
         </Button>
-        <Button colorScheme="teal" variant="link">Github</Button>
+        <Button colorScheme="teal" variant="link">
+          Github
+        </Button>
       </ButtonGroup>
       <Section title="About">
         I am a rising Junior attending the University of California, Riverside
@@ -66,7 +67,8 @@ export default function Home() {
         cream switches lubricated with Krytox 205g0 along with Durock
         stabilizers.
         <br />
-        <br />I vibe with cool typography and my favorite font is Inter. I aim
+        <br />
+        I vibe with cool typography and my favorite font is Inter. I aim
         to travel all over the world.
       </Section>
       <Timeline />

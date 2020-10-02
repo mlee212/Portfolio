@@ -25,8 +25,8 @@ h2 {
 h3 {
   display: block !important;
   font-size: 1.17em !important;
-  /* margin-top: 1em !important;
-  margin-bottom: 1em !important; */
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
   font-weight: bold !important;
@@ -38,4 +38,11 @@ h4 {
   margin-left: 0 !important;
   margin-right: 0 !important;
   font-weight: bold !important;
+}
+p{
+  display: block !important;
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }

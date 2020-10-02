@@ -54,8 +54,8 @@ export const Nav = () => {
           <Button variant="ghost">Projects</Button>
         </Link>
 
-        <Link href="/readings">
-          <Button variant="ghost">Readings</Button>
+        <Link href="/journal">
+          <Button variant="ghost">Journal</Button>
         </Link>
       </ButtonGroup>
     </StickyNav>

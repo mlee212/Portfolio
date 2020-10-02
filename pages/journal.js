@@ -21,20 +21,19 @@ export default function Readings({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
 
-      <Heading mb={4}>Readings</Heading>
+      <Heading mb={4}>Journal</Heading>
       <p>My thoughts and ideas written down.</p>
       <Box>
         {allPostsData.map(({ id, date, title, excerpt }) => (
           <Box key={id}>
-            <Button variant="link" my={2}>
+            <Button variant="link" mb={-6}>
               <Heading as="h3" size="lg" fontWeight="bold">
                 <Link href={`/posts/${id}`}>
                   <a>{title}</a>
                 </Link>
               </Heading>
             </Button>
-            <br />
-            <Text fontSize="sm" color="gray.500">
+            <Text fontSize="sm" color="gray.500" lineHeight={1}>
               <Date dateString={date} />
             </Text>
             <Text>{excerpt}</Text>
