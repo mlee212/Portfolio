@@ -21,7 +21,7 @@ const Section = ({ title, children }) => {
 
   return (
     <Box>
-      <Heading fontWeight="bold" my={4}>
+      <Heading fontWeight="bold" as="h1" my={5}>
         {title}
       </Heading>
       <Text color={color[colorMode]}>{children}</Text>

@@ -48,7 +48,7 @@ export default function Projects() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <Heading mb={4}>Projects</Heading>
+      <Heading fontWeight="bold" as="h1" my={5}>Projects</Heading>
       <Heading size="lg" my={4}>
         Currently working on:
       </Heading>
