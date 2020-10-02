@@ -1,3 +1,5 @@
+// Credit to Lee Robinson
+
 import React, { useState } from "react";
 import {
   useColorMode,
@@ -10,6 +12,7 @@ import {
   Stack,
   Divider,
   Code,
+  Link,
 } from "@chakra-ui/core";
 import { CheckCircleIcon, ChevronDownIcon } from "@chakra-ui/icons";
 
@@ -32,12 +35,12 @@ const TimelineStep = ({ title, children }) => {
 
   return (
     <ListItem>
-      <Stack ml={2} mb={4}>
-        <Flex align="center">
+      <Stack ml={2} mb={2}>
+        <Flex align="center" mb={-6}>
           <CheckCircleIcon mr={2} color="green.300" />
           <Text fontWeight="medium">{title}</Text>
         </Flex>
-        <Text color={color[colorMode]} pl={6}>
+        <Text color={color[colorMode]} pl={6} my={-2}>
           {children}
         </Text>
       </Stack>
@@ -116,21 +119,28 @@ const Timeline = () => {
       maxWidth="700px"
       mt={8}
     >
-      <Heading letterSpacing="tight" mb={4} size="xl" fontWeight="bold">
+      <Heading size="xl" fontWeight="bold">
         Timeline
       </Heading>
       <Heading
         as="h3"
         size="lg"
         fontWeight="bold"
-        mb={4}
+   
+        mb={-2}
         letterSpacing="tighter"
       >
         2020
       </Heading>
       <List>
+        <TimelineStep title="Started Habitle">
+          As a collaboration project, my colleague Dev Bhatia and I are
+          developing a web app that helps people develop positive habits by
+          visualizing their progress.
+        </TimelineStep>
         <TimelineStep title="Started my Junior Year">
-          Here is where I currently am.
+          Here is where I currently am. I'm looking forward to more challenging
+          classes in an even more challenging enviroment.
         </TimelineStep>
         <TimelineStep title="Finished All my Math Classes">
           After years and years of grueling math, I can finally say, I'm done.

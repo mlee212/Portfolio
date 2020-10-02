@@ -42,7 +42,7 @@ export default function Layout({ children, home }) {
         >
           {children}
           {!home && (
-          <Link href="/readings">
+          <Link href="/journal">
             <Button variant="ghost" my={4}>
               ← Go back
             </Button>
