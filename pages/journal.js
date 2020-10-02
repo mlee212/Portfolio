@@ -21,7 +21,7 @@ export default function Readings({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
 
-      <Heading mb={4}>Journal</Heading>
+      <Heading fontWeight="bold" as="h1" my={5}>Journal</Heading>
       <p>My thoughts and ideas written down.</p>
       <Box>
         {allPostsData.map(({ id, date, title, excerpt }) => (

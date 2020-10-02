@@ -28,7 +28,7 @@ export const Footer = () => {
         Don't be a Stranger
       </Heading>
       <Text>I don't bite anything except really good food.</Text>
-      <ButtonGroup mt={5} spacing={4}>
+      <ButtonGroup my={4} spacing={4}>
         <Button colorScheme="teal" variant="solid" onClick={onCopy}>
           {hasCopied ? "Copied!" : "Email"}
         </Button>
@@ -43,6 +43,7 @@ export const Footer = () => {
           </Link>
         </Button>
       </ButtonGroup>
+      <Text color="gray.500" fontSize="sm">{(new Date().getFullYear())} &#169; Rajbir Johar</Text>
     </Box>
   );
 };

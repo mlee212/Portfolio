@@ -119,15 +119,13 @@ const Timeline = () => {
       maxWidth="700px"
       mt={8}
     >
-      <Heading size="xl" fontWeight="bold">
+      <Heading as="h1" lineHeight={1}>
         Timeline
       </Heading>
       <Heading
         as="h3"
         size="lg"
         fontWeight="bold"
-   
-        mb={-2}
         letterSpacing="tighter"
       >
         2020
@@ -186,7 +184,7 @@ const Timeline = () => {
           my={4}
           mx="auto"
           fontWeight="medium"
-          variant="ghost"
+          variant="solid"
           onClick={() => showFullTimeline(true)}
         >
           Read More

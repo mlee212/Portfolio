@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Nav } from "../components/nav";
 import { Footer } from "../components/footer";
 import { Box, Button, useColorMode } from "@chakra-ui/core";
+import { ChevronLeftIcon } from "@chakra-ui/icons";
 
 const name = "Rajbir";
 export const siteTitle = "RJ | Portfolio";
@@ -43,8 +44,8 @@ export default function Layout({ children, home }) {
           {children}
           {!home && (
           <Link href="/journal">
-            <Button variant="ghost" my={4}>
-              ← Go back
+            <Button variant="solid" fontWeight="medium" my={2}>
+              <ChevronLeftIcon />Go back
             </Button>
           </Link>
         )}
