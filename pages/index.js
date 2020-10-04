@@ -37,45 +37,46 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-
-      <Section title="Hello you. I'm Rajbir.">
-        I like to call myself a creative addict, visual storyteller, and
-        keyboard enthusiast.
-        <br />
-        <br />
-        Based in Southern California.
-      </Section>
-      <ButtonGroup mt={4} spacing={4}>
-        <Button colorScheme="teal" variant="solid" onClick={onCopy}>
-          {hasCopied ? "Copied!" : "Email"}
-        </Button>
-        <Button colorScheme="teal" variant="link">
-          Github
-        </Button>
-      </ButtonGroup>
-      <Section title="About">
+      <Box
+        minH="90vh"
+        display="flex"
+        justifyContent="center"
+        flexDirection="column"
+      >
+        <Section title="Hello you. I'm Rajbir.">
+          I like to call myself a creative addict, visual storyteller, and
+          keyboard enthusiast.
+          <br />
+          <br />
+          Based in Southern California.
+        </Section>
+        <ButtonGroup mt={4} spacing={4}>
+          <Button colorScheme="teal" variant="solid" onClick={onCopy}>
+            {hasCopied ? "Copied!" : "Email"}
+          </Button>
+          <Button colorScheme="teal" variant="link">
+            Github
+          </Button>
+        </ButtonGroup>
+      </Box>
+      <Section title="A Bit About Me">
         I am a rising Junior attending the University of California, Riverside
         studying Computer science. I participate in multiple hackathon web
         development teams and love designing interfaces.
         <br />
         <br />
         In my spare time I practice perfecting the art of the grilled cheese and
-        experiment with building new bespoke mechanical keyboards.
-        <br />
-        <br />
-        Currently I am typing on my Iron165 (my favorite board ever) built with
-        cream switches lubricated with Krytox 205g0 along with Durock
-        stabilizers.
-        <br />
-        <br />
-        I vibe with cool typography and my favorite font is Inter. I aim
-        to travel all over the world.
+        experiment with building new bespoke mechanical keyboards. Currently I
+        am typing on my Iron165 (my favorite board ever) built with cream
+        switches lubricated with Krytox 205g0 along with Durock stabilizers. I
+        vibe with cool typography and my favorite font is Inter. I aim to travel
+        all over the world.
       </Section>
       <Timeline />
       <Heading mb={4} mt={4}>
         My Tracks Right Now
       </Heading>
-      <Text>This is what I bop to when I code. Updated daily.</Text>
+      <Text>The music I enjoy the most right now.</Text>
       <TopTracks />
     </Layout>
   );

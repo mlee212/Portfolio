@@ -11,10 +11,9 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <article>
-        <Heading mb={4}>{postData.title}</Heading>
-
+        <Heading as="h1" mb={4}>{postData.title}</Heading>
         <Text fontSize="sm" color="gray.500">
-          <Date dateString={postData.date} />
+        {postData.author} / <Date dateString={postData.date} />
         </Text>
         <Text mb={4}>{postData.excerpt}</Text>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />

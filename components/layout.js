@@ -6,18 +6,18 @@ import { Box, Button, useColorMode } from "@chakra-ui/core";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 
 const name = "Rajbir";
-export const siteTitle = "RJ | Portfolio";
+export const siteTitle = "Rajbir | Portfolio";
 
 export default function Layout({ children, home }) {
   const { colorMode, toggleColorMode } = useColorMode();
   const bgColor = {
     light: "white",
-    dark: "gray.800",
+    dark: "#101010",
   };
 
   return (
     <div>
-      <Box bg={bgColor[colorMode]} transition="background-color 0.5s ease-in-out">
+      <Box bg={bgColor[colorMode]} transition="background-color 0.2s ease-in-out">
         <Head>
           {/* <link rel="icon" href="/favicon.ico" /> */}
           <meta

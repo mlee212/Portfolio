@@ -48,12 +48,17 @@ export default function Projects() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <Heading fontWeight="bold" as="h1" my={5}>Projects</Heading>
+      <Heading fontWeight="bold" as="h1" my={5}>
+        Projects
+      </Heading>
       <Heading size="lg" my={4}>
         Currently working on:
       </Heading>
       <Accordion defaultIndex={[0]} allowMultiple>
-        <AccordionSection title="Habitle">
+        <AccordionSection title="Habitle" href="https://habitle.com">
+          Coming from Attempt 2 Studios is a brand new app, Habitle!
+          <br />
+          <br />
           Habitle is a habit tracking web app that provides a simple feature: to
           track habits. That's it.
           <br />
@@ -77,8 +82,8 @@ export default function Projects() {
           title="Rho Shell"
           href="https://github.com/r-jo/rhoshell"
         >
-          A simple command line interface written in C++ with the core functions
-          of a terminal.
+          A command line interface written in C++ with the core functions of a
+          terminal.
           <br />
           <br />
           This project demonstrates a deep understanding of file systems,

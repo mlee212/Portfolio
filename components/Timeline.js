@@ -14,7 +14,7 @@ import {
   Code,
   Link,
 } from "@chakra-ui/core";
-import { CheckCircleIcon, ChevronDownIcon } from "@chakra-ui/icons";
+import { StarIcon, ChevronDownIcon } from "@chakra-ui/icons";
 
 const YearDivider = () => {
   const { colorMode } = useColorMode();
@@ -23,7 +23,7 @@ const YearDivider = () => {
     dark: "gray.500",
   };
 
-  return <Divider borderColor={borderColor[colorMode]} my={8} w="100%" />;
+  return <Divider borderColor={borderColor[colorMode]} my={4} w="100%" />;
 };
 
 const TimelineStep = ({ title, children }) => {
@@ -35,9 +35,9 @@ const TimelineStep = ({ title, children }) => {
 
   return (
     <ListItem>
-      <Stack ml={2} mb={2}>
+      <Stack ml={2} mb={-2}>
         <Flex align="center" mb={-6}>
-          <CheckCircleIcon mr={2} color="green.300" />
+          <StarIcon mr={2} color="green.300" />
           <Text fontWeight="medium">{title}</Text>
         </Flex>
         <Text color={color[colorMode]} pl={6} my={-2}>
@@ -55,15 +55,15 @@ const FullTimeline = () => (
       2018
     </Heading>
     <List>
-      <TimelineStep title="Graduated High School">
-        Peace out high school lunches.
-      </TimelineStep>
       <TimelineStep title="Hello World!">
         I wrote my first line of code{" "}
         <Code>cout &#60;&#60; "Hello World!";</Code>
       </TimelineStep>
       <TimelineStep title="Moved to University of California, Riverside">
         For Computer Science!
+      </TimelineStep>
+      <TimelineStep title="Graduated High School">
+        Peace out high school lunches.
       </TimelineStep>
     </List>
     <YearDivider />
@@ -120,14 +120,9 @@ const Timeline = () => {
       mt={8}
     >
       <Heading as="h1" lineHeight={1}>
-        Timeline
+        Where I've Been
       </Heading>
-      <Heading
-        as="h3"
-        size="lg"
-        fontWeight="bold"
-        letterSpacing="tighter"
-      >
+      <Heading as="h3" size="lg" fontWeight="bold" letterSpacing="tighter">
         2020
       </Heading>
       <List>

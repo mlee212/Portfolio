@@ -2,6 +2,7 @@
 title: "Mechanical Keyboards"
 excerpt: "Why mechanical keyboards? Well, this article will explain why I believe we should invest in the most used tool in development or any work that deals with a computer."
 date: "2020-09-30"
+author: "Rajbir Johar"
 ---
 
 ## Who Cares?
@@ -12,7 +13,7 @@ The fact of the matter is, our keyboards go through alot. Approximately *five to
 
 Now why shouldn't we make our experience typing on a keyboard more enjoyable given that we are spending so much time using it especially now during the pandemic? 
 
-Enter: the <mark>custom mechanical keyboard</mark>. 
+Enter: the *custom mechanical keyboard*. 
 
 ### The Typical Office Keyboard
 

@@ -5,7 +5,7 @@ export default function App({ Component, pageProps }) {
   return (
     <ChakraProvider>
       <CSSReset />
-      <ColorModeScript initialColorMode="light" />
+      <ColorModeScript initialColorMode="dark" />
       <Component {...pageProps} />
     </ChakraProvider>
   );

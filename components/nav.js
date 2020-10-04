@@ -3,10 +3,7 @@ import { useRouter } from "next/router";
 import {
   Button,
   useColorMode,
-  Icon,
-  Box,
   ButtonGroup,
-  Text,
   Flex,
 } from "@chakra-ui/core";
 import styled from "@emotion/styled";
@@ -16,7 +13,8 @@ const StickyNav = styled(Flex)`
   position: sticky;
   z-index: 5;
   top: 0;
-  transition: background-color 0.5s ease-in-out;
+  backdrop-filter: saturate(180%) blur(20px);
+  transition: background-color 0.2s ease-in-out;
 `;
 
 export const Nav = () => {
@@ -24,7 +22,11 @@ export const Nav = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const bgColor = {
     light: "white",
-    dark: "gray.800",
+    dark: "#101010",
+  };
+  const navBgColor = {
+    light: 'rgba(255, 255, 255, 0.8)',
+    dark: 'rgba(16, 16, 16, 0.8)'
   };
 
   return (
@@ -32,9 +34,9 @@ export const Nav = () => {
       flexDirection="row"
       justifyContent="space-between"
       alignItems="center"
-      maxWidth="45rem"
+      maxWidth="50rem"
       width="100%"
-      bg={bgColor[colorMode]}
+      bg={navBgColor[colorMode]}
       as="nav"
       py={5}
       mt={[0, 0]}
