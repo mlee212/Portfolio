@@ -3,7 +3,7 @@ import Container, { siteTitle } from "../components/Container";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/Date";
-import { Heading, Box, Button, Text } from "@chakra-ui/core";
+import { Heading, Box, Text } from "@chakra-ui/core";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
