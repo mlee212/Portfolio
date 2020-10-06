@@ -23,7 +23,7 @@ export const Footer = () => {
       <Divider />
       <Box maxW="45rem" p="0 2rem 3rem" m="3rem auto 0rem">
         <Heading as="h3" size="lg" fontWeight="bold" mb={4}>
-          Don't be a Stranger
+          Don't be a Stranger.
         </Heading>
         <Text>I don't bite anything except really good food.</Text>
         <ButtonGroup my={4} spacing={4}>
