@@ -2,7 +2,7 @@ import Container from "../../components/Container";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/Date";
 import Head from "next/head";
-import { Heading, Text, Box } from "@chakra-ui/core";
+import { Heading, Text, Box, useColorMode } from "@chakra-ui/core";
 
 export default function Post({ postData }) {
   return (
@@ -19,7 +19,7 @@ export default function Post({ postData }) {
             {postData.author} / <Date dateString={postData.date} />
           </Text>
           <Text mb={4}>{postData.excerpt}</Text>
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <Text><div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} /></Text>
         </article>
       </Box>
     </Container>

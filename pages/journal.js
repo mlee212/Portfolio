@@ -3,7 +3,7 @@ import Container, { siteTitle } from "../components/Container";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/Date";
-import { Heading, Box, Text } from "@chakra-ui/core";
+import { Heading, Box, Text, useColorMode } from "@chakra-ui/core";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -15,6 +15,12 @@ export async function getStaticProps() {
 }
 
 export default function Readings({ allPostsData }) {
+  const { colorMode } = useColorMode();
+  const color = {
+    light: "gray.700",
+    dark: "gray.400",
+  };
+
   return (
     <Container main>
       <Head>
@@ -32,12 +38,12 @@ export default function Readings({ allPostsData }) {
                 <Link href={`/posts/${id}`}>
                   <a>{title}</a>
                 </Link>
-                <Text fontSize="sm" color="gray.500">
+                <Text fontWeight="normal" fontSize="sm" color="gray.500">
                   <Date dateString={date} />
                 </Text>
               </Box>
             </Heading>
-            <Text>{excerpt}</Text>
+            <Text color={color[colorMode]}>{excerpt}</Text>
           </Box>
         ))}
       </Box>
