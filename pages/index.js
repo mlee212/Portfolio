@@ -14,23 +14,19 @@ import {
 
 const Section = ({ title, children }) => {
   const { colorMode } = useColorMode();
-  const color = {
-    light: "gray.700",
-    dark: "gray.400",
-  };
 
   return (
     <Box>
       <Heading fontWeight="bold" as="h1" my={5}>
         {title}
       </Heading>
-      <Text color={color[colorMode]}>{children}</Text>
+      <Text>{children}</Text>
     </Box>
   );
 };
 
 export default function Home() {
-  const [value, setValue] = React.useState("rajbirsjohar@gmail.com");
+  const [value] = React.useState("rajbirsjohar@gmail.com");
   const { onCopy, hasCopied } = useClipboard(value);
   return (
     <Container main>

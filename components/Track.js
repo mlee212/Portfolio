@@ -1,23 +1,21 @@
 // Full Credit to Lee Robinson
 
-import React from 'react';
-import { Box, Link, Stack, Text, useColorMode } from '@chakra-ui/core';
+import React from "react";
+import { Box, Link, Stack, Text, useColorMode } from "@chakra-ui/core";
 
 const Track = (track) => {
   const { colorMode } = useColorMode();
   const rankingColor = {
-    light: 'gray.400',
-    dark: 'gray.600'
+    light: "gray.400",
+    dark: "gray.600",
   };
 
   return (
     <Box
-      
       display="flex"
       flexDirection="row"
       alignItems="baseline"
-      
-      p={2}
+      px={2}
       maxWidth="100%"
       w="full"
     >

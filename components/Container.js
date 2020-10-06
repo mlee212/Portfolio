@@ -21,12 +21,12 @@ export default function Container({ children, main }) {
   const router = useRouter();
   const { colorMode, toggleColorMode } = useColorMode();
   const bgColor = {
-    light: "white",
-    dark: "#101010",
+    light: "#fff",
+    dark: "#080808",
   };
   const navBgColor = {
     light: "rgba(255, 255, 255, 0.8)",
-    dark: "rgba(16, 16, 16, 0.8)",
+    dark: "rgba(8, 8, 8, 0.8)",
   };
 
   return (
@@ -53,7 +53,7 @@ export default function Container({ children, main }) {
           flexDirection="row"
           justifyContent="space-between"
           alignItems="center"
-          maxWidth="50rem"
+          maxWidth="55rem"
           width="100%"
           bg={navBgColor[colorMode]}
           as="nav"
@@ -63,7 +63,7 @@ export default function Container({ children, main }) {
           px={8}
           mx="auto"
         >
-          <Button p={1} onClick={toggleColorMode}>
+          <Button p={1} borderRadius="50%" onClick={toggleColorMode}>
             {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
           </Button>
           <ButtonGroup spacing={1}>

@@ -21,12 +21,6 @@ import {
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 const AccordionSection = ({ title, href, children }) => {
-  const { colorMode } = useColorMode();
-  const color = {
-    light: "gray.700",
-    dark: "gray.400",
-  };
-
   return (
     <AccordionItem>
       <AccordionButton>
@@ -39,7 +33,7 @@ const AccordionSection = ({ title, href, children }) => {
         <AccordionIcon />
       </AccordionButton>
       <AccordionPanel pb={4}>
-        <Text color={color[colorMode]}>{children}</Text>
+        <Text>{children}</Text>
       </AccordionPanel>
     </AccordionItem>
   );
@@ -82,6 +76,12 @@ export default function Projects() {
           and I are collaborating on serving a minimal and functional app that
           can be used by everyone. No login required because we don't need your
           data.
+          <Stack isInline mt={4}>
+            <Badge colorScheme="gray">Git</Badge>
+            <Badge colorScheme="blue">HTML</Badge>
+            <Badge colorScheme="red">CSS</Badge>
+            <Badge colorScheme="orange">JS</Badge>
+          </Stack>
         </AccordionSection>
 
         <Heading size="lg" my={4}>
@@ -179,16 +179,46 @@ export default function Projects() {
         </AccordionSection>
 
         <AccordionSection title="Citrushack" href="https://citrushack.com">
-          I was a member of the team that developed the website for UCR's famous
-          annual hackathon, Citrushack, for the years 2018 and 2019 where I
-          focused on the frontend and developed an interface that was easy to
-          use by the thousands of students that participated.
-          <br />
-          <br />
-          Here is where I learned how to manage a large scale project with a
-          team using tools such as git version control.
+          <h3>Introduction</h3>
+          Since 2018, I was a member of the team that developed the website for
+          UCR's famous annual hackathon, Citrushack, for the years 2018 and 2019
+          where I focused on the frontend and developed an interface that was
+          easy to use by the thousands of students that participated.
+          <h3>Purpose</h3>
+          After Cutiehack, I wanted to expand on my experience and challenge
+          myself with a larger scale project in terms of students. The
+          developemental process is split into two parallel tasks, one for
+          frontend and one for backend.
+          <h3>Challenges</h3>
+          The biggest challenge would be that this was in fact my first
+          introduction ever into using React.JS and I had zero prior knowledge
+          on javascript. But by spending time breaking down the large problems
+          into smaller ones, I was able to overcome each task given to me.
+          <h4>Overcoming a Challenge</h4>
+          For example, the countdown clock was to be implemented so students can
+          see how long they have until the event. I figured out I needed three
+          objects: the current date, the final date, and the time between each
+          of these dates. Using the moment.JS package, a library that handles
+          dates and times, helped speed the process. By using React states, I
+          was able to figure out that I can subtract the two dates and split the
+          time elapsed into its Day, Hours, Minutes, and Seconds partitions. I
+          then created an <Code>interval</Code> that updates every second and
+          saves inside the <Code>ComponentDidMount</Code> lifecycle method until
+          it is cleared. A little bit of CSS and SVGs, and we were off the
+          races.
+          <h3>Workflow and Collaboration</h3>
+          With my focus being on frontend, we collaborated with the design team
+          through figma as well as helped the backend team connect to the
+          frontend interface. I helped design key parts of the website including
+          the navigation bar and countdown clock to the event using modern tools
+          such as flexbox and grid to ensure a smooth user experience on both
+          desktop and mobile and across all the major browsers.
           <Stack isInline mt={4}>
-            <Badge colorScheme="green">React.JS</Badge>
+            <Badge colorScheme="green">React</Badge>
+            <Badge colorScheme="gray">Git</Badge>
+            <Badge colorScheme="blue">HTML</Badge>
+            <Badge colorScheme="red">CSS</Badge>
+            <Badge colorScheme="orange">JS</Badge>
           </Stack>
         </AccordionSection>
 
