@@ -23,7 +23,7 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 const AccordionSection = ({ title, href, children }) => {
   return (
     <AccordionItem>
-      <AccordionButton>
+      <AccordionButton _expanded={{ color: "tomato" }}>
         <Box flex="1" textAlign="left" fontWeight="bold">
           <Link href={href} isExternal>
             <b>{title}</b>
@@ -55,7 +55,7 @@ export default function Projects() {
       <Heading size="lg" my={4}>
         Currently working on:
       </Heading>
-      <Accordion minH="50vh" defaultIndex={[0]} allowMultiple>
+      <Accordion minH="50vh">
         <AccordionSection title="Habitle" href="https://habitle.com">
           <h3>Introduction</h3>
           Coming from Attempt 2 Studios is a brand new app, Habitle!
@@ -194,7 +194,7 @@ export default function Projects() {
           introduction ever into using React.JS and I had zero prior knowledge
           on javascript. But by spending time breaking down the large problems
           into smaller ones, I was able to overcome each task given to me.
-          <h4>Overcoming a Challenge</h4>
+          <h4>T-minus Five, Four, Three, Two, One</h4>
           For example, the countdown clock was to be implemented so students can
           see how long they have until the event. I figured out I needed three
           objects: the current date, the final date, and the time between each
@@ -223,26 +223,80 @@ export default function Projects() {
         </AccordionSection>
 
         <AccordionSection title="Cutiehack" href="https://cutiehack.io">
-          Much like Citrushack, Cutiehack was another one of UCR's smaller
-          annual hackathons where I contributed my skills to building the
-          frontend of the website that the students used to participate in the
-          hackathon.
-          <br />
-          <br />
-          This project was aimed at beginners and learning how to develop a
-          website as part of a team.
+          <h3>Introduction</h3>
+          Before Citrushack, I was a member of the smaller but still popular
+          Cutiehack hackathon web development team. I had a focus on frontend
+          development where I helped design and develop different components of
+          the website.
+          <h3>Purpose</h3>
+          This website served as the main portal for all students that joined
+          Cutiehack. Cutiehack is the smaller sibling to Citrushack. In contrast
+          to Citrushack, Cutiehack was aimed at newcomers and students zero
+          experience in technology and coding. Even if Cutiehack was smaller, I
+          had to ensure this website was accessible to the hundreds of students
+          that used it to participate.
+          <h3>Challenges</h3>
+          What posed as the biggest challenge to me in the beginning was my
+          complete lack of web development experience. I walked into the first
+          meeting and was welcomed with open arms by the team where I was taught
+          the fundementals of how to build a website. That first experience is
+          what pushes me to continue attending every year to give the same
+          welcome to the newcomers that want to be involved in web development.
+          <h4>From Zero to Hero</h4>I didn't know the first thing about how to
+          render a document on a browser. Nothing. Fortunately, I was part of an
+          experienced team who loved to help out and answer questions. While I
+          did use Google to solve a lot of the problems that arose during my
+          initial development, I always took the opportunity to converse with my
+          team about the best way to approach a certain challenge and we would
+          bounce off ideas. This helped immensely with my soft skills and
+          building positive and impactful relationships with my team.
+          <h3>Workflow and Collaboration</h3>
+          With my focus being on frontend, we collaborated with the design team
+          through figma as well as helped the backend team connect to the
+          frontend interface. I helped design key parts of the website including
+          the navigation bar and countdown clock to the event using modern tools
+          such as flexbox and grid to ensure a smooth user experience on both
+          desktop and mobile and across all the major browsers.
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React.JS</Badge>
           </Stack>
         </AccordionSection>
 
         <AccordionSection title="Biohack" href="https://biohackucr.com">
-          Biohack was another one of UCR's annual hackathons that focused on
-          bioengineering and life sciences versus tradition engineering
-          disciplines and where I played a major role in designing the website
-          including the revamped mascot and implementing quality UI and UX
-          designs to give thousands of users an easy to use and robust interface
-          to interact with.
+          <h3>Introduction</h3>
+          Biohack is where I really put my skills to the test. After two years
+          of studying web development on my own, I joined a small four man team
+          in building the website for the Biohack hackathon. I mention skills,
+          because this time I took a major role in developing the website which
+          including UI and UX. I performed code reviews for my team members and
+          made sure to run my code by them as well.
+          <h3>Purpose</h3>
+          Biohack is a hackathon geared towards life sciences and bioengineering
+          vs the traditional engineering disciplines. I brought my two years of
+          experience with design and front end development to the team where we
+          tackled challenges such as performance, accessibility, and style. I
+          completely redesigned the mascot to fix higher resolution screens and
+          used modern CSS rules like flexbox to render a great experience on
+          both mobile and desktop platforms as well cross browser support.
+          <h3>Challenges</h3>
+          Some of the biggest challenges I faced when working on Biohack was how
+          to delegate and accept tasks. With the added freedom of developing
+          without the guidance of a leader, I took it upon myself to solve
+          problems based on my strengths and also improving my weaknesses. I
+          strived to be team oriented in order to give all of my team members
+          the support they needed.
+          <h4>Rising from Defeat</h4>
+          Unfortunately, 2020 Biohack was hit by COVID and consequently
+          cancelled. But I didn't let this turn of events stop me from
+          continuing web development. With the skills I acquired from developing
+          Biohack, I began to develop some of my own side projects.
+          <h3>Workflow and Collaboration</h3>
+          With my focus being on frontend, we collaborated with the design team
+          through figma as well as helped the backend team connect to the
+          frontend interface. I helped design key parts of the website including
+          the navigation bar and countdown clock to the event using modern tools
+          such as flexbox and grid to ensure a smooth user experience on both
+          desktop and mobile and across all the major browsers.
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React.JS</Badge>
           </Stack>
