@@ -13,7 +13,6 @@ import {
   Stack,
   Text,
   Code,
-  useColorMode,
   Image,
   List,
   ListItem,
@@ -23,7 +22,7 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 const AccordionSection = ({ title, href, children }) => {
   return (
     <AccordionItem>
-      <AccordionButton _expanded={{ color: "tomato" }}>
+      <AccordionButton _expanded={{ color: "#0070f3" }}>
         <Box flex="1" textAlign="left" fontWeight="bold">
           <Link href={href} isExternal>
             <b>{title}</b>
@@ -55,7 +54,7 @@ export default function Projects() {
       <Heading size="lg" my={4}>
         Currently working on:
       </Heading>
-      <Accordion minH="50vh">
+      <Accordion minH="50vh" defaultIndex={[0]} allowMultiple>
         <AccordionSection title="Habitle" href="https://habitle.com">
           <h3>Introduction</h3>
           Coming from Attempt 2 Studios is a brand new app, Habitle!
@@ -70,17 +69,17 @@ export default function Projects() {
           is no easy way to visualize the progress of that habit over a course
           of time.
           <h3>Collaboration</h3>
-          <Link color="teal.500" href="https://www.devbhatia.me" isExternal>
+          <Link color="#0070f3" href="https://www.devbhatia.me" isExternal>
             Dev Bhatia
           </Link>{" "}
           and I are collaborating on serving a minimal and functional app that
           can be used by everyone. No login required because we don't need your
           data.
           <Stack isInline mt={4}>
-            <Badge colorScheme="gray">Git</Badge>
+            <Badge colorScheme="orange">JS</Badge>
             <Badge colorScheme="blue">HTML</Badge>
             <Badge colorScheme="red">CSS</Badge>
-            <Badge colorScheme="orange">JS</Badge>
+            <Badge colorScheme="gray">Git</Badge>
           </Stack>
         </AccordionSection>
 
@@ -215,10 +214,10 @@ export default function Projects() {
           desktop and mobile and across all the major browsers.
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React</Badge>
-            <Badge colorScheme="gray">Git</Badge>
+            <Badge colorScheme="orange">JS</Badge>
             <Badge colorScheme="blue">HTML</Badge>
             <Badge colorScheme="red">CSS</Badge>
-            <Badge colorScheme="orange">JS</Badge>
+            <Badge colorScheme="gray">Git</Badge>
           </Stack>
         </AccordionSection>
 
@@ -259,6 +258,10 @@ export default function Projects() {
           desktop and mobile and across all the major browsers.
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React.JS</Badge>
+            <Badge colorScheme="orange">JS</Badge>
+            <Badge colorScheme="blue">HTML</Badge>
+            <Badge colorScheme="red">CSS</Badge>
+            <Badge colorScheme="gray">Git</Badge>
           </Stack>
         </AccordionSection>
 
@@ -299,6 +302,10 @@ export default function Projects() {
           desktop and mobile and across all the major browsers.
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React.JS</Badge>
+            <Badge colorScheme="orange">JS</Badge>
+            <Badge colorScheme="blue">HTML</Badge>
+            <Badge colorScheme="red">CSS</Badge>
+            <Badge colorScheme="gray">Git</Badge>
           </Stack>
         </AccordionSection>
       </Accordion>

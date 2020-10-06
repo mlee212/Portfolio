@@ -29,15 +29,15 @@ export const Footer = () => {
           </Heading>
           <Text>I don't bite anything except really good food.</Text>
           <ButtonGroup my={4} spacing={4}>
-            <Button colorScheme="teal" variant="solid" onClick={onCopy}>
+            <Button colorScheme="blue" variant="solid" onClick={onCopy}>
               {hasCopied ? "Copied!" : "Email"}
             </Button>
-            <Button colorScheme="teal" variant="link">
+            <Button colorScheme="blue" variant="link">
               <Link href="https://github.com/r-jo" isExternal>
                 Github
               </Link>
             </Button>
-            <Button colorScheme="teal" variant="link">
+            <Button colorScheme="blue" variant="link">
               <Link href="https://www.linkedin.com/in/rajbirjohar/" isExternal>
                 Linkedin
               </Link>
