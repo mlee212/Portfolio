@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Container, { siteTitle } from "../components/Container";
 import {
   Accordion,
   AccordionItem,
@@ -14,6 +14,9 @@ import {
   Text,
   Code,
   useColorMode,
+  Image,
+  List,
+  ListItem,
 } from "@chakra-ui/core";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
@@ -44,18 +47,23 @@ const AccordionSection = ({ title, href, children }) => {
 
 export default function Projects() {
   return (
-    <Layout home>
+    <Container main>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <Heading fontWeight="bold" as="h1" my={5}>
         Projects
       </Heading>
+      <Text>
+        Here a collection of my best work where I demonstrate my skills as a
+        developer and a creator.
+      </Text>
       <Heading size="lg" my={4}>
         Currently working on:
       </Heading>
-      <Accordion defaultIndex={[0]} allowMultiple>
+      <Accordion minH="50vh" defaultIndex={[0]} allowMultiple>
         <AccordionSection title="Habitle" href="https://habitle.com">
+          <h3>Introduction</h3>
           Coming from Attempt 2 Studios is a brand new app, Habitle!
           <br />
           <br />
@@ -67,11 +75,13 @@ export default function Projects() {
           seem to stick to a positive habit and we feel that it is because there
           is no easy way to visualize the progress of that habit over a course
           of time.
-          <br />
-          <br />
-          Dev Bhatia and I are collaborating on serving a minimal and functional
-          app that can be used by everyone. No login required because we don't
-          need your data.
+          <h3>Collaboration</h3>
+          <Link color="teal.500" href="https://www.devbhatia.me" isExternal>
+            Dev Bhatia
+          </Link>{" "}
+          and I are collaborating on serving a minimal and functional app that
+          can be used by everyone. No login required because we don't need your
+          data.
         </AccordionSection>
 
         <Heading size="lg" my={4}>
@@ -82,20 +92,89 @@ export default function Projects() {
           title="Rho Shell"
           href="https://github.com/r-jo/rhoshell"
         >
-          A command line interface written in C++ with the core functions of a
-          terminal.
+          <h3>Introduction</h3>
+          Rho Shell is a command line interface that can perform the core
+          functions of a terminal.
           <br />
           <br />
-          This project demonstrates a deep understanding of file systems,
-          structures, pipes, and commands on a normal terminal.
-          <br />
-          <br />
-          Its main functions include being able to <Code>cp</Code> - copy,{" "}
+          This program is aimed to replicate the standard functions of a shell
+          using a Command Line Interface (CLI) which is written primarily in
+          C++. Its main functions include being able to <Code>cp</Code> - copy,{" "}
           <Code>rm</Code> - remove, <Code>mv</Code> - move, and{" "}
           <Code>echo</Code> - echo. It can parse through <Code>&&</Code> and{" "}
-          <Code>||</Code> symbols as well.
+          <Code>||</Code> symbols as well. Multiple commands can be run at once.
+          <Image
+            py={50}
+            src="/assets/Diagram.png"
+            alt="Flow Diagram depicting how the program and user interact."
+          />
+          <Text textAlign="center" color="grey">
+            This diagram depicts the flow of the program and how it interacts
+            based on user input.
+          </Text>
+          <h3>Example</h3>
+          After executing <Code>./rhoshell</Code> within a terminal instance, a
+          user can execute most of the basic terminal commands. The difference
+          is that it is not being executed by the terminal itself, but from the
+          program Rho Shell.
+          <h3>Classes</h3>
+          <h4>Base Classes</h4>
+          <List spacing={3} styleType="disc">
+            <ListItem>
+              <Code>virtual execute()</Code>: This function is used as a
+              template for which all the child class derive their own{" "}
+              <Code>execute()</Code> function from. This allows the child
+              classes to override the parent function without rewriting the same
+              function over and over.
+            </ListItem>
+            <ListItem>
+              <Code>virtual getCommand()</Code>: This function is used as a
+              template for testing which retrieves which command was executed
+              while allowing each child class to derive its own function for
+              testing purposes.
+            </ListItem>
+          </List>
+          <h4>Connector Class</h4>
+          <List spacing={3} styleType="disc">
+            <ListItem>
+              <Code>left & right</Code>: These functions are used by the parser
+              to determine the left and right operands of the command given by
+              the user.
+            </ListItem>
+          </List>
+          <h4>Operator Classes</h4>
+          <List spacing={3} styleType="disc">
+            <ListItem>
+              <Code>and</Code>: Also known as <Code>&&</Code> which executes
+              both left and right operand functions if both functions are valid
+              and nonconflicting.
+            </ListItem>
+            <ListItem>
+              <Code>or</Code>: Also known as <Code>||</Code> which executes
+              either or both left and right operand functions if atleast one of
+              the operand functions are valid and nonconflicting.
+            </ListItem>
+            <ListItem>
+              <Code>semicolon</Code>: Also known as <Code>;</Code> which is used
+              to separate instructions.
+            </ListItem>
+            <ListItem>
+              <Code>TestCommand</Code>: Used to test each operator class.
+            </ListItem>
+          </List>
+          <h3>Testing</h3>
+          Testing was a major aspect in the development process of the project.
+          We used Google's Test Suite and wrote our own in order to test our
+          functions against several types of inputs, both right and wrong, using
+          bash scripting to automate the entire process.
+          <h3>Collaboration</h3>
+          This program was built by a two person team where we used git version
+          control to keep track of all the delegated tasks, commit changes, and
+          code reviews. We communicated throughout the entire project on how we
+          were developing and strived to be team-oriented.
           <Stack isInline mt={4}>
             <Badge colorScheme="yellow">C++</Badge>
+            <Badge colorScheme="gray">Git</Badge>
           </Stack>
         </AccordionSection>
 
@@ -138,16 +217,7 @@ export default function Projects() {
             <Badge colorScheme="green">React.JS</Badge>
           </Stack>
         </AccordionSection>
-
-        <AccordionSection title="Portfolio" href="https://rajbirjohar.com">
-          This website serves as my medium to demonstrate my skills and current
-          inspiration through its design language. I focus on the adjectives{" "}
-          <i>clean</i> and <i>minimal</i>. It's currently written using Next.js.
-          <Stack isInline mt={4}>
-            <Badge colorScheme="blue">Next.JS</Badge>
-          </Stack>
-        </AccordionSection>
       </Accordion>
-    </Layout>
+    </Container>
   );
 }

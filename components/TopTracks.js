@@ -1,19 +1,20 @@
-import React from 'react';
-import useSWR from 'swr';
+// Full Credit to Lee Robinson
 
-import fetcher from '../lib/fetcher';
+import React from "react";
+import useSWR from "swr";
+import fetcher from "../lib/fetcher";
 
-import Track from './Track';
+import Track from "./Track";
 
 const TopTracks = () => {
-  const { data } = useSWR('/api/top-tracks', fetcher);
+  const { data } = useSWR("/api/top-tracks", fetcher);
 
   if (!data) {
     return null;
   }
 
   return data.tracks.map((track, index) => (
-    <Track ranking={index + 1} key={track.songUrl} {...track} />
+      <Track ranking={index + 1} key={track.songUrl} {...track} />
   ));
 };
 

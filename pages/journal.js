@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Container, { siteTitle } from "../components/Container";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
-import Date from "../components/date";
+import Date from "../components/Date";
 import { Heading, Box, Button, Text } from "@chakra-ui/core";
 
 export async function getStaticProps() {
@@ -16,7 +16,7 @@ export async function getStaticProps() {
 
 export default function Readings({ allPostsData }) {
   return (
-    <Layout home>
+    <Container main>
       <Head>
         <title>{siteTitle}</title>
       </Head>
@@ -24,7 +24,7 @@ export default function Readings({ allPostsData }) {
         Journal
       </Heading>
       <p>My thoughts and ideas written down.</p>
-      <Box minH="50vh">
+      <Box minH="50vh" maxW="45rem">
         {allPostsData.map(({ id, date, title, excerpt }) => (
           <Box key={id}>
             <Heading as="h2" size="lg" fontWeight="bold" lineHeight="0.5">
@@ -41,6 +41,6 @@ export default function Readings({ allPostsData }) {
           </Box>
         ))}
       </Box>
-    </Layout>
+    </Container>
   );
 }

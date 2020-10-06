@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Container, { siteTitle } from "../components/Container";
 import TopTracks from "../components/TopTracks";
 import Timeline from "../components/Timeline";
 import {
@@ -33,7 +33,7 @@ export default function Home() {
   const [value, setValue] = React.useState("rajbirsjohar@gmail.com");
   const { onCopy, hasCopied } = useClipboard(value);
   return (
-    <Layout home>
+    <Container main>
       <Head>
         <title>{siteTitle}</title>
       </Head>
@@ -73,11 +73,11 @@ export default function Home() {
         all over the world.
       </Section>
       <Timeline />
-      <Heading mb={4} mt={4}>
-        My Tracks Right Now
+      <Heading fontWeight="bold" as="h1" my={5}>
+        My Music Right Now
       </Heading>
-      <Text>The music I enjoy the most right now.</Text>
+      <Text>The top ten songs I've been listening to.</Text>
       <TopTracks />
-    </Layout>
+    </Container>
   );
 }

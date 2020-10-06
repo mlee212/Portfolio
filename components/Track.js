@@ -1,12 +1,10 @@
+// Full Credit to Lee Robinson
+
 import React from 'react';
 import { Box, Link, Stack, Text, useColorMode } from '@chakra-ui/core';
 
 const Track = (track) => {
   const { colorMode } = useColorMode();
-  const borderColor = {
-    light: 'gray.300',
-    dark: 'gray.600'
-  };
   const rankingColor = {
     light: 'gray.400',
     dark: 'gray.600'
@@ -14,12 +12,11 @@ const Track = (track) => {
 
   return (
     <Box
-      mb={4}
+      
       display="flex"
       flexDirection="row"
       alignItems="baseline"
-      borderBottom="1px solid"
-      borderColor={borderColor[colorMode]}
+      
       p={2}
       maxWidth="100%"
       w="full"

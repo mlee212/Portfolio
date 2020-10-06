@@ -1,4 +1,4 @@
-// Credit to Lee Robinson
+// Full Credit to Lee Robinson
 
 import React, { useState } from "react";
 import {
@@ -40,7 +40,7 @@ const TimelineStep = ({ title, children }) => {
           <StarIcon mr={2} color="green.300" />
           <Text fontWeight="medium">{title}</Text>
         </Flex>
-        <Text color={color[colorMode]} pl={6} my={-2}>
+        <Text color={color[colorMode]} pl={6}>
           {children}
         </Text>
       </Stack>
@@ -50,7 +50,7 @@ const TimelineStep = ({ title, children }) => {
 
 const FullTimeline = () => (
   <>
-    <YearDivider />
+    <Divider my={2}/>
     <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
       2018
     </Heading>
@@ -66,7 +66,7 @@ const FullTimeline = () => (
         Peace out high school lunches.
       </TimelineStep>
     </List>
-    <YearDivider />
+    <Divider my={2}/>
     <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
       2017
     </Heading>
@@ -77,7 +77,7 @@ const FullTimeline = () => (
         on.
       </TimelineStep>
     </List>
-    <YearDivider />
+    <Divider my={2}/>
     <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
       2015
     </Heading>
@@ -87,7 +87,7 @@ const FullTimeline = () => (
         Cydia tweaks.
       </TimelineStep>
     </List>
-    <YearDivider />
+    <Divider my={2}/>
     <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
       2012
     </Heading>
@@ -98,7 +98,7 @@ const FullTimeline = () => (
         up trying to take it apart and cracked the screen :(.
       </TimelineStep>
     </List>
-    <YearDivider />
+    <Divider my={2}/>
     <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
       2000
     </Heading>
@@ -120,7 +120,7 @@ const Timeline = () => {
       mt={8}
     >
       <Heading as="h1" lineHeight={1}>
-        Where I've Been
+        What I've Been Up To
       </Heading>
       <Heading as="h3" size="lg" fontWeight="bold" letterSpacing="tighter">
         2020
@@ -148,7 +148,7 @@ const Timeline = () => {
           here.)
         </TimelineStep>
       </List>
-      <YearDivider />
+      <Divider my={2}/>
       <Heading
         as="h3"
         size="lg"
