@@ -17,7 +17,7 @@ const Section = ({ title, children }) => {
 
   return (
     <Box>
-      <Heading fontWeight="bold" as="h1" my={5}>
+      <Heading fontWeight="bold" as="h1" my={6}>
         {title}
       </Heading>
       <Text>{children}</Text>
@@ -34,7 +34,7 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <Box
-        minH="90vh"
+        minH="85vh"
         display="flex"
         justifyContent="center"
         flexDirection="column"
