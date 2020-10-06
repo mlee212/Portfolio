@@ -76,7 +76,7 @@ export default function Home() {
       <Heading fontWeight="bold" as="h1" my={5}>
         My Music Right Now
       </Heading>
-      <Text>The top ten songs I've been listening to.</Text>
+      <Text>The top ten songs I've been listening to. Updated Daily.</Text>
       <TopTracks />
     </Container>
   );
