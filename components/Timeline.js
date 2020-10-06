@@ -38,7 +38,7 @@ const TimelineStep = ({ title, children }) => {
       <Stack ml={2} mb={-2}>
         <Flex align="center" mb={-6}>
           <StarIcon mr={2} color="green.300" />
-          <Text fontWeight="medium">{title}</Text>
+          <Text fontWeight="bold">{title}</Text>
         </Flex>
         <Text color={color[colorMode]} pl={6}>
           {children}

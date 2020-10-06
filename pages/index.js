@@ -47,10 +47,10 @@ export default function Home() {
           Based in Southern California.
         </Section>
         <ButtonGroup mt={4} spacing={4}>
-          <Button colorScheme="teal" variant="solid" onClick={onCopy}>
+          <Button colorScheme="blue" variant="solid" onClick={onCopy}>
             {hasCopied ? "Copied!" : "Email"}
           </Button>
-          <Button colorScheme="teal" variant="link">
+          <Button colorScheme="blue" variant="link">
             Github
           </Button>
         </ButtonGroup>
