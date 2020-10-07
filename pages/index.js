@@ -12,7 +12,9 @@ import {
   Box,
   Link,
   Stack,
+  Badge,
 } from "@chakra-ui/core";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 
 const Section = ({ title, children }) => {
@@ -43,17 +45,20 @@ const ProjectCard = ({ title, children, href }) => {
     dark:
       "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(8, 8, 8, 0.4)",
   };
+
   return (
-    <motion.div className="card" whileHover={{
-      position: 'relative',
-      zIndex: 1,
-      background: 'transparent',
-      scale: [1, 1.035, 1.025],
-      transition: {
-        duration: .2
-      }
-    }}>
-    
+    <motion.div
+      whileTap={{ scale: 1 }}
+      whileHover={{
+        position: "relative",
+        zIndex: 1,
+        background: "transparent",
+        scale: [1, 1.035, 1.025],
+        transition: {
+          duration: 0.2,
+        },
+      }}
+    >
       <Box
         bg={bgColor[colorMode]}
         boxShadow={bxShadow[colorMode]}
@@ -61,14 +66,14 @@ const ProjectCard = ({ title, children, href }) => {
         px={6}
         py={1}
         transition="all 0.2s ease-in-out"
-        
       >
         <Heading fontWeight="bold" as="h3">
-        <Link href={href} isExternal>{title} </Link>
+          <Link href={href} isExternal>
+            {title} <ExternalLinkIcon mb={1} />
+          </Link>
         </Heading>
         <Text>{children}</Text>
       </Box>
-   
     </motion.div>
   );
 };
@@ -112,19 +117,38 @@ export default function Home() {
             <ProjectCard title="Habitle" href="https://habitle.com">
               A minimal and powerful web app that generates a heatmap to visual
               progress to promote a positive and consistent lifestyle.
+              <Stack isInline mt={4}>
+                <Badge colorScheme="orange">JS</Badge>
+                <Badge colorScheme="blue">HTML</Badge>
+                <Badge colorScheme="red">CSS</Badge>
+                <Badge colorScheme="gray">Git</Badge>
+              </Stack>
             </ProjectCard>
             <ProjectCard title="Citrushack" href="https://citrushack.com">
               The website used by hundreds of students to interact and
               participate in the annual Citrushack hackathon. Now, fully online.
+              <Stack isInline mt={4}>
+                <Badge colorScheme="green">React</Badge>
+                <Badge colorScheme="orange">JS</Badge>
+                <Badge colorScheme="blue">HTML</Badge>
+                <Badge colorScheme="red">CSS</Badge>
+                <Badge colorScheme="gray">Git</Badge>
+              </Stack>
             </ProjectCard>
             <ProjectCard title="Biohack" href="https://biohackucr.com">
               The website used by hundreds of students to interact and
               participate in the annual Biohack hackathon. Now, fully online.
+              <Stack isInline mt={4}>
+                <Badge colorScheme="green">React</Badge>
+                <Badge colorScheme="orange">JS</Badge>
+                <Badge colorScheme="blue">HTML</Badge>
+                <Badge colorScheme="red">CSS</Badge>
+                <Badge colorScheme="gray">Git</Badge>
+              </Stack>
             </ProjectCard>
           </Stack>
         </Section>
       </Box>
-
       <Timeline />
       <Heading fontWeight="bold" as="h1" my={5}>
         My Music Right Now

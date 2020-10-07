@@ -16,25 +16,72 @@ import {
   Image,
   List,
   ListItem,
+  useColorMode,
 } from "@chakra-ui/core";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { motion } from "framer-motion";
 
-const AccordionSection = ({ title, href, children }) => {
+// const AccordionSection = ({ title, href, children }) => {
+//   return (
+//     <AccordionItem>
+//       <AccordionButton _expanded={{ color: "#0070f3" }}>
+//         <Box flex="1" textAlign="left" fontWeight="bold">
+//           <Link href={href} isExternal>
+//             <b>{title}</b>
+//           </Link>
+//           <ExternalLinkIcon mx="4px" mb="5px" />
+//         </Box>
+//         <AccordionIcon />
+//       </AccordionButton>
+//       <AccordionPanel pb={4}>
+//         <Text>{children}</Text>
+//       </AccordionPanel>
+//     </AccordionItem>
+//   );
+// };
+
+const ProjectCard = ({ title, children, href }) => {
+  const { colorMode } = useColorMode();
+  const bgColor = {
+    light: "#fff",
+    dark: "#111",
+  };
+  const bxShadow = {
+    light:
+      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+    dark:
+      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(8, 8, 8, 0.4)",
+  };
+
   return (
-    <AccordionItem>
-      <AccordionButton _expanded={{ color: "#0070f3" }}>
-        <Box flex="1" textAlign="left" fontWeight="bold">
+    <motion.div
+      whileTap={{ scale: 1 }}
+      whileHover={{
+        position: "relative",
+        zIndex: 1,
+        background: "transparent",
+        scale: [1, 1.035, 1.025],
+        transition: {
+          duration: 0.2,
+        },
+      }}
+    >
+      <Box
+        bg={bgColor[colorMode]}
+        boxShadow={bxShadow[colorMode]}
+        borderRadius="7px"
+        px={6}
+        py={1}
+        transition="all 0.2s ease-in-out"
+      >
+        <Heading fontWeight="bold" as="h3">
           <Link href={href} isExternal>
-            <b>{title}</b>
+            {title} <ExternalLinkIcon mb={1} />
           </Link>
-          <ExternalLinkIcon mx="4px" mb="5px" />
-        </Box>
-        <AccordionIcon />
-      </AccordionButton>
-      <AccordionPanel pb={4}>
+        </Heading>
         <Text>{children}</Text>
-      </AccordionPanel>
-    </AccordionItem>
+      </Box>
+    </motion.div>
   );
 };
 
@@ -54,7 +101,19 @@ export default function Projects() {
       <Heading size="lg" my={4}>
         Currently working on:
       </Heading>
-      <Accordion minH="50vh" defaultIndex={[0]} allowMultiple>
+      <Stack spacing={4}>
+        <ProjectCard title="Habitle" href="https://habitle.com">
+          A minimal and powerful web app that generates a heatmap to visual
+          progress to promote a positive and consistent lifestyle.
+          <Stack isInline mt={4}>
+            <Badge colorScheme="orange">JS</Badge>
+            <Badge colorScheme="blue">HTML</Badge>
+            <Badge colorScheme="red">CSS</Badge>
+            <Badge colorScheme="gray">Git</Badge>
+          </Stack>
+        </ProjectCard>
+      </Stack>
+      {/* <Accordion minH="50vh" defaultIndex={[0]} allowMultiple>
         <AccordionSection title="Habitle" href="https://habitle.com">
           <h3>Introduction</h3>
           Coming from Attempt 2 Studios is a brand new app, Habitle!
@@ -81,13 +140,56 @@ export default function Projects() {
             <Badge colorScheme="red">CSS</Badge>
             <Badge colorScheme="gray">Git</Badge>
           </Stack>
-        </AccordionSection>
+        </AccordionSection> */}
 
-        <Heading size="lg" my={4}>
-          Finished Projects:
-        </Heading>
+      <Heading size="lg" my={4}>
+        Finished Projects:
+      </Heading>
+      <Stack spacing={4}>
+        <ProjectCard title="Rho Shell" href="https://github.com/r-jo/rhoshell">
+          A CLI written in C++ able to perform the core functions of a normal
+          terminal.
+          <Stack isInline mt={4}>
+            <Badge colorScheme="yellow">C++</Badge>
+            <Badge colorScheme="gray">Git</Badge>
+          </Stack>
+        </ProjectCard>
+        <ProjectCard title="Citrushack" href="https://citrushack.com">
+          The website used by hundreds of students to interact and participate
+          in the annual Citrushack hackathon. Now, fully online.
+          <Stack isInline mt={4}>
+            <Badge colorScheme="green">React</Badge>
+            <Badge colorScheme="orange">JS</Badge>
+            <Badge colorScheme="blue">HTML</Badge>
+            <Badge colorScheme="red">CSS</Badge>
+            <Badge colorScheme="gray">Git</Badge>
+          </Stack>
+        </ProjectCard>
+        <ProjectCard title="Cutiehack" href="https://cutiehack.io">
+          The website used by hundreds of students to interact and participate
+          in the annual Cutiehack hackathon. Now, fully online.
+          <Stack isInline mt={4}>
+            <Badge colorScheme="green">React</Badge>
+            <Badge colorScheme="orange">JS</Badge>
+            <Badge colorScheme="blue">HTML</Badge>
+            <Badge colorScheme="red">CSS</Badge>
+            <Badge colorScheme="gray">Git</Badge>
+          </Stack>
+        </ProjectCard>
+        <ProjectCard title="Biohack" href="https://biohackucr.com">
+          The website used by hundreds of students to interact and participate
+          in the annual Biohack hackathon. Now, fully online.
+          <Stack isInline mt={4}>
+            <Badge colorScheme="green">React</Badge>
+            <Badge colorScheme="orange">JS</Badge>
+            <Badge colorScheme="blue">HTML</Badge>
+            <Badge colorScheme="red">CSS</Badge>
+            <Badge colorScheme="gray">Git</Badge>
+          </Stack>
+        </ProjectCard>
+      </Stack>
 
-        <AccordionSection
+      {/* <AccordionSection
           title="Rho Shell"
           href="https://github.com/r-jo/rhoshell"
         >
@@ -308,7 +410,7 @@ export default function Projects() {
             <Badge colorScheme="gray">Git</Badge>
           </Stack>
         </AccordionSection>
-      </Accordion>
+      </Accordion> */}
     </Container>
   );
 }

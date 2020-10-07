@@ -30,10 +30,19 @@ export default function Container({ children, main }) {
     light: "rgba(255, 255, 255, 0.8)",
     dark: "rgba(0, 0, 0, 0.8)",
   };
+  const logo ={
+    light: "#000",
+    dark: "#fff",
+  }
 
   return (
     <>
       <style jsx>{`
+        .logo {
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 18px;
+        }
         .nav-link {
           text-decoration: none;
         }
@@ -77,9 +86,11 @@ export default function Container({ children, main }) {
           px={8}
           mx="auto"
         >
-          <Button p={1} borderRadius="50%" onClick={toggleColorMode}>
-            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-          </Button>
+          <Box maxH="40px" maxW="40px" py={0} px={2} borderRadius="5px" bg={logo[colorMode]} color={bgColor[colorMode]}>
+            <ActiveLink href="/">
+              <a className="logo">R</a>
+            </ActiveLink>
+          </Box>
           <ButtonGroup spacing={5}>
             <ActiveLink activeClassName="active" href="/">
               <a className="nav-link">Home</a>
@@ -106,6 +117,7 @@ export default function Container({ children, main }) {
             key={router.route}
             initial="pageInitial"
             animate="pageAnimate"
+            exit="pageExit"
             variants={{
               pageInitial: {
                 opacity: 0,
@@ -115,9 +127,14 @@ export default function Container({ children, main }) {
                 opacity: 1,
                 x: 0,
               },
+              pageExit: {
+                opacity: 0,
+                x: 10,
+              },
             }}
           >
             {children}
+
             {!main && (
               <Link href="/journal">
                 <Button variant="solid" fontWeight="medium" my={2}>
@@ -127,6 +144,19 @@ export default function Container({ children, main }) {
               </Link>
             )}
           </motion.div>
+          <Button
+            colorScheme="blue"
+            position="fixed"
+            bottom="20"
+            right="20"
+            boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+            p={1}
+            borderRadius="50%"
+            onClick={toggleColorMode}
+            zIndex="10"
+          >
+            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          </Button>
         </Box>
         <Footer />
       </Box>
