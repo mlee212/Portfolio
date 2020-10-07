@@ -13,6 +13,7 @@ import {
   Link,
   Stack,
 } from "@chakra-ui/core";
+import { motion } from "framer-motion";
 
 const Section = ({ title, children }) => {
   return (
@@ -34,7 +35,7 @@ const ProjectCard = ({ title, children, href }) => {
   const { colorMode } = useColorMode();
   const bgColor = {
     light: "#fff",
-    dark: "#090909",
+    dark: "#111",
   };
   const bxShadow = {
     light:
@@ -43,7 +44,16 @@ const ProjectCard = ({ title, children, href }) => {
       "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(8, 8, 8, 0.4)",
   };
   return (
-    <Link href={href} isExternal>
+    <motion.div className="card" whileHover={{
+      position: 'relative',
+      zIndex: 1,
+      background: 'transparent',
+      scale: [1, 1.035, 1.025],
+      transition: {
+        duration: .2
+      }
+    }}>
+    
       <Box
         bg={bgColor[colorMode]}
         boxShadow={bxShadow[colorMode]}
@@ -54,11 +64,12 @@ const ProjectCard = ({ title, children, href }) => {
         
       >
         <Heading fontWeight="bold" as="h3">
-          {title}
+        <Link href={href} isExternal>{title} </Link>
         </Heading>
         <Text>{children}</Text>
       </Box>
-    </Link>
+   
+    </motion.div>
   );
 };
 
