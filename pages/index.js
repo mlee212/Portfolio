@@ -2,20 +2,18 @@ import Head from "next/head";
 import Container, { siteTitle } from "../components/Container";
 import TopTracks from "../components/TopTracks";
 import Timeline from "../components/Timeline";
+import ProjectCard from "../components/ProjectCard";
 import {
   Heading,
   Text,
   Button,
   ButtonGroup,
   useClipboard,
-  useColorMode,
   Box,
   Link,
   Stack,
   Badge,
 } from "@chakra-ui/core";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { motion } from "framer-motion";
 
 const Section = ({ title, children }) => {
   return (
@@ -30,51 +28,6 @@ const Section = ({ title, children }) => {
       </Heading>
       <Text>{children}</Text>
     </Box>
-  );
-};
-
-const ProjectCard = ({ title, children, href }) => {
-  const { colorMode } = useColorMode();
-  const bgColor = {
-    light: "#fff",
-    dark: "#111",
-  };
-  const bxShadow = {
-    light:
-      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-    dark:
-      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(8, 8, 8, 0.4)",
-  };
-
-  return (
-    <motion.div
-      whileTap={{ scale: 1 }}
-      whileHover={{
-        position: "relative",
-        zIndex: 1,
-        background: "transparent",
-        scale: [1, 1.035, 1.025],
-        transition: {
-          duration: 0.2,
-        },
-      }}
-    >
-      <Box
-        bg={bgColor[colorMode]}
-        boxShadow={bxShadow[colorMode]}
-        borderRadius="7px"
-        px={6}
-        py={1}
-        transition="all 0.2s ease-in-out"
-      >
-        <Heading fontWeight="bold" as="h3">
-          <Link href={href} isExternal>
-            {title} <ExternalLinkIcon mb={1} />
-          </Link>
-        </Heading>
-        <Text>{children}</Text>
-      </Box>
-    </motion.div>
   );
 };
 
@@ -104,11 +57,23 @@ export default function Home() {
           ever) with lubricated cream switches.
           <br />
           <ButtonGroup mt={4} spacing={4}>
-            <Button colorScheme="blue" variant="solid" onClick={onCopy}>
+            <Button
+              colorScheme="blue"
+              variant="solid"
+              _hover={{
+                transform: "translateY(-2px)",
+                boxShadow:
+                  "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 8px -1px rgba(0, 0, 0, 0.06)",
+              }}
+              onClick={onCopy}
+            >
               {hasCopied ? "Copied!" : "@ Email"}
             </Button>
-            <Button colorScheme="blue" variant="link">
-              Github
+            <Button
+              colorScheme="blue"
+              variant="link"
+            >
+              <Link href="https://github.com/r-jo" isExternal>Github</Link>
             </Button>
           </ButtonGroup>
         </Section>
