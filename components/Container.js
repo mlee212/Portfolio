@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import ActiveLink from "./ActiveLink";
 import { useRouter } from "next/router";
 import { Footer } from "./Footer";
 import { Box, Button, ButtonGroup, Flex, useColorMode } from "@chakra-ui/core";
@@ -31,6 +32,19 @@ export default function Container({ children, main }) {
 
   return (
     <>
+      <style jsx>{`
+        .nav-link {
+          text-decoration: none;
+        }
+        .nav-link:hover{
+          text-decoration: underline;
+        }
+        .active {
+          font-weight: bold;
+          text-decoration: none;
+        }
+        
+      `}</style>
       <Box
         bg={bgColor[colorMode]}
         transition="background-color 0.2s ease-in-out"
@@ -53,7 +67,7 @@ export default function Container({ children, main }) {
           flexDirection="row"
           justifyContent="space-between"
           alignItems="center"
-          maxWidth="55rem"
+          maxWidth="50rem"
           width="100%"
           bg={navBgColor[colorMode]}
           as="nav"
@@ -66,26 +80,27 @@ export default function Container({ children, main }) {
           <Button p={1} borderRadius="50%" onClick={toggleColorMode}>
             {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
           </Button>
-          <ButtonGroup spacing={1}>
-            <Link href="/">
-              <Button variant="ghost">Home</Button>
-            </Link>
+          <ButtonGroup spacing={5}>
+            <ActiveLink activeClassName="active" href="/">
+              <a className="nav-link">Home</a>
+            </ActiveLink>
 
-            <Link href="/projects">
-              <Button variant="ghost">Projects</Button>
-            </Link>
+            <ActiveLink activeClassName="active" href="/projects">
+              <a className="nav-link">Projects</a>
+            </ActiveLink>
 
-            <Link href="/journal">
-              <Button variant="ghost">Journal</Button>
-            </Link>
+            <ActiveLink activeClassName="active" href="/journal">
+              <a className="nav-link">Journal</a>
+            </ActiveLink>
           </ButtonGroup>
         </StickyNav>
         <Box
-          maxW="45rem"
+          maxW="40rem"
           p="0 2rem"
           m="3rem auto 6rem"
           my={50}
           lineHeight="1.6"
+          fontSize="lg"
         >
           {children}
           {!main && (
