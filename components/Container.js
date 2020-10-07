@@ -6,6 +6,7 @@ import { Footer } from "./Footer";
 import { Box, Button, ButtonGroup, Flex, useColorMode } from "@chakra-ui/core";
 import { ChevronLeftIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
 const name = "Rajbir";
 export const siteTitle = "Rajbir | Portfolio";
@@ -36,14 +37,13 @@ export default function Container({ children, main }) {
         .nav-link {
           text-decoration: none;
         }
-        .nav-link:hover{
+        .nav-link:hover {
           text-decoration: underline;
         }
         .active {
           font-weight: bold;
           text-decoration: none;
         }
-        
       `}</style>
       <Box
         bg={bgColor[colorMode]}
@@ -102,15 +102,31 @@ export default function Container({ children, main }) {
           lineHeight="1.6"
           fontSize="lg"
         >
-          {children}
-          {!main && (
-            <Link href="/journal">
-              <Button variant="solid" fontWeight="medium" my={2}>
-                <ChevronLeftIcon />
-                Go back
-              </Button>
-            </Link>
-          )}
+          <motion.div
+            key={router.route}
+            initial="pageInitial"
+            animate="pageAnimate"
+            variants={{
+              pageInitial: {
+                opacity: 0,
+                x: -10,
+              },
+              pageAnimate: {
+                opacity: 1,
+                x: 0,
+              },
+            }}
+          >
+            {children}
+            {!main && (
+              <Link href="/journal">
+                <Button variant="solid" fontWeight="medium" my={2}>
+                  <ChevronLeftIcon />
+                  Go back
+                </Button>
+              </Link>
+            )}
+          </motion.div>
         </Box>
         <Footer />
       </Box>

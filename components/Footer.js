@@ -17,7 +17,7 @@ export const Footer = () => {
   const { colorMode } = useColorMode();
   const bgColor = {
     light: "#f9f9f9",
-    dark: "#090909",
+    dark: "#111",
   };
   return (
     <>
