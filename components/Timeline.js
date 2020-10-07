@@ -12,25 +12,14 @@ import {
   Stack,
   Divider,
   Code,
-  Link,
 } from "@chakra-ui/core";
 import { StarIcon, ChevronDownIcon } from "@chakra-ui/icons";
-
-const YearDivider = () => {
-  const { colorMode } = useColorMode();
-  const borderColor = {
-    light: "gray.400",
-    dark: "gray.500",
-  };
-
-  return <Divider borderColor={borderColor[colorMode]} my={4} w="100%" />;
-};
 
 const TimelineStep = ({ title, children }) => {
   const { colorMode } = useColorMode();
   const color = {
-    light: "gray.700",
-    dark: "gray.400",
+    light: "#090909",
+    dark: "#f9f9f9",
   };
 
   return (
@@ -50,7 +39,7 @@ const TimelineStep = ({ title, children }) => {
 
 const FullTimeline = () => (
   <>
-    <Divider my={2}/>
+    <Divider my={2} />
     <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
       2018
     </Heading>
@@ -66,7 +55,7 @@ const FullTimeline = () => (
         Peace out high school lunches.
       </TimelineStep>
     </List>
-    <Divider my={2}/>
+    <Divider my={2} />
     <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
       2017
     </Heading>
@@ -77,7 +66,7 @@ const FullTimeline = () => (
         on.
       </TimelineStep>
     </List>
-    <Divider my={2}/>
+    <Divider my={2} />
     <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
       2015
     </Heading>
@@ -87,7 +76,7 @@ const FullTimeline = () => (
         Cydia tweaks.
       </TimelineStep>
     </List>
-    <Divider my={2}/>
+    <Divider my={2} />
     <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
       2012
     </Heading>
@@ -98,7 +87,7 @@ const FullTimeline = () => (
         up trying to take it apart and cracked the screen :(.
       </TimelineStep>
     </List>
-    <Divider my={2}/>
+    <Divider my={2} />
     <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
       2000
     </Heading>
@@ -120,7 +109,7 @@ const Timeline = () => {
       mt={8}
     >
       <Heading as="h1" lineHeight={1}>
-        What I've Been Up To
+        Where I've Been
       </Heading>
       <Heading as="h3" size="lg" fontWeight="bold" letterSpacing="tighter">
         2020
@@ -148,7 +137,7 @@ const Timeline = () => {
           here.)
         </TimelineStep>
       </List>
-      <Divider my={2}/>
+      <Divider my={2} />
       <Heading
         as="h3"
         size="lg"

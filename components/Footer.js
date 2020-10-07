@@ -1,14 +1,14 @@
 import {
-  Button,
   Box,
-  ButtonGroup,
   useClipboard,
   Link,
   useColorMode,
   Heading,
   Text,
-  Grid,
   SimpleGrid,
+  ButtonGroup,
+  Button,
+  Stack,
 } from "@chakra-ui/core";
 
 export const Footer = () => {
@@ -17,7 +17,7 @@ export const Footer = () => {
   const { colorMode } = useColorMode();
   const bgColor = {
     light: "#f9f9f9",
-    dark: "#000",
+    dark: "#090909",
   };
   return (
     <>
@@ -26,36 +26,35 @@ export const Footer = () => {
         transition="background-color 0.2s ease-in-out"
       >
         <SimpleGrid
-          maxW="45rem"
+          maxW="40rem"
           p="3rem 2rem 3rem"
           m="0rem auto 0rem"
           columns={2}
           spacingX="40px"
-          minChildWidth="300px"
+          minChildWidth="250px"
         >
           <Box>
-            <Heading as="h3">Why You're Here.</Heading>
+            <Heading as="h3">Don't be a Stranger</Heading>
             <Text>
-              Doesn't matter! I'm always up for making new friends. Learn more
-              and always feel free to contact me.
+              I don't bite anything except really good food. I'm always up for
+              making new friends. Learn more and always feel free to contact me.
             </Text>
             <Text color="gray.500" fontSize="sm">
               {new Date().getFullYear()} &#169; Rajbir Johar
             </Text>
           </Box>
-          <Box>
-            <Heading as="h3">Don't be a Stranger.</Heading>
-            <Text>I don't bite anything except really good food.</Text>
-            <ButtonGroup my={4} spacing={4}>
-              <Button colorScheme="green" variant="solid" onClick={onCopy}>
-                {hasCopied ? "Copied!" : "Email"}
+          <ButtonGroup>
+            <Stack direction={"column"} spacing={3}>
+              <Heading as="h3">Useful Links</Heading>
+              <Button colorScheme="blue" variant="solid" onClick={onCopy}>
+                {hasCopied ? "Copied!" : "@ Email"}
               </Button>
-              <Button colorScheme="green" variant="link">
+              <Button colorScheme="blue" variant="link">
                 <Link href="https://github.com/r-jo" isExternal>
                   Github
                 </Link>
               </Button>
-              <Button colorScheme="green" variant="link">
+              <Button colorScheme="blue" variant="link">
                 <Link
                   href="https://www.linkedin.com/in/rajbirjohar/"
                   isExternal
@@ -63,8 +62,8 @@ export const Footer = () => {
                   Linkedin
                 </Link>
               </Button>
-            </ButtonGroup>
-          </Box>
+            </Stack>
+          </ButtonGroup>
         </SimpleGrid>
       </Box>
     </>
