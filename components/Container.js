@@ -30,10 +30,10 @@ export default function Container({ children, main }) {
     light: "rgba(255, 255, 255, 0.8)",
     dark: "rgba(0, 0, 0, 0.8)",
   };
-  const logo ={
+  const logo = {
     light: "#000",
     dark: "#fff",
-  }
+  };
 
   return (
     <>
@@ -86,7 +86,15 @@ export default function Container({ children, main }) {
           px={8}
           mx="auto"
         >
-          <Box maxH="40px" maxW="40px" py={0} px={2} borderRadius="5px" bg={logo[colorMode]} color={bgColor[colorMode]}>
+          <Box
+            maxH="40px"
+            maxW="40px"
+            py={0}
+            px={2}
+            borderRadius="5px"
+            bg={logo[colorMode]}
+            color={bgColor[colorMode]}
+          >
             <ActiveLink href="/">
               <a className="logo">R</a>
             </ActiveLink>
@@ -147,8 +155,8 @@ export default function Container({ children, main }) {
           <Button
             colorScheme="blue"
             position="fixed"
-            bottom="20"
-            right="20"
+            bottom="10"
+            right="10"
             boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
             p={1}
             borderRadius="50%"
