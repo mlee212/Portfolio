@@ -22,12 +22,12 @@ export default function Container({ children, main }) {
   const router = useRouter();
   const { colorMode, toggleColorMode } = useColorMode();
   const bgColor = {
-    light: "#fff",
-    dark: "#080808",
+    light: "#ffffff",
+    dark: "#000000",
   };
   const navBgColor = {
     light: "rgba(255, 255, 255, 0.8)",
-    dark: "rgba(8, 8, 8, 0.8)",
+    dark: "rgba(0, 0, 0, 0.8)",
   };
 
   return (
@@ -67,7 +67,7 @@ export default function Container({ children, main }) {
           flexDirection="row"
           justifyContent="space-between"
           alignItems="center"
-          maxWidth="50rem"
+          maxWidth="40rem"
           width="100%"
           bg={navBgColor[colorMode]}
           as="nav"
