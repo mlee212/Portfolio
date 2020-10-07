@@ -10,6 +10,7 @@ import {
   useClipboard,
   useColorMode,
   Box,
+  Link,
 } from "@chakra-ui/core";
 
 const Section = ({ title, children }) => {
@@ -17,7 +18,7 @@ const Section = ({ title, children }) => {
 
   return (
     <Box>
-      <Heading fontWeight="bold" as="h1" my={6}>
+      <Heading textAlign="center" fontWeight="bold" as="h1" my={6}>
         {title}
       </Heading>
       <Text>{children}</Text>
@@ -33,41 +34,32 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <Box
-        minH="85vh"
-        display="flex"
-        justifyContent="center"
-        flexDirection="column"
-      >
+      <Box display="flex" justifyContent="center" flexDirection="column">
         <Section title="Hello you. I'm Rajbir.">
-          I like to call myself a creative addict, visual storyteller, and
-          keyboard enthusiast.
+          I'm a frontend web developer based in Southern California 😎 studying
+          Computer Science at the University of California, Riverside 🐻. I'm
+          currently working on{" "}
+          <Link href="https://habitle.com" color="#0070f3" isExternal>
+            Habitle
+          </Link>
+          , a new app that generates a heatmap which promotes positive habits ✅.
           <br />
           <br />
-          Based in Southern California.
+          If I'm not coding, you can catch me perfecting the art of the grilled
+          cheese 🥪 or building bespoke keyboards ⌨️. Gotta invest in your tool of
+          trade, am I right? I'm typing on my Iron165 (my favorite board ever)
+          with lubricated cream switches.
         </Section>
-        <ButtonGroup mt={4} spacing={4}>
-          <Button colorScheme="blue" variant="solid" onClick={onCopy}>
+        <ButtonGroup mt={4} spacing={4} justifyContent="center">
+          <Button colorScheme="green" variant="solid" onClick={onCopy}>
             {hasCopied ? "Copied!" : "Email"}
           </Button>
-          <Button colorScheme="blue" variant="link">
+          <Button colorScheme="green" variant="link">
             Github
           </Button>
         </ButtonGroup>
       </Box>
-      <Section title="A Bit About Me">
-        I am a rising Junior attending the University of California, Riverside
-        studying Computer science. I participate in multiple hackathon web
-        development teams and love designing interfaces.
-        <br />
-        <br />
-        In my spare time I practice perfecting the art of the grilled cheese and
-        experiment with building new bespoke mechanical keyboards. Currently I
-        am typing on my Iron165 (my favorite board ever) built with cream
-        switches lubricated with Krytox 205g0 along with Durock stabilizers. I
-        vibe with cool typography and my favorite font is Inter. I aim to travel
-        all over the world.
-      </Section>
+
       <Timeline />
       <Heading fontWeight="bold" as="h1" my={5}>
         My Music Right Now

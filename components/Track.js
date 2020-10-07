@@ -22,7 +22,7 @@ const Track = (track) => {
       <Text fontSize="sm" fontWeight="bold" color={rankingColor[colorMode]}>
         {track.ranking}
       </Text>
-      <Stack spacing={0} ml={3}>
+      <Stack ml={3}>
         <Link
           fontWeight="medium"
           maxWidth="100%"
