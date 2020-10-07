@@ -1,25 +1,7 @@
 import Head from "next/head";
 import Container, { siteTitle } from "../components/Container";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Box,
-  Heading,
-  Link,
-  Badge,
-  Stack,
-  Text,
-  Code,
-  Image,
-  List,
-  ListItem,
-  useColorMode,
-} from "@chakra-ui/core";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { motion } from "framer-motion";
+import ProjectCard from "../components/ProjectCard";
+import { Heading, Badge, Stack, Text, Code } from "@chakra-ui/core";
 
 // const AccordionSection = ({ title, href, children }) => {
 //   return (
@@ -39,51 +21,6 @@ import { motion } from "framer-motion";
 //     </AccordionItem>
 //   );
 // };
-
-const ProjectCard = ({ title, children, href }) => {
-  const { colorMode } = useColorMode();
-  const bgColor = {
-    light: "#fff",
-    dark: "#111",
-  };
-  const bxShadow = {
-    light:
-      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-    dark:
-      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(8, 8, 8, 0.4)",
-  };
-
-  return (
-    <motion.div
-      whileTap={{ scale: 1 }}
-      whileHover={{
-        position: "relative",
-        zIndex: 1,
-        background: "transparent",
-        scale: [1, 1.035, 1.025],
-        transition: {
-          duration: 0.2,
-        },
-      }}
-    >
-      <Box
-        bg={bgColor[colorMode]}
-        boxShadow={bxShadow[colorMode]}
-        borderRadius="7px"
-        px={6}
-        py={1}
-        transition="all 0.2s ease-in-out"
-      >
-        <Heading fontWeight="bold" as="h3">
-          <Link href={href} isExternal>
-            {title} <ExternalLinkIcon mb={1} />
-          </Link>
-        </Heading>
-        <Text>{children}</Text>
-      </Box>
-    </motion.div>
-  );
-};
 
 export default function Projects() {
   return (
@@ -147,8 +84,9 @@ export default function Projects() {
       </Heading>
       <Stack spacing={4}>
         <ProjectCard title="Rho Shell" href="https://github.com/r-jo/rhoshell">
-          A CLI written in C++ able to perform the core functions of a normal
-          terminal.
+          Rho Shell is a program that is aimed to replicate the standard
+          functions of a shell using a Command Line Interface (CLI), written
+          primarily in C++.
           <Stack isInline mt={4}>
             <Badge colorScheme="yellow">C++</Badge>
             <Badge colorScheme="gray">Git</Badge>

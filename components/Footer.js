@@ -8,7 +8,6 @@ import {
   SimpleGrid,
   ButtonGroup,
   Button,
-  Stack,
 } from "@chakra-ui/core";
 
 export const Footer = () => {
@@ -26,11 +25,11 @@ export const Footer = () => {
         transition="background-color 0.2s ease-in-out"
       >
         <SimpleGrid
-          maxW="40rem"
+          maxW="50rem"
           p="3rem 2rem 3rem"
           m="0rem auto 0rem"
-          columns={2}
-          spacingX="40px"
+          columns={3}
+          spacingX="50px"
           minChildWidth="250px"
         >
           <Box>
@@ -43,10 +42,19 @@ export const Footer = () => {
               {new Date().getFullYear()} &#169; Rajbir Johar
             </Text>
           </Box>
-          <ButtonGroup>
-            <Stack direction={"column"} spacing={3}>
-              <Heading as="h3">Useful Links</Heading>
-              <Button colorScheme="blue" variant="solid" onClick={onCopy}>
+          <Box>
+            <Heading as="h3">Useful Links</Heading>
+            <ButtonGroup spacing={3}>
+              <Button
+                colorScheme="blue"
+                variant="solid"
+                _hover={{
+                  transform: "translateY(-2px)",
+                  boxShadow:
+                    "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 4px 8px -1px rgba(0, 0, 0, 0.06)",
+                }}
+                onClick={onCopy}
+              >
                 {hasCopied ? "Copied!" : "@ Email"}
               </Button>
               <Button colorScheme="blue" variant="link">
@@ -62,8 +70,17 @@ export const Footer = () => {
                   Linkedin
                 </Link>
               </Button>
-            </Stack>
-          </ButtonGroup>
+
+              <Button colorScheme="blue" variant="link">
+                <Link
+                  href="https://open.spotify.com/user/7btb9b9wefyiocyrfto5ayc83?si=ASEIwohWQuezjR07gRbnIw"
+                  isExternal
+                >
+                  Spotify
+                </Link>
+              </Button>
+            </ButtonGroup>
+          </Box>
         </SimpleGrid>
       </Box>
     </>

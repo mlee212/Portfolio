@@ -1,59 +1,27 @@
 import Head from "next/head";
 import Link from "next/link";
-import ActiveLink from "./ActiveLink";
 import { useRouter } from "next/router";
+import { Nav } from "./Nav";
 import { Footer } from "./Footer";
+import { DarkMode } from "./DarkMode";
 import { Box, Button, ButtonGroup, Flex, useColorMode } from "@chakra-ui/core";
-import { ChevronLeftIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-import styled from "@emotion/styled";
+import { ChevronLeftIcon } from "@chakra-ui/icons";
+
 import { motion } from "framer-motion";
 
 const name = "Rajbir";
 export const siteTitle = "Rajbir | Portfolio";
 
-const StickyNav = styled(Flex)`
-  position: sticky;
-  z-index: 5;
-  top: 0;
-  backdrop-filter: saturate(180%) blur(20px);
-  transition: background-color 0.2s ease-in-out;
-`;
-
 export default function Container({ children, main }) {
   const router = useRouter();
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
   const bgColor = {
     light: "#ffffff",
     dark: "#000000",
   };
-  const navBgColor = {
-    light: "rgba(255, 255, 255, 0.8)",
-    dark: "rgba(0, 0, 0, 0.8)",
-  };
-  const logo = {
-    light: "#000",
-    dark: "#fff",
-  };
 
   return (
     <>
-      <style jsx>{`
-        .logo {
-          text-decoration: none;
-          font-weight: 700;
-          font-size: 18px;
-        }
-        .nav-link {
-          text-decoration: none;
-        }
-        .nav-link:hover {
-          text-decoration: underline;
-        }
-        .active {
-          font-weight: bold;
-          text-decoration: none;
-        }
-      `}</style>
       <Box
         bg={bgColor[colorMode]}
         transition="background-color 0.2s ease-in-out"
@@ -62,7 +30,7 @@ export default function Container({ children, main }) {
           {/* <link rel="icon" href="/favicon.ico" /> */}
           <meta
             name="description"
-            content="A portfolio for my awesome projects and ideas using Next.js"
+            content="A portfolio for my neat projects and ideas using Next.js"
           />
           <meta
             property="og:image"
@@ -72,47 +40,7 @@ export default function Container({ children, main }) {
           />
           <meta name="og:title" content={siteTitle} />
         </Head>
-        <StickyNav
-          flexDirection="row"
-          justifyContent="space-between"
-          alignItems="center"
-          maxWidth="40rem"
-          width="100%"
-          bg={navBgColor[colorMode]}
-          as="nav"
-          py={5}
-          mt={[0, 0]}
-          mb={5}
-          px={8}
-          mx="auto"
-        >
-          <Box
-            maxH="40px"
-            maxW="40px"
-            py={0}
-            px={2}
-            borderRadius="5px"
-            bg={logo[colorMode]}
-            color={bgColor[colorMode]}
-          >
-            <ActiveLink href="/">
-              <a className="logo">R</a>
-            </ActiveLink>
-          </Box>
-          <ButtonGroup spacing={5}>
-            <ActiveLink activeClassName="active" href="/">
-              <a className="nav-link">Home</a>
-            </ActiveLink>
-
-            <ActiveLink activeClassName="active" href="/projects">
-              <a className="nav-link">Projects</a>
-            </ActiveLink>
-
-            <ActiveLink activeClassName="active" href="/journal">
-              <a className="nav-link">Journal</a>
-            </ActiveLink>
-          </ButtonGroup>
-        </StickyNav>
+        <Nav />
         <Box
           maxW="40rem"
           p="0 2rem"
@@ -142,7 +70,6 @@ export default function Container({ children, main }) {
             }}
           >
             {children}
-
             {!main && (
               <Link href="/journal">
                 <Button variant="solid" fontWeight="medium" my={2}>
@@ -152,20 +79,8 @@ export default function Container({ children, main }) {
               </Link>
             )}
           </motion.div>
-          <Button
-            colorScheme="blue"
-            position="fixed"
-            bottom="10"
-            right="10"
-            boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-            p={1}
-            borderRadius="50%"
-            onClick={toggleColorMode}
-            zIndex="10"
-          >
-            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-          </Button>
         </Box>
+        <DarkMode />
         <Footer />
       </Box>
     </>
