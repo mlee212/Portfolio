@@ -1,4 +1,4 @@
-import ActiveLink from "./ActiveLink";
+import Link from "next/link";
 import { Box, useColorMode } from "@chakra-ui/core";
 
 export default function Logo() {
@@ -30,9 +30,9 @@ export default function Logo() {
       fontSize="18px"
       fontWeight="600"
     >
-      <ActiveLink href="/">
+      <Link href="/">
         <a className="logo">R</a>
-      </ActiveLink>
+      </Link>
     </Box>
   );
 }
