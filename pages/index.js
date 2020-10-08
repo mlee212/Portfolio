@@ -47,8 +47,7 @@ export default function Home() {
           <Link href="https://habitle.com" color="#0070f3" isExternal>
             Habitle
           </Link>
-          , a new app that generates a heatmap which promotes positive habits
-          ✅.
+          , a new app that generates a heatmap which promotes positive habits.
           <br />
           <br />
           If I'm not coding, you can catch me perfecting the art of the grilled
@@ -69,11 +68,10 @@ export default function Home() {
             >
               {hasCopied ? "Copied!" : "@ Email"}
             </Button>
-            <Button
-              colorScheme="blue"
-              variant="link"
-            >
-              <Link href="https://github.com/r-jo" isExternal>Github</Link>
+            <Button colorScheme="blue" variant="link">
+              <Link href="https://github.com/r-jo" isExternal>
+                Github
+              </Link>
             </Button>
           </ButtonGroup>
         </Section>
@@ -83,6 +81,7 @@ export default function Home() {
               A minimal and powerful web app that generates a heatmap to visual
               progress to promote a positive and consistent lifestyle.
               <Stack isInline mt={4}>
+                <Badge colorScheme="green">React</Badge>
                 <Badge colorScheme="orange">JS</Badge>
                 <Badge colorScheme="blue">HTML</Badge>
                 <Badge colorScheme="red">CSS</Badge>

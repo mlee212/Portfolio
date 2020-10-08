@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Container, { siteTitle } from "../components/Container";
 import ProjectCard from "../components/ProjectCard";
-import { Heading, Badge, Stack, Text, Code } from "@chakra-ui/core";
+import { Heading, Badge, Stack, Text, Wrap, Code } from "@chakra-ui/core";
 
 // const AccordionSection = ({ title, href, children }) => {
 //   return (
@@ -33,8 +33,31 @@ export default function Projects() {
       </Heading>
       <Text>
         Here a collection of my best work where I demonstrate my skills as a
-        developer and a creator.
+        developer and a creator. Some of the technologies I currently use are:
       </Text>
+      <Wrap justify="center" mt={4}>
+        <Badge fontSize="lg" colorScheme="blue">
+          Next
+        </Badge>
+        <Badge fontSize="lg" colorScheme="green">
+          React
+        </Badge>
+        <Badge fontSize="lg" colorScheme="orange">
+          JS
+        </Badge>
+        <Badge fontSize="lg" colorScheme="purple">
+          HTML
+        </Badge>
+        <Badge fontSize="lg" colorScheme="red">
+          CSS
+        </Badge>
+        <Badge fontSize="lg" colorScheme="yellow">
+          C++
+        </Badge>
+        <Badge fontSize="lg" colorScheme="gray">
+          Git
+        </Badge>
+      </Wrap>
       <Heading size="lg" my={4}>
         Currently working on:
       </Heading>
@@ -43,8 +66,9 @@ export default function Projects() {
           A minimal and powerful web app that generates a heatmap to visual
           progress to promote a positive and consistent lifestyle.
           <Stack isInline mt={4}>
+            <Badge colorScheme="green">React</Badge>
             <Badge colorScheme="orange">JS</Badge>
-            <Badge colorScheme="blue">HTML</Badge>
+            <Badge colorScheme="purple">HTML</Badge>
             <Badge colorScheme="red">CSS</Badge>
             <Badge colorScheme="gray">Git</Badge>
           </Stack>
@@ -98,7 +122,7 @@ export default function Projects() {
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React</Badge>
             <Badge colorScheme="orange">JS</Badge>
-            <Badge colorScheme="blue">HTML</Badge>
+            <Badge colorScheme="purple">HTML</Badge>
             <Badge colorScheme="red">CSS</Badge>
             <Badge colorScheme="gray">Git</Badge>
           </Stack>
@@ -109,7 +133,7 @@ export default function Projects() {
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React</Badge>
             <Badge colorScheme="orange">JS</Badge>
-            <Badge colorScheme="blue">HTML</Badge>
+            <Badge colorScheme="purple">HTML</Badge>
             <Badge colorScheme="red">CSS</Badge>
             <Badge colorScheme="gray">Git</Badge>
           </Stack>
@@ -120,7 +144,7 @@ export default function Projects() {
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React</Badge>
             <Badge colorScheme="orange">JS</Badge>
-            <Badge colorScheme="blue">HTML</Badge>
+            <Badge colorScheme="purple">HTML</Badge>
             <Badge colorScheme="red">CSS</Badge>
             <Badge colorScheme="gray">Git</Badge>
           </Stack>
