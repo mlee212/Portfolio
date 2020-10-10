@@ -2,7 +2,15 @@ import Container from "../../components/Container";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/Date";
 import Head from "next/head";
-import { Heading, Text, Box, useColorMode } from "@chakra-ui/core";
+import {
+  Heading,
+  Text,
+  Box,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+} from "@chakra-ui/core";
 
 export default function Post({ postData }) {
   return (
@@ -12,6 +20,17 @@ export default function Post({ postData }) {
           <title>{postData.title}</title>
         </Head>
         <article>
+          <Breadcrumb>
+            <BreadcrumbItem>
+              <BreadcrumbLink>Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem>
+              <BreadcrumbLink>Journal</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink>{postData.title}</BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
           <Heading as="h1" mb={4}>
             {postData.title}
           </Heading>
@@ -19,7 +38,9 @@ export default function Post({ postData }) {
             {postData.author} / <Date dateString={postData.date} />
           </Text>
           <Text mb={4}>{postData.excerpt}</Text>
-          <Text><div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} /></Text>
+          <Text>
+            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          </Text>
         </article>
       </Box>
     </Container>
