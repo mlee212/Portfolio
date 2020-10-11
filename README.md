@@ -4,7 +4,7 @@
 
 ## Purpose
 
-A collection of my awesome projects that I've finished and am currently working on. Built with [Next.js](https://nextjs.org/) and styled with [Chakra UI](https://next.chakra-ui.com/).
+A collection of my awesome projects that I've finished and am currently working on. Built with [Next.js](https://nextjs.org/), styled with [Chakra UI](https://next.chakra-ui.com/), and animated with [framer-motion](https://www.framer.com/api/motion/)
 
 ### Notes
 
