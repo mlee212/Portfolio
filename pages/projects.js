@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Container, { siteTitle } from "../components/Container";
 import ProjectCard from "../components/ProjectCard";
-import { Heading, Badge, Stack, Text, Wrap, Code } from "@chakra-ui/core";
+import { Heading, Badge, Stack, Text, Wrap } from "@chakra-ui/core";
 
 // const AccordionSection = ({ title, href, children }) => {
 //   return (

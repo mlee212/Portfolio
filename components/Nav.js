@@ -2,6 +2,7 @@ import ActiveLink from "./ActiveLink";
 import Logo from "./Logo";
 import { ButtonGroup, Flex, useColorMode } from "@chakra-ui/core";
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
 const StickyNav = styled(Flex)`
   position: sticky;
