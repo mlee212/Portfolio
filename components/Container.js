@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 const name = "Rajbir";
 export const siteTitle = "Rajbir | Portfolio";
 
-export default function Container({ children, main }) {
+export default function Container({ children, main, journal }) {
   const router = useRouter();
   const { colorMode } = useColorMode();
   const bgColor = {
