@@ -9,7 +9,6 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbSeparator,
 } from "@chakra-ui/core";
 
 export default function Post({ postData }) {

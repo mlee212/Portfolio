@@ -3,7 +3,6 @@ import Logo from "./Logo";
 import { ButtonGroup, Flex, useColorMode } from "@chakra-ui/core";
 import styled from "@emotion/styled";
 
-
 const StickyNav = styled(Flex)`
   position: sticky;
   z-index: 5;
