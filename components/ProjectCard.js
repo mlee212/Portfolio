@@ -6,13 +6,17 @@ export default function ProjectCard({ title, children, href }) {
   const { colorMode } = useColorMode();
   const bgColor = {
     light: "#fff",
-    dark: "#111",
+    dark: "#383b40",
   };
+  const textColor = {
+    light:"#333",
+    dark: "rgba(240,240,244, 0.5)",
+  }
   const bxShadow = {
     light:
       "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
     dark:
-      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(8, 8, 8, 0.4)",
+      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
   };
 
   return (
@@ -41,7 +45,7 @@ export default function ProjectCard({ title, children, href }) {
             {title} <ExternalLinkIcon mb={1} />
           </Link>
         </Heading>
-        <Text>{children}</Text>
+        <Text color={textColor[colorMode]}>{children}</Text>
       </Box>
     </motion.div>
   );

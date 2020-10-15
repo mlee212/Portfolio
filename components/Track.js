@@ -7,7 +7,7 @@ const Track = (track) => {
   const { colorMode } = useColorMode();
   const rankingColor = {
     light: "gray.400",
-    dark: "gray.600",
+    dark: "rgba(240,240,244,0.32)",
   };
 
   return (
@@ -35,7 +35,7 @@ const Track = (track) => {
           {track.title}
         </Link>
         <Text
-          color="gray.500"
+          color={rankingColor[colorMode]}
           mb={4}
           maxWidth="100%"
           whiteSpace="wrap"

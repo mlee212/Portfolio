@@ -13,9 +13,16 @@ import {
   Link,
   Stack,
   Badge,
+  useColorMode,
 } from "@chakra-ui/core";
 
 const Section = ({ title, children }) => {
+  const { colorMode } = useColorMode();
+  const textColor = {
+    light: "#333",
+    dark: "rgba(240,240,244,0.5)",
+  };
+
   return (
     <Box
       minH="50vh"
@@ -26,12 +33,17 @@ const Section = ({ title, children }) => {
       <Heading fontWeight="bold" as="h1" my={4}>
         {title}
       </Heading>
-      <Text>{children}</Text>
+      <Text color={textColor[colorMode]}>{children}</Text>
     </Box>
   );
 };
 
 export default function Home() {
+  const { colorMode } = useColorMode();
+  const linkColor = {
+    light: "#000",
+    dark: "#fff",
+  };
   const [value] = React.useState("rajbirsjohar@gmail.com");
   const { onCopy, hasCopied } = useClipboard(value);
   return (
@@ -44,7 +56,11 @@ export default function Home() {
           I'm a frontend web developer based in Southern California 😎 studying
           Computer Science at the University of California, Riverside 🐻. I'm
           currently working on{" "}
-          <Link href="https://habitle.com" color="#0070f3" isExternal>
+          <Link
+            href="https://habitle.com"
+            color={linkColor[colorMode]}
+            isExternal
+          >
             Habitle
           </Link>
           , a new app that generates a heatmap which promotes positive habits.
@@ -55,9 +71,9 @@ export default function Home() {
           of trade, am I right? I'm typing on my Iron165 (my favorite board
           ever) with lubricated cream switches.
           <br />
-          <ButtonGroup mt={4} spacing={4}>
+          <ButtonGroup mt={4} spacing={1}>
             <Button
-              colorScheme="blue"
+              color={linkColor[colorMode]}
               variant="solid"
               _hover={{
                 transform: "translateY(-2px)",
@@ -68,50 +84,50 @@ export default function Home() {
             >
               {hasCopied ? "Copied!" : "@ Email"}
             </Button>
-            <Button colorScheme="blue" variant="link">
-              <Link href="https://github.com/r-jo" isExternal>
-                Github
-              </Link>
-            </Button>
+            <Link href="https://github.com/r-jo" isExternal>
+              <Button variant="ghost">Github</Button>
+            </Link>
           </ButtonGroup>
         </Section>
-        <Section title="Featured Projects">
-          <Stack spacing={4}>
-            <ProjectCard title="Habitle" href="https://habitle.com">
-              A minimal and powerful web app that generates a heatmap to visual
-              progress to promote a positive and consistent lifestyle.
-              <Stack isInline mt={4}>
-                <Badge colorScheme="green">React</Badge>
-                <Badge colorScheme="orange">JS</Badge>
-                <Badge colorScheme="blue">HTML</Badge>
-                <Badge colorScheme="red">CSS</Badge>
-                <Badge colorScheme="gray">Git</Badge>
-              </Stack>
-            </ProjectCard>
-            <ProjectCard title="Citrushack" href="https://citrushack.com">
-              The website used by hundreds of students to interact and
-              participate in the annual Citrushack hackathon. Now, fully online.
-              <Stack isInline mt={4}>
-                <Badge colorScheme="green">React</Badge>
-                <Badge colorScheme="orange">JS</Badge>
-                <Badge colorScheme="blue">HTML</Badge>
-                <Badge colorScheme="red">CSS</Badge>
-                <Badge colorScheme="gray">Git</Badge>
-              </Stack>
-            </ProjectCard>
-            <ProjectCard title="Biohack" href="https://biohackucr.com">
-              The website used by hundreds of students to interact and
-              participate in the annual Biohack hackathon. Now, fully online.
-              <Stack isInline mt={4}>
-                <Badge colorScheme="green">React</Badge>
-                <Badge colorScheme="orange">JS</Badge>
-                <Badge colorScheme="blue">HTML</Badge>
-                <Badge colorScheme="red">CSS</Badge>
-                <Badge colorScheme="gray">Git</Badge>
-              </Stack>
-            </ProjectCard>
-          </Stack>
-        </Section>
+
+        <Heading fontWeight="bold" as="h1" my={4}>
+          Featured Projects
+        </Heading>
+        <Stack spacing={4}>
+          <ProjectCard title="Habitle" href="https://habitle.com">
+            A minimal and powerful web app that generates a heatmap to visual
+            progress to promote a positive and consistent lifestyle.
+            <Stack isInline mt={4}>
+              <Badge colorScheme="green">React</Badge>
+              <Badge colorScheme="orange">JS</Badge>
+              <Badge colorScheme="blue">HTML</Badge>
+              <Badge colorScheme="red">CSS</Badge>
+              <Badge colorScheme="gray">Git</Badge>
+            </Stack>
+          </ProjectCard>
+          <ProjectCard title="Citrushack" href="https://citrushack.com">
+            The website used by hundreds of students to interact and participate
+            in the annual Citrushack hackathon. Now, fully online.
+            <Stack isInline mt={4}>
+              <Badge colorScheme="green">React</Badge>
+              <Badge colorScheme="orange">JS</Badge>
+              <Badge colorScheme="blue">HTML</Badge>
+              <Badge colorScheme="red">CSS</Badge>
+              <Badge colorScheme="gray">Git</Badge>
+            </Stack>
+          </ProjectCard>
+          <ProjectCard title="Biohack" href="https://biohackucr.com">
+            The website used by hundreds of students to interact and participate
+            in the annual Biohack hackathon. Now, fully online.
+            <Stack isInline mt={4}>
+              <Badge colorScheme="green">React</Badge>
+              <Badge colorScheme="orange">JS</Badge>
+              <Badge colorScheme="blue">HTML</Badge>
+              <Badge colorScheme="red">CSS</Badge>
+              <Badge colorScheme="gray">Git</Badge>
+            </Stack>
+          </ProjectCard>
+        </Stack>
       </Box>
       <Timeline />
       <Heading fontWeight="bold" as="h1" my={5}>
