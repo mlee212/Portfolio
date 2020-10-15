@@ -16,8 +16,8 @@ export default function Container({ children, main, journal }) {
   const router = useRouter();
   const { colorMode } = useColorMode();
   const bgColor = {
-    light: "#ffffff",
-    dark: "#000000",
+    light: "#fffafa",
+    dark: "#1f2023",
   };
 
   return (

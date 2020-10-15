@@ -2,7 +2,6 @@ import ActiveLink from "./ActiveLink";
 import Logo from "./Logo";
 import { ButtonGroup, Flex, useColorMode } from "@chakra-ui/core";
 import styled from "@emotion/styled";
-import { motion } from "framer-motion";
 
 const StickyNav = styled(Flex)`
   position: sticky;
@@ -15,12 +14,12 @@ const StickyNav = styled(Flex)`
 export function Nav() {
   const { colorMode } = useColorMode();
   const bgColor = {
-    light: "#fff",
-    dark: "#000",
+    light: "#fffafa",
+    dark: "#1f2023",
   };
   const navBgColor = {
-    light: "rgba(255, 255, 255, 0.8)",
-    dark: "rgba(0, 0, 0, 0.8)",
+    light: "rgba(255, 250, 250, 0.8)",
+    dark: "rgba(31, 32, 35, 0.8)",
   };
 
   return (

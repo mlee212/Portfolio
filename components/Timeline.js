@@ -19,14 +19,14 @@ const TimelineStep = ({ title, children }) => {
   const { colorMode } = useColorMode();
   const color = {
     light: "#090909",
-    dark: "#f9f9f9",
+    dark: "rgba(240,240,244,0.5)",
   };
 
   return (
     <ListItem>
       <Stack ml={2} mb={-2}>
         <Flex align="center" mb={-6}>
-          <StarIcon mr={2} color="green.300" />
+          <StarIcon mr={2} color="#f4b1af" />
           <Text fontWeight="bold">{title}</Text>
         </Flex>
         <Text color={color[colorMode]} pl={6}>
