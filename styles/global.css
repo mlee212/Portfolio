@@ -7,7 +7,16 @@ html {
     font-family: "Inter var", sans-serif;
   }
 }
-
+@media (prefers-color-scheme: light) {
+  body{
+  background: #ffffff !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body{
+  background: #1f2023 !important;
+  }
+}
 h1 {
   font-size: 2em !important;
   font-weight: bold !important;

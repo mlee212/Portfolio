@@ -11,11 +11,6 @@ import {
 } from "@chakra-ui/core";
 
 export default function Projects() {
-  const { colorMode } = useColorMode();
-  const textColor = {
-    light: "#333",
-    dark: "rgba(240,240,244, 0.5)",
-  };
   return (
     <Container main>
       <Head>
@@ -24,7 +19,7 @@ export default function Projects() {
       <Heading fontWeight="bold" as="h1" my={5}>
         Projects
       </Heading>
-      <Text color={textColor[colorMode]}>
+      <Text>
         Here a collection of my best work where I demonstrate my skills as a
         developer and a creator. Some of the technologies I currently use are:
       </Text>

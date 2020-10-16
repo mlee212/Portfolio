@@ -3,8 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
-import { DarkMode } from "./DarkMode";
-import { Box, Button, ButtonGroup, Flex, useColorMode } from "@chakra-ui/core";
+import { Box, Button, useColorMode } from "@chakra-ui/core";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 
 import { motion } from "framer-motion";
@@ -16,7 +15,7 @@ export default function Container({ children, main, journal }) {
   const router = useRouter();
   const { colorMode } = useColorMode();
   const bgColor = {
-    light: "#fffafa",
+    light: "#ffffff",
     dark: "#1f2023",
   };
 
@@ -80,7 +79,6 @@ export default function Container({ children, main, journal }) {
             )}
           </motion.div>
         </Box>
-        <DarkMode />
         <Footer />
       </Box>
     </>

@@ -1,7 +1,9 @@
 import ActiveLink from "./ActiveLink";
 import Logo from "./Logo";
-import { ButtonGroup, Flex, useColorMode } from "@chakra-ui/core";
+import { Box, ButtonGroup, Flex, useColorMode } from "@chakra-ui/core";
 import styled from "@emotion/styled";
+
+import { DarkMode } from "./DarkMode";
 
 const StickyNav = styled(Flex)`
   position: sticky;
@@ -13,12 +15,8 @@ const StickyNav = styled(Flex)`
 
 export function Nav() {
   const { colorMode } = useColorMode();
-  const bgColor = {
-    light: "#fffafa",
-    dark: "#1f2023",
-  };
   const navBgColor = {
-    light: "rgba(255, 250, 250, 0.8)",
+    light: "rgba(255, 255, 255, 0.8)",
     dark: "rgba(31, 32, 35, 0.8)",
   };
 
@@ -27,7 +25,7 @@ export function Nav() {
       flexDirection="row"
       justifyContent="space-between"
       alignItems="center"
-      maxWidth="45rem"
+      maxWidth="50rem"
       width="100%"
       bg={navBgColor[colorMode]}
       as="nav"
@@ -38,7 +36,7 @@ export function Nav() {
       mx="auto"
     >
       <Logo />
-      <ButtonGroup spacing={5}>
+      <ButtonGroup alignItems="center" spacing={5}>
         <ActiveLink activeClassName="active" href="/">
           <a className="nav-link">Home</a>
         </ActiveLink>
@@ -50,6 +48,7 @@ export function Nav() {
         <ActiveLink activeClassName="active" href="/journal">
           <a className="nav-link">Journal</a>
         </ActiveLink>
+        <DarkMode />
       </ButtonGroup>
     </StickyNav>
   );

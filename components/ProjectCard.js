@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function ProjectCard({ title, children, href }) {
   const { colorMode } = useColorMode();
   const bgColor = {
-    light: "#fff",
+    light: "#fffafa",
     dark: "#383b40",
   };
   const textColor = {
