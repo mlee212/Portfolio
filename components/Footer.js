@@ -22,11 +22,14 @@ export const Footer = () => {
     light: "#333",
     dark: "rgba(240,240,244, 0.5)",
   };
-
+  const shadow = {
+    light: "0 50vh 0 50vh #fff",
+    dark: "0 50vh 0 50vh #1f2023",
+  };
   return (
     <>
       <Divider />
-      <Box>
+      <Box boxShadow={shadow[colorMode]}>
         <SimpleGrid
           maxW="50rem"
           p="3rem 2rem 3rem"
@@ -38,11 +41,7 @@ export const Footer = () => {
           <Box>
             <Heading as="h3">Useful Links</Heading>
             <ButtonGroup spacing={2}>
-              <Button
-                variant="solid"
-                aria-label="Email"
-                onClick={onCopy}
-              >
+              <Button variant="solid" aria-label="Email" onClick={onCopy}>
                 {hasCopied ? "Copied!" : "@ Email"}
               </Button>
               <Link href="https://github.com/r-jo" isExternal>
