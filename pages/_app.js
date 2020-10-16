@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/core";
 
 const config = {
-  useSystemColorMode: false,
+  useSystemColorMode: true,
   initialColorMode: "dark",
 };
 
