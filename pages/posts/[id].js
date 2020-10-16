@@ -1,5 +1,6 @@
 import Container from "../../components/Container";
 import { getAllPostIds, getPostData } from "../../lib/posts";
+import Link from "next/link";
 import Date from "../../components/Date";
 import Head from "next/head";
 import {
@@ -13,11 +14,6 @@ import {
 } from "@chakra-ui/core";
 
 export default function Post({ postData }) {
-  const { colorMode } = useColorMode();
-  const textColor = {
-    light:"#333",
-    dark: "rgba(240,240,244, 0.7)",
-  }
   return (
     <Container>
       <Box maxW="45rem" m="3rem auto 0rem">
@@ -25,12 +21,12 @@ export default function Post({ postData }) {
           <title>{postData.title}</title>
         </Head>
         <article>
-          <Breadcrumb color={textColor[colorMode]}>
+          <Breadcrumb>
             <BreadcrumbItem>
-              <BreadcrumbLink>Home</BreadcrumbLink>
+              <BreadcrumbLink><Link href="/"><a>Home</a></Link></BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <BreadcrumbLink>Journal</BreadcrumbLink>
+              <BreadcrumbLink><Link href="/journal"><a>Journal</a></Link></BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbItem isCurrentPage>
               <BreadcrumbLink>{postData.title}</BreadcrumbLink>
@@ -39,13 +35,13 @@ export default function Post({ postData }) {
           <Heading as="h1" mb={4}>
             {postData.title}
           </Heading>
-          <Text fontSize="sm" color={textColor[colorMode]}>
+          <Text fontSize="sm">
             {postData.author} / <Date dateString={postData.date} />
           </Text>
-          <Text mb={4} color={textColor[colorMode]}>
+          <Text mb={4}>
             {postData.excerpt}
           </Text>
-          <Text color={textColor[colorMode]}>
+          <Text>
             <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
           </Text>
         </article>

@@ -4,12 +4,12 @@ import { Box, useColorMode } from "@chakra-ui/core";
 export default function Logo() {
   const { colorMode } = useColorMode();
   const logo = {
-    light: "#000",
-    dark: "#fff",
+    light: "#1f2023",
+    dark: "#f6a6a6",
   };
   const logoBgColor = {
     light: "#fff",
-    dark: "#000",
+    dark: "#fff",
   };
   return (
     <Box

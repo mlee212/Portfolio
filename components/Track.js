@@ -7,7 +7,7 @@ const Track = (track) => {
   const { colorMode } = useColorMode();
   const rankingColor = {
     light: "gray.400",
-    dark: "rgba(240,240,244,0.32)",
+    dark: "rgba(240,240,244,0.5)",
   };
 
   return (

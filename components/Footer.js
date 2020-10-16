@@ -8,8 +8,9 @@ import {
   SimpleGrid,
   ButtonGroup,
   IconButton,
+  Divider,
+  Button,
 } from "@chakra-ui/core";
-import { AtSignIcon, CheckIcon } from "@chakra-ui/icons";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { FaSpotify } from "react-icons/fa";
 
@@ -24,6 +25,7 @@ export const Footer = () => {
 
   return (
     <>
+      <Divider />
       <Box>
         <SimpleGrid
           maxW="50rem"
@@ -34,26 +36,15 @@ export const Footer = () => {
           minChildWidth="250px"
         >
           <Box>
-            <Heading as="h3">Don't be a Stranger</Heading>
-            <Text color={textColor[colorMode]}>
-              I don't bite anything except really good food. I'm always up for
-              making new friends. Learn more and always feel free to contact me.
-            </Text>
-            <Text color={textColor[colorMode]} fontSize="sm">
-              {new Date().getFullYear()} &#169; Rajbir Johar
-            </Text>
-          </Box>
-          <Box>
             <Heading as="h3">Useful Links</Heading>
-            <ButtonGroup spacing={3}>
-              <IconButton
-                variant="ghost"
+            <ButtonGroup spacing={2}>
+              <Button
+                variant="solid"
                 aria-label="Email"
-                fontSize="25px"
                 onClick={onCopy}
               >
-                {hasCopied ? <CheckIcon /> : <AtSignIcon />}
-              </IconButton>
+                {hasCopied ? "Copied!" : "@ Email"}
+              </Button>
               <Link href="https://github.com/r-jo" isExternal>
                 <IconButton
                   variant="ghost"
@@ -84,6 +75,16 @@ export const Footer = () => {
                 />
               </Link>
             </ButtonGroup>
+          </Box>
+          <Box>
+            <Heading as="h3">Don't be a Stranger</Heading>
+            <Text color={textColor[colorMode]}>
+              I don't bite anything except really good food. I'm always up for
+              making new friends. Learn more and always feel free to contact me.
+            </Text>
+            <Text color={textColor[colorMode]} fontSize="sm">
+              {new Date().getFullYear()} &#169; Rajbir Johar
+            </Text>
           </Box>
         </SimpleGrid>
       </Box>

@@ -1,10 +1,22 @@
 import "../styles/global.css";
 
-import { ChakraProvider, CSSReset, ColorModeScript } from "@chakra-ui/core";
+import {
+  ChakraProvider,
+  extendTheme,
+  CSSReset,
+  ColorModeScript,
+} from "@chakra-ui/core";
 
-export default function App({ Component, pageProps, router }) {
+const config = {
+  useSystemColorMode: false,
+  initialColorMode: "dark",
+};
+
+const customTheme = extendTheme({ config });
+
+export default function App({ Component, pageProps }) {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={customTheme}>
       <CSSReset />
       <ColorModeScript initialColorMode="dark" />
       <Component {...pageProps} />
