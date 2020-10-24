@@ -6,7 +6,7 @@ import { Footer } from "./Footer";
 import { Box, Button, useColorMode } from "@chakra-ui/core";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const name = "Rajbir";
 export const siteTitle = "Rajbir | Portfolio";
@@ -42,6 +42,7 @@ export default function Container({ children, main, journal }) {
           lineHeight="1.6"
           fontSize="lg"
         >
+          <AnimatePresence>
           <motion.div
             key={router.route}
             initial="pageInitial"
@@ -72,6 +73,7 @@ export default function Container({ children, main, journal }) {
               </Link>
             )}
           </motion.div>
+          </AnimatePresence>
         </Box>
         <Footer />
       </Box>

@@ -4,12 +4,6 @@ import React from "react";
 import { Box, Link, Stack, Text, useColorMode } from "@chakra-ui/core";
 
 const Track = (track) => {
-  const { colorMode } = useColorMode();
-  const rankingColor = {
-    light: "gray.400",
-    dark: "rgba(240,240,244,0.5)",
-  };
-
   return (
     <Box
       display="flex"
@@ -19,7 +13,7 @@ const Track = (track) => {
       maxWidth="100%"
       w="full"
     >
-      <Text fontSize="sm" fontWeight="bold" color={rankingColor[colorMode]}>
+      <Text fontSize="sm" fontWeight="bold" color="gray.500">
         {track.ranking}
       </Text>
       <Stack ml={3}>
@@ -35,7 +29,7 @@ const Track = (track) => {
           {track.title}
         </Link>
         <Text
-          color={rankingColor[colorMode]}
+          color="gray.500"
           mb={4}
           maxWidth="100%"
           whiteSpace="wrap"

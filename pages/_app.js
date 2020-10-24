@@ -8,8 +8,8 @@ import {
 } from "@chakra-ui/core";
 
 const config = {
-  useSystemColorMode: true,
-  initialColorMode: "dark",
+  useSystemColorMode: false,
+  initialColorMode: "light",
 };
 
 const customTheme = extendTheme({ config });
@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
   return (
     <ChakraProvider theme={customTheme}>
       <CSSReset />
-      <ColorModeScript initialColorMode="dark" />
+      <ColorModeScript initialColorMode="light" />
       <Component {...pageProps} />
     </ChakraProvider>
   );
