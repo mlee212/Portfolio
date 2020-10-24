@@ -67,11 +67,11 @@ export const Footer = () => {
           </Box>
           <Box>
             <Heading as="h3">Don't be a Stranger</Heading>
-            <Text>
+            <Text color="gray.500">
               I don't bite anything except really good food. I'm always up for
               making new friends. Learn more and always feel free to contact me.
             </Text>
-            <Text fontSize="sm">
+            <Text color="gray.500" fontSize="sm">
               {new Date().getFullYear()} &#169; Rajbir Johar
             </Text>
           </Box>

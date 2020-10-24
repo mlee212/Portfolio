@@ -5,12 +5,16 @@ import { motion } from "framer-motion";
 export default function ProjectCard({ title, children, href }) {
   const { colorMode } = useColorMode();
   const bg = {
-    light: "gray.50",
+    light: "white",
     dark: "gray.700",
+  }
+  const color = {
+    light: "gray.500",
+    dark: "gray.400",
   }
   const bxShadow = {
     light:
-      "0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
     dark:
       "0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
   };
@@ -41,7 +45,7 @@ export default function ProjectCard({ title, children, href }) {
             {title} <ExternalLinkIcon mb={1} />
           </Link>
         </Heading>
-        <Text>{children}</Text>
+        <Text color={color[colorMode]}>{children}</Text>
       </Box>
     </motion.div>
   );
