@@ -15,11 +15,6 @@ export async function getStaticProps() {
 }
 
 export default function Readings({ allPostsData }) {
-  const { colorMode } = useColorMode();
-  const textColor = {
-    light: "#000",
-    dark: "rgba(240,240,244, 0.5)",
-  };
 
   return (
     <Container main>
@@ -38,12 +33,12 @@ export default function Readings({ allPostsData }) {
                 <Link href={`/posts/${id}`}>
                   <a>{title}</a>
                 </Link>
-                <Text fontWeight="normal" fontSize="sm" color={textColor[colorMode]}>
+                <Text fontWeight="normal" fontSize="sm" color="gray.500">
                   <Date dateString={date} />
                 </Text>
               </Box>
             </Heading>
-            <Text color={textColor[colorMode]}>{excerpt}</Text>
+            <Text color="gray.500">{excerpt}</Text>
           </Box>
         ))}
       </Box>

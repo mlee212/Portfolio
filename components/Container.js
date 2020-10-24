@@ -13,16 +13,10 @@ export const siteTitle = "Rajbir | Portfolio";
 
 export default function Container({ children, main, journal }) {
   const router = useRouter();
-  const { colorMode } = useColorMode();
-  const bgColor = {
-    light: "#ffffff",
-    dark: "#1f2023",
-  };
 
   return (
     <>
       <Box
-        bg={bgColor[colorMode]}
         transition="background-color 0.2s ease-in-out"
       >
         <Head>
