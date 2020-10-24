@@ -3,13 +3,13 @@ import { Box, useColorMode } from "@chakra-ui/core";
 
 export default function Logo() {
   const { colorMode } = useColorMode();
-  const logo = {
-    light: "#1f2023",
-    dark: "#f6a6a6",
-  };
-  const logoBgColor = {
-    light: "#fff",
+  const bg = {
+    light: "gray.800",
     dark: "#fff",
+  };
+  const color = {
+    light: "#fff",
+    dark: "gray.800",
   };
   return (
     <Box
@@ -24,8 +24,8 @@ export default function Logo() {
       py={0}
       px={2}
       borderRadius="2px"
-      bg={logo[colorMode]}
-      color={logoBgColor[colorMode]}
+      bg={bg[colorMode]}
+      color={color[colorMode]}
       textDecoration="none"
       fontSize="18px"
       fontWeight="600"

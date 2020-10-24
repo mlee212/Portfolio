@@ -1,14 +1,8 @@
-import { Box, Link, Heading, Text,useColorMode } from "@chakra-ui/core";
+import { Box, Link, Heading, Text } from "@chakra-ui/core";
 
 export default function Custom404() {
-  const { colorMode } = useColorMode();
-  const bgColor = {
-    light: "#ffffff",
-    dark: "#000000",
-  };
   return (
-    <Box bg={bgColor[colorMode]} minH="100vh">
-      <Box maxW="40rem" p="0rem" m="0rem auto 6rem">
+      <Box maxW="40rem" p="0rem" m="3rem auto 6rem">
       <Heading>
         Did you ever hear the tragedy of Darth Plagueis The Wise?
       </Heading>
@@ -28,6 +22,5 @@ export default function Custom404() {
 
       <Link href="/">← Back to home</Link>
       </Box>
-    </Box>
   );
 }

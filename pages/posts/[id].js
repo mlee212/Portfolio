@@ -10,7 +10,6 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  useColorMode,
 } from "@chakra-ui/core";
 
 export default function Post({ postData }) {

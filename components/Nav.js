@@ -1,6 +1,6 @@
 import ActiveLink from "./ActiveLink";
 import Logo from "./Logo";
-import { Box, ButtonGroup, Flex, useColorMode } from "@chakra-ui/core";
+import { ButtonGroup, Flex, useColorMode } from "@chakra-ui/core";
 import styled from "@emotion/styled";
 
 import { DarkMode } from "./DarkMode";
@@ -17,10 +17,11 @@ export function Nav() {
   const { colorMode } = useColorMode();
   const navBgColor = {
     light: "rgba(255, 255, 255, 0.8)",
-    dark: "rgba(31, 32, 35, 0.8)",
+    dark: "rgba(26, 32, 44, 0.8)",
   };
 
   return (
+    <>
     <StickyNav
       flexDirection="row"
       justifyContent="space-between"
@@ -51,5 +52,6 @@ export function Nav() {
         <DarkMode />
       </ButtonGroup>
     </StickyNav>
+    </>
   );
 }

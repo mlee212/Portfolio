@@ -2,7 +2,6 @@ import {
   Box,
   useClipboard,
   Link,
-  useColorMode,
   Heading,
   Text,
   SimpleGrid,
@@ -17,19 +16,10 @@ import { FaSpotify } from "react-icons/fa";
 export const Footer = () => {
   const [value] = React.useState("rajbirsjohar@gmail.com");
   const { onCopy, hasCopied } = useClipboard(value);
-  const { colorMode } = useColorMode();
-  const textColor = {
-    light: "#333",
-    dark: "rgba(240,240,244, 0.5)",
-  };
-  const shadow = {
-    light: "0 50vh 0 50vh #fff",
-    dark: "0 50vh 0 50vh #1f2023",
-  };
   return (
     <>
       <Divider />
-      <Box boxShadow={shadow[colorMode]}>
+      <Box>
         <SimpleGrid
           maxW="50rem"
           p="3rem 2rem 3rem"
@@ -77,11 +67,11 @@ export const Footer = () => {
           </Box>
           <Box>
             <Heading as="h3">Don't be a Stranger</Heading>
-            <Text color={textColor[colorMode]}>
+            <Text>
               I don't bite anything except really good food. I'm always up for
               making new friends. Learn more and always feel free to contact me.
             </Text>
-            <Text color={textColor[colorMode]} fontSize="sm">
+            <Text fontSize="sm">
               {new Date().getFullYear()} &#169; Rajbir Johar
             </Text>
           </Box>

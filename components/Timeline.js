@@ -16,20 +16,14 @@ import {
 import { StarIcon, ChevronDownIcon } from "@chakra-ui/icons";
 
 const TimelineStep = ({ title, children }) => {
-  const { colorMode } = useColorMode();
-  const color = {
-    light: "#090909",
-    dark: "rgba(240,240,244,0.5)",
-  };
-
   return (
     <ListItem>
       <Stack ml={2} mb={-2}>
         <Flex align="center" mb={-6}>
-          <StarIcon mr={2} color="#f4b1af" />
+          <StarIcon mr={2} color="green.300" />
           <Text fontWeight="bold">{title}</Text>
         </Flex>
-        <Text color={color[colorMode]} pl={6}>
+        <Text pl={6}>
           {children}
         </Text>
       </Stack>
@@ -115,6 +109,9 @@ const Timeline = () => {
         2020
       </Heading>
       <List>
+        <TimelineStep title="Web dev Lead!">
+          I'm now in charge of the development for the vision of Cutiehack and Citrushack.
+        </TimelineStep>
         <TimelineStep title="Started Habitle">
           As a collaboration project, my colleague Dev Bhatia and I are
           developing a web app that helps people develop positive habits by
