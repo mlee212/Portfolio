@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
-import { Box, Button, useColorMode } from "@chakra-ui/core";
+import { Box, Button } from "@chakra-ui/core";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -35,7 +35,7 @@ export default function Container({ children, main, journal }) {
         </Head>
         <Nav />
         <Box
-          maxW="40rem"
+          maxW="42rem"
           p="0 2rem"
           m="3rem auto 6rem"
           my={50}
@@ -59,7 +59,7 @@ export default function Container({ children, main, journal }) {
               },
               pageExit: {
                 opacity: 0,
-                x: 10,
+                x: 0,
               },
             }}
           >
