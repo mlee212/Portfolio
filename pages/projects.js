@@ -6,8 +6,6 @@ import {
   Badge,
   Stack,
   Text,
-  Wrap,
-  useColorMode,
 } from "@chakra-ui/core";
 
 export default function Projects() {
@@ -23,7 +21,7 @@ export default function Projects() {
         Here a collection of my best work where I demonstrate my skills as a
         developer and a creator. Some of the technologies I currently use are:
       </Text>
-      <Wrap justify="center" mt={4}>
+      <Stack isInline justify="center" mt={4}>
         <Badge fontSize="lg" colorScheme="blue">
           Next
         </Badge>
@@ -45,7 +43,7 @@ export default function Projects() {
         <Badge fontSize="lg" colorScheme="gray">
           Git
         </Badge>
-      </Wrap>
+      </Stack>
       <Heading size="lg" my={4}>
         Currently working on:
       </Heading>

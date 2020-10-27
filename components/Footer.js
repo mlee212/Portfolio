@@ -64,6 +64,10 @@ export const Footer = () => {
                 />
               </Link>
             </ButtonGroup>
+            <Box mt={4}>
+            <Link href="https://github.com/r-jo/portfolio" isExternal>/Source code</Link><br />
+            <Link href="https://nextjs.org" isExternal>/Next.js</Link>
+            </Box>
           </Box>
           <Box>
             <Heading as="h3">Don't be a Stranger</Heading>
