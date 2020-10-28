@@ -18,7 +18,7 @@ import {
 const Section = ({ title, children }) => {
   return (
     <Box
-      mt={7}
+      minH="50vh"
       display="flex"
       flexDirection="column"
       justifyContent="center"
@@ -40,7 +40,7 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <Box>
-        <Section>
+        <Section title="Hi there, I'm Rajbir.">
           I'm a frontend web developer based in Southern California 😎 studying
           Computer Science at the University of California, Riverside. I'm
           currently working on{" "}
