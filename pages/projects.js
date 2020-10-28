@@ -6,6 +6,7 @@ import {
   Badge,
   Stack,
   Text,
+  Flex,
 } from "@chakra-ui/core";
 
 export default function Projects() {
@@ -21,7 +22,7 @@ export default function Projects() {
         Here a collection of my best work where I demonstrate my skills as a
         developer and a creator. Some of the technologies I currently use are:
       </Text>
-      <Stack isInline justify="center" mt={4}>
+      <Stack justify="center" isInline mt={4}>
         <Badge fontSize="lg" colorScheme="blue">
           Next
         </Badge>
