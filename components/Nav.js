@@ -1,6 +1,6 @@
 import ActiveLink from "./ActiveLink";
 import Logo from "./Logo";
-import { ButtonGroup, Flex, useColorMode } from "@chakra-ui/core";
+import { ButtonGroup, Flex, useColorMode, Box } from "@chakra-ui/core";
 import styled from "@emotion/styled";
 
 import { DarkMode } from "./DarkMode";
@@ -22,36 +22,41 @@ export function Nav() {
 
   return (
     <>
-    <StickyNav
-      flexDirection="row"
-      justifyContent="space-between"
-      alignItems="center"
-      maxWidth="50rem"
-      width="100%"
-      bg={navBgColor[colorMode]}
-      as="nav"
-      py={5}
-      mt={[0, 0]}
-      mb={5}
-      px={8}
-      mx="auto"
-    >
-      <Logo />
-      <ButtonGroup alignItems="center" spacing={5}>
-        <ActiveLink activeClassName="active" href="/">
-          <a className="nav-link">Home</a>
-        </ActiveLink>
+      <StickyNav
+        width="100%"
+        bg={navBgColor[colorMode]}
+        as="nav"
+        py={5}
+        mt={[0, 0]}
+        mb={5}
+        px={8}
+      >
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="space-between"
+          alignItems="center"
+          maxWidth="50rem"
+          width="100%"
+          mx="auto"
+        >
+          <Logo />
+          <ButtonGroup alignItems="center" spacing={5}>
+            <ActiveLink activeClassName="active" href="/">
+              <a className="nav-link">Home</a>
+            </ActiveLink>
 
-        <ActiveLink activeClassName="active" href="/projects">
-          <a className="nav-link">Projects</a>
-        </ActiveLink>
+            <ActiveLink activeClassName="active" href="/projects">
+              <a className="nav-link">Projects</a>
+            </ActiveLink>
 
-        <ActiveLink activeClassName="active" href="/journal">
-          <a className="nav-link">Journal</a>
-        </ActiveLink>
-        <DarkMode />
-      </ButtonGroup>
-    </StickyNav>
+            <ActiveLink activeClassName="active" href="/journal">
+              <a className="nav-link">Journal</a>
+            </ActiveLink>
+            <DarkMode />
+          </ButtonGroup>
+        </Box>
+      </StickyNav>
     </>
   );
 }

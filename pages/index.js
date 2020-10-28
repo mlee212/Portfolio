@@ -13,13 +13,12 @@ import {
   Link,
   Stack,
   Badge,
-  useColorMode,
 } from "@chakra-ui/core";
 
 const Section = ({ title, children }) => {
   return (
     <Box
-      minH="50vh"
+      mt={7}
       display="flex"
       flexDirection="column"
       justifyContent="center"
@@ -41,7 +40,7 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <Box>
-        <Section title="Hi there, I'm Rajbir.">
+        <Section>
           I'm a frontend web developer based in Southern California 😎 studying
           Computer Science at the University of California, Riverside. I'm
           currently working on{" "}
@@ -62,11 +61,7 @@ export default function Home() {
           ever) with lubricated cream switches.
           <br />
           <ButtonGroup mt={4} spacing={1}>
-            <Button
-              variant="solid"
-              aria-label="Email"
-              onClick={onCopy}
-            >
+            <Button variant="solid" aria-label="Email" onClick={onCopy}>
               {hasCopied ? "Copied!" : "@ Email"}
             </Button>
             <Link href="https://github.com/r-jo" isExternal>
