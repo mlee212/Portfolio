@@ -23,7 +23,7 @@ const Section = ({ title, children }) => {
       flexDirection="column"
       justifyContent="center"
     >
-      <Heading fontWeight="bold" as="h1" my={4}>
+      <Heading fontWeight="bold" as="h1" mb={4}>
         {title}
       </Heading>
       <Text>{children}</Text>

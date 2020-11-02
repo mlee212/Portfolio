@@ -64,15 +64,6 @@ export const Footer = () => {
                 />
               </Link>
             </ButtonGroup>
-            <Box mt={4}>
-              <Link href="https://github.com/r-jo/portfolio" isExternal>
-                /Source code
-              </Link>
-              <br />
-              <Link href="https://nextjs.org" isExternal>
-                /Next.js
-              </Link>
-            </Box>
           </Box>
           <Box>
             <Heading as="h3">Don't be a Stranger</Heading>
@@ -83,60 +74,6 @@ export const Footer = () => {
             <Text color="gray.500" fontSize="sm">
               {new Date().getFullYear()} &#169; Rajbir Johar
             </Text>
-
-            <svg viewBox="0 0 100 20">
-              <defs>
-                <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="5%" stop-color="#718096"></stop>
-                  <stop offset="95%" stop-color="#718096"></stop>
-                </linearGradient>
-                <pattern
-                  id="wave"
-                  x="0"
-                  y="0"
-                  width="120"
-                  height="20"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    id="wavePath"
-                    d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z"
-                    mask="url(#mask)"
-                    fill="url(#gradient)"
-                  >
-                    <animateTransform
-                      attributeName="transform"
-                      begin="0s"
-                      dur="2.5s"
-                      type="translate"
-                      from="0,0"
-                      to="40,0"
-                      repeatCount="indefinite"
-                    ></animateTransform>
-                  </path>
-                </pattern>
-              </defs>
-              <text
-                font-weight="bold"
-                font-size="0.4em"
-                x="0"
-                y="11"
-                fill="url(#wave)"
-                fill-opacity="1.0"
-              >
-                Next to the ocean.
-              </text>
-              <text
-                font-weight="bold"
-                font-size="0.4em"
-                x="0"
-                y="11"
-                fill="url(#gradient)"
-                fill-opacity="0.5"
-              >
-                Next to the ocean.
-              </text>
-            </svg>
           </Box>
         </SimpleGrid>
       </Box>

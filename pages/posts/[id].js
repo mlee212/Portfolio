@@ -7,9 +7,6 @@ import {
   Heading,
   Text,
   Box,
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
   Avatar,
   Flex,
 } from "@chakra-ui/core";
