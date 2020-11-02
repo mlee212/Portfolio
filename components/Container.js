@@ -11,7 +11,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const name = "Rajbir";
 export const siteTitle = "Rajbir | Portfolio";
 
-export default function Container({ children, main, journal }) {
+export default function Container({ children, main }) {
   const router = useRouter();
 
   return (
