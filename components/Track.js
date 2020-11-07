@@ -1,7 +1,7 @@
 // Full Credit to Lee Robinson
 
 import React from "react";
-import { Box, Link, Stack, Text, useColorMode } from "@chakra-ui/core";
+import { Box, Link, Stack, Text } from "@chakra-ui/core";
 
 const Track = (track) => {
   return (

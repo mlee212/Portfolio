@@ -7,9 +7,8 @@ import {
   Heading,
   Text,
   Box,
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
+  Avatar,
+  Flex,
 } from "@chakra-ui/core";
 
 export default function Post({ postData }) {
@@ -20,26 +19,16 @@ export default function Post({ postData }) {
           <title>{postData.title}</title>
         </Head>
         <article>
-          <Breadcrumb>
-            <BreadcrumbItem>
-              <BreadcrumbLink><Link href="/"><a>Home</a></Link></BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbItem>
-              <BreadcrumbLink><Link href="/journal"><a>Journal</a></Link></BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbItem isCurrentPage>
-              <BreadcrumbLink>{postData.title}</BreadcrumbLink>
-            </BreadcrumbItem>
-          </Breadcrumb>
           <Heading as="h1" mb={4}>
             {postData.title}
           </Heading>
-          <Text fontSize="sm">
-            {postData.author} / <Date dateString={postData.date} />
-          </Text>
-          <Text mb={4}>
-            {postData.excerpt}
-          </Text>
+          <Flex my={-4} alignItems="center">
+            <Avatar size="xs" name="Rajbir Johar" src="/images/profile.jpeg" />
+            <Text pl={2} fontSize="sm">
+              {postData.author} / <Date dateString={postData.date} />
+            </Text>
+          </Flex>
+          <Text mb={4}>{postData.excerpt}</Text>
           <Text>
             <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
           </Text>

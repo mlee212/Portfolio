@@ -13,7 +13,6 @@ import {
   Link,
   Stack,
   Badge,
-  useColorMode,
 } from "@chakra-ui/core";
 
 const Section = ({ title, children }) => {
@@ -24,7 +23,7 @@ const Section = ({ title, children }) => {
       flexDirection="column"
       justifyContent="center"
     >
-      <Heading fontWeight="bold" as="h1" my={4}>
+      <Heading fontWeight="bold" as="h1" mb={4}>
         {title}
       </Heading>
       <Text>{children}</Text>
@@ -62,11 +61,7 @@ export default function Home() {
           ever) with lubricated cream switches. Test change
           <br />
           <ButtonGroup mt={4} spacing={1}>
-            <Button
-              variant="solid"
-              aria-label="Email"
-              onClick={onCopy}
-            >
+            <Button variant="solid" aria-label="Email" onClick={onCopy}>
               {hasCopied ? "Copied!" : "@ Email"}
             </Button>
             <Link href="https://github.com/r-jo" isExternal>

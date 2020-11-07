@@ -9,7 +9,7 @@ export default function ProjectCard({ title, children, href }) {
     dark: "gray.700",
   }
   const color = {
-    light: "gray.500",
+    light: "gray.600",
     dark: "gray.400",
   }
   const bxShadow = {
