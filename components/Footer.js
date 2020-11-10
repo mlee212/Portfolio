@@ -1,8 +1,9 @@
+import React from "react";
 import {
   Box,
   useClipboard,
   Link,
-  Heading,
+  useColorMode,
   Text,
   SimpleGrid,
   ButtonGroup,
@@ -14,6 +15,11 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { FaSpotify } from "react-icons/fa";
 
 export const Footer = () => {
+  const { colorMode } = useColorMode();
+  const color = {
+    light: "gray.600",
+    dark: "#8e95a3",
+  }
   const [value] = React.useState("rajbirsjohar@gmail.com");
   const { onCopy, hasCopied } = useClipboard(value);
   return (
@@ -28,8 +34,8 @@ export const Footer = () => {
           spacingX="50px"
           minChildWidth="250px"
         >
-          <Box>
-            <Heading as="h3">Useful Links</Heading>
+          <Box my={2}>
+            <Text fontWeight="bold" mb={4}>Useful Links</Text>
             <ButtonGroup spacing={2}>
               <Button variant="solid" aria-label="Email" onClick={onCopy}>
                 {hasCopied ? "Copied!" : "@ Email"}
@@ -65,13 +71,12 @@ export const Footer = () => {
               </Link>
             </ButtonGroup>
           </Box>
-          <Box>
-            <Heading as="h3">Don't be a Stranger</Heading>
-            <Text color="gray.500">
+          <Box my={2}>
+            <Text fontWeight="bold" mb={4}>Don't be a Stranger</Text>
+            <Text color={color[colorMode]}>
               I don't bite anything except really good food. I'm always up for
               making new friends. Learn more and always feel free to contact me.
-            </Text>
-            <Text color="gray.500" fontSize="sm">
+              <br />
               {new Date().getFullYear()} &#169; Rajbir Johar
             </Text>
           </Box>

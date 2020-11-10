@@ -1,3 +1,4 @@
+import React from "react";
 import Head from "next/head";
 import Container, { siteTitle } from "../components/Container";
 import TopTracks from "../components/TopTracks";
@@ -13,6 +14,7 @@ import {
   Link,
   Stack,
   Badge,
+  useToast,
 } from "@chakra-ui/core";
 
 const Section = ({ title, children }) => {
@@ -32,6 +34,7 @@ const Section = ({ title, children }) => {
 };
 
 export default function Home() {
+  const toast = useToast();
   const [value] = React.useState("rajbirsjohar@gmail.com");
   const { onCopy, hasCopied } = useClipboard(value);
   return (
@@ -61,7 +64,7 @@ export default function Home() {
           ever) with lubricated cream switches.
           <br />
           <ButtonGroup mt={4} spacing={1}>
-            <Button variant="solid" aria-label="Email" onClick={onCopy}>
+          <Button variant="solid" aria-label="Email" onClick={onCopy}>
               {hasCopied ? "Copied!" : "@ Email"}
             </Button>
             <Link href="https://github.com/r-jo" isExternal>
@@ -73,41 +76,41 @@ export default function Home() {
         <Heading fontWeight="bold" as="h1" my={4}>
           Featured Projects
         </Heading>
-        <Stack spacing={4} py={5}>
-          <ProjectCard title="Habitle" href="https://habitle.com">
-            A minimal and powerful web app that generates a heatmap to visual
-            progress to promote a positive and consistent lifestyle.
-            <Stack isInline mt={4}>
-              <Badge colorScheme="green">React</Badge>
-              <Badge colorScheme="orange">JS</Badge>
-              <Badge colorScheme="blue">HTML</Badge>
-              <Badge colorScheme="red">CSS</Badge>
-              <Badge colorScheme="gray">Git</Badge>
-            </Stack>
-          </ProjectCard>
-          <ProjectCard title="Citrushack" href="https://citrushack.com">
-            The website used by hundreds of students to interact and participate
-            in the annual Citrushack hackathon. Now, fully online.
-            <Stack isInline mt={4}>
-              <Badge colorScheme="green">React</Badge>
-              <Badge colorScheme="orange">JS</Badge>
-              <Badge colorScheme="blue">HTML</Badge>
-              <Badge colorScheme="red">CSS</Badge>
-              <Badge colorScheme="gray">Git</Badge>
-            </Stack>
-          </ProjectCard>
-          <ProjectCard title="Biohack" href="https://biohackucr.com">
-            The website used by hundreds of students to interact and participate
-            in the annual Biohack hackathon. Now, fully online.
-            <Stack isInline mt={4}>
-              <Badge colorScheme="green">React</Badge>
-              <Badge colorScheme="orange">JS</Badge>
-              <Badge colorScheme="blue">HTML</Badge>
-              <Badge colorScheme="red">CSS</Badge>
-              <Badge colorScheme="gray">Git</Badge>
-            </Stack>
-          </ProjectCard>
-        </Stack>
+        <Stack spacing={4}>
+        <ProjectCard title="Citrushack" href="https://citrushack.com">
+          The website used by hundreds of students to interact and participate
+          in the annual Citrushack hackathon. <i>Coming Winter 2021.</i>
+          <Stack isInline mt={4}>
+            <Badge colorScheme="green">React</Badge>
+            <Badge colorScheme="orange">JS</Badge>
+            <Badge colorScheme="purple">HTML</Badge>
+            <Badge colorScheme="red">CSS</Badge>
+            <Badge colorScheme="gray">Git</Badge>
+          </Stack>
+        </ProjectCard>
+        <ProjectCard title="Biohack" href="https://biohackucr.com">
+          The website used by hundreds of students to interact and participate
+          in the annual Biohack hackathon. <i>Coming Spring 2021.</i>
+          <Stack isInline mt={4}>
+            <Badge colorScheme="green">React</Badge>
+            <Badge colorScheme="orange">JS</Badge>
+            <Badge colorScheme="purple">HTML</Badge>
+            <Badge colorScheme="red">CSS</Badge>
+            <Badge colorScheme="gray">Git</Badge>
+          </Stack>
+        </ProjectCard>
+        <ProjectCard title="Habitle" href="https://habitle.com">
+          A minimal and powerful web app that generates a heatmap to visual
+          progress to promote a positive and consistent lifestyle.
+          <Stack isInline mt={4}>
+            <Badge colorScheme="green">React</Badge>
+            <Badge colorScheme="orange">JS</Badge>
+            <Badge colorScheme="purple">HTML</Badge>
+            <Badge colorScheme="red">CSS</Badge>
+            <Badge colorScheme="gray">Git</Badge>
+          </Stack>
+        </ProjectCard>
+      </Stack>
       </Box>
       <Timeline />
       <Heading fontWeight="bold" as="h1" my={5}>
