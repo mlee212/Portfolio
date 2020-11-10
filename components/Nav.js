@@ -29,7 +29,7 @@ export function Nav() {
         py={5}
         mt={[0, 0]}
         mb={5}
-        px={8}
+        px={6}
       >
         <Box
           display="flex"

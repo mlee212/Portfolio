@@ -53,7 +53,7 @@ export default function Container({ children, main }) {
           >
             <Box
               maxW="42rem"
-              p="0 2rem"
+              p="0 1.75rem"
               m="3rem auto 6rem"
               my={50}
               lineHeight="1.6"
