@@ -1,3 +1,4 @@
+import React from "react";
 import Head from "next/head";
 import Container, { siteTitle } from "../components/Container";
 import TopTracks from "../components/TopTracks";
