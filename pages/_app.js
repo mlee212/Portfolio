@@ -7,18 +7,22 @@ import {
   ColorModeScript,
 } from "@chakra-ui/core";
 
-const config = {
-  useSystemColorMode: false,
-  initialColorMode: "light",
-};
-
-const customTheme = extendTheme({ config });
+import { mode } from '@chakra-ui/theme-tools'
 
 export default function App({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={customTheme}>
+    <ChakraProvider theme={extendTheme({
+      styles: {
+        global: (props) => ({
+          body: {
+            bg: mode('#fdfefe', '#191b1f')(props),
+            color: mode('#191b1f', '#fdfefe')(props),
+          },
+        }),
+      },
+    })}>
       <CSSReset />
-      <ColorModeScript initialColorMode="light" />
+      <ColorModeScript initialColorMode="dark" />
       <Component {...pageProps} />
     </ChakraProvider>
   );

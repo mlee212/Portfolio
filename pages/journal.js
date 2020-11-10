@@ -3,7 +3,7 @@ import Container, { siteTitle } from "../components/Container";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/Date";
-import { Heading, Box, Text } from "@chakra-ui/core";
+import { Heading, Box, Text, useColorMode } from "@chakra-ui/core";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -15,6 +15,15 @@ export async function getStaticProps() {
 }
 
 export default function Readings({ allPostsData }) {
+  const { colorMode } = useColorMode();
+  const dateColor = {
+    light: "gray.600",
+    dark: "#8e95a3",
+  }
+  const excerptColor = {
+    light: "gray.600",
+    dark: "#c6cad1",
+  }
   return (
     <Container main>
       <Head>
@@ -28,8 +37,8 @@ export default function Readings({ allPostsData }) {
         {allPostsData.map(({ id, date, title, excerpt }) => (
           <>
             <Link href={`/posts/${id}`}>
-              <Box borderRadius="7px" cursor="pointer" key={id}>
-                <Heading as="h2" size="lg" fontWeight="bold" lineHeight="0.5">
+              <Box mt={4} cursor="pointer" key={id}>
+                <Heading size="md" fontWeight="bold">
                   <Box
                     display="flex"
                     alignItems="center"
@@ -37,12 +46,12 @@ export default function Readings({ allPostsData }) {
                     flexDirection="row"
                   >
                     {title}
-                    <Text fontWeight="normal" fontSize="sm" color="gray.500">
+                    <Text fontWeight="normal" fontSize="sm" color={dateColor[colorMode]}>
                       <Date dateString={date} />
                     </Text>
                   </Box>
                 </Heading>
-                <Text>{excerpt}</Text>
+                <Text color={excerptColor[colorMode]}>{excerpt}</Text>
               </Box>
             </Link>
           </>

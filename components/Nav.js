@@ -16,8 +16,8 @@ const StickyNav = styled(Flex)`
 export function Nav() {
   const { colorMode } = useColorMode();
   const navBgColor = {
-    light: "rgba(255, 255, 255, 0.8)",
-    dark: "rgba(26, 32, 44, 0.8)",
+    light: "rgba(253, 254, 254, 0.8)",
+    dark: "rgba(25, 27, 31, 0.8)",
   };
 
   return (
@@ -48,10 +48,6 @@ export function Nav() {
 
             <ActiveLink activeClassName="active" href="/projects">
               <a className="nav-link">Projects</a>
-            </ActiveLink>
-
-            <ActiveLink activeClassName="active" href="/journal">
-              <a className="nav-link">Journal</a>
             </ActiveLink>
             <DarkMode />
           </ButtonGroup>

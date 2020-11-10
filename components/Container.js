@@ -1,10 +1,8 @@
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
-import { Box, Button } from "@chakra-ui/core";
-import { ChevronLeftIcon } from "@chakra-ui/icons";
+import { Box } from "@chakra-ui/core";
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -16,9 +14,7 @@ export default function Container({ children, main }) {
 
   return (
     <>
-      <Box
-        transition="background-color 0.2s ease-in-out"
-      >
+      <Box transition="background-color 0.2s ease-in-out">
         <Head>
           {/* <link rel="icon" href="/favicon.ico" /> */}
           <meta
@@ -34,15 +30,7 @@ export default function Container({ children, main }) {
           <meta name="og:title" content={siteTitle} />
         </Head>
         <Nav />
-        <Box
-          maxW="42rem"
-          p="0 2rem"
-          m="3rem auto 6rem"
-          my={50}
-          lineHeight="1.6"
-          fontSize="lg"
-        >
-          <AnimatePresence>
+        <AnimatePresence>
           <motion.div
             key={router.route}
             initial="pageInitial"
@@ -63,18 +51,18 @@ export default function Container({ children, main }) {
               },
             }}
           >
-            {children}
-            {!main && (
-              <Link href="/journal">
-                <Button variant="solid" fontWeight="medium" my={2}>
-                  <ChevronLeftIcon />
-                  Go back
-                </Button>
-              </Link>
-            )}
+            <Box
+              maxW="42rem"
+              p="0 2rem"
+              m="3rem auto 6rem"
+              my={50}
+              lineHeight="1.6"
+              fontSize="lg"
+            >
+              {children}
+            </Box>
           </motion.div>
-          </AnimatePresence>
-        </Box>
+        </AnimatePresence>
         <Footer />
       </Box>
     </>

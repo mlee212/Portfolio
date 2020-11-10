@@ -1,19 +1,24 @@
 // Full Credit to Lee Robinson
 
 import React from "react";
-import { Box, Link, Stack, Text } from "@chakra-ui/core";
+import { Box, Link, Stack, Text, useColorMode } from "@chakra-ui/core";
 
 const Track = (track) => {
+  const { colorMode } = useColorMode();
+  const color = {
+    light: "gray.600",
+    dark: "#8e95a3",
+  }
   return (
     <Box
       display="flex"
       flexDirection="row"
       alignItems="baseline"
-      px={2}
+      pt={4}
       maxWidth="100%"
       w="full"
     >
-      <Text fontSize="sm" fontWeight="bold" color="gray.500">
+      <Text fontSize="sm" fontWeight="bold" color={color[colorMode]}>
         {track.ranking}
       </Text>
       <Stack ml={3}>
@@ -29,8 +34,8 @@ const Track = (track) => {
           {track.title}
         </Link>
         <Text
-          color="gray.500"
-          mb={4}
+          color={color[colorMode]}
+          mb={2}
           maxWidth="100%"
           whiteSpace="wrap"
           overflow="hidden"
