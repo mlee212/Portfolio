@@ -83,9 +83,6 @@ export default function Home() {
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React</Badge>
             <Badge colorScheme="orange">JS</Badge>
-            <Badge colorScheme="purple">HTML</Badge>
-            <Badge colorScheme="red">CSS</Badge>
-            <Badge colorScheme="gray">Git</Badge>
           </Stack>
         </ProjectCard>
         <ProjectCard title="Biohack" href="https://biohackucr.com">
@@ -94,9 +91,6 @@ export default function Home() {
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React</Badge>
             <Badge colorScheme="orange">JS</Badge>
-            <Badge colorScheme="purple">HTML</Badge>
-            <Badge colorScheme="red">CSS</Badge>
-            <Badge colorScheme="gray">Git</Badge>
           </Stack>
         </ProjectCard>
         <ProjectCard title="Habitle" href="https://habitle.com">
@@ -105,9 +99,6 @@ export default function Home() {
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React</Badge>
             <Badge colorScheme="orange">JS</Badge>
-            <Badge colorScheme="purple">HTML</Badge>
-            <Badge colorScheme="red">CSS</Badge>
-            <Badge colorScheme="gray">Git</Badge>
           </Stack>
         </ProjectCard>
       </Stack>
