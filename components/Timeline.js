@@ -13,7 +13,7 @@ import {
   Divider,
   Code,
 } from "@chakra-ui/core";
-import { StarIcon, ChevronDownIcon } from "@chakra-ui/icons";
+import { CheckCircleIcon, ChevronDownIcon } from "@chakra-ui/icons";
 
 const TimelineStep = ({ title, children }) => {
   const { colorMode } = useColorMode();
@@ -23,9 +23,9 @@ const TimelineStep = ({ title, children }) => {
   };
   return (
     <ListItem>
-      <Stack ml={2} py={3}>
+      <Stack py={3}>
         <Flex align="center">
-          <StarIcon mr={2} color="green.300" />
+          <CheckCircleIcon mr={2} color="green.300" />
           <Text fontWeight="bold">{title}</Text>
         </Flex>
         <Text color={color[colorMode]} pl={6}>

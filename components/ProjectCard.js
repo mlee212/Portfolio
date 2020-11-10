@@ -40,7 +40,7 @@ export default function ProjectCard({ title, children, href }) {
         py={5}
         transition="all 0.2s ease-in-out"
       >
-        <Text textDecoration="none" fontWeight="bold">
+        <Text textDecoration="none" fontWeight="bold" mb={2}>
           <Link href={href} textDecoration="none" isExternal>
             {title} <ExternalLinkIcon mb={1} />
           </Link>

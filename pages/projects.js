@@ -14,9 +14,9 @@ export default function Projects() {
       </Heading>
       <Text>
         Here a collection of my best work where I demonstrate my skills as a
-        developer and a creator. Some of the technologies I currently use are:
+        developer and a creator. Some of the languages and frameworks I currently use are:
       </Text>
-      <Stack maxW="42rem" p="0 2rem" justify="center" isInline mt={4}>
+      <Stack justify="center" isInline my={4}>
         <Badge fontSize="lg" colorScheme="blue">
           Next
         </Badge>
@@ -36,7 +36,7 @@ export default function Projects() {
           C++
         </Badge>
       </Stack>
-      <Heading size="lg" my={4}>
+      <Heading size="lg" my={8}>
         Currently working on:
       </Heading>
       <Stack spacing={4}>
@@ -71,7 +71,7 @@ export default function Projects() {
           </Stack>
         </ProjectCard>
       </Stack>
-      <Heading size="lg" my={4}>
+      <Heading size="lg" my={8}>
         Finished Projects:
       </Heading>
       <Stack spacing={4}>
