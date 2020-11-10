@@ -26,12 +26,6 @@ export default function Projects() {
         <Badge fontSize="lg" colorScheme="orange">
           JS
         </Badge>
-        <Badge fontSize="lg" colorScheme="purple">
-          HTML
-        </Badge>
-        <Badge fontSize="lg" colorScheme="red">
-          CSS
-        </Badge>
         <Badge fontSize="lg" colorScheme="yellow">
           C++
         </Badge>
@@ -49,9 +43,6 @@ export default function Projects() {
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React</Badge>
             <Badge colorScheme="orange">JS</Badge>
-            <Badge colorScheme="purple">HTML</Badge>
-            <Badge colorScheme="red">CSS</Badge>
-            <Badge colorScheme="gray">Git</Badge>
           </Stack>
         </ProjectCard>
         <ProjectCard title="Biohack" href="https://biohackucr.com">
@@ -60,9 +51,6 @@ export default function Projects() {
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React</Badge>
             <Badge colorScheme="orange">JS</Badge>
-            <Badge colorScheme="purple">HTML</Badge>
-            <Badge colorScheme="red">CSS</Badge>
-            <Badge colorScheme="gray">Git</Badge>
           </Stack>
         </ProjectCard>
         <ProjectCard title="Habitle" href="https://habitle.com">
@@ -71,9 +59,6 @@ export default function Projects() {
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React</Badge>
             <Badge colorScheme="orange">JS</Badge>
-            <Badge colorScheme="purple">HTML</Badge>
-            <Badge colorScheme="red">CSS</Badge>
-            <Badge colorScheme="gray">Git</Badge>
           </Stack>
         </ProjectCard>
       </Stack>
@@ -87,7 +72,6 @@ export default function Projects() {
           perform most of the basic and common commands of a terminal.
           <Stack isInline mt={4}>
             <Badge colorScheme="yellow">C++</Badge>
-            <Badge colorScheme="gray">Git</Badge>
           </Stack>
         </ProjectCard>
 
@@ -99,9 +83,6 @@ export default function Projects() {
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React</Badge>
             <Badge colorScheme="cyan">TS</Badge>
-            <Badge colorScheme="purple">HTML</Badge>
-            <Badge colorScheme="red">CSS</Badge>
-            <Badge colorScheme="gray">Git</Badge>
           </Stack>
         </ProjectCard>
       </Stack>
