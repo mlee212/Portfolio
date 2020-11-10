@@ -26,11 +26,14 @@ export default function Projects() {
         <Badge fontSize="lg" colorScheme="orange">
           JS
         </Badge>
+        <Badge fontSize="lg" colorScheme="purple">
+          HTML
+        </Badge>
+        <Badge fontSize="lg" colorScheme="red">
+          CSS
+        </Badge>
         <Badge fontSize="lg" colorScheme="yellow">
           C++
-        </Badge>
-        <Badge fontSize="lg" colorScheme="gray">
-          Git
         </Badge>
       </Stack>
       <Heading size="lg" my={4}>
@@ -43,6 +46,8 @@ export default function Projects() {
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React</Badge>
             <Badge colorScheme="orange">JS</Badge>
+            <Badge colorScheme="purple">HTML</Badge>
+            <Badge colorScheme="red">CSS</Badge>
           </Stack>
         </ProjectCard>
         <ProjectCard title="Biohack" href="https://biohackucr.com">
@@ -51,6 +56,8 @@ export default function Projects() {
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React</Badge>
             <Badge colorScheme="orange">JS</Badge>
+            <Badge colorScheme="purple">HTML</Badge>
+            <Badge colorScheme="red">CSS</Badge>
           </Stack>
         </ProjectCard>
         <ProjectCard title="Habitle" href="https://habitle.com">
@@ -59,6 +66,8 @@ export default function Projects() {
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React</Badge>
             <Badge colorScheme="orange">JS</Badge>
+            <Badge colorScheme="purple">HTML</Badge>
+            <Badge colorScheme="red">CSS</Badge>
           </Stack>
         </ProjectCard>
       </Stack>
@@ -83,6 +92,8 @@ export default function Projects() {
           <Stack isInline mt={4}>
             <Badge colorScheme="green">React</Badge>
             <Badge colorScheme="cyan">TS</Badge>
+            <Badge colorScheme="purple">HTML</Badge>
+            <Badge colorScheme="red">CSS</Badge>
           </Stack>
         </ProjectCard>
       </Stack>
