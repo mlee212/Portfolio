@@ -16,7 +16,7 @@ export default function Container({ children, main }) {
     <>
       <Box transition="background-color 0.2s ease-in-out">
         <Head>
-          {/* <link rel="icon" href="/favicon.ico" /> */}
+          <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
             content="A portfolio for my neat projects and ideas using Next.js"
