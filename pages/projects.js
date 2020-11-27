@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Container, { siteTitle } from "../components/Container";
 import ProjectCard from "../components/ProjectCard";
-import { Heading, Badge, Stack, Text, Flex } from "@chakra-ui/core";
+import { Heading, Badge, Stack, Text, Link } from "@chakra-ui/core";
 
 export default function Projects() {
   return (
@@ -74,7 +74,7 @@ export default function Projects() {
       <Heading size="lg" my={8}>
         Finished Projects:
       </Heading>
-      <Stack spacing={4}>
+      <Stack spacing={4} mb={6}>
         <ProjectCard title="Rho Shell" href="https://github.com/r-jo/rhoshell">
           Rho Shell is aimed to replicate the standard functions of a shell
           using a Command Line Interface (CLI), written primarily in C++. It can
@@ -97,6 +97,13 @@ export default function Projects() {
           </Stack>
         </ProjectCard>
       </Stack>
+      <Text>You can find out more about what I do on my <Link
+            href="https://github.com/r-jo"
+            textDecoration="underline"
+            isExternal
+          >
+            Github
+          </Link>!</Text>
     </Container>
   );
 }

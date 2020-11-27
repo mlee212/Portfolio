@@ -1,38 +1,22 @@
 import Link from "next/link";
-import { Box, useColorMode } from "@chakra-ui/core";
+import Image from 'next/image';
+import { Box, useColorMode, Button, useColorModeValue } from "@chakra-ui/core";
 
 export default function Logo() {
-  const { colorMode } = useColorMode();
-  const bg = {
-    light: "gray.800",
-    dark: "#fff",
-  };
-  const color = {
-    light: "#fff",
-    dark: "gray.800",
-  };
+  const { colorMode, toggleColorMode } = useColorMode()
+
+  const bg = useColorModeValue("gray.100", "gray.600")
   return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      textAlign="center"
-      maxH="30px"
-      maxW="30px"
-      minH="30px"
-      minW="30px"
-      py={0}
-      px={2}
-      borderRadius="2px"
-      bg={bg[colorMode]}
-      color={color[colorMode]}
-      textDecoration="none"
-      fontSize="18px"
-      fontWeight="600"
-    >
-      <Link href="/">
-        <a className="logo">R</a>
-      </Link>
-    </Box>
+    <Link href="/">
+      <Button padding="1" variant="solid" backgroundColor={bg} borderRadius="50%"><Box>
+    <Image 
+    src="/images/icon_logo.png"
+    alt="Logo picture"
+    width="32"
+    height="32"
+    cursor="pointer"
+    />
+    </Box></Button>
+    </Link>
   );
 }
