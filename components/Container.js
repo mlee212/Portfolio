@@ -30,7 +30,7 @@ export default function Container({ children, main }) {
           <meta name="og:title" content={siteTitle} />
         </Head>
         <Nav />
-        <AnimatePresence>
+        <AnimatePresence exitBeforeEnter>
           <motion.div
             key={router.route}
             initial="pageInitial"
@@ -47,12 +47,12 @@ export default function Container({ children, main }) {
               },
               pageExit: {
                 opacity: 0,
-                x: 0,
+                x: 10,
               },
             }}
           >
             <Box
-              maxW="42rem"
+              maxW="43rem"
               p="0 1.75rem"
               m="3rem auto 6rem"
               my={50}
