@@ -3,7 +3,28 @@ import Container, { siteTitle } from "../components/Container";
 import ProjectCard from "../components/ProjectCard";
 import { Heading, Badge, Stack, Text, Link } from "@chakra-ui/core";
 
+import { motion } from "framer-motion";
+
 export default function Projects() {
+  const list = {
+    visible: {
+      opacity: 1,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        when: "afterChildren",
+      },
+    },
+  };
+  const item = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  };
   return (
     <Container main>
       <Head>
@@ -14,96 +35,145 @@ export default function Projects() {
       </Heading>
       <Text>
         Here a collection of my best work where I demonstrate my skills as a
-        developer and a creator. Some of the languages and frameworks I currently use are:
+        developer and a creator. Some of the languages and frameworks I
+        currently use are:
       </Text>
-      <Stack justify="center" isInline my={4}>
-        <Badge fontSize="lg" colorScheme="blue">
+      <Text textAlign="center" my={3}>
+        <Badge fontSize="lg" colorScheme="blue" m={1}>
           Next
         </Badge>
-        <Badge fontSize="lg" colorScheme="green">
+        <Badge fontSize="lg" colorScheme="green" m={1}>
           React
         </Badge>
-        <Badge fontSize="lg" colorScheme="orange">
+        <Badge fontSize="lg" colorScheme="orange" m={1}>
           JS
         </Badge>
-        <Badge fontSize="lg" colorScheme="purple">
+        <Badge fontSize="lg" colorScheme="purple" m={1}>
           HTML
         </Badge>
-        <Badge fontSize="lg" colorScheme="red">
+        <Badge fontSize="lg" colorScheme="red" m={1}>
           CSS
         </Badge>
-        <Badge fontSize="lg" colorScheme="yellow">
+        <Badge fontSize="lg" colorScheme="yellow" m={1}>
           C++
         </Badge>
-      </Stack>
+        <Badge fontSize="lg" colorScheme="black" m={1}>
+          Git
+        </Badge>
+        <Badge fontSize="lg" colorScheme="teal" m={1}>
+          Figma
+        </Badge>
+      </Text>
       <Heading size="lg" my={8}>
         Currently working on:
       </Heading>
-      <Stack spacing={4}>
-        <ProjectCard title="Citrushack" href="https://citrushack.com">
-          The website used by hundreds of students to interact and participate
-          in the annual Citrushack hackathon. Coming Winter 2021.
-          <Stack isInline mt={4}>
-            <Badge colorScheme="green">React</Badge>
-            <Badge colorScheme="orange">JS</Badge>
-            <Badge colorScheme="purple">HTML</Badge>
-            <Badge colorScheme="red">CSS</Badge>
-          </Stack>
-        </ProjectCard>
-        <ProjectCard title="Biohack" href="https://biohackucr.com">
-          The website used by hundreds of students to interact and participate
-          in the annual Biohack hackathon. Coming Spring 2021.
-          <Stack isInline mt={4}>
-            <Badge colorScheme="green">React</Badge>
-            <Badge colorScheme="orange">JS</Badge>
-            <Badge colorScheme="purple">HTML</Badge>
-            <Badge colorScheme="red">CSS</Badge>
-          </Stack>
-        </ProjectCard>
-        <ProjectCard title="Habitle" href="https://habitle.com">
-          A minimal and powerful web app that generates a heatmap to visual
-          progress to promote a positive and consistent lifestyle.
-          <Stack isInline mt={4}>
-            <Badge colorScheme="green">React</Badge>
-            <Badge colorScheme="orange">JS</Badge>
-            <Badge colorScheme="purple">HTML</Badge>
-            <Badge colorScheme="red">CSS</Badge>
-          </Stack>
-        </ProjectCard>
-      </Stack>
+      <motion.div initial="hidden" animate="visible" variants={list}>
+        <Stack spacing={4}>
+          <motion.div variants={item}>
+            <ProjectCard
+              title="Citrushack"
+              href="https://citrushack.com"
+              image="/images/citrushack.png"
+              category="Hackathon"
+            >
+              The website used by hundreds of students to interact and
+              participate in the annual Citrushack hackathon. Coming Winter
+              2021.
+              <Stack isInline mt={4}>
+                <Badge colorScheme="green">React</Badge>
+                <Badge colorScheme="orange">JS</Badge>
+                <Badge colorScheme="purple">HTML</Badge>
+                <Badge colorScheme="red">CSS</Badge>
+              </Stack>
+            </ProjectCard>
+          </motion.div>
+          <motion.div variants={item}>
+            <ProjectCard
+              title="Biohack"
+              href="https://biohackucr.com"
+              image="/images/icon_logo.png"
+              category="Hackathon"
+            >
+              The website used by hundreds of students to interact and
+              participate in the annual Biohack hackathon. Coming Spring 2021.
+              <Stack isInline mt={4}>
+                <Badge colorScheme="green">React</Badge>
+                <Badge colorScheme="orange">JS</Badge>
+                <Badge colorScheme="purple">HTML</Badge>
+                <Badge colorScheme="red">CSS</Badge>
+              </Stack>
+            </ProjectCard>
+          </motion.div>
+          <motion.div variants={item}>
+            <ProjectCard
+              title="Habitle"
+              href="https://habitle.com"
+              image="/images/habitle.png"
+              category="Personal Project"
+            >
+              A minimal and powerful web app that generates a heatmap to visual
+              progress to promote a positive and consistent lifestyle.
+              <Stack isInline mt={4}>
+                <Badge colorScheme="green">React</Badge>
+                <Badge colorScheme="orange">JS</Badge>
+                <Badge colorScheme="purple">HTML</Badge>
+                <Badge colorScheme="red">CSS</Badge>
+              </Stack>
+            </ProjectCard>
+          </motion.div>
+        </Stack>
+      </motion.div>
       <Heading size="lg" my={8}>
         Finished Projects:
       </Heading>
-      <Stack spacing={4} mb={6}>
-        <ProjectCard title="Rho Shell" href="https://github.com/r-jo/rhoshell">
-          Rho Shell is aimed to replicate the standard functions of a shell
-          using a Command Line Interface (CLI), written primarily in C++. It can
-          perform most of the basic and common commands of a terminal.
-          <Stack isInline mt={4}>
-            <Badge colorScheme="yellow">C++</Badge>
-          </Stack>
-        </ProjectCard>
-
-        <ProjectCard title="Cutiehack" href="https://cutiehack.io">
-          The website used by 500+ students to interact with and participate in
-          the annual Cutiehack hackathon. Built with React and Typescript for
-          wicked fast performance. Co-led the effort on UI/UX and frontend to
-          provide a seamless and easy-to-use interface.
-          <Stack isInline mt={4}>
-            <Badge colorScheme="green">React</Badge>
-            <Badge colorScheme="cyan">TS</Badge>
-            <Badge colorScheme="purple">HTML</Badge>
-            <Badge colorScheme="red">CSS</Badge>
-          </Stack>
-        </ProjectCard>
-      </Stack>
-      <Text>You can find out more about what I do on my <Link
-            href="https://github.com/r-jo"
-            textDecoration="underline"
-            isExternal
-          >
-            Github
-          </Link>!</Text>
+      <motion.div initial="hidden" animate="visible" variants={list}>
+        <Stack spacing={4} mb={6}>
+          <motion.div variants={item}>
+            <ProjectCard
+              title="Rho Shell"
+              href="https://github.com/r-jo/rhoshell"
+              image="/images/terminal.png"
+              category="Personal Project"
+            >
+              Rho Shell is aimed to replicate the standard functions of a shell
+              using a Command Line Interface (CLI), written primarily in C++. It
+              can perform most of the basic and common commands of a terminal.
+              <Stack isInline mt={4}>
+                <Badge colorScheme="yellow">C++</Badge>
+              </Stack>
+            </ProjectCard>
+          </motion.div>
+          <motion.div variants={item}>
+            <ProjectCard
+              title="Cutiehack"
+              href="https://cutiehack.io"
+              image="/images/cutiehack2020.png"
+              category="Hackathon"
+            >
+              The website used by 500+ students to interact with and participate
+              in the annual Cutiehack hackathon. Co-led the effort on UI/UX and
+              frontend to provide a seamless and easy-to-use interface.
+              <Stack isInline mt={4}>
+                <Badge colorScheme="green">React</Badge>
+                <Badge colorScheme="cyan">TS</Badge>
+                <Badge colorScheme="purple">HTML</Badge>
+                <Badge colorScheme="red">CSS</Badge>
+              </Stack>
+            </ProjectCard>
+          </motion.div>
+        </Stack>
+      </motion.div>
+      <Text>
+        You can find out more about what I do on my{" "}
+        <Link
+          href="https://github.com/r-jo"
+          textDecoration="underline"
+          isExternal
+        >
+          Github
+        </Link>
+        !
+      </Text>
     </Container>
   );
 }

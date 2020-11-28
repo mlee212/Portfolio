@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }) {
     <ChakraProvider theme={customTheme}>
       <CSSReset />
       <ColorModeScript initialColorMode="light" />
-      <Component {...pageProps} />
+          <Component {...pageProps} />
     </ChakraProvider>
   );
 }

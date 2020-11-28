@@ -1,24 +1,34 @@
-import { Box, Text, Link, useColorMode } from "@chakra-ui/core";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+import {
+  Box,
+  Text,
+  Link,
+  useColorMode,
+  useColorModeValue,
+  Center,
+} from "@chakra-ui/core";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
-export default function ProjectCard({ title, children, href }) {
+export default function ProjectCard({
+  title,
+  category,
+  children,
+  image,
+  href,
+}) {
   const { colorMode } = useColorMode();
   const bg = {
     light: "white",
     dark: "#24272d",
   };
-  const color = {
-    light: "gray.600",
-    dark: "#e2e4e8",
-  };
+  const color = useColorModeValue("gray.600", "#e2e4e8");
   const bxShadow = {
     light:
       "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
     dark:
       "0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
   };
-
+  const imagebg = useColorModeValue("gray.100", "#1a1e21");
   return (
     <motion.div
       whileTap={{ scale: 1 }}
@@ -33,21 +43,53 @@ export default function ProjectCard({ title, children, href }) {
       }}
     >
       <Box
+        display={{ md: "flex" }}
         bg={bg[colorMode]}
         boxShadow={bxShadow[colorMode]}
         borderRadius="7px"
-        px={6}
-        py={5}
+        minHeight="100%"
         transition="all 0.2s ease-in-out"
+        p={3}
       >
-        <Text textDecoration="none" fontWeight="bold" mb={2}>
-          <Link href={href} textDecoration="none" isExternal>
-            {title} <ExternalLinkIcon mb={1} />
+        <Center
+          flexShrink={0}
+          backgroundColor={imagebg}
+          p={4}
+          borderRadius="7px"
+        >
+          <Image
+            width="150px"
+            height="150px"
+            src={image}
+            alt="Project Brand Logo"
+          />
+        </Center>
+
+        <Box mt={{ base: 4, md: 0 }} ml={{ md: 2 }} p={4}>
+          <Text
+            fontWeight="bold"
+            textTransform="uppercase"
+            fontSize="sm"
+            letterSpacing="wide"
+            color="teal.600"
+          >
+            {category}
+          </Text>
+          <Link
+            mt={1}
+            display="block"
+            fontSize="lg"
+            lineHeight="normal"
+            fontWeight="semibold"
+            href={href}
+            isExternal
+          >
+            {title}
           </Link>
-        </Text>
-        <Text textDecoration="none" color={color[colorMode]}>
-          {children}
-        </Text>
+          <Text mt={2} color={color}>
+            {children}
+          </Text>
+        </Box>
       </Box>
     </motion.div>
   );
