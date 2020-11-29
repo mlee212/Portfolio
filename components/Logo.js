@@ -11,7 +11,6 @@ export default function Logo() {
         variant="solid"
         backgroundColor={bg}
         borderRadius="50%"
-        _hover={{ transform: "rotate(-30deg)" }}
       >
         <Box>
           <Image

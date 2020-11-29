@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Container, { siteTitle } from "../components/Container";
 import ProjectCard from "../components/ProjectCard";
-import { Heading, Badge, Stack, Text, Link } from "@chakra-ui/core";
+import { Heading, Badge, Stack, Text, Link , Flex} from "@chakra-ui/core";
 
 import { motion } from "framer-motion";
 
@@ -34,36 +34,79 @@ export default function Projects() {
         Projects
       </Heading>
       <Text>
-        Here a collection of my best work where I demonstrate my skills as a
-        developer and a creator. Some of the languages and frameworks I
-        currently use are:
+        Here is a collection of my best work where I demonstrate my skills as a
+        developer and a creator. Some of the languages, frameworks, and
+        libraries I currently use are:
       </Text>
-      <Text textAlign="center" my={3}>
-        <Badge fontSize="lg" colorScheme="blue" m={1}>
-          Next
-        </Badge>
-        <Badge fontSize="lg" colorScheme="green" m={1}>
-          React
-        </Badge>
-        <Badge fontSize="lg" colorScheme="orange" m={1}>
-          JS
-        </Badge>
-        <Badge fontSize="lg" colorScheme="purple" m={1}>
-          HTML
-        </Badge>
-        <Badge fontSize="lg" colorScheme="red" m={1}>
-          CSS
-        </Badge>
-        <Badge fontSize="lg" colorScheme="yellow" m={1}>
-          C++
-        </Badge>
-        <Badge fontSize="lg" colorScheme="black" m={1}>
-          Git
-        </Badge>
-        <Badge fontSize="lg" colorScheme="teal" m={1}>
-          Figma
-        </Badge>
-      </Text>
+      <motion.div initial="hidden" animate="visible" variants={list}>
+        <Flex flexWrap="wrap" justify="center" my={3}>
+          <motion.div variants={item}>
+            <Badge fontSize="lg" colorScheme="blue" m={1}>
+              Next
+            </Badge>
+          </motion.div>
+          <motion.div variants={item}>
+            <Badge fontSize="lg" colorScheme="green" m={1}>
+              React
+            </Badge>
+          </motion.div>
+          <motion.div variants={item}>
+            <Badge fontSize="lg" colorScheme="orange" m={1}>
+              JS
+            </Badge>
+          </motion.div>
+          <motion.div variants={item}>
+            <Badge fontSize="lg" colorScheme="purple" m={1}>
+              HTML
+            </Badge>
+          </motion.div>
+          <motion.div variants={item}>
+            <Badge fontSize="lg" colorScheme="yellow" m={1}>
+              Styled Components
+            </Badge>
+          </motion.div>
+          <motion.div variants={item}>
+            <Badge fontSize="lg" colorScheme="red" m={1}>
+              CSS
+            </Badge>
+          </motion.div>
+          <motion.div variants={item}>
+            <Badge fontSize="lg" colorScheme="yellow" m={1}>
+              C++
+            </Badge>
+          </motion.div>
+          <motion.div variants={item}>
+            <Badge fontSize="lg" colorScheme="blue" m={1}>
+              Chakra UI
+            </Badge>
+          </motion.div>
+          <motion.div variants={item}>
+            <Badge fontSize="lg" colorScheme="gray" m={1}>
+              Git
+            </Badge>
+          </motion.div>
+          <motion.div variants={item}>
+            <Badge fontSize="lg" colorScheme="teal" m={1}>
+              Figma
+            </Badge>
+          </motion.div>
+          <motion.div variants={item}>
+            <Badge fontSize="lg" colorScheme="green" m={1}>
+              Yarn
+            </Badge>
+          </motion.div>
+          <motion.div variants={item}>
+            <Badge fontSize="lg" colorScheme="red" m={1}>
+              NPM
+            </Badge>
+          </motion.div>
+          <motion.div variants={item}>
+            <Badge fontSize="lg" colorScheme="purple" m={1}>
+              Tailwind
+            </Badge>
+          </motion.div>
+        </Flex>
+      </motion.div>
       <Heading size="lg" my={8}>
         Currently working on:
       </Heading>
