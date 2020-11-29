@@ -64,7 +64,7 @@ export default function Home() {
       <Box>
         <Section title="Hi there, I'm Rajbir.">
           I'm a frontend web developer based in Southern California 😎 studying
-          Computer Science at the University of California, Riverside. I'm
+          Computer Science at the University of California at Riverside. I'm
           currently working on{" "}
           <Link
             href="https://habitle.com"

@@ -75,7 +75,7 @@ export const Footer = () => {
             <Text fontWeight="bold" mb={4}>Don't be a Stranger</Text>
             <Text color={color[colorMode]}>
               I don't bite anything except really good food. I'm always up for
-              making new friends. Learn more and always feel free to contact me.
+              making new friends. Learn more and feel free to contact me.
               <br />
               {new Date().getFullYear()} &#169; Rajbir Johar
             </Text>

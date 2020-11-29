@@ -5,7 +5,7 @@ export function DarkMode() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Box transition="all ease 0.2s" _hover={{ transform: "rotate(-30deg)" }}>
+    <Box transition="all ease 1s" _hover={{ transform: "rotate(-360deg)" }}>
       <IconButton
         variant="ghost"
         p={1}

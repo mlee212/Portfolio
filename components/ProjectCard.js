@@ -28,7 +28,7 @@ export default function ProjectCard({
     dark:
       "0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
   };
-  const imagebg = useColorModeValue("gray.100", "#1a1e21");
+  
   return (
     <motion.div
       whileTap={{ scale: 1 }}
@@ -53,9 +53,8 @@ export default function ProjectCard({
       >
         <Center
           flexShrink={0}
-          backgroundColor={imagebg}
+          bgImage={image}
           p={4}
-          borderRadius="7px"
         >
           <Image
             width="150px"
