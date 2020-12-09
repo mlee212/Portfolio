@@ -21,7 +21,7 @@ import { motion } from "framer-motion";
 const Section = ({ title, children }) => {
   return (
     <Box
-      minH="50vh"
+      minH="85vh"
       display="flex"
       flexDirection="column"
       justifyContent="center"
@@ -62,26 +62,11 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <Box>
-        <Section title="Hi there, I'm Rajbir.">
-          I'm a frontend web developer based in Southern California 😎 studying
-          Computer Science at the University of California at Riverside. I'm
-          currently working on{" "}
-          <Link
-            href="https://habitle.com"
-            textDecoration="underline"
-            isExternal
-          >
-            Habitle
-          </Link>
-          , a new app that generates a heatmap promoting positive habits through
-          visualization.
-          <br />
-          <br />
-          If I'm not coding, you can catch me perfecting the art of the grilled
-          cheese 🥪 or building bespoke keyboards ⌨️. Gotta invest in your tool
-          of trade, am I right? I'm typing on my Iron165 (my favorite board
-          ever) with lubricated cream switches.
-          <br />
+        <Section title="Rajbir Johar">
+          <Text fontSize="xl">
+            Frontend Developer <br />
+            Based in California
+          </Text>
           <ButtonGroup mt={4} spacing={1}>
             <Button variant="solid" aria-label="Email" onClick={onCopy}>
               {hasCopied ? "Copied!" : "@ Email"}
@@ -91,7 +76,24 @@ export default function Home() {
             </Link>
           </ButtonGroup>
         </Section>
-
+        <Heading fontWeight="bold" as="h1" my={8}>
+          What I'm About
+        </Heading>
+        I'm a frontend web developer based in Southern California 😎 studying
+        Computer Science at the University of California at Riverside. I'm
+        currently working on{" "}
+        <Link href="https://habitle.com" textDecoration="underline" isExternal>
+          Habitle
+        </Link>
+        , a new app that generates a heatmap promoting positive habits through
+        visualization.
+        <br />
+        <br />
+        If I'm not coding, you can catch me perfecting the art of the grilled
+        cheese 🥪 or building bespoke keyboards ⌨️. Gotta invest in your tool of
+        trade, am I right? I'm typing on my Iron165 (my favorite board ever)
+        with lubricated cream switches.
+        <br />
         <Heading fontWeight="bold" as="h1" my={8}>
           Featured Projects
         </Heading>
