@@ -108,7 +108,7 @@ export default function Projects() {
         </Flex>
       </motion.div>
       <Heading size="lg" my={8}>
-        Currently working on:
+        Currently working on
       </Heading>
       <motion.div initial="hidden" animate="visible" variants={list}>
         <Stack spacing={4}>
@@ -167,7 +167,7 @@ export default function Projects() {
         </Stack>
       </motion.div>
       <Heading size="lg" my={8}>
-        Finished Projects:
+        Finished Projects
       </Heading>
       <motion.div initial="hidden" animate="visible" variants={list}>
         <Stack spacing={4} mb={6}>
