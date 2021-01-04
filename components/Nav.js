@@ -49,6 +49,9 @@ export function Nav() {
             <ActiveLink activeClassName="active" href="/projects">
               <a className="nav-link">Projects</a>
             </ActiveLink>
+            <ActiveLink activeClassName="active" href="/more">
+              <a className="nav-link">More</a>
+            </ActiveLink>
             <DarkMode />
           </ButtonGroup>
         </Box>

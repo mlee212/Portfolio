@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Container, { siteTitle } from "../components/Container";
 import ProjectCard from "../components/ProjectCard";
-import { Heading, Badge, Stack, Text, Link , Flex} from "@chakra-ui/core";
+import { Heading, Badge, Stack, Text, Link , Flex, Box} from "@chakra-ui/core";
 
 import { motion } from "framer-motion";
 
@@ -30,6 +30,7 @@ export default function Projects() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <Box pt={5}>
       <Heading fontWeight="bold" as="h1" my={5}>
         Projects
       </Heading>
@@ -42,12 +43,12 @@ export default function Projects() {
         <Flex flexWrap="wrap" justify="center" my={3}>
           <motion.div variants={item}>
             <Badge fontSize="lg" colorScheme="blue" m={1}>
-              Next
+              Next JS
             </Badge>
           </motion.div>
           <motion.div variants={item}>
             <Badge fontSize="lg" colorScheme="green" m={1}>
-              React
+              React JS
             </Badge>
           </motion.div>
           <motion.div variants={item}>
@@ -120,10 +121,10 @@ export default function Projects() {
               category="Hackathon"
             >
               The website used by hundreds of students to interact and
-              participate in the annual Citrushack hackathon. Coming Winter
+              participate in the annual Citrushack hackathon. Coming Spring
               2021.
               <Stack isInline mt={4}>
-                <Badge colorScheme="green">React</Badge>
+                <Badge colorScheme="blue">Next JS</Badge>
                 <Badge colorScheme="orange">JS</Badge>
                 <Badge colorScheme="purple">HTML</Badge>
                 <Badge colorScheme="red">CSS</Badge>
@@ -134,13 +135,13 @@ export default function Projects() {
             <ProjectCard
               title="Biohack"
               href="https://biohackucr.com"
-              image="/images/icon_logo.png"
+              image="/images/biohack2021.png"
               category="Hackathon"
             >
               The website used by hundreds of students to interact and
               participate in the annual Biohack hackathon. Coming Spring 2021.
               <Stack isInline mt={4}>
-                <Badge colorScheme="green">React</Badge>
+                <Badge colorScheme="blue">Next JS</Badge>
                 <Badge colorScheme="orange">JS</Badge>
                 <Badge colorScheme="purple">HTML</Badge>
                 <Badge colorScheme="red">CSS</Badge>
@@ -157,7 +158,7 @@ export default function Projects() {
               A minimal and powerful web app that generates a heatmap to visual
               progress to promote a positive and consistent lifestyle.
               <Stack isInline mt={4}>
-                <Badge colorScheme="green">React</Badge>
+                <Badge colorScheme="green">React JS</Badge>
                 <Badge colorScheme="orange">JS</Badge>
                 <Badge colorScheme="purple">HTML</Badge>
                 <Badge colorScheme="red">CSS</Badge>
@@ -197,7 +198,7 @@ export default function Projects() {
               in the annual Cutiehack hackathon. Co-led the effort on UI/UX and
               frontend to provide a seamless and easy-to-use interface.
               <Stack isInline mt={4}>
-                <Badge colorScheme="green">React</Badge>
+                <Badge colorScheme="green">React JS</Badge>
                 <Badge colorScheme="cyan">TS</Badge>
                 <Badge colorScheme="purple">HTML</Badge>
                 <Badge colorScheme="red">CSS</Badge>
@@ -217,6 +218,7 @@ export default function Projects() {
         </Link>
         !
       </Text>
+      </Box>
     </Container>
   );
 }

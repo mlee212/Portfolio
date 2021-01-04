@@ -1,8 +1,7 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import Container, { siteTitle } from "../components/Container";
-import TopTracks from "../components/TopTracks";
-import Timeline from "../components/Timeline";
 import ProjectCard from "../components/ProjectCard";
 import {
   Heading,
@@ -11,7 +10,7 @@ import {
   ButtonGroup,
   useClipboard,
   Box,
-  Link,
+  Link as ChakraLink,
   Stack,
   Badge,
 } from "@chakra-ui/core";
@@ -21,7 +20,7 @@ import { motion } from "framer-motion";
 const Section = ({ title, children }) => {
   return (
     <Box
-      minH="85vh"
+      minH="50vh"
       display="flex"
       flexDirection="column"
       justifyContent="center"
@@ -65,7 +64,7 @@ export default function Home() {
         <Section title="Rajbir Johar">
           <Text fontSize="xl">
             Frontend Developer <br />
-            Based in California
+            Based in Southern California
           </Text>
           <ButtonGroup mt={4} spacing={1}>
             <Button variant="solid" aria-label="Email" onClick={onCopy}>
@@ -82,23 +81,27 @@ export default function Home() {
         I'm a frontend web developer based in Southern California 😎 studying
         Computer Science at the University of California at Riverside. I'm
         currently working on{" "}
-        <Link href="https://habitle.com" textDecoration="underline" isExternal>
-          Habitle
+        <Link
+          href="https://citrushack.com"
+          textDecoration="underline"
+          isExternal
+        >
+          Citrushack
         </Link>
-        , a new app that generates a heatmap promoting positive habits through
-        visualization.
+        , the largest hackathon offered by UCR. More updates soon to come!
         <br />
         <br />
         If I'm not coding, you can catch me perfecting the art of the grilled
         cheese 🥪 or building bespoke keyboards ⌨️. Gotta invest in your tool of
         trade, am I right? I'm typing on my Iron165 (my favorite board ever)
-        with lubricated cream switches.
+        with lubricated cream switches. You can also find me currently playing
+        through Ghost of Tsushima.
         <br />
         <Heading fontWeight="bold" as="h1" my={8}>
           Featured Projects
         </Heading>
         <motion.div initial="hidden" animate="visible" variants={list}>
-          <Stack spacing={4}>
+          <Stack spacing={4} mb={6}>
             <motion.div variants={item}>
               <ProjectCard
                 title="Citrushack"
@@ -107,10 +110,10 @@ export default function Home() {
                 category="Hackathon"
               >
                 The website used by hundreds of students to interact and
-                participate in the annual Citrushack hackathon. Coming Winter
+                participate in the annual Citrushack hackathon. Coming Spring
                 2021.
                 <Stack isInline mt={4}>
-                  <Badge colorScheme="green">React</Badge>
+                  <Badge colorScheme="blue">Next JS</Badge>
                   <Badge colorScheme="orange">JS</Badge>
                   <Badge colorScheme="purple">HTML</Badge>
                   <Badge colorScheme="red">CSS</Badge>
@@ -121,13 +124,13 @@ export default function Home() {
               <ProjectCard
                 title="Biohack"
                 href="https://biohackucr.com"
-                image="/images/icon_logo.png"
+                image="/images/biohack2021.png"
                 category="Hackathon"
               >
                 The website used by hundreds of students to interact and
                 participate in the annual Biohack hackathon. Coming Spring 2021.
                 <Stack isInline mt={4}>
-                  <Badge colorScheme="green">React</Badge>
+                  <Badge colorScheme="blue">Next JS</Badge>
                   <Badge colorScheme="orange">JS</Badge>
                   <Badge colorScheme="purple">HTML</Badge>
                   <Badge colorScheme="red">CSS</Badge>
@@ -154,12 +157,23 @@ export default function Home() {
           </Stack>
         </motion.div>
       </Box>
-      <Timeline />
-      <Heading fontWeight="bold" as="h1" my={8}>
-        My Music Right Now
-      </Heading>
-      <Text>The top ten songs I've been listening to. Updated Daily.</Text>
-      <TopTracks />
+      <Text>
+        Discover some of my other{" "}
+        <ChakraLink as={Link} href="/projects">
+          <Text cursor="pointer" as="u">
+            projects
+          </Text>
+        </ChakraLink>{" "}
+         or check out my{" "}
+        <ChakraLink
+          href="https://github.com/r-jo"
+          textDecoration="underline"
+          isExternal
+        >
+          Github
+        </ChakraLink>
+        !
+      </Text>
     </Container>
   );
 }
