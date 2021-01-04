@@ -142,7 +142,7 @@ export default function Container({ children, main }) {
             }}
           >
             <Box
-              maxW="43rem"
+              maxW="45rem"
               p="0 1.75rem"
               m="3rem auto 6rem"
               my={50}

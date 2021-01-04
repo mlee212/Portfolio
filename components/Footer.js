@@ -12,7 +12,6 @@ import {
   Button,
 } from "@chakra-ui/core";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { FaSpotify } from "react-icons/fa";
 
 export const Footer = () => {
   const { colorMode } = useColorMode();
@@ -55,18 +54,6 @@ export const Footer = () => {
                   aria-label="Github"
                   fontSize="25px"
                   icon={<AiFillLinkedin />}
-                />
-              </Link>
-
-              <Link
-                href="https://open.spotify.com/user/7btb9b9wefyiocyrfto5ayc83?si=ASEIwohWQuezjR07gRbnIw"
-                isExternal
-              >
-                <IconButton
-                  variant="ghost"
-                  aria-label="Github"
-                  fontSize="25px"
-                  icon={<FaSpotify />}
                 />
               </Link>
             </ButtonGroup>
