@@ -26,7 +26,7 @@ export default function More() {
         <ListItem>M1 Mac Mini (New Addition!)</ListItem>
         <ListItem>Macbook Pro 16"</ListItem>
         <ListItem>iPad Pro 11"</ListItem>
-        <ListItem>iPhone 12</ListItem>
+        <ListItem>iPhone 12 Pro</ListItem>
         <ListItem>LG 34" Ultrawide</ListItem>
         <ListItem>Mandalorian Figurine (to yell at when I can't solve a bug)</ListItem>
       </List>

@@ -7,7 +7,7 @@ import { DarkMode } from "./DarkMode";
 
 const StickyNav = styled(Flex)`
   position: sticky;
-  z-index: 5;
+  z-index: 2;
   top: 0;
   backdrop-filter: saturate(180%) blur(20px);
   transition: background-color 0.2s ease-in-out;

@@ -18,23 +18,29 @@ export const Footer = () => {
   const color = {
     light: "gray.600",
     dark: "#8e95a3",
-  }
+  };
+  const bg = {
+    light: "#fdfefe",
+    dark: "#191b1f",
+  };
   const [value] = React.useState("rajbirsjohar@gmail.com");
   const { onCopy, hasCopied } = useClipboard(value);
   return (
     <>
       <Divider />
-      <Box>
+      <Box position="relative" bg={bg[colorMode]} zIndex={2}>
         <SimpleGrid
           maxW="50rem"
-          p="3rem 2rem 3rem"
+          p="3rem 0rem"
           m="0rem auto 0rem"
           columns={3}
           spacingX="50px"
           minChildWidth="250px"
         >
           <Box my={2}>
-            <Text fontWeight="bold" mb={4}>Useful Links</Text>
+            <Text fontWeight="bold" mb={4}>
+              Useful Links
+            </Text>
             <ButtonGroup spacing={2}>
               <Button variant="solid" aria-label="Email" onClick={onCopy}>
                 {hasCopied ? "Copied!" : "@ Email"}
@@ -59,7 +65,9 @@ export const Footer = () => {
             </ButtonGroup>
           </Box>
           <Box my={2}>
-            <Text fontWeight="bold" mb={4}>Don't be a Stranger</Text>
+            <Text fontWeight="bold" mb={4}>
+              Don't be a Stranger
+            </Text>
             <Text color={color[colorMode]}>
               I don't bite anything except really good food. I'm always up for
               making new friends. Learn more and feel free to contact me.

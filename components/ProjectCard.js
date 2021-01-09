@@ -50,6 +50,7 @@ export default function ProjectCard({
         minHeight="100%"
         transition="all 0.2s ease-in-out"
         p={3}
+        zIndex="1000"
       >
         <Center
           flexShrink={0}
