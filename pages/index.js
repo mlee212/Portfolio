@@ -17,6 +17,8 @@ import {
 
 import { motion } from "framer-motion";
 
+import Particles from "react-tsparticles"
+
 const Section = ({ title, children }) => {
   return (
     <Box

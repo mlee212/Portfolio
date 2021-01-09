@@ -6,6 +6,8 @@ import { Box } from "@chakra-ui/core";
 
 import { motion, AnimatePresence } from "framer-motion";
 
+import Particles from "react-tsparticles"
+
 const name = "Rajbir";
 export const siteTitle = "Rajbir | Portfolio";
 
@@ -120,6 +122,137 @@ export default function Container({ children, main }) {
           <meta name="og:title" content={siteTitle} />
         </Head>
         <Nav />
+        <Particles
+        id="tsparticles"
+        options={{
+          background: {
+            color: {
+              value: "",
+            },
+            position: {
+              value: "",
+            },
+          },
+          backgroundMode:{
+            enable: true,
+            zIndex: -100,
+          },
+          particles: {
+            number: {
+              value: 60,
+              density: {
+                enable: true,
+                value_area: 1000
+              }
+            },
+            color: {
+              value: "#ffffff"
+            },
+            shape: {
+              type: "star",
+              stroke: {
+                width: 0,
+                color: "#000000"
+              }
+            },
+            opacity: {
+              value: 1,
+              random: true,
+              anim: {
+                enable: true,
+                speed: 2.0,
+                opacity_min: 0.6,
+                sync: false
+              }
+            },
+            size: {
+              value: 2,
+              random: true,
+              anim: {
+                enable: true,
+                speed: 0.3,
+                size_min: 1,
+                sync: false
+              }
+            },
+            line_linked: {
+              enable: true,
+              distance: 60,
+              color: "#ffffff",
+              opacity: 0.7,
+              width: 1.5
+            },
+            move: {
+              enable: true,
+              speed: 0.5,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+              attract: {
+                enable: false,
+                rotateX: 0,
+                rotateY: 0
+              }
+            }
+          },
+          interactivity: {
+            detect_on: "window",
+            events: {
+              onDiv: [
+                {
+                  enable: true,
+                  selectors: ".titlespace",
+                  mode: "bounce",
+                  type: "rectangle"
+                }
+              ],
+              resize: true,
+              onhover: {
+                enable: true,
+                mode: "bubble",
+                parallax: {
+                  enable: true,
+                  force: 100,
+                  smooth: 6
+                }
+              },
+              onclick: {
+                enable: true,
+                mode: "push"
+              },
+              resize: true
+            },
+            modes: {
+              grab: {
+                distance: 400,
+                line_linked: {
+                  opacity: 1
+                }
+              },
+              bubble: {
+                distance: 250,
+                size: 6,
+                duration: 2,
+                opacity: 0.9,
+                speed: 3
+              },
+              repulse: {
+                distance: 400,
+                duration: 0.4
+              },
+              push: {
+                particles_nb: 1
+              },
+              remove: {
+                particles_nb: 2
+              }
+            }
+          },
+          detectRetina: true,
+        }}
+      />
         <AnimatePresence exitBeforeEnter>
           <motion.div
             key={router.route}
@@ -148,6 +281,7 @@ export default function Container({ children, main }) {
               my={50}
               lineHeight="1.6"
               fontSize="lg"
+              overflowX="hidden"
             >
               {children}
             </Box>
