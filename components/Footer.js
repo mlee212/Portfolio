@@ -31,7 +31,7 @@ export const Footer = () => {
       <Box position="relative" bg={bg[colorMode]} zIndex={2}>
         <SimpleGrid
           maxW="50rem"
-          p="3rem 0rem"
+          p="3rem 2rem 3rem"
           m="0rem auto 0rem"
           columns={3}
           spacingX="50px"
