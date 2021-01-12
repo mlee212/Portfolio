@@ -43,8 +43,8 @@ const Track = (track) => {
         >
           {track.artist}
         </Text>
-        <Divider />
       </Stack>
+      <Divider />
     </Box>
   );
 };
