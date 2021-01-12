@@ -10,6 +10,7 @@ const Track = (track) => {
     dark: "#8e95a3",
   }
   return (
+    <>
     <Box
       display="flex"
       flexDirection="row"
@@ -44,8 +45,9 @@ const Track = (track) => {
           {track.artist}
         </Text>
       </Stack>
-      <Divider />
     </Box>
+    <Divider />
+    </>
   );
 };
 
