@@ -11,7 +11,7 @@ export default function More() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <Box pt={5}>
+      <Box pt={20}>
       <Timeline />
       <Heading fontWeight="bold" as="h1" my={8}>
         My Music Right Now

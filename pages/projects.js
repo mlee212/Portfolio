@@ -30,7 +30,7 @@ export default function Projects() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <Box pt={5}>
+      <Box pt={20}>
       <Heading fontWeight="bold" as="h1" my={5}>
         Projects
       </Heading>

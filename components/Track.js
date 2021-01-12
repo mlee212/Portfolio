@@ -1,7 +1,7 @@
 // Full Credit to Lee Robinson
 
 import React from "react";
-import { Box, Link, Stack, Text, useColorMode } from "@chakra-ui/core";
+import { Box, Divider, Link, Stack, Text, useColorMode } from "@chakra-ui/core";
 
 const Track = (track) => {
   const { colorMode } = useColorMode();
@@ -43,6 +43,7 @@ const Track = (track) => {
         >
           {track.artist}
         </Text>
+        <Divider />
       </Stack>
     </Box>
   );
