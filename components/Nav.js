@@ -6,7 +6,7 @@ import styled from "@emotion/styled";
 import { DarkMode } from "./DarkMode";
 
 const StickyNav = styled(Flex)`
-  position: sticky;
+  position: fixed;
   z-index: 2;
   top: 0;
   backdrop-filter: saturate(180%) blur(20px);
