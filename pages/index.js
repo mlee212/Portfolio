@@ -22,13 +22,13 @@ export default function Home() {
         <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 text-black dark:text-white">
           What I'm About.
         </h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-4 text-lg">
+        <p className="text-gray-600 dark:text-gray-400 mb-4 text-lg md:text-md">
           I'm a frontend web developer based in Southern California 😎 studying
           Computer Science at the University of California at Riverside. I'm
           currently working on Citrushack, the largest hackathon offered by UCR.
           More updates soon to come!
         </p>
-        <p className="text-gray-600 dark:text-gray-400 mb-16 text-lg">
+        <p className="text-gray-600 dark:text-gray-400 mb-16 text-lg md:text-md">
           If I'm not coding, you can catch me perfecting the art of the grilled
           cheese 🥪 or building bespoke keyboards ⌨️. Gotta invest in your tool
           of trade, am I right? I'm typing on my Iron165 (my favorite board
@@ -41,21 +41,21 @@ export default function Home() {
         <ProjectCard
           image="/images/citrushack.png"
           children="The website used by hundreds of students to interact and participate in the annual Citrushack hackathon. Coming Spring 2021."
-          href="https://rajbirjohar.com"
+          href="https://citrushack.com"
           category="Citrushack"
           date="Hackathon"
         />
         <ProjectCard
           image="/images/biohack2021.png"
           children="The website used by hundreds of students to interact and participate in the annual Biohack hackathon. Coming Spring 2021."
-          href="https://rajbirjohar.com"
+          href="https://biohackucr.com/#/"
           category="Biohack"
           date="Hackathon"
         />
         <ProjectCard
           image="/images/habitle.png"
           children="A minimal and powerful web app that generates a heatmap to visual progress to promote a positive and consistent lifestyle."
-          href="https://rajbirjohar.com"
+          href="https://habitle.com/#/"
           category="Habitle"
           date="Personal Project"
         />
