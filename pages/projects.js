@@ -12,7 +12,7 @@ export default function Projects() {
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
           Projects
         </h1>
-        <p className="text-gray-600 dark:text-gray-400 mb-4 text-lg md:text-md">
+        <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
           Here is a collection of my best work where I demonstrate my skills as
           a developer and a creator. Some of the languages, frameworks, and
           libraries I currently use are:
@@ -20,7 +20,7 @@ export default function Projects() {
         <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-4 text-black dark:text-white">
           Current Projects
         </h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-4 text-lg md:text-md">
+        <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
           {" "}
           Here are some of the projects that I am currently working on.
         </p>
@@ -48,7 +48,7 @@ export default function Projects() {
         <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-4 text-black dark:text-white">
           Finished Projects
         </h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-4 text-lg md:text-md">
+        <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
           {" "}
           And these are my finished projects.
         </p>

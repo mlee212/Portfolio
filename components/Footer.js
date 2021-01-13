@@ -8,7 +8,7 @@ export const Footer = () => {
           Find me elsewhere.
         </p>
         <a
-          className="text-gray-700 text-lg md:text-md dark:text-gray-400 no-underline hover:underline"
+          className="text-gray-700 md:text-lg text-md dark:text-gray-400 no-underline hover:underline"
           target="_blank"
           rel="noopener noreferrer"
           href="https://github.com/r-jo"
@@ -17,7 +17,7 @@ export const Footer = () => {
         </a>
         <br />
         <a
-          className="text-gray-700 text-lg md:text-md dark:text-gray-400 no-underline hover:underline"
+          className="text-gray-700 md:text-lg text-md dark:text-gray-400 no-underline hover:underline"
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/rajbirjohar/"
