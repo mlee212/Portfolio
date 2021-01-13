@@ -19,6 +19,31 @@ export default function More() {
           The top ten songs I've been listening to. Updated Daily.
         </p>
         <TopTracks />
+        <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-4 text-black dark:text-white">
+          Favorite Tech
+        </h3>
+        <h3 className="text-lg md:text-xl font-bold mb-4 tracking-tight text-gray-900 dark:text-gray-100">
+          Productivity
+        </h3>
+        <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
+          <ul>
+            <li>M1 Mac Mini (2020)</li>
+            <li>16" Macbook Pro (2019)</li>
+            <li>11" iPad Pro (2018)</li>
+            <li>iPhone 12 Pro</li>
+            <li>LG 34" Ultrawide</li>
+          </ul>
+        </p>
+        <h3 className="text-lg md:text-xl font-bold mb-4 tracking-tight text-gray-900 dark:text-gray-100">
+          Downtime
+        </h3>
+        <p className="text-gray-600 dark:text-gray-400 md:text-lg text-md">
+          <ul>
+            <li>Playstation 5</li>
+            <li>Xbox Series-X</li>
+            <li>LG 55" CX</li>
+          </ul>
+        </p>
       </div>
     </Container>
   );
