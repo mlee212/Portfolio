@@ -4,7 +4,7 @@
 
 ## Purpose
 
-A collection of my neat projects and ideas that I've finished and am currently working on. Built with [Next.js](https://nextjs.org/) and styled with (Tailwind)[https://tailwindcss.com)
+A collection of my neat projects and ideas that I've finished and am currently working on. Built with [Next.js](https://nextjs.org/) and styled with [Tailwind](https://tailwindcss.com)
 
 ### Notes
 
@@ -14,4 +14,4 @@ A collection of my neat projects and ideas that I've finished and am currently w
 
 Credit is appreciated if any of my code is used :)
 
-Huge shout out to (Lee Robinson)[https://leerob.io] for the inspiration.
+Huge shout out to [Lee Robinson](https://leerob.io) for the inspiration.
