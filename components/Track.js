@@ -1,54 +1,27 @@
 // Full Credit to Lee Robinson
 
-import React from "react";
-import { Box, Divider, Link, Stack, Text, useColorMode } from "@chakra-ui/core";
-
-const Track = (track) => {
-  const { colorMode } = useColorMode();
-  const color = {
-    light: "gray.600",
-    dark: "#8e95a3",
-  }
+export default function Track(track) {
   return (
-    <>
-    <Box
-      display="flex"
-      flexDirection="row"
-      alignItems="baseline"
-      pt={4}
-      maxWidth="100%"
-      w="full"
-    >
-      <Text fontSize="sm" fontWeight="bold" color={color[colorMode]}>
+    <div className="flex flex-row items-baseline border-b border-gray-100 dark:border-gray-800 max-w-3xl w-full mt-8">
+      <p className="text-md font-bold text-gray-400 dark:text-gray-600">
         {track.ranking}
-      </Text>
-      <Stack ml={3}>
-        <Link
-          fontWeight="medium"
-          maxWidth="100%"
-          whiteSpace="wrap"
-          overflow="hidden"
-          textOverflow="ellipsis"
+      </p>
+      <div className="flex flex-col pl-3">
+        <a
+          className="font-medium text-gray-900 dark:text-gray-100 truncate w-60 sm:w-96 md:w-full text-lg"
           href={track.songUrl}
-          isExternal
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {track.title}
-        </Link>
-        <Text
-          color={color[colorMode]}
-          mb={2}
-          maxWidth="100%"
-          whiteSpace="wrap"
-          overflow="hidden"
-          textOverflow="ellipsis"
+        </a>
+        <p
+          className="text-gray-500 mb-4 truncate w-60 sm:w-96 md:w-full text-lg"
+          color="gray.500"
         >
           {track.artist}
-        </Text>
-      </Stack>
-    </Box>
-    <Divider />
-    </>
+        </p>
+      </div>
+    </div>
   );
-};
-
-export default Track;
+}

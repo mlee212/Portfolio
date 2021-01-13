@@ -1,162 +1,178 @@
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import NextLink from "next/link";
 import Head from "next/head";
-import { useRouter } from "next/router";
-import { Nav } from "./Nav";
+import ActiveLink from "./ActiveLink";
+
 import { Footer } from "./Footer";
-import { Box } from "@chakra-ui/core";
 
-import { motion, AnimatePresence } from "framer-motion";
+export const siteTitle = "Rajbir Johar | Portfolio";
 
-const name = "Rajbir";
-export const siteTitle = "Rajbir | Portfolio";
+export default function Container({ children }) {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
-export default function Container({ children, main }) {
-  const router = useRouter();
+  // After mounting, we have access to the theme
+  useEffect(() => setMounted(true), []);
 
   return (
-    <>
-      <Box transition="background-color 0.2s ease-in-out">
-        <Head>
-          <link
-            rel="apple-touch-icon-precomposed"
-            sizes="57x57"
-            href="apple-touch-icon-57x57.png"
-          />
-          <link
-            rel="apple-touch-icon-precomposed"
-            sizes="114x114"
-            href="apple-touch-icon-114x114.png"
-          />
-          <link
-            rel="apple-touch-icon-precomposed"
-            sizes="72x72"
-            href="apple-touch-icon-72x72.png"
-          />
-          <link
-            rel="apple-touch-icon-precomposed"
-            sizes="144x144"
-            href="apple-touch-icon-144x144.png"
-          />
-          <link
-            rel="apple-touch-icon-precomposed"
-            sizes="60x60"
-            href="apple-touch-icon-60x60.png"
-          />
-          <link
-            rel="apple-touch-icon-precomposed"
-            sizes="120x120"
-            href="apple-touch-icon-120x120.png"
-          />
-          <link
-            rel="apple-touch-icon-precomposed"
-            sizes="76x76"
-            href="apple-touch-icon-76x76.png"
-          />
-          <link
-            rel="apple-touch-icon-precomposed"
-            sizes="152x152"
-            href="apple-touch-icon-152x152.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            href="favicon-196x196.png"
-            sizes="196x196"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            href="favicon-96x96.png"
-            sizes="96x96"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            href="favicon-32x32.png"
-            sizes="32x32"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            href="favicon-16x16.png"
-            sizes="16x16"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            href="favicon-128.png"
-            sizes="128x128"
-          />
-          <meta name="application-name" content="&nbsp;" />
-          <meta name="msapplication-TileColor" content="#FFFFFF" />
-          <meta name="msapplication-TileImage" content="mstile-144x144.png" />
-          <meta
-            name="msapplication-square70x70logo"
-            content="mstile-70x70.png"
-          />
-          <meta
-            name="msapplication-square150x150logo"
-            content="mstile-150x150.png"
-          />
-          <meta
-            name="msapplication-wide310x150logo"
-            content="mstile-310x150.png"
-          />
-          <meta
-            name="msapplication-square310x310logo"
-            content="mstile-310x310.png"
-          />
+    <body className="bg-white dark:bg-bgdark transition duration-500 ease-in-out">
+      <Head>
+        <link
+          rel="apple-touch-icon-precomposed"
+          sizes="57x57"
+          href="apple-touch-icon-57x57.png"
+        />
+        <link
+          rel="apple-touch-icon-precomposed"
+          sizes="114x114"
+          href="apple-touch-icon-114x114.png"
+        />
+        <link
+          rel="apple-touch-icon-precomposed"
+          sizes="72x72"
+          href="apple-touch-icon-72x72.png"
+        />
+        <link
+          rel="apple-touch-icon-precomposed"
+          sizes="144x144"
+          href="apple-touch-icon-144x144.png"
+        />
+        <link
+          rel="apple-touch-icon-precomposed"
+          sizes="60x60"
+          href="apple-touch-icon-60x60.png"
+        />
+        <link
+          rel="apple-touch-icon-precomposed"
+          sizes="120x120"
+          href="apple-touch-icon-120x120.png"
+        />
+        <link
+          rel="apple-touch-icon-precomposed"
+          sizes="76x76"
+          href="apple-touch-icon-76x76.png"
+        />
+        <link
+          rel="apple-touch-icon-precomposed"
+          sizes="152x152"
+          href="apple-touch-icon-152x152.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="favicon-196x196.png"
+          sizes="196x196"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="favicon-96x96.png"
+          sizes="96x96"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="favicon-32x32.png"
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="favicon-16x16.png"
+          sizes="16x16"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="favicon-128.png"
+          sizes="128x128"
+        />
+        <meta name="application-name" content="&nbsp;" />
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+        <meta
+          name="msapplication-square150x150logo"
+          content="mstile-150x150.png"
+        />
+        <meta
+          name="msapplication-wide310x150logo"
+          content="mstile-310x150.png"
+        />
+        <meta
+          name="msapplication-square310x310logo"
+          content="mstile-310x310.png"
+        />
 
-          <meta
-            name="description"
-            content="A portfolio for my neat projects and ideas using Next.js"
-          />
-          <meta
-            property="og:image"
-            content="/images/icon_logo.png"
-            // content={`https://og-image.now.sh/${encodeURI(
-            //   siteTitle
-            // )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-          />
-          <meta name="og:title" content={siteTitle} />
-        </Head>
-        <Nav />
-
-        <AnimatePresence exitBeforeEnter>
-          <motion.div
-            key={router.route}
-            initial="pageInitial"
-            animate="pageAnimate"
-            exit="pageExit"
-            variants={{
-              pageInitial: {
-                opacity: 0,
-                x: -10,
-              },
-              pageAnimate: {
-                opacity: 1,
-                x: 0,
-              },
-              pageExit: {
-                opacity: 0,
-                x: 10,
-              },
-            }}
-          >
-            <Box
-              maxW="45rem"
-              p="0 1.75rem"
-              m="3rem auto 6rem"
-              my={50}
-              lineHeight="1.6"
-              fontSize="lg"
-              overflowX="hidden"
+        <meta
+          name="description"
+          content="A portfolio for my neat projects and ideas using Next.js"
+        />
+        <meta
+          property="og:image"
+          content="/images/icon_logo.png"
+          // content={`https://og-image.now.sh/${encodeURI(
+          //   siteTitle
+          // )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+        />
+        <meta name="og:title" content={siteTitle} />
+      </Head>
+      <nav className="sticky-nav flex justify-between items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-white dark:bg-bgdark bg-opacity-60 transition duration-500 ease-in-out">
+        <button
+          aria-label="Toggle Dark Mode"
+          type="button"
+          className="bg-gray-100 dark:bg-cardbgdark rounded-md p-3 h-10 w-10"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        >
+          {mounted && (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              stroke="currentColor"
+              className="h-4 w-4 text-gray-800 dark:text-gray-200"
             >
-              {children}
-            </Box>
-          </motion.div>
-        </AnimatePresence>
+              {theme === "dark" ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                />
+              )}
+            </svg>
+          )}
+        </button>
+        <div>
+          <ActiveLink activeClassName="active" href="/">
+            <a className="nav-link p-1 sm:p-4 text-gray-900 dark:text-gray-100">
+              Home
+            </a>
+          </ActiveLink>
+          <ActiveLink activeClassName="active" href="/projects">
+            <a className="nav-link p-1 sm:p-4 text-gray-900 dark:text-gray-100">
+              Projects
+            </a>
+          </ActiveLink>
+          <ActiveLink activeClassName="active" href="/more">
+            <a className="nav-link p-1 sm:p-4 text-gray-900 dark:text-gray-100">
+              More
+            </a>
+          </ActiveLink>
+        </div>
+      </nav>
+      <main className="flex flex-col justify-center px-8">
+        {children}
         <Footer />
-      </Box>
-    </>
+      </main>
+    </body>
   );
 }

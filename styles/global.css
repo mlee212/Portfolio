@@ -1,14 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://rsms.me/inter/inter.css");
 html {
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 @supports (font-variation-settings: normal) {
   html {
     font-family: "Inter var", sans-serif;
   }
 }
-html,body{
-  overflow-x: hidden;
+.sticky-nav {
+  position: sticky !important;
+  z-index: 10 !important;
+  top: 0 !important;
+  backdrop-filter: saturate(180%) blur(20px);
 }
 .nav-link {
   text-decoration: none;
@@ -20,3 +28,4 @@ html,body{
   font-weight: bold;
   text-decoration: none;
 }
+

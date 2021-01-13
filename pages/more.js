@@ -3,7 +3,6 @@ import Head from "next/head";
 import Container, { siteTitle } from "../components/Container";
 import TopTracks from "../components/TopTracks";
 import Timeline from "../components/Timeline";
-import { Heading, Text, Box, Divider, List, ListItem } from "@chakra-ui/core";
 
 export default function More() {
   return (
@@ -11,33 +10,16 @@ export default function More() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <Box pt={20}>
-      <Timeline />
-      <Heading fontWeight="bold" as="h1" my={8}>
-        My Music Right Now
-      </Heading>
-      <Text>The top ten songs I've been listening to. Updated Daily.</Text>
-      <TopTracks />
-      <Heading fontWeight="bold" as="h1" my={8}>
-        Favorite Tech
-      </Heading>
-      <Heading as="h2" fontSize="2xl">Productivity</Heading>
-      <List>
-        <ListItem>M1 Mac Mini (New Addition!)</ListItem>
-        <ListItem>Macbook Pro 16"</ListItem>
-        <ListItem>iPad Pro 11"</ListItem>
-        <ListItem>iPhone 12 Pro</ListItem>
-        <ListItem>LG 34" Ultrawide</ListItem>
-        <ListItem>Mandalorian Figurine (to yell at when I can't solve a bug)</ListItem>
-      </List>
-      <Divider my={2}/>
-      <Heading as="h2" fontSize="2xl">Downtime</Heading>
-      <List>
-      <ListItem>PS5 (Currently playing Ghost of Tsushima)</ListItem>
-      <ListItem>Xbox Series X</ListItem>
-      <ListItem>LG 55" CX</ListItem>
-      </List>
-      </Box>
+      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 mt-4">
+        <Timeline />
+        <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-4 text-black dark:text-white">
+          My Music Right Now
+        </h3>
+        <p className="text-gray-600 dark:text-gray-400 mb-4 text-lg">
+          The top ten songs I've been listening to. Updated Daily.
+        </p>
+        <TopTracks />
+      </div>
     </Container>
   );
 }
