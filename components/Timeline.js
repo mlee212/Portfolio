@@ -33,9 +33,9 @@ const Step = ({ title, children }) => {
             <path d="M22 4L12 14.01l-3-3" />
           </g>
         </svg>
-        <p className="font-medium text-lg md:text-md text-gray-900 dark:text-gray-100">{title}</p>
+        <p className="font-medium md:text-lg text-md text-gray-900 dark:text-gray-100">{title}</p>
       </div>
-      <p className="text-gray-700 text-lg md:text-md dark:text-gray-400 ml-6">{children}</p>
+      <p className="text-gray-700 md:text-lg text-md dark:text-gray-400 ml-6">{children}</p>
     </li>
   );
 };

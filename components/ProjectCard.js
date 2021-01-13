@@ -15,7 +15,7 @@ export default function ProjectCard({ date, category, children, image, href }) {
             <div class="text-lg text-black dark:text-white">{category}</div>
           </figcaption>
           <blockquote>
-            <p class="text-lg md:text-md dark:text-white">{children}</p>
+            <p class="md:text-lg text-md dark:text-white">{children}</p>
           </blockquote>
         </div>
       </figure>
