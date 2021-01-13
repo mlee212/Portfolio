@@ -24,12 +24,21 @@ export const Footer = () => {
         >
           Linkedin
         </a>
+        <br />
+        <a
+          className="text-gray-700 md:text-lg text-md dark:text-gray-400 no-underline hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://leerob.io/"
+        >
+          /Inspo
+        </a>
       </div>
       <div className="max-w-lg">
         <p className="font-medium text-lg text-gray-900 dark:text-gray-100 my-2">
           Don't be a Stranger.
         </p>
-        <p className="text-gray-700 text-lg md:text-md dark:text-gray-400">
+        <p className="text-gray-700 md:text-lg text-md dark:text-gray-400">
           I don't bite anything except really good food. I'm always up for
           making new friends. Learn more and feel free to contact me. <br />
           2021 © Rajbir Johar
