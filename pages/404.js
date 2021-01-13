@@ -6,7 +6,7 @@ export default function Custom404() {
       <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 text-black dark:text-white">
         Did you ever hear the tragedy of Darth Plagueis The Wise?
       </h3>
-      <p className="text-gray-600 dark:text-gray-400 mb-4 text-lg md:text-md">
+      <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
         I thought not. It’s not a story the Jedi would tell you. It’s a Sith
         legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so
         wise he could use the Force to influence the midichlorians to create
