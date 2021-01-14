@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Custom404() {
   return (
     <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 mt-4">
-      <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 text-black dark:text-white">
+      <h3 className="font-bold text-2xl md:text-4xl  mb-4 text-black dark:text-white">
         Did you ever hear the tragedy of Darth Plagueis The Wise?
       </h3>
       <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">

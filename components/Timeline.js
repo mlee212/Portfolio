@@ -10,7 +10,7 @@ const Divider = () => {
 
 const Year = ({ children }) => {
   return (
-    <h3 className="text-lg md:text-xl font-bold mb-4 tracking-tight text-gray-900 dark:text-gray-100">
+    <h3 className="text-lg md:text-xl font-bold mb-4  text-gray-900 dark:text-gray-100">
       {children}
     </h3>
   );
@@ -33,9 +33,13 @@ const Step = ({ title, children }) => {
             <path d="M22 4L12 14.01l-3-3" />
           </g>
         </svg>
-        <p className="font-medium md:text-lg text-md text-gray-900 dark:text-gray-100">{title}</p>
+        <p className="font-medium md:text-lg text-md text-gray-900 dark:text-gray-100">
+          {title}
+        </p>
       </div>
-      <p className="text-gray-700 md:text-lg text-md dark:text-gray-400 ml-6">{children}</p>
+      <p className="text-gray-700 md:text-lg text-md dark:text-gray-400 ml-6">
+        {children}
+      </p>
     </li>
   );
 };
@@ -110,9 +114,9 @@ export default function Timeline() {
 
   return (
     <>
-      <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
+      <h3 className="font-bold text-2xl md:text-4xl my-4 text-black dark:text-white">
         Experiences
-      </h1>
+      </h3>
       <Year>2021</Year>
       <ul>
         <Step title="New Year, New Me">
@@ -153,7 +157,7 @@ export default function Timeline() {
       ) : (
         <button
           type="button"
-          className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-gray-100 dark:bg-cardbgdark rounded-md font-medium text-gray-900 dark:text-gray-100 text-md"
+          className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-gray-100 dark:bg-cardbgdark rounded-md font-medium text-gray-900 dark:text-gray-100 text-lg md:text-md transition duration-400 ease-in-out transform hover:-translate-y-1 hover:shadow-md"
           onClick={() => showFullTimeline(true)}
         >
           See More
