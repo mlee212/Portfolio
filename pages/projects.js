@@ -9,7 +9,7 @@ export default function Projects() {
         <title>{siteTitle}</title>
       </Head>
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 mt-4">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
+        <h1 className="font-bold text-3xl md:text-5xl  mb-4 text-black dark:text-white">
           Projects
         </h1>
         <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
@@ -17,7 +17,7 @@ export default function Projects() {
           a developer and a creator. Some of the languages, frameworks, and
           libraries I currently use are:
         </p>
-        <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-4 text-black dark:text-white">
+        <h3 className="font-bold text-2xl md:text-4xl  my-4 text-black dark:text-white">
           Current Projects
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
@@ -45,7 +45,7 @@ export default function Projects() {
           category="Habitle"
           date="Personal Project"
         />
-        <h3 className="font-bold text-2xl md:text-4xl tracking-tight my-4 text-black dark:text-white">
+        <h3 className="font-bold text-2xl md:text-4xl  my-4 text-black dark:text-white">
           Finished Projects
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
