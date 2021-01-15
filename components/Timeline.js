@@ -157,7 +157,7 @@ export default function Timeline() {
       ) : (
         <button
           type="button"
-          className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-gray-100 dark:bg-cardbgdark rounded-md font-medium text-gray-900 dark:text-gray-100 text-lg md:text-md transition duration-400 ease-in-out transform hover:-translate-y-1 hover:shadow-md"
+          className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-gray-100 dark:bg-cardbgdark rounded-md font-medium text-gray-900 dark:text-gray-100 md:text-lg text-md transition duration-400 ease-in-out transform hover:-translate-y-1 hover:shadow-md"
           onClick={() => showFullTimeline(true)}
         >
           See More
