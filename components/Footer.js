@@ -36,7 +36,7 @@ export const Footer = () => {
       </div>
       <div className="max-w-lg">
         <p className="font-medium text-lg text-gray-900 dark:text-gray-100 my-2">
-          Don't be a Stranger.
+          Don't be a stranger.
         </p>
         <p className="text-gray-700 md:text-lg text-md dark:text-gray-400">
           I don't bite anything except really good food. I'm always up for

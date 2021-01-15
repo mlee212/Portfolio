@@ -157,17 +157,17 @@ export default function Container({ children }) {
         </div>
         <div>
           <ActiveLink activeClassName="active" href="/">
-            <a className="nav-link p-1 sm:p-4 text-gray-900 dark:text-gray-100">
+            <a className="nav-link p-3 text-gray-900 dark:text-gray-100">
               Home
             </a>
           </ActiveLink>
           <ActiveLink activeClassName="active" href="/projects">
-            <a className="nav-link p-1 sm:p-4 text-gray-900 dark:text-gray-100">
+            <a className="nav-link p-3 text-gray-900 dark:text-gray-100">
               Projects
             </a>
           </ActiveLink>
           <ActiveLink activeClassName="active" href="/more">
-            <a className="nav-link p-1 sm:p-4 text-gray-900 dark:text-gray-100">
+            <a className="nav-link p-3 text-gray-900 dark:text-gray-100">
               More
             </a>
           </ActiveLink>

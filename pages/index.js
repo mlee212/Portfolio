@@ -15,7 +15,7 @@ export default function Home() {
         <h1 className="font-bold text-3xl md:text-5xl mb-4 text-black dark:text-white">
           Hey, I'm Rajbir.
         </h1>
-        <h2 className="text-black dark:text-gray-400 mb-16 md:text-lg text-md">
+        <h2 className="text-black dark:text-white mb-16 md:text-lg text-md">
           Frontend Developer <br />
           Based in Southern California
         </h2>
