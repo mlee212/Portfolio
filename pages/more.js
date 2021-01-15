@@ -36,7 +36,7 @@ export default function More() {
         <h3 className="font-bold text-2xl md:text-4xl  my-4 text-black dark:text-white">
           Favorite Tech
         </h3>
-        <div className="flex content-between w-full">
+        <div className="md:flex content-between w-full">
           <div className="w-full">
             <h3 className="text-lg md:text-xl font-bold mb-4  text-gray-900 dark:text-gray-100">
               Productivity
