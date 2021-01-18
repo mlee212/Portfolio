@@ -39,7 +39,7 @@ export default function Projects() {
           date="Hackathon"
         />
         <ProjectCard
-          image="/images/habitle.jpg"
+          image="/images/habitle.png"
           children="A minimal and powerful web app that generates a heatmap to visual progress to promote a positive and consistent lifestyle."
           href="https://habitle.com/#/"
           category="Habitle"
