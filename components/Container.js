@@ -118,8 +118,8 @@ export default function Container({ children }) {
       </Head>
       <nav className="sticky-nav flex justify-between items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-white dark:bg-bgdark bg-opacity-60 transition duration-500 ease-in-out">
         
-      <div class="h-10 w-10 relative cursor-pointer">
-      <div class="absolute inset-0 bg-gray-700 dark:bg-white opacity-25 rounded-md shadow-2xl"></div>
+      <div className="h-10 w-10 relative cursor-pointer">
+      <div className="absolute inset-0 bg-gray-700 dark:bg-white opacity-25 rounded-md shadow-2xl"></div>
         <button
           aria-label="Toggle Dark Mode"
           type="button"
