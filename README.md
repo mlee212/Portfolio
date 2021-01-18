@@ -6,6 +6,17 @@
 
 A collection of my neat projects and ideas that I've finished and am currently working on. Built with [Next.js](https://nextjs.org/) and styled with [Tailwind](https://tailwindcss.com).
 
+### Features
+
+#### Perfect Score on Google Lighthouse
+
+![Google Lighthouse Score](/images/googlelighthousescore.png)
+
+#### Follows Accessibility Rules
+
+- All anchors and images have a description/alt attribute
+- html and body has all required meta tags and attributes
+
 ### Notes
 
 - **Important: This is not meant to serve as a template. All of the code was written to my needs.**
