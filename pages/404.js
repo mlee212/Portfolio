@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Custom404() {
   return (
-    <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 mt-4">
-      <h3 className="font-bold text-2xl md:text-4xl  mb-4 text-black dark:text-white">
+    <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mt-16 px-8 text-center">
+      <h3 className="font-bold text-2xl md:text-4xl  mb-16 text-black dark:text-white">
         Did you ever hear the tragedy of Darth Plagueis The Wise?
       </h3>
       <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
@@ -22,7 +22,7 @@ export default function Custom404() {
         Anyways, you've reached the 404...and nothing else.
       </p>
 
-      <Link href="/">← Back to home</Link>
+      <Link href="/"><button className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-gray-100 dark:bg-cardbgdark rounded-md font-medium text-gray-900 dark:text-gray-100 md:text-lg text-md transition duration-400 ease-in-out transform hover:-translate-y-1 hover:shadow-md">← Back to home</button></Link>
     </div>
   );
 }

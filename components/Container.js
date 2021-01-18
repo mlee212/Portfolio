@@ -107,7 +107,7 @@ export default function Container({ children }) {
         />
         <meta
           name="description"
-          content="A portfolio for my neat projects and ideas using Next.js"
+          content="A portfolio for my neat projects and ideas."
         />
         <meta
           property="og:image"

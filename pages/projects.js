@@ -2,21 +2,53 @@ import Head from "next/head";
 import Container, { siteTitle } from "../components/Container";
 import ProjectCard from "../components/ProjectCard";
 
+const Badge = ({ child }) => {
+  return (
+    <button
+      type="button"
+      class="bg-gray-100 dark:bg-cardbgdark dark:text-white text-black p-2 m-1 rounded items-center"
+    >
+      {child}
+    </button>
+  );
+};
+
 export default function Projects() {
   return (
     <Container main>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 mt-4">
-        <h1 className="font-bold text-3xl md:text-5xl  mb-4 text-black dark:text-white">
+      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mt-4">
+        <h1 className="font-bold text-3xl md:text-5xl mb-4 text-black dark:text-white">
           Projects
         </h1>
         <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
           Here is a collection of my best work where I demonstrate my skills as
-          a developer and a creator. Some of the languages, frameworks, and
-          libraries I currently use are:
+          a developer and a creator. You can also see a more detailed view on my{" "}
+          <a
+            className="underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/r-jo"
+          >
+            Github
+          </a>.{" "}
+          Some of the languages, frameworks, and libraries I currently use are:
         </p>
+        <div className="text-center">
+          <Badge child="Next JS" />
+          <Badge child="React JS" />
+          <Badge child="Javascript" />
+          <Badge child="HTML5" />
+          <Badge child="CSS3" />
+          <Badge child="Git" />
+          <Badge child="Yarn" />
+          <Badge child="NPM" />
+          <Badge child="Chakra UI" />
+          <Badge child="Tailwind CSS" />
+          <Badge child="Styled Components" />
+        </div>
         <h3 className="font-bold text-2xl md:text-4xl  my-4 text-black dark:text-white">
           Current Projects
         </h3>
