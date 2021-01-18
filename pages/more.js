@@ -9,7 +9,7 @@ export default function More() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 mt-4">
+      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mt-4">
         <h1 className="font-bold text-3xl md:text-5xl mb-4 text-black dark:text-white">
           What I'm About.
         </h1>
@@ -36,12 +36,12 @@ export default function More() {
         <h3 className="font-bold text-2xl md:text-4xl  my-4 text-black dark:text-white">
           Favorite Tech
         </h3>
-        <div className="md:flex content-between w-full">
+        <div className="md:flex w-full">
           <div className="w-full">
-            <h3 className="text-lg md:text-xl font-bold mb-4  text-gray-900 dark:text-gray-100">
+            <h3 className="text-lg md:text-xl font-bold my-2 text-gray-900 dark:text-gray-100">
               Productivity
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
+            <p className="text-gray-600 dark:text-gray-400 md:text-lg text-md">
               <ul>
                 <li>M1 Mac Mini (2020) (New Addition!)</li>
                 <li>16" Macbook Pro (2019)</li>
@@ -52,7 +52,7 @@ export default function More() {
             </p>
           </div>
           <div className="w-full">
-            <h3 className="text-lg md:text-xl font-bold mb-4  text-gray-900 dark:text-gray-100">
+            <h3 className="text-lg md:text-xl font-bold my-2 text-gray-900 dark:text-gray-100">
               Downtime
             </h3>
             <p className="text-gray-600 dark:text-gray-400 md:text-lg text-md">

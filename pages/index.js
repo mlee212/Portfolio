@@ -24,7 +24,12 @@ export default function Home() {
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
           {" "}
-          Here are some of the projects that I am currently working on.
+          Here are some of the projects that I am currently working on. Check
+          out my other{" "}
+          <Link href="/projects">
+            <a className="underline">projects</a>
+          </Link>{" "}
+          here.
         </p>
         <ProjectCard
           image="/images/citrushack.png"
