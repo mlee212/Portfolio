@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import NextLink from "next/link";
 import Head from "next/head";
 import ActiveLink from "./ActiveLink";
+import Html from "next/document";
 
 import { Footer } from "./Footer";
 
@@ -16,6 +16,7 @@ export default function Container({ children }) {
   useEffect(() => setMounted(true), []);
 
   return (
+    <html lang="en">
     <body className="bg-white dark:bg-bgdark transition duration-500 ease-in-out">
       <Head>
         <link
@@ -104,7 +105,6 @@ export default function Container({ children }) {
           name="msapplication-square310x310logo"
           content="mstile-310x310.png"
         />
-
         <meta
           name="description"
           content="A portfolio for my neat projects and ideas using Next.js"
@@ -112,10 +112,8 @@ export default function Container({ children }) {
         <meta
           property="og:image"
           content="/images/icon_logo.png"
-          // content={`https://og-image.now.sh/${encodeURI(
-          //   siteTitle
-          // )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
+
         <meta name="og:title" content={siteTitle} />
       </Head>
       <nav className="sticky-nav flex justify-between items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-white dark:bg-bgdark bg-opacity-60 transition duration-500 ease-in-out">
@@ -168,7 +166,7 @@ export default function Container({ children }) {
           </ActiveLink>
           <ActiveLink activeClassName="active" href="/more">
             <a className="nav-link p-3 text-gray-900 dark:text-gray-100">
-              More
+              About
             </a>
           </ActiveLink>
         </div>
@@ -178,5 +176,6 @@ export default function Container({ children }) {
         <Footer />
       </main>
     </body>
+    </html>
   );
 }
