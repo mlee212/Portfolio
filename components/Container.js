@@ -122,7 +122,7 @@ export default function Container({ children }) {
         <button
           aria-label="Toggle Dark Mode"
           type="button"
-          className="flex items-center justify-center bg-gray-100 border-gray-100 dark:border-gray-600 border-2 dark:bg-cardbgdark rounded-md h-10 w-10"
+          className="flex items-center justify-center bg-gray-100 border-gray-100 dark:border-gray-600 border-2 dark:bg-cardbgdark rounded-md h-10 w-10 hover:border-gray-300 dark:hover:border-gray-400 transition duration-300 ease-in-out"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
           {mounted && (
