@@ -35,7 +35,7 @@ export const Footer = () => {
             /Inspo
           </a>
         </div>
-        <div className="flex-1 md-0 md:px-4">
+        <div className="flex-1">
           <p className="font-medium text-lg text-gray-900 dark:text-gray-100 my-2">
             Don't be a stranger.
           </p>
@@ -44,7 +44,7 @@ export const Footer = () => {
             making new friends.
           </p>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 md:ml-4">
           <p className="font-medium text-lg text-gray-900 dark:text-gray-100 my-2">
             Privacy first.
           </p>
