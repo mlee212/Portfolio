@@ -119,11 +119,10 @@ export default function Container({ children }) {
       <nav className="sticky-nav flex justify-between items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-white dark:bg-bgdark bg-opacity-60 transition duration-500 ease-in-out">
         
       <div className="h-10 w-10 relative cursor-pointer">
-      <div className="absolute inset-0 bg-gray-700 dark:bg-white opacity-25 rounded-md shadow-2xl"></div>
         <button
           aria-label="Toggle Dark Mode"
           type="button"
-          className="inset-0 bg-gray-100 dark:bg-cardbgdark rounded-md p-3 h-10 w-10 transition duration-400 ease-in-out transform hover-hover:hover:-rotate-45 shadow-md"
+          className="flex items-center justify-center bg-gray-100 border-gray-100 dark:border-gray-600 border-2 dark:bg-cardbgdark rounded-md h-10 w-10"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
           {mounted && (

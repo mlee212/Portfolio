@@ -25,7 +25,7 @@ const Step = ({ title, children }) => {
           <g
             fill="none"
             stroke="currentColor"
-            strokeWidth="2"
+            strokeWidth="3"
             strokeLinecap="round"
             strokeLinejoin="round"
           >

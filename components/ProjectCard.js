@@ -3,7 +3,8 @@ import Image from "next/image";
 export default function ProjectCard({ date, category, children, image, href }) {
   return (
     <a href={href} rel="noreferrer" rel="noopener" target="_blank">
-      <figure className="flex bg-cardbg dark:bg-cardbgdark rounded-lg p-6 shadow-xl mb-4 transition duration-400 ease-in-out transform hover:-translate-y-1">
+      <figure className="flex bg-cardbg dark:bg-cardbgdark border-black p-6 rounded-lg mb-4 border-2 border-solid border-gray-200
+       dark:border-gray-600 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl dark:hover:border-gray-400">
         <div className="space-y-4">
           <figcaption className="font-medium flex items-center">
             <div className="w-12 h-12 md:w-16 md:h-16 relative flex md:items-start">
