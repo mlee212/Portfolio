@@ -12,7 +12,7 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mt-4">
-        <h1 className="font-bold text-3xl md:text-5xl mb-4 text-black dark:text-white">
+        <h1 className="font-bold text-3xl md:text-5xl pb-4 bg-gradient-to-r text-black dark:text-transparent dark:from-purple-400 dark:via-pink-500 dark:to-red-500 bg-clip-text">
           Hey, I'm Rajbir.
         </h1>
         <h2 className="text-black dark:text-white mb-16 md:text-lg text-md">
