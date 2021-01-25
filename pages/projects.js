@@ -20,7 +20,7 @@ export default function Projects() {
         <title>{siteTitle}</title>
       </Head>
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mt-4">
-        <h1 className="font-bold text-3xl md:text-5xl mb-4 text-black dark:text-white">
+        <h1 className="font-bold text-3xl md:text-5xl pb-4 text-black bg-gradient-to-r text-black dark:text-transparent dark:from-red-400 dark:via-yellow-500 dark:to-green-500 bg-clip-text">
           Projects
         </h1>
         <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
@@ -33,8 +33,9 @@ export default function Projects() {
             href="https://github.com/r-jo"
           >
             Github
-          </a>.{" "}
-          Some of the languages, frameworks, and libraries I currently use are:
+          </a>
+          . Some of the languages, frameworks, and libraries I currently use
+          are:
         </p>
         <div className="text-center">
           <Badge child="Next JS" />
