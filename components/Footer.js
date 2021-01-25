@@ -5,7 +5,7 @@ export const Footer = () => {
     <footer className="max-w-4xl w-full py-8 my-8 mx-auto border-t-2 border-gray-200 dark:border-gray-600">
       <div className="md:flex justify-between py-4">
         <div className="flex-1">
-          <p className="font-medium text-lg text-gray-900 dark:text-gray-100 my-2">
+          <p className="font-medium text-lg text-purple-700 dark:text-red-400 my-2">
             Find me elsewhere.
           </p>
           <a
@@ -36,7 +36,7 @@ export const Footer = () => {
           </a>
         </div>
         <div className="flex-1">
-          <p className="font-medium text-lg text-gray-900 dark:text-gray-100 my-2">
+          <p className="font-medium text-lg text-purple-700 dark:text-red-400 my-2">
             Don't be a stranger.
           </p>
           <p className="text-gray-700 md:text-lg text-md dark:text-gray-400">
@@ -45,7 +45,7 @@ export const Footer = () => {
           </p>
         </div>
         <div className="flex-1 md:ml-4">
-          <p className="font-medium text-lg text-gray-900 dark:text-gray-100 my-2">
+          <p className="font-medium text-lg text-purple-700 dark:text-red-400 my-2">
             Privacy first.
           </p>
           <p className="text-gray-700 md:text-lg text-md dark:text-gray-400">
