@@ -55,7 +55,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="w-full text-center text-gray-700 dark:text-gray-400">
-        <p>2021 © Rajbir Johar</p>
+        <p>🛰️ 2021 © Rajbir Johar</p>
       </div>
     </footer>
   );
