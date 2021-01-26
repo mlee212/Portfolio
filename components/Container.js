@@ -163,7 +163,7 @@ export default function Container({ children }) {
               Projects
             </a>
           </ActiveLink>
-          <ActiveLink activeClassName="active" href="/more">
+          <ActiveLink activeClassName="active" href="/about">
             <a className="nav-link p-3 text-gray-900 dark:text-gray-100">
               About
             </a>
