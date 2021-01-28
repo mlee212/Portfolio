@@ -1,39 +1,59 @@
 import React from "react";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
     <footer className="max-w-4xl w-full py-8 my-8 mx-auto border-t-2 border-gray-200 dark:border-gray-600">
-      <div className="md:flex justify-between py-4">
+      <div className="md:flex space-y-8 md:space-y-0 py-4">
         <div className="flex-1">
           <p className="font-medium text-lg text-blue-700 dark:text-red-400 my-2">
             Find me elsewhere.
           </p>
-          <a
-            className="text-gray-700 md:text-lg text-md dark:text-gray-400 no-underline hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/r-jo"
-          >
-            Github
-          </a>
-          <br />
-          <a
-            className="text-gray-700 md:text-lg text-md dark:text-gray-400 no-underline hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/rajbirjohar/"
-          >
-            Linkedin
-          </a>
-          <br />
-          <a
-            className="text-gray-700 md:text-lg text-md dark:text-gray-400 no-underline hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://leerob.io/"
-          >
-            /Inspo
-          </a>
+          <div className="flex flex-col md:flex-row md:space-x-16 md:space-y-0 space-y-2">
+            <div className="flex flex-col space-y-2">
+              <Link href="/">
+                <a className="text-gray-700 md:text-lg text-md dark:text-gray-400 no-underline hover:underline">
+                  Home
+                </a>
+              </Link>
+              <a
+                className="text-gray-700 md:text-lg text-md dark:text-gray-400 no-underline hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/r-jo"
+              >
+                Github
+              </a>
+
+              <a
+                className="text-gray-700 md:text-lg text-md dark:text-gray-400 no-underline hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/rajbirjohar/"
+              >
+                Linkedin
+              </a>
+            </div>
+            <div className="flex flex-col space-y-2">
+              <a
+                className="text-gray-700 md:text-lg text-md dark:text-gray-400 no-underline hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://twitter.com/RajbirJohar"
+              >
+                Twitter
+              </a>
+
+              <a
+                className="text-gray-700 md:text-lg text-md dark:text-gray-400 no-underline hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://leerob.io/"
+              >
+                Inspo
+              </a>
+            </div>
+          </div>
         </div>
         <div className="flex-1">
           <p className="font-medium text-lg text-blue-700 dark:text-red-400 my-2">
