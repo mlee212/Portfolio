@@ -4,13 +4,13 @@ import React, { useState } from "react";
 
 const Divider = () => {
   return (
-    <div className="border border-gray-200 dark:border-gray-600 w-full my-8" />
+    <div className="border-b border-grey4-light dark:border-grey4-dark w-full my-8" />
   );
 };
 
 const Year = ({ children }) => {
   return (
-    <h3 className="text-lg md:text-xl font-bold mb-4  text-gray-900 dark:text-gray-100">
+    <h3 className="text-lg md:text-xl font-bold mb-4  text-text-light dark:text-text-dark">
       {children}
     </h3>
   );
@@ -19,7 +19,7 @@ const Year = ({ children }) => {
 const Step = ({ title, children }) => {
   return (
     <li className="mb-4 ml-2">
-      <div className="flex items-center mb-2 text-green-700 dark:text-green-300">
+      <div className="flex items-center mb-2 text-green-light dark:text-green-dark">
         <span className="sr-only">Check</span>
         <svg className="h-4 w-4 mr-2" viewBox="0 0 24 24">
           <g
@@ -33,11 +33,11 @@ const Step = ({ title, children }) => {
             <path d="M22 4L12 14.01l-3-3" />
           </g>
         </svg>
-        <p className="font-medium md:text-lg text-md text-gray-900 dark:text-gray-100">
+        <p className="font-medium md:text-lg text-md text-text-light dark:text-text-dark">
           {title}
         </p>
       </div>
-      <p className="text-gray-700 md:text-lg text-md dark:text-gray-400 ml-6">
+      <p className="md:text-lg text-md text-grey2-dark dark:text-grey-light ml-6">
         {children}
       </p>
     </li>
@@ -114,7 +114,7 @@ export default function Timeline() {
 
   return (
     <>
-      <h3 className="font-bold text-2xl md:text-4xl my-4 text-blue-700 dark:text-red-400 text-opacity-75">
+      <h3 className="font-bold text-2xl md:text-4xl my-4 text-title-light dark:text-title-dark">
         Experiences
       </h3>
       <Year>2021</Year>
@@ -157,7 +157,9 @@ export default function Timeline() {
       ) : (
         <button
           type="button"
-          className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-gray-100 dark:bg-cardbgdark rounded-md font-medium text-gray-900 dark:text-gray-100 md:text-lg text-md transition duration-400 ease-in-out transform hover:-translate-y-1 hover:shadow-md"
+          className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-grey6-light dark:bg-grey5-dark
+           rounded-md font-medium text-text-light dark:text-text-dark md:text-lg text-md
+           transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
           onClick={() => showFullTimeline(true)}
         >
           See More

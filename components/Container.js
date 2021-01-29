@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Head from "next/head";
 import ActiveLink from "./ActiveLink";
-import Html from "next/document";
 
 import { Footer } from "./Footer";
 
@@ -16,8 +15,8 @@ export default function Container({ children }) {
   useEffect(() => setMounted(true), []);
 
   return (
-    <html lang="en">
-    <body className="bg-white dark:bg-bgdark transition duration-500 ease-in-out">
+    <html lang="en" className="bg-primary-light dark:bg-primary-dark transition duration-500 ease-in-out">
+    <body className="bg-primary-light dark:bg-primary-dark transition duration-500 ease-in-out">
       <Head>
         <link
           rel="apple-touch-icon-precomposed"
@@ -116,13 +115,12 @@ export default function Container({ children }) {
 
         <meta name="og:title" content={siteTitle} />
       </Head>
-      <nav className="sticky-nav flex justify-between items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-white dark:bg-bgdark bg-opacity-60 transition duration-500 ease-in-out">
-        
+      <nav className="sticky-nav flex justify-between items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-primary-light dark:bg-primary-dark bg-opacity-80 transition duration-500 ease-in-out">
       <div className="h-10 w-10 relative cursor-pointer">
         <button
           aria-label="Toggle Dark Mode"
           type="button"
-          className="flex items-center justify-center bg-gray-100 border-gray-100 dark:border-gray-600 border-2 dark:bg-cardbgdark rounded-md h-10 w-10 hover:border-gray-300 dark:hover:border-gray-400 transition duration-300 ease-in-out"
+          className="flex items-center justify-center h-10 w-10 bg-grey6-light dark:bg-grey5-dark rounded-md"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
           {mounted && (

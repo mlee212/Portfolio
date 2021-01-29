@@ -3,8 +3,7 @@ import Image from "next/image";
 export default function ProjectCard({ date, category, children, image, href }) {
   return (
     <a href={href} rel="noreferrer" rel="noopener" target="_blank">
-      <figure className="flex bg-cardbg dark:bg-cardbgdark border-black p-6 rounded-lg mb-4 border-2 border-solid border-gray-200
-       dark:border-gray-600 transition duration-300 ease-in-out transform hover:shadow-2xl dark:hover:border-gray-400">
+      <figure className="flex bg-grey6-light dark:bg-grey6-dark p-6 rounded-lg mb-4 transition duration-300 ease-in-out hover-hover:hover:shadow-2xl">
         <div className="space-y-4">
           <figcaption className="font-medium flex items-center">
             <div className="w-12 h-12 md:w-16 md:h-16 relative flex md:items-start">
@@ -17,16 +16,18 @@ export default function ProjectCard({ date, category, children, image, href }) {
               />
             </div>
             <div className="pl-4">
-              <div className="text-sm text-gray-600 dark:text-gray-400 uppercase">
+              <div className="text-sm text-text-light dark:text-text-dark uppercase">
                 {date}
               </div>
-              <div className="text-lg text-black dark:text-white">
+              <div className="text-lg text-blue-light dark:text-blue-dark hover:underline">
                 {category}
               </div>
             </div>
           </figcaption>
           <blockquote>
-            <p className="md:text-lg text-md dark:text-white">{children}</p>
+            <p className="md:text-lg text-md text-grey2-dark dark:text-grey2-light">
+              {children}
+            </p>
           </blockquote>
         </div>
       </figure>
