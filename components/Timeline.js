@@ -37,7 +37,7 @@ const Step = ({ title, children }) => {
           {title}
         </p>
       </div>
-      <p className="md:text-lg text-md text-grey-light dark:text-grey-dark ml-6">
+      <p className="md:text-lg text-md text-grey2-dark dark:text-grey-light ml-6">
         {children}
       </p>
     </li>
@@ -157,7 +157,7 @@ export default function Timeline() {
       ) : (
         <button
           type="button"
-          className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-primary-light dark:bg-grey3-dark
+          className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-grey6-light dark:bg-grey5-dark
            rounded-md font-medium text-text-light dark:text-text-dark md:text-lg text-md
            transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
           onClick={() => showFullTimeline(true)}

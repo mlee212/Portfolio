@@ -59,7 +59,7 @@ export const Footer = () => {
           <p className="font-medium text-lg text-title-light dark:text-title-dark my-2">
             Don't be a stranger.
           </p>
-          <p className="text-grey-light dark:text-grey-dark md:text-lg text-md">
+          <p className="text-grey2-dark dark:text-grey-light md:text-lg text-md">
             I don't bite anything except really good food. I'm always up for
             making new friends.
           </p>
@@ -68,13 +68,13 @@ export const Footer = () => {
           <p className="font-medium text-lg text-title-light dark:text-title-dark my-2">
             Privacy first.
           </p>
-          <p className="text-grey-light dark:text-grey-dark md:text-lg text-md">
+          <p className="text-grey2-dark dark:text-grey-light md:text-lg text-md">
             This site only uses local storage for the theme. It does not track
             anything you do.
           </p>
         </div>
       </div>
-      <div className="w-full text-center text-grey-light dark:text-grey-dark">
+      <div className="w-full text-center text-grey2-dark dark:text-grey-light">
         <p>🛰️ 2021 © Rajbir Johar</p>
       </div>
     </footer>

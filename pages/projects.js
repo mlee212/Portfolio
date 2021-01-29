@@ -6,7 +6,7 @@ const Badge = ({ child }) => {
   return (
     <button
       type="button"
-      class="bg-primary-light dark:bg-grey3-dark dark:text-white text-black p-2 m-1 rounded items-center"
+      class="bg-grey6-light dark:bg-grey3-dark dark:text-white text-black p-2 m-1 rounded items-center"
     >
       {child}
     </button>
@@ -50,9 +50,9 @@ export default function Projects() {
           <Badge child="Tailwind CSS" />
           <Badge child="Styled Components" />
         </div>
-        <h3 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
+        <h1 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
           Current Projects
-        </h3>
+        </h1>
         <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
           {" "}
           Here are some of the projects that I am currently working on.
@@ -78,9 +78,9 @@ export default function Projects() {
           category="Habitle"
           date="Personal Project"
         />
-        <h3 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
+        <h1 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
           Finished Projects
-        </h3>
+        </h1>
         <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
           {" "}
           Here are my finished projects.

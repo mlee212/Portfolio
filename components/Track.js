@@ -16,8 +16,7 @@ export default function Track(track) {
           {track.title}
         </a>
         <p
-          className="mb-4 truncate w-60 sm:w-96 md:w-full md:text-lg text-md text-grey-light dark:text-gray-dark"
-          color="gray.500"
+          className="mb-4 truncate w-60 sm:w-96 md:w-full md:text-lg text-md text-grey2-dark dark:text-grey-light"
         >
           {track.artist}
         </p>

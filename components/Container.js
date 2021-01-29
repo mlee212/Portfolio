@@ -15,8 +15,8 @@ export default function Container({ children }) {
   useEffect(() => setMounted(true), []);
 
   return (
-    <html lang="en" className="bg-grey3-light dark:bg-primary-dark transition duration-500 ease-in-out">
-    <body className="bg-grey3-light dark:bg-primary-dark transition duration-500 ease-in-out">
+    <html lang="en" className="bg-primary-light dark:bg-primary-dark transition duration-500 ease-in-out">
+    <body className="bg-primary-light dark:bg-primary-dark transition duration-500 ease-in-out">
       <Head>
         <link
           rel="apple-touch-icon-precomposed"
@@ -115,12 +115,12 @@ export default function Container({ children }) {
 
         <meta name="og:title" content={siteTitle} />
       </Head>
-      <nav className="sticky-nav flex justify-between items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-grey3-light dark:bg-primary-dark bg-opacity-80 transition duration-500 ease-in-out">
+      <nav className="sticky-nav flex justify-between items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-primary-light dark:bg-primary-dark bg-opacity-80 transition duration-500 ease-in-out">
       <div className="h-10 w-10 relative cursor-pointer">
         <button
           aria-label="Toggle Dark Mode"
           type="button"
-          className="flex items-center justify-center h-10 w-10 bg-primary-light dark:bg-grey3-dark rounded-md"
+          className="flex items-center justify-center h-10 w-10 bg-grey6-light dark:bg-grey5-dark rounded-md"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
           {mounted && (
