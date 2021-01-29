@@ -12,36 +12,36 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mt-4">
-        <h1 className="font-bold text-3xl md:text-5xl pb-4 text-blue-700 dark:text-red-400">
-          Hey, I'm Rajbir.
+        <h1 className="font-bold text-3xl md:text-5xl pb-4 text-title-light dark:text-title-dark">
+          Hello! I'm Rajbir.
         </h1>
-        <h2 className="text-black dark:text-white mb-16 md:text-lg text-md">
+        <h2 className="text-text-light dark:text-text-dark font-medium mb-16 md:text-lg text-md">
           Frontend Developer <br />
           Based in Southern California
         </h2>
-        <h3 className="font-bold text-2xl md:text-4xl  my-4 text-blue-700 dark:text-red-400 text-opacity-75">
+        <h3 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
           Current Projects
         </h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
+        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
           {" "}
           Here are some of the projects that I am currently working on. Check
           out my other{" "}
           <Link href="/projects">
-            <a className="underline">projects</a>
+            <a className="text-blue-light dark:text-blue-dark hover:underline">projects</a>
           </Link>{" "}
           here.
         </p>
         <ProjectCard
-          image="/images/citrushack.png"
+          image="/images/citrushack2021.png"
           children="The website used by hundreds of students to interact and participate in the annual Citrushack hackathon. Coming Spring 2021."
-          href="https://citrushack.com"
+          href="https://citrushackdemo.vercel.app"
           category="Citrushack"
           date="Hackathon"
         />
         <ProjectCard
           image="/images/biohack2021.png"
           children="The website used by hundreds of students to interact and participate in the annual Biohack hackathon. Coming Spring 2021."
-          href="https://biohackucr.com/#/"
+          href="https://biohackdemo.vercel.app"
           category="Biohack"
           date="Hackathon"
         />

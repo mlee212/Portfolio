@@ -10,10 +10,10 @@ export default function More() {
         <title>{siteTitle}</title>
       </Head>
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mt-4">
-        <h1 className="font-bold text-3xl md:text-5xl pb-4 text-blue-700 dark:text-red-400">
+        <h1 className="font-bold text-3xl md:text-5xl pb-4 text-title-light dark:text-title-dark">
           What I'm About.
         </h1>
-        <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
+        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
           I'm a frontend web developer based in Southern California 😎 studying
           Computer Science at the University of California at Riverside.
           <br />
@@ -28,14 +28,14 @@ export default function More() {
           You can also find me currently playing through <i>The Last of Us 2</i>
           .
         </p>
-        <h3 className="font-bold text-2xl md:text-4xl  my-4 text-blue-700 dark:text-red-400 text-opacity-75">
+        <h3 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
           My Music Right Now
         </h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
+        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
           Here are the top ten songs I've been listening to, updated daily.
         </p>
         <TopTracks />
-        <p className="text-gray-600 dark:text-gray-400 my-4 md:text-lg text-md">
+        <p className="text-text-light dark:text-text-dark my-4 md:text-lg text-md">
           Find something we have in common? Let's talk about it. ☕
         </p>
       </div>

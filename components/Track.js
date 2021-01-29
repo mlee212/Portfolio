@@ -2,13 +2,13 @@
 
 export default function Track(track) {
   return (
-    <div className="flex flex-row items-baseline border-b border-gray-200 dark:border-gray-600 max-w-3xl w-full mt-8">
-      <p className="text-md text-gray-400 dark:text-gray-600">
+    <div className="flex flex-row items-baseline border-b border-grey4-light dark:border-grey4-dark max-w-3xl w-full mt-8">
+      <p className="text-md text-grey-light dark:text-gray-dark">
         {track.ranking}
       </p>
       <div className="flex flex-col pl-3">
         <a
-          className="font-medium text-gray-900 dark:text-gray-100 truncate w-60 sm:w-96 md:w-full md:text-lg text-md"
+          className="underline font-medium text-title-light dark:text-title-dark truncate w-60 sm:w-96 md:w-full md:text-lg text-md"
           href={track.songUrl}
           target="_blank"
           rel="noopener noreferrer"
@@ -16,7 +16,7 @@ export default function Track(track) {
           {track.title}
         </a>
         <p
-          className="text-gray-500 mb-4 truncate w-60 sm:w-96 md:w-full md:text-lg text-md"
+          className="mb-4 truncate w-60 sm:w-96 md:w-full md:text-lg text-md text-grey-light dark:text-gray-dark"
           color="gray.500"
         >
           {track.artist}

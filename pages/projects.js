@@ -6,7 +6,7 @@ const Badge = ({ child }) => {
   return (
     <button
       type="button"
-      class="bg-gray-100 dark:bg-cardbgdark dark:text-white text-black p-2 m-1 rounded items-center"
+      class="bg-primary-light dark:bg-grey3-dark dark:text-white text-black p-2 m-1 rounded items-center"
     >
       {child}
     </button>
@@ -20,14 +20,14 @@ export default function Projects() {
         <title>{siteTitle}</title>
       </Head>
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mt-4">
-        <h1 className="font-bold text-3xl md:text-5xl pb-4 text-black bg-gradient-to-r text-blue-700 dark:text-red-400">
+        <h1 className="font-bold text-3xl md:text-5xl pb-4 text-title-light dark:text-title-dark">
           Projects
         </h1>
-        <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
-          Here is a collection of my best work where I demonstrate my skills as
-          a developer and a creator. You can also see a more detailed view on my{" "}
+        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
+          <span className="font-medium">Here is a collection of my best work where I demonstrate my skills as
+          a developer and a creator.</span> You can also see a more detailed view on my{" "}
           <a
-            className="underline"
+            className="text-blue-light dark:text-blue-dark hover:underline"
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/r-jo"
@@ -50,24 +50,24 @@ export default function Projects() {
           <Badge child="Tailwind CSS" />
           <Badge child="Styled Components" />
         </div>
-        <h3 className="font-bold text-2xl md:text-4xl  my-4 text-blue-700 dark:text-red-400 text-opacity-75">
+        <h3 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
           Current Projects
         </h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
+        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
           {" "}
           Here are some of the projects that I am currently working on.
         </p>
         <ProjectCard
-          image="/images/citrushack.png"
+          image="/images/citrushack2021.png"
           children="The website used by hundreds of students to interact and participate in the annual Citrushack hackathon. Coming Spring 2021."
-          href="https://citrushack.com"
+          href="https://citrushackdemo.vercel.app"
           category="Citrushack"
           date="Hackathon"
         />
         <ProjectCard
           image="/images/biohack2021.png"
           children="The website used by hundreds of students to interact and participate in the annual Biohack hackathon. Coming Spring 2021."
-          href="https://biohackucr.com/#/"
+          href="https://biohackucrdemo.vercel.app"
           category="Biohack"
           date="Hackathon"
         />
@@ -78,12 +78,12 @@ export default function Projects() {
           category="Habitle"
           date="Personal Project"
         />
-        <h3 className="font-bold text-2xl md:text-4xl  my-4 text-blue-700 dark:text-red-400 text-opacity-75">
+        <h3 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
           Finished Projects
         </h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-4 md:text-lg text-md">
+        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
           {" "}
-          And these are my finished projects.
+          Here are my finished projects.
         </p>
         <ProjectCard
           image="/images/terminal.png"
