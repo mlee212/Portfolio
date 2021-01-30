@@ -115,7 +115,7 @@ export default function Container({ children }) {
 
         <meta name="og:title" content={siteTitle} />
       </Head>
-      <nav className="sticky-nav flex justify-between items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-primary-light dark:bg-primary-dark bg-opacity-80 transition duration-500 ease-in-out">
+      <nav className="sticky-nav flex justify-between items-center max-w-4xl w-full p-6 my-0 md:my-8 mx-auto bg-primary-light dark:bg-primary-dark bg-opacity-80 transition duration-500 ease-in-out">
       <div className="h-10 w-10 relative cursor-pointer">
         <button
           aria-label="Toggle Dark Mode"
