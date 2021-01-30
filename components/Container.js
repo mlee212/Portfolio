@@ -168,7 +168,7 @@ export default function Container({ children }) {
           </ActiveLink>
         </div>
       </nav>
-      <main className="flex flex-col justify-center px-8">
+      <main className="flex flex-col justify-center px-6">
         {children}
         <Footer />
       </main>
