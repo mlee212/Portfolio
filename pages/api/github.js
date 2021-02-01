@@ -21,10 +21,15 @@ export default async (req, res) => {
   const reposStarred = await octokit.request("/users/r-jo/starred");
   const starredCount = reposStarred.data.length;
 
+  //Orgs request
+  const userOrgs = await octokit.request("/user/orgs");
+  const orgsCount = userOrgs.data.length;
+
   //return
   return res.status(200).json({
     stars: starsCount,
     followers: followerCount,
     starred: starredCount,
+    orgsCont: orgsCount,
   });
 };

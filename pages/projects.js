@@ -48,6 +48,8 @@ export default function Projects() {
           <Badge child="NPM" />
           <Badge child="Chakra UI" />
           <Badge child="Tailwind CSS" />
+          <Badge child="C++" />
+          <Badge child="REST" />
           <Badge child="Styled Components" />
         </div>
         <h1 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
