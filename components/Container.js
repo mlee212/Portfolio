@@ -15,7 +15,7 @@ export default function Container({ children }) {
   useEffect(() => setMounted(true), []);
 
   return (
-    <html lang="en" className="bg-primary-light dark:bg-primary-dark transition duration-500 ease-in-out">
+    <html lang="en" className="bg-primary-light dark:bg-primary-dark">
     <body className="bg-primary-light dark:bg-primary-dark transition duration-500 ease-in-out">
       <Head>
         <link
@@ -120,7 +120,7 @@ export default function Container({ children }) {
         <button
           aria-label="Toggle Dark Mode"
           type="button"
-          className="flex items-center justify-center h-10 w-10 dark:bg-grey5-dark rounded-md border border-grey5-light dark:border-grey6-dark"
+          className="flex items-center justify-center h-10 w-10 bg-card-light dark:bg-card-dark rounded-md"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
           {mounted && (
@@ -129,7 +129,7 @@ export default function Container({ children }) {
               viewBox="0 0 24 24"
               fill="currentColor"
               stroke="currentColor"
-              className="h-4 w-4 text-gray-800 dark:text-gray-200"
+              className="h-4 w-4 text-text-light dark:text-text-dark"
             >
               {theme === "dark" ? (
                 <path
@@ -150,19 +150,19 @@ export default function Container({ children }) {
           )}
         </button>
         </div>
-        <div>
+        <div className="space-x-2">
           <ActiveLink activeClassName="active" href="/">
-            <a className="nav-link p-3 text-gray-900 dark:text-gray-100">
+            <a className="nav-link px-3 py-2 text-gray-900 dark:text-gray-100">
               Home
             </a>
           </ActiveLink>
           <ActiveLink activeClassName="active" href="/projects">
-            <a className="nav-link p-3 text-gray-900 dark:text-gray-100">
+            <a className="nav-link px-3 py-2 text-gray-900 dark:text-gray-100">
               Projects
             </a>
           </ActiveLink>
           <ActiveLink activeClassName="active" href="/about">
-            <a className="nav-link p-3 text-gray-900 dark:text-gray-100">
+            <a className="nav-link px-3 py-2 text-gray-900 dark:text-gray-100">
               About
             </a>
           </ActiveLink>
