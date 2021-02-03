@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 const Divider = () => {
   return (
-    <div className="border-b border-grey4-light dark:border-grey4-dark w-full my-8" />
+    <div className="border-b border-border-light dark:border-border-dark w-full my-8" />
   );
 };
 
@@ -18,8 +18,8 @@ const Year = ({ children }) => {
 
 const Step = ({ title, children }) => {
   return (
-    <li className="mb-4 ml-2">
-      <div className="flex items-center mb-2 text-green-light dark:text-green-dark">
+    <li className="mb-4">
+      <div className="flex items-center mb-2 text-title-light dark:text-title-dark">
         <span className="sr-only">Check</span>
         <svg className="h-4 w-4 mr-2" viewBox="0 0 24 24">
           <g
@@ -37,7 +37,7 @@ const Step = ({ title, children }) => {
           {title}
         </p>
       </div>
-      <p className="md:text-lg text-md text-grey2-dark dark:text-grey-light ml-6">
+      <p className="md:text-lg text-md text-subtext-light dark:text-subtext-dark ml-6">
         {children}
       </p>
     </li>
@@ -157,8 +157,8 @@ export default function Timeline() {
       ) : (
         <button
           type="button"
-          className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-grey6-light dark:bg-grey5-dark
-           rounded-md font-medium text-text-light dark:text-text-dark md:text-lg text-md
+          className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-card-light dark:bg-card-dark
+           rounded-md font-medium text-subtext-light dark:text-subtext-dark md:text-lg text-md
            transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
           onClick={() => showFullTimeline(true)}
         >

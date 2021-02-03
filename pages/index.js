@@ -27,7 +27,7 @@ export default function Home() {
           Here are some of the projects that I am currently working on. Check
           out my other{" "}
           <Link href="/projects">
-            <a className="text-blue-light dark:text-blue-dark hover:underline">projects</a>
+            <a className="text-link-light dark:text-link-dark underline">projects</a>
           </Link>{" "}
           here.
         </p>

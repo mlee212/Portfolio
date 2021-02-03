@@ -6,7 +6,7 @@ const Badge = ({ child }) => {
   return (
     <button
       type="button"
-      class="bg-grey6-light dark:bg-grey6-dark dark:text-white text-black p-2 m-1 rounded items-center"
+      class="bg-card-light dark:bg-card-dark text-subtext-light dark:text-subtext-dark p-2 m-1 rounded items-center"
     >
       {child}
     </button>
@@ -27,7 +27,7 @@ export default function Projects() {
           <span className="font-medium">Here is a collection of my best work where I demonstrate my skills as
           a developer and a creator.</span> You can also see a more detailed view on my{" "}
           <a
-            className="text-blue-light dark:text-blue-dark hover:underline"
+            className="text-link-light dark:text-link-dark underline"
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/r-jo"
