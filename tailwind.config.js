@@ -7,16 +7,24 @@ module.exports = {
         transparent: 'transparent',
         current:'currentColor',
         title:{
-          light:"#000",
-          dark:"#fff",
+          light:"#3B3B3A",
+          dark:"#F8F9F6",
         },
         primary:{
-          light:"#fff",
-          dark:"#000",
+          light:"#f4f5f1",
+          dark:"#3e3e3d",
         },
         text:{
-          light:"#1d1d1f",
-          dark:"#fff"
+          light:"#3e3e3d",
+          dark:"#f4f5f1"
+        },
+        card:{
+          light:"#e0e1dd",
+          dark:"",
+        },
+        link:{
+          light: "#3B3B3A",
+          dark: "#F8F9F6",
         },
         grey:{
           light:"rgb(142,142,147)",
