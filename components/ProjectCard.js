@@ -1,6 +1,12 @@
 import Image from "next/image";
 
-export default function ProjectCard({ date, category, children, image, href }) {
+export default function ProjectCard({
+  title,
+  category,
+  children,
+  image,
+  href,
+}) {
   return (
     <a href={href} rel="noreferrer" rel="noopener" target="_blank">
       <figure className="flex bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark p-6 rounded-lg mb-4 transition duration-300 ease-in-out hover-hover:hover:shadow-2xl">
@@ -17,10 +23,10 @@ export default function ProjectCard({ date, category, children, image, href }) {
             </div>
             <div className="pl-4">
               <div className="text-sm text-text-light dark:text-text-dark uppercase">
-                {date}
-              </div>
-              <div className="text-lg text-link-light dark:text-link-dark hover:underline">
                 {category}
+              </div>
+              <div className="flex items-center text-lg text-link-light dark:text-link-dark hover:underline">
+                {title}
               </div>
             </div>
           </figcaption>

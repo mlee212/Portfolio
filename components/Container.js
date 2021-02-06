@@ -5,6 +5,8 @@ import ActiveLink from "./ActiveLink";
 
 import { Footer } from "./Footer";
 
+import { MoonIcon, SunIcon } from "../public/images/icons/icons.js";
+
 export const siteTitle = "Rajbir Johar | Portfolio";
 
 export default function Container({ children }) {
@@ -13,7 +15,7 @@ export default function Container({ children }) {
   const [scroll, setScroll] = useState(false);
 
   const changeNav = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 50) {
       setScroll(true);
     } else {
       setScroll(false);
@@ -34,7 +36,9 @@ export default function Container({ children }) {
     <html lang="en">
       <body
         className={`transition duration-300 ease-in-out ${
-          scroll ? "bg-secondary-light dark:bg-secondary-dark" : "bg-primary-light dark:bg-primary-dark"
+          scroll
+            ? "bg-secondary-light dark:bg-secondary-dark"
+            : "bg-primary-light dark:bg-primary-dark"
         }`}
       >
         <Head>
@@ -135,64 +139,52 @@ export default function Container({ children }) {
 
           <meta name="og:title" content={siteTitle} />
         </Head>
-        <nav className="sticky-nav flex justify-center items-center  
+        <nav
+          className="sticky-nav flex justify-center items-center  
         w-full p-6 my-0 md:my-8 mx-auto bg-primary-light dark:bg-primary-dark 
-        bg-opacity-80 transition duration-300 ease-in-out">
+         transition duration-300 ease-in-out"
+        >
           <div className="w-full max-w-4xl flex items-center justify-between">
-          <div className="h-10 w-10 relative cursor-pointer">
-            <button
-              aria-label="Toggle Dark Mode"
-              type="button"
-              className="flex items-center justify-center h-10 w-10 bg-card-light dark:bg-card-dark rounded-md"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            >
-              {mounted && (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  className="h-4 w-4 text-text-light dark:text-text-dark"
-                >
-                  {theme === "dark" ? (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                    />
-                  ) : (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                    />
-                  )}
-                </svg>
-              )}
-            </button>
-          </div>
-          <div className="space-x-2">
-            <ActiveLink activeClassName="active" href="/">
-              <a className="nav-link px-3 py-2 text-gray-900 dark:text-gray-100">
-                Home
-              </a>
-            </ActiveLink>
-            <ActiveLink activeClassName="active" href="/projects">
-              <a className="nav-link px-3 py-2 text-gray-900 dark:text-gray-100">
-                Projects
-              </a>
-            </ActiveLink>
-            <ActiveLink activeClassName="active" href="/about">
-              <a className="nav-link px-3 py-2 text-gray-900 dark:text-gray-100">
-                About
-              </a>
-            </ActiveLink>
-          </div>
+            <div className="h-9 w-9 relative cursor-pointer">
+              <button
+                aria-label="Toggle Dark Mode"
+                type="button"
+                className="flex items-center justify-center h-9 w-9 bg-card-light dark:bg-card-dark rounded-md"
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              >
+                {mounted && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    className="h-4 w-4 text-text-light dark:text-text-dark"
+                  >
+                    {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+                  </svg>
+                )}
+              </button>
+            </div>
+            <div className="space-x-2">
+              <ActiveLink activeClassName="active" href="/">
+                <a className="nav-link px-3 py-2 text-gray-900 dark:text-gray-100">
+                  Home
+                </a>
+              </ActiveLink>
+              <ActiveLink activeClassName="active" href="/projects">
+                <a className="nav-link px-3 py-2 text-gray-900 dark:text-gray-100">
+                  Projects
+                </a>
+              </ActiveLink>
+              <ActiveLink activeClassName="active" href="/about">
+                <a className="nav-link px-3 py-2 text-gray-900 dark:text-gray-100">
+                  About
+                </a>
+              </ActiveLink>
+            </div>
           </div>
         </nav>
-        
+
         <main className="flex flex-col justify-center px-6">
           {children}
           <Footer />

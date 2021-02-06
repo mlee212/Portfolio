@@ -60,25 +60,25 @@ export default function Projects() {
           Here are some of the projects that I am currently working on.
         </p>
         <ProjectCard
-          image="/images/citrushack2021.png"
+          image="/images/citrushack.png"
           children="The website used by hundreds of students to interact and participate in the annual Citrushack hackathon. Coming Spring 2021."
           href="https://citrushackdemo.vercel.app"
-          category="Citrushack"
-          date="Hackathon"
+          title="Citrushack"
+          category="Hackathon"
         />
         <ProjectCard
           image="/images/biohack2021.png"
           children="The website used by hundreds of students to interact and participate in the annual Biohack hackathon. Coming Spring 2021."
           href="https://biohackucrdemo.vercel.app"
-          category="Biohack"
-          date="Hackathon"
+          title="Biohack"
+          category="Hackathon"
         />
         <ProjectCard
           image="/images/habitle.png"
           children="A minimal and powerful web app that generates a heatmap to visual progress to promote a positive and consistent lifestyle."
           href="https://habitle.com/#/"
-          category="Habitle"
-          date="Personal Project"
+          title="Habitle"
+          category="Personal Project"
         />
         <h1 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
           Finished Projects
@@ -91,15 +91,15 @@ export default function Projects() {
           image="/images/terminal.png"
           children="Rho Shell is aimed to replicate the standard functions of a shell using a Command Line Interface (CLI), written primarily in C++. It can perform most of the basic and common commands of a terminal."
           href="https://github.com/r-jo/rhoshell"
-          category="Rho Shell"
-          date="Personal Project"
+          title="Rho Shell"
+          category="Personal Project"
         />
         <ProjectCard
           image="/images/cutiehack2020.png"
           children="The website used by 500+ students to interact with and participate in the annual Cutiehack hackathon. Co-led the effort on UI/UX and frontend to provide a seamless and easy-to-use interface."
           href="https://cutiehack.io"
-          category="Cutiehack"
-          date="Hackathon"
+          title="Cutiehack"
+          category="Hackathon"
         />
       </div>
     </Container>
