@@ -31,7 +31,7 @@ export const Footer = () => {
               </a>
             </div>
             <div className="flex flex-col space-y-2">
-            <a
+              <a
                 className="md:text-lg text-md text-link-light dark:text-link-dark no-underline hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -46,15 +46,6 @@ export const Footer = () => {
                 href="https://twitter.com/RajbirJohar"
               >
                 Twitter
-              </a>
-
-              <a
-                className="md:text-lg text-md text-link-light dark:text-link-dark no-underline hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://leerob.io/"
-              >
-                Inspo
               </a>
             </div>
           </div>

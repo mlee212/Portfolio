@@ -32,25 +32,25 @@ export default function Home() {
           here.
         </p>
         <ProjectCard
-          image="/images/citrushack2021.png"
+          image="/images/citrushack.png"
           children="The website used by hundreds of students to interact and participate in the annual Citrushack hackathon. Coming Spring 2021."
           href="https://citrushackdemo.vercel.app"
-          category="Citrushack"
-          date="Hackathon"
+          title="Citrushack"
+          category="Hackathon"
         />
         <ProjectCard
           image="/images/biohack2021.png"
           children="The website used by hundreds of students to interact and participate in the annual Biohack hackathon. Coming Spring 2021."
           href="https://biohackdemo.vercel.app"
-          category="Biohack"
-          date="Hackathon"
+          title="Biohack"
+          category="Hackathon"
         />
         <ProjectCard
           image="/images/habitle.png"
           children="A minimal and powerful web app that generates a heatmap to visual progress to promote a positive and consistent lifestyle."
           href="https://habitle.com/#/"
-          category="Habitle"
-          date="Personal Project"
+          title="Habitle"
+          category="Personal Project"
         />
         <Timeline />
       </div>
