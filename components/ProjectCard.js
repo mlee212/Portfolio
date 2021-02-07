@@ -9,7 +9,8 @@ export default function ProjectCard({
 }) {
   return (
     <a href={href} rel="noreferrer" rel="noopener" target="_blank">
-      <figure className="flex bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark p-6 rounded-lg mb-4 transition duration-300 ease-in-out hover-hover:hover:shadow-2xl">
+      <figure className="flex hover-hover:hover:bg-card-light hover-hover:dark:hover:bg-card-dark border-2 border-card-light
+       dark:border-card-dark p-6 rounded-lg mb-4 transition duration-300 ease-in-out hover-hover:hover:shadow-lg">
         <div className="space-y-4">
           <figcaption className="font-medium flex items-center">
             <div className="w-12 h-12 md:w-16 md:h-16 relative flex md:items-start">

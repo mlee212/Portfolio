@@ -15,7 +15,7 @@ export default function Container({ children }) {
   const [scroll, setScroll] = useState(false);
 
   const changeNav = () => {
-    if (window.scrollY >= 50) {
+    if (window.scrollY >= 30) {
       setScroll(true);
     } else {
       setScroll(false);
