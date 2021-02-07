@@ -3,7 +3,6 @@ import Head from "next/head";
 import Container, { siteTitle } from "../components/Container";
 import TopTracks from "../components/TopTracks";
 import GithubStats from "../components/GithubStats";
-import { MusicIcon } from "../public/images/icons/icons";
 
 export default function More() {
   return (

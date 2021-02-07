@@ -1,11 +1,12 @@
 import { data } from "autoprefixer";
 import useSWR from "swr";
 import fetcher from "../lib/fetcher";
+import Loader from "./Loader";
 
 export default function GithubStats() {
   const { data } = useSWR("/api/github", fetcher);
   if (!data) {
-    return null;
+    return <Loader show />;
   }
 
   return (
