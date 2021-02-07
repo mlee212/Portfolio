@@ -12,11 +12,11 @@ module.exports = {
         },
         primary: {
           light: "#f4f5f1",
-          dark: "#3e3e3d",
+          dark: "#2b2b2a",
         },
         secondary: {
           light: "#f0f0ec",
-          dark: "#3b3b3b",
+          dark: "#2a2a2a",
         },
         text: {
           light: "#3e3e3d",
@@ -24,7 +24,7 @@ module.exports = {
         },
         card: {
           light: "#e0e1dd",
-          dark: "#2b2b2a",
+          dark: "#3b3b3b",
         },
         subtext: {
           light: "#636366",
@@ -36,7 +36,7 @@ module.exports = {
         },
         border: {
           light: "#e0e1dd",
-          dark: "#2b2b2a",
+          dark: "#3b3b3b",
         },
       },
       screens: {
