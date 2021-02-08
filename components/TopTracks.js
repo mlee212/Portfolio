@@ -10,10 +10,9 @@ export default function TopTracks() {
   const { data } = useSWR("/api/top-tracks", fetcher);
 
   if (!data) {
-    return <Loader show/>;
-  }
-
-  return data.tracks.map((track, index) => (
-    <Track ranking={index + 1} key={track.songUrl} {...track} />
-  ));
+    return <Loader show />;
+  } else
+    return data.tracks.map((track, index) => (
+      <Track ranking={index + 1} key={track.songUrl} {...track} />
+    ));
 }
