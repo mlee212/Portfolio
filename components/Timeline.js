@@ -14,7 +14,7 @@ import {
 
 const Divider = () => {
   return (
-    <div className="border-b border-border-light dark:border-border-dark w-full my-8" />
+    <div className="border-b-2 border-border-light dark:border-border-dark w-full my-8" />
   );
 };
 
@@ -168,7 +168,7 @@ export default function Timeline() {
           type="button"
           className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-card-light dark:bg-card-dark
            rounded-md font-medium text-subtext-light dark:text-subtext-dark md:text-lg text-md
-           transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+           transition duration-300 ease-in-out transform hover-hover:hover:-translate-y-1 hover-hover:hover:shadow-lg"
           onClick={() => showFullTimeline(true)}
         >
           See More

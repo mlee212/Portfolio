@@ -15,7 +15,7 @@ export default function Container({ children }) {
   const [scroll, setScroll] = useState(false);
 
   const changeNav = () => {
-    if (window.scrollY >= 30) {
+    if (window.scrollY >= 10) {
       setScroll(true);
     } else {
       setScroll(false);
@@ -140,9 +140,10 @@ export default function Container({ children }) {
           <meta name="og:title" content={siteTitle} />
         </Head>
         <nav
-          className="sticky-nav flex justify-center items-center  
+          className={`sticky-nav flex justify-center items-center  
         w-full p-6 my-0 md:my-8 mx-auto bg-primary-light dark:bg-primary-dark 
-         transition duration-300 ease-in-out"
+         transition duration-300 ease-in-out ${
+          scroll ? "shadow-sm" : "shadow-none"}`}
         >
           <div className="w-full max-w-4xl flex items-center justify-between">
             <div className="h-9 w-9 relative cursor-pointer">
