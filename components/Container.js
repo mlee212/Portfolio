@@ -15,7 +15,7 @@ export default function Container({ children }) {
   const [scroll, setScroll] = useState(false);
 
   const changeNav = () => {
-    if (window.scrollY >= 10) {
+    if (window.scrollY >= 32) {
       setScroll(true);
     } else {
       setScroll(false);
@@ -35,11 +35,8 @@ export default function Container({ children }) {
   return (
     <html lang="en">
       <body
-        className={`transition duration-300 ease-in-out ${
-          scroll
-            ? "bg-secondary-light dark:bg-secondary-dark"
-            : "bg-primary-light dark:bg-primary-dark"
-        }`}
+        className="transition duration-300 ease-in-out 
+           bg-primary-light dark:bg-primary-dark"
       >
         <Head>
           <link
@@ -141,9 +138,12 @@ export default function Container({ children }) {
         </Head>
         <nav
           className={`sticky-nav flex justify-center items-center  
-        w-full p-6 my-0 md:my-8 mx-auto bg-primary-light dark:bg-primary-dark 
+        w-full p-6 my-0 md:my-8 mx-auto 
          transition duration-300 ease-in-out ${
-          scroll ? "shadow-sm" : "shadow-none"}`}
+           scroll
+             ? "shadow-sm bg-secondary-light dark:bg-secondary-dark"
+             : "shadow-none bg-primary-light dark:bg-primary-dark"
+         }`}
         >
           <div className="w-full max-w-4xl flex items-center justify-between">
             <div className="h-9 w-9 relative cursor-pointer">
@@ -168,17 +168,17 @@ export default function Container({ children }) {
             </div>
             <div className="space-x-2">
               <ActiveLink activeClassName="active" href="/">
-                <a className="nav-link px-3 py-2 text-gray-900 dark:text-gray-100">
+                <a className="nav-link px-3 py-2 text-nav-light dark:text-nav-dark">
                   Home
                 </a>
               </ActiveLink>
               <ActiveLink activeClassName="active" href="/projects">
-                <a className="nav-link px-3 py-2 text-gray-900 dark:text-gray-100">
+                <a className="nav-link px-3 py-2 text-nav-light dark:text-nav-dark">
                   Projects
                 </a>
               </ActiveLink>
               <ActiveLink activeClassName="active" href="/about">
-                <a className="nav-link px-3 py-2 text-gray-900 dark:text-gray-100">
+                <a className="nav-link px-3 py-2 text-nav-light dark:text-nav-dark">
                   About
                 </a>
               </ActiveLink>

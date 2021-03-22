@@ -32,7 +32,7 @@ export default function ProjectCard({
             </div>
           </figcaption>
           <blockquote>
-            <p className="md:text-lg text-md text-subtext-light dark:text-subtext-dark">
+            <p className="md:text-lg text-md text-text-light dark:text-text-dark">
               {children}
             </p>
           </blockquote>
