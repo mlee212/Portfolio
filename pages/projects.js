@@ -6,7 +6,7 @@ const Badge = ({ child }) => {
   return (
     <button
       type="button"
-      class="bg-card-light dark:bg-card-dark text-subtext-light dark:text-subtext-dark p-2 m-1 rounded items-center"
+      class="bg-card-light dark:bg-card-dark text-text-light dark:text-text-dark p-2 m-1 rounded items-center"
     >
       {child}
     </button>
