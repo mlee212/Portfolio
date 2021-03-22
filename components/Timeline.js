@@ -9,7 +9,7 @@ import {
   FireIcon,
   StarIcon,
   SadIcon,
-  BoltIcon
+  BoltIcon,
 } from "../public/images/icons/icons.js";
 
 const Divider = () => {
@@ -78,7 +78,10 @@ const FullTimeline = () => (
         I wrote my first line of code{" "}
         <code>cout &#60;&#60; "Hello World!";</code>
       </Step>
-      <Step title="Moved to University of California, Riverside" icon={<HatIcon />}>
+      <Step
+        title="Moved to University of California, Riverside"
+        icon={<HatIcon />}
+      >
         For Computer Science!
       </Step>
       <Step title="Graduated High School">Peace out high school lunches.</Step>
@@ -149,7 +152,9 @@ export default function Timeline() {
           Half way there! I'm looking forward to more challenging classes in an
           even more challenging enviroment.
         </Step>
-        <Step title="Finished All my Math Classes" icon={<HatIcon />}>No more!</Step>
+        <Step title="Finished All my Math Classes" icon={<HatIcon />}>
+          No more!
+        </Step>
         <Step title="UC Zoom" icon={<SadIcon />}>
           The COVID-19 Pandemic shifted all of our classes online and we had to
           adapt using video calling and online only platforms.
@@ -167,7 +172,7 @@ export default function Timeline() {
         <button
           type="button"
           className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-card-light dark:bg-card-dark
-           rounded-md font-medium text-subtext-light dark:text-subtext-dark md:text-lg text-md
+           rounded-md text-text-light dark:text-text-dark md:text-lg text-md
            transition duration-300 ease-in-out transform hover-hover:hover:-translate-y-1 hover-hover:hover:shadow-lg"
           onClick={() => showFullTimeline(true)}
         >
