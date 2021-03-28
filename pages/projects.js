@@ -61,8 +61,10 @@ export default function Projects() {
         </p>
         <ProjectCard
           image="/images/citrushack.png"
-          children="The website used by hundreds of students to interact and participate in the annual Citrushack hackathon. Coming Spring 2021."
-          href="https://citrushackdemo.vercel.app"
+          children="Create your Zen. This is the Founder's Edition of the Citrushack website written by me.
+           It's to illustrate my version of the project. Citrushack is scheduled for April 9th to 11th 2021. 
+           Everyone is welcome to join here!"
+          href="https://citrushack-fe.vercel.app"
           title="Citrushack"
           category="Hackathon"
         />
