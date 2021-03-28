@@ -191,7 +191,8 @@ export default function Container({ children }) {
         <main className="w-full max-w-4xl mx-auto">
           <div
             className="relative z-10 transition duration-300 ease-in-out 
-        bg-primary-light dark:bg-primary-dark md:p-6 px-0 py-6 md:mx-0 mx-6 border-b-2"
+        bg-primary-light dark:bg-primary-dark md:p-6 px-0 py-6 md:mx-0 mx-6 border-b-2
+        border-border-light dark:border-border-dark"
           >
             {children}
           </div>
