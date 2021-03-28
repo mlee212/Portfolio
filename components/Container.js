@@ -15,7 +15,7 @@ export default function Container({ children }) {
   const [scroll, setScroll] = useState(false);
 
   const changeNav = () => {
-    if (window.scrollY >= 32) {
+    if (window.scrollY >= 1) {
       setScroll(true);
     } else {
       setScroll(false);
@@ -137,15 +137,17 @@ export default function Container({ children }) {
           <meta name="og:title" content={siteTitle} />
         </Head>
         <nav
-          className={`sticky-nav flex justify-center items-center  
-        w-full p-6 my-0 md:my-8 mx-auto 
-         transition duration-300 ease-in-out ${
-           scroll
-             ? "shadow-sm bg-secondary-light dark:bg-secondary-dark"
-             : "shadow-none bg-primary-light dark:bg-primary-dark"
-         }`}
+          className="sticky-nav sticky flex justify-center items-center  
+        w-full p-6 pb-0 my-0 md:my-8 mx-auto transition duration-100 ease-in-out 
+          bg-primary-light dark:bg-primary-dark"
         >
-          <div className="w-full max-w-4xl flex items-center justify-between">
+          <div
+            className={`w-full max-w-4xl flex items-center justify-between transition duration-300 ease-in-out border-b-2 pb-6 ${
+              scroll
+                ? "border-border-light dark:border-border-dark"
+                : "border-primary-light dark:border-primary-dark"
+            }`}
+          >
             <div className="h-9 w-9 relative cursor-pointer">
               <button
                 aria-label="Toggle Dark Mode"
@@ -186,9 +188,16 @@ export default function Container({ children }) {
           </div>
         </nav>
 
-        <main className="flex flex-col justify-center px-6">
-          {children}
+        <main className="w-full max-w-4xl mx-auto">
+          <div
+            className="relative z-10 transition duration-300 ease-in-out 
+        bg-primary-light dark:bg-primary-dark md:p-6 px-0 py-6 md:mx-0 mx-6 border-b-2"
+          >
+            {children}
+          </div>
+          <div className="sticky bottom-0 z-0">
           <Footer />
+          </div>
         </main>
       </body>
     </html>
