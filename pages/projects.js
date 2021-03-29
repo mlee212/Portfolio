@@ -61,9 +61,11 @@ export default function Projects() {
         </p>
         <ProjectCard
           image="/images/citrushack.png"
-          children="Create your Zen. This is the Founder's Edition of the Citrushack website written by me.
-           It's to illustrate my version of the project. Citrushack is scheduled for April 9th to 11th 2021. 
-           Everyone is welcome to join here!"
+          children={[
+            "Create your Zen. This is the Founder's Edition of the Citrushack website written by me. It's to illustrate my version of the project. Citrushack is scheduled for April 9th to 11th 2021. Everyone is welcome to join ",
+            <a href="https://citrushack.com" target="_blank" className="underline">here</a>,
+            "!",
+          ]}
           href="https://citrushack-fe.vercel.app"
           title="Citrushack"
           category="Hackathon"

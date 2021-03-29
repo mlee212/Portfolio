@@ -188,17 +188,9 @@ export default function Container({ children }) {
           </div>
         </nav>
 
-        <main className="w-full max-w-4xl mx-auto">
-          <div
-            className="relative z-10 transition duration-300 ease-in-out 
-        bg-primary-light dark:bg-primary-dark md:p-6 px-0 py-6 md:mx-0 mx-6 border-b-2
-        border-border-light dark:border-border-dark"
-          >
-            {children}
-          </div>
-          <div className="sticky bottom-0 z-0">
+        <main className="flex flex-col w-full max-w-4xl mx-auto p-6">
+          {children}
           <Footer />
-          </div>
         </main>
       </body>
     </html>
