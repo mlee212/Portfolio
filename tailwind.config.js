@@ -8,19 +8,19 @@ module.exports = {
         current: "currentColor",
         title: {
           light: "#3B3B3A",
-          dark: "#adbac7",
+          dark: "#efefef",
         },
         primary: {
           light: "#f4f5f1",
-          dark: "#22272e",
+          dark: "#191919",
         },
         secondary: {
           light: "#ebede6",
-          dark: "#2d333b",
+          dark: "#191919",
         },
         text: {
           light: "#3e3e3d",
-          dark: "#adbac7",
+          dark: "#c3c3c3",
         },
         nav: {
           light: "#3e3e3d",
@@ -28,19 +28,27 @@ module.exports = {
         },
         card: {
           light: "#e0e1dd",
-          dark: "#373e47",
+          dark: "#313232",
         },
         subtext: {
           light: "#636366",
-          dark: "#768390",
+          dark: "#8e8e8e",
+        },
+        button:{
+          light:"#191919",
+          dark:"#bbb",
+        },
+        buttontext:{
+          light: "#f4f5f1",
+          dark: "#3e3e3d",
         },
         link: {
           light: "#3B3B3A",
-          dark: "#F8F9F6",
+          dark: "#fff",
         },
         border: {
           light: "#e0e1dd",
-          dark: "#373e47",
+          dark: "#313232",
         },
       },
       screens: {

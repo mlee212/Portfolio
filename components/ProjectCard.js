@@ -9,7 +9,7 @@ export default function ProjectCard({
 }) {
   return (
     <figure
-      className="flex hover-hover:hover:bg-card-light hover-hover:dark:hover:bg-card-dark border-2 border-card-light
+      className="flex bg-card-light dark:bg-card-dark border-2 border-card-light
        dark:border-card-dark p-6 rounded-lg mb-4 transition duration-300 ease-in-out hover-hover:hover:shadow-lg"
     >
       <div className="space-y-4">
@@ -19,8 +19,6 @@ export default function ProjectCard({
               src={image}
               alt="Product Logo"
               layout="fill"
-              width={150}
-              height={150}
             />
           </div>
           <div className="pl-4">

@@ -170,17 +170,17 @@ export default function Container({ children }) {
             </div>
             <div className="space-x-2">
               <ActiveLink activeClassName="active" href="/">
-                <a className="nav-link px-3 py-2 text-nav-light dark:text-nav-dark">
+                <a className="nav-link px-3 py-2 text-link-light dark:text-link-dark">
                   Home
                 </a>
               </ActiveLink>
               <ActiveLink activeClassName="active" href="/projects">
-                <a className="nav-link px-3 py-2 text-nav-light dark:text-nav-dark">
+                <a className="nav-link px-3 py-2 text-link-light dark:text-link-dark">
                   Projects
                 </a>
               </ActiveLink>
               <ActiveLink activeClassName="active" href="/about">
-                <a className="nav-link px-3 py-2 text-nav-light dark:text-nav-dark">
+                <a className="nav-link px-3 py-2 text-link-light dark:text-link-dark">
                   About
                 </a>
               </ActiveLink>

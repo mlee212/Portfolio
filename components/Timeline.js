@@ -20,7 +20,7 @@ const Divider = () => {
 
 const Year = ({ children }) => {
   return (
-    <h3 className="text-lg md:text-xl font-bold mb-4  text-text-light dark:text-text-dark">
+    <h3 className="text-lg md:text-xl font-bold mb-4  text-title-light dark:text-title-dark">
       {children}
     </h3>
   );
@@ -54,7 +54,7 @@ const Step = ({ title, children, icon }) => {
 const FullTimeline = () => (
   <>
     <Divider />
-    <Year>2018</Year>
+    <Year>2019</Year>
     <ul>
       <Step title="Started Web Development" icon={<StarIcon />}>
         Around this time, I discovered where my two passions, coding and art,
@@ -171,8 +171,8 @@ export default function Timeline() {
       ) : (
         <button
           type="button"
-          className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-card-light dark:bg-card-dark
-           rounded-md text-text-light dark:text-text-dark md:text-lg text-md
+          className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-button-light dark:bg-button-dark
+           rounded-md text-buttontext-light dark:text-buttontext-dark md:text-lg text-md
            transition duration-300 ease-in-out transform hover-hover:hover:-translate-y-1 hover-hover:hover:shadow-lg"
           onClick={() => showFullTimeline(true)}
         >
