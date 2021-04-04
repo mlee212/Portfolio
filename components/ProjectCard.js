@@ -19,23 +19,21 @@ export default function ProjectCard({
               src={image}
               alt="Product Logo"
               layout="fill"
-              width={150}
-              height={150}
             />
           </div>
           <div className="pl-4">
-            <div className="text-sm text-text-light dark:text-text-dark uppercase">
+            <div className="text-sm uppercase text-accent-light dark:text-accent-dark">
               {category}
             </div>
             <a href={href} rel="noreferrer" rel="noopener" target="_blank">
-              <div className="flex items-center text-lg text-link-light dark:text-link-dark hover:underline">
+              <div className="flex items-center text-lg text-shade-dark dark:text-shade-light underline">
                 {title}
               </div>
             </a>
           </div>
         </figcaption>
         <blockquote>
-          <p className="md:text-lg text-md text-text-light dark:text-text-dark">
+          <p className="md:text-lg text-md text-shade-dark dark:text-shade-light">
             {children}
           </p>
         </blockquote>

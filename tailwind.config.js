@@ -6,42 +6,16 @@ module.exports = {
       colors: {
         transparent: "transparent",
         current: "currentColor",
-        title: {
-          light: "#3B3B3A",
-          dark: "#adbac7",
+        shade: {
+          light: "#F4F2F1",
+          dark: "#191919",
         },
-        primary: {
-          light: "#f4f5f1",
-          dark: "#22272e",
+        accent: {
+          light: "#C0877D",
+          dark: "#7B6875",
         },
-        secondary: {
-          light: "#ebede6",
-          dark: "#2d333b",
-        },
-        text: {
-          light: "#3e3e3d",
-          dark: "#adbac7",
-        },
-        nav: {
-          light: "#3e3e3d",
-          dark: "#cdd9e5",
-        },
-        card: {
-          light: "#e0e1dd",
-          dark: "#373e47",
-        },
-        subtext: {
-          light: "#636366",
-          dark: "#768390",
-        },
-        link: {
-          light: "#3B3B3A",
-          dark: "#F8F9F6",
-        },
-        border: {
-          light: "#e0e1dd",
-          dark: "#373e47",
-        },
+        brand: "#945B68",
+        darkcard: "#222222",
       },
       screens: {
         "hover-hover": { raw: "(hover: hover)" },

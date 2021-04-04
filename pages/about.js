@@ -31,7 +31,7 @@ export default function More() {
         <h3 className="font-bold text-2xl md:text-4xl my-4 text-title-light dark:text-title-dark">
           My Music
         </h3>
-        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
+        <p className="text-shade-dark dark:text-shade-light mb-4 md:text-lg text-md">
           Here are the top ten songs I've been listening to, updated daily.
         </p>
         <TopTracks />

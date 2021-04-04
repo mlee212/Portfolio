@@ -13,31 +13,25 @@ export default function GithubStats() {
       <>
         <div className="md:flex w-full space-y-4 md:space-y-0 md:space-x-4">
           <div className="flex-1 space-y-4">
-            <div className="rounded-lg text-title-light dark:text-title-dark p-6 bg-card-light dark:bg-card-dark">
+            <div className="rounded-lg p-6 bg-shade-light dark:bg-darkcard shadow-xl">
               <h4 className="font-medium text-md md:text-lg ">Github Stars</h4>
-              <p className="text-subtext-light dark:text-subtext-dark">
-                {data ? data.stars : "Loading ⭐"} stars collected.
-              </p>
+              <p>{data ? data.stars : "Loading ⭐"} stars collected.</p>
             </div>
-            <div className="rounded-lg text-title-light dark:text-title-dark p-6 bg-card-light dark:bg-card-dark">
+            <div className="rounded-lg p-6 bg-shade-light dark:bg-darkcard shadow-xl">
               <h4 className="font-medium text-md md:text-lg">
                 Github Followers
               </h4>
-              <p className="text-subtext-light dark:text-subtext-dark">
-                {data ? data.followers : "Loading 👨‍💻"} followers acquired.
-              </p>
+              <p>{data ? data.followers : "Loading 👨‍💻"} followers acquired.</p>
             </div>
           </div>
           <div className="flex-1 space-y-4">
-            <div className="rounded-lg text-title-light dark:text-title-dark p-6 bg-card-light dark:bg-card-dark">
+            <div className="rounded-lg p-6 bg-shade-light dark:bg-darkcard shadow-xl">
               <h4 className="font-medium text-md md:text-lg">Repos Starred</h4>
-              <p className="text-subtext-light dark:text-subtext-dark">
-                {data ? data.starred : "Loading 📚"} repos saved.
-              </p>
+              <p>{data ? data.starred : "Loading 📚"} repos saved.</p>
             </div>
-            <div className="rounded-lg text-title-light dark:text-title-dark p-6 bg-card-light dark:bg-card-dark">
+            <div className="rounded-lg p-6 bg-shade-light dark:bg-darkcard shadow-xl">
               <h4 className="font-medium text-md md:text-lg">Organizations</h4>
-              <p className="text-subtext-light dark:text-subtext-dark">
+              <p>
                 {data ? data.orgsCont : "Loading 🧑‍💻"} orgs contributed to.
               </p>
             </div>

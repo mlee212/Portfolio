@@ -14,13 +14,13 @@ import {
 
 const Divider = () => {
   return (
-    <div className="border-b-2 border-border-light dark:border-border-dark w-full my-8" />
+    <div className="border-b-2 border-accent-light border-opacity-10 dark:border-darkcard dark:border-opacity-100 w-full my-8" />
   );
 };
 
 const Year = ({ children }) => {
   return (
-    <h3 className="text-lg md:text-xl font-bold mb-4  text-text-light dark:text-text-dark">
+    <h3 className="text-lg md:text-xl font-bold mb-4  text-title-light dark:text-title-dark">
       {children}
     </h3>
   );
@@ -29,22 +29,22 @@ const Year = ({ children }) => {
 const Step = ({ title, children, icon }) => {
   return (
     <li className="mb-4">
-      <div className="flex items-center mb-2 text-title-light dark:text-title-dark">
+      <div className="flex items-center mb-2 text-shade-light dark:text-shade-dark">
         <span className="sr-only">Check</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="h-5 w-5 text-text-light dark:text-text-dark mr-2"
+          className="h-5 w-5 text-shade-dark dark:text-shade-light mr-2"
         >
           {icon}
         </svg>
-        <p className="font-medium md:text-lg text-md text-text-light dark:text-text-dark">
+        <p className="font-medium md:text-lg text-md text-shade-dark dark:text-shade-light">
           {title}
         </p>
       </div>
-      <p className="md:text-lg text-md text-subtext-light dark:text-subtext-dark ml-6">
+      <p className="md:text-lg text-md text-shade-dark dark:text-shade-light ml-6">
         {children}
       </p>
     </li>
@@ -54,7 +54,7 @@ const Step = ({ title, children, icon }) => {
 const FullTimeline = () => (
   <>
     <Divider />
-    <Year>2018</Year>
+    <Year>2019</Year>
     <ul>
       <Step title="Started Web Development" icon={<StarIcon />}>
         Around this time, I discovered where my two passions, coding and art,
@@ -171,9 +171,8 @@ export default function Timeline() {
       ) : (
         <button
           type="button"
-          className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-card-light dark:bg-card-dark
-           rounded-md text-text-light dark:text-text-dark md:text-lg text-md
-           transition duration-300 ease-in-out transform hover-hover:hover:-translate-y-1 hover-hover:hover:shadow-lg"
+          className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-shade-dark dark:bg-shade-light text-shade-light dark:text-shade-dark
+           rounded-md md:text-lg text-md transition duration-300 ease-in-out transform hover-hover:hover:-translate-y-1 hover-hover:hover:shadow-lg"
           onClick={() => showFullTimeline(true)}
         >
           See More

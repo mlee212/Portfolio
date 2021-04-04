@@ -2,7 +2,7 @@
 
 export default function Track(track) {
   return (
-    <div className="flex flex-row items-baseline border-b-2 border-border-light dark:border-border-dark max-w-3xl w-full pt-6">
+    <div className="flex flex-row items-baseline border-b-2 border-accent-light border-opacity-10 dark:border-darkcard dark:border-opacity-100 max-w-3xl w-full pt-6">
       <p className="text-md text-subtext-light dark:text-subtext-dark">
         {track.ranking}
       </p>

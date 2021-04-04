@@ -11,18 +11,22 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mt-4">
+      <div className="max-w-2xl mx-auto">
         <h1 className="font-bold text-3xl md:text-5xl pb-4 text-title-light dark:text-title-dark">
-          Hello! I'm Rajbir.
+          Hello! I'm{" "}
+          <span className="text-accent-light dark:text-accent-dark">
+            Rajbir
+          </span>
+          .
         </h1>
-        <h2 className="text-text-light dark:text-text-dark font-medium mb-16 md:text-lg text-md">
+        <h2 className="text-shade-dark dark:text-shade-light font-medium mb-16 md:text-lg text-md">
           Frontend Developer <br />
           Based in Southern California
         </h2>
-        <h3 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
+        <h3 className="font-bold text-2xl md:text-4xl my-4 text-title-light dark:text-title-dark">
           Current Projects
         </h3>
-        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
+        <p className="text-shade-dark dark:text-shade-light md:text-lg text-md">
           {" "}
           Here are some of the projects that I am currently working on. Check
           out my other{" "}

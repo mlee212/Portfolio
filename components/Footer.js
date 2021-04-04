@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="max-w-4xl w-full border-t-2 border-border-light dark:border-border-dark py-6 my-8 mx-auto">
+    <footer className="max-w-4xl w-full border-t-2 border-accent-light border-opacity-10 dark:border-darkcard dark:border-opacity-100 py-6 my-8 mx-auto">
       <div className="md:flex space-y-8 md:space-y-0 py-4">
         <div className="flex-1">
           <p className="font-medium text-lg text-title-light dark:text-title-dark my-2">
@@ -51,7 +51,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="flex-1">
-          <p className="font-medium text-lg text-title-light dark:text-title-dark my-2">
+          <p className="font-medium text-lg my-2">
             Don't be a stranger.
           </p>
           <p className="text-subtext-light dark:text-subtext-dark text-opacity-75 md:text-lg text-md">
@@ -60,7 +60,7 @@ export const Footer = () => {
           </p>
         </div>
         <div className="flex-1 md:ml-4">
-          <p className="font-medium text-lg text-title-light dark:text-title-dark my-2">
+          <p className="font-medium text-lg my-2">
             Privacy first.
           </p>
           <p className="text-subtext-light dark:text-subtext-dark text-opacity-75 md:text-lg text-md">
