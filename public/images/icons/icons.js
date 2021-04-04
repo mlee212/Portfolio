@@ -38,6 +38,7 @@ export const HatIcon = () => (
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
+    className="dark:text-blue-300"
   >
     <path fill="none" d="M12 14l9-5-9-5-9 5 9 5z" />
     <path
@@ -59,6 +60,7 @@ export const CakeIcon = () => (
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
+    className="dark:text-pink-300"
   >
     <path
       stroke-linecap="round"
@@ -91,6 +93,7 @@ export const FireIcon = () => (
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
+    className="dark:text-red-300"
   >
     <path
       stroke-linecap="round"
@@ -113,6 +116,7 @@ export const StarIcon = () => (
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
+    className="dark:text-yellow-200"
   >
     <path
       stroke-linecap="round"
@@ -129,6 +133,7 @@ export const SadIcon = () => (
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
+    className="dark:text-red-300"
   >
     <path
       stroke-linecap="round"
@@ -145,6 +150,7 @@ export const BoltIcon = () => (
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
+    className="dark:text-yellow-200"
   >
     <path
       stroke-linecap="round"

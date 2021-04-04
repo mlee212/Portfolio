@@ -14,7 +14,7 @@ import {
 
 const Divider = () => {
   return (
-    <div className="border-b-2 border-accent-light border-opacity-10 dark:border-darkcard dark:border-opacity-100 w-full my-8" />
+    <div className="border-b-2 border-gray-100 dark:border-gray-700 w-full my-8 transition duration-300 ease-in-out" />
   );
 };
 
@@ -28,23 +28,23 @@ const Year = ({ children }) => {
 
 const Step = ({ title, children, icon }) => {
   return (
-    <li className="mb-4">
-      <div className="flex items-center mb-2 text-shade-light dark:text-shade-dark">
-        <span className="sr-only">Check</span>
+    <li className="my-4">
+      <div className="flex items-center">
+        <span className="sr-only">Icon</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="h-5 w-5 text-shade-dark dark:text-shade-light mr-2"
+          className="h-5 w-5 mr-1"
         >
           {icon}
         </svg>
-        <p className="font-medium md:text-lg text-md text-shade-dark dark:text-shade-light">
+        <p className="font-medium md:text-lg text-md mt-1">
           {title}
         </p>
       </div>
-      <p className="md:text-lg text-md text-shade-dark dark:text-shade-light ml-6">
+      <p className="md:text-lg text-md ml-6 mt-2 text-gray-500 dark:text-gray-300">
         {children}
       </p>
     </li>
@@ -171,8 +171,8 @@ export default function Timeline() {
       ) : (
         <button
           type="button"
-          className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-shade-dark dark:bg-shade-light text-shade-light dark:text-shade-dark
-           rounded-md md:text-lg text-md transition duration-300 ease-in-out transform hover-hover:hover:-translate-y-1 hover-hover:hover:shadow-lg"
+          className="flex items-center text-sm my-8 mx-auto px-4 py-2 bg-gray-100 dark:bg-gray-700 hover-hover:hover:bg-gray-200
+          hover-hover:dark:hover:bg-gray-600 rounded-md md:text-lg text-md transition duration-300 ease-in-out"
           onClick={() => showFullTimeline(true)}
         >
           See More
