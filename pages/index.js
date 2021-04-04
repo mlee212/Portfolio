@@ -68,7 +68,7 @@ export default function Home() {
         <div className="flex flex-col flex-1 space-y-4">
           <figure
             className="md:flex flex-col justify-center hidden 
-            flex-1 bg-accent-light dark:bg-accent-dark text-shade-light text-center  
+            flex-1 bg-accent-light text-shade-light text-center  
             p-6 rounded-lg shadow-2xl"
           >
             <h1 className="font-bold md:text-lg text-md">Purpose</h1>

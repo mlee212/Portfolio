@@ -154,7 +154,7 @@ export default function Container({ children }) {
           <div
             className={`w-full max-w-4xl flex items-center justify-between transition duration-100 ease-in-out border-b-2 pb-6 ${
               scroll
-                ? "border-accent-light dark:border-accent-dark border-opacity-10"
+                ? "border-accent-light border-opacity-10 dark:border-darkcard dark:border-opacity-100"
                 : "border-shade-light dark:border-shade-dark"
             }`}
           >

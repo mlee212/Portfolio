@@ -14,7 +14,7 @@ import {
 
 const Divider = () => {
   return (
-    <div className="border-b-2 border-accent-light dark:border-accent-dark border-opacity-10 w-full my-8" />
+    <div className="border-b-2 border-accent-light border-opacity-10 dark:border-darkcard dark:border-opacity-100 w-full my-8" />
   );
 };
 
