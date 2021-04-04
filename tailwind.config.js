@@ -8,13 +8,14 @@ module.exports = {
         current: "currentColor",
         shade: {
           light: "#F4F2F1",
-          dark: "#3F3637",
+          dark: "#191919",
         },
         accent: {
           light: "#C0877D",
           dark: "#7B6875",
         },
         brand: "#945B68",
+        darkcard: "#222222",
       },
       screens: {
         "hover-hover": { raw: "(hover: hover)" },

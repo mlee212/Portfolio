@@ -6,7 +6,7 @@ const Badge = ({ child }) => {
   return (
     <button
       type="button"
-      class="shadow-xl bg-shade-dark dark:bg-shade-light text-shade-light dark:text-shade-dark p-2 m-1 rounded items-center"
+      class="shadow-2xl bg-shade-dark dark:bg-shade-light text-shade-light dark:text-shade-dark p-2 m-1 rounded items-center"
     >
       {child}
     </button>
@@ -60,8 +60,8 @@ export default function Projects() {
         <div className="flex flex-col flex-1 space-y-4">
           <figure
             className="md:flex flex-col justify-center hidden 
-            flex-1 bg-shade-dark dark:bg-brand text-shade-light text-center  
-            p-6 rounded-lg shadow-xl"
+            flex-1 bg-accent-dark text-shade-light text-center  
+            p-6 rounded-lg shadow-2xl"
           >
             <h1 className="font-bold md:text-lg text-md">Skills</h1>
             <h2 className="md:text-lg text-md">
@@ -111,8 +111,8 @@ export default function Projects() {
           />
           <figure
             className="md:flex flex-col justify-center hidden 
-            flex-1 bg-accent-dark dark:bg-accent-light text-shade-light text-center  
-            p-6 rounded-lg shadow-xl"
+            flex-1 bg-accent-light dark:bg-accent-light text-shade-light text-center  
+            p-6 rounded-lg shadow-2xl"
           >
             <h1 className="font-bold md:text-lg text-md">Motivation</h1>
             <h2 className="md:text-lg text-md">

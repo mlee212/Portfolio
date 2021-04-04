@@ -9,7 +9,7 @@ export default function ProjectCard({
 }) {
   return (
     <figure
-      className="flex-1 bg-shade-light border-accent-light border-opacity-10
+      className="flex-1 bg-shade-light dark:bg-darkcard border-accent-light border-opacity-10
        dark:border-card-dark p-6 rounded-lg shadow-2xl"
     >
       <div className="space-y-4">
@@ -26,14 +26,14 @@ export default function ProjectCard({
               {category}
             </div>
             <a href={href} rel="noreferrer" rel="noopener" target="_blank">
-              <div className="flex items-center text-lg text-shade-dark underline">
+              <div className="flex items-center text-lg text-shade-dark dark:text-shade-light underline">
                 {title}
               </div>
             </a>
           </div>
         </figcaption>
         <blockquote>
-          <p className="md:text-lg text-md text-shade-dark">
+          <p className="md:text-lg text-md text-shade-dark dark:text-shade-light">
             {children}
           </p>
         </blockquote>
