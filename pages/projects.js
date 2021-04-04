@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Container, { siteTitle } from "../components/Container";
 import ProjectCard from "../components/ProjectCard";
+import GithubStats from "../components/GithubStats";
 
 const Badge = ({ child }) => {
   return (
@@ -24,8 +25,11 @@ export default function Projects() {
           Projects
         </h1>
         <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
-          <span className="font-medium">Here is a collection of my best work where I demonstrate my skills as
-          a developer and a creator.</span> You can also see a more detailed view on my{" "}
+          <span className="font-medium">
+            Here is a collection of my best work where I demonstrate my skills
+            as a developer and a creator.
+          </span>{" "}
+          You can also see a more detailed view on my{" "}
           <a
             className="text-link-light dark:text-link-dark underline"
             target="_blank"
@@ -52,6 +56,13 @@ export default function Projects() {
           <Badge child="REST" />
           <Badge child="Styled Components" />
         </div>
+        <h3 className="font-bold text-2xl md:text-4xl my-4 text-title-light dark:text-title-dark">
+          Dashboard
+        </h3>
+        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
+          My Github dashboard tracking my Github statistics.
+        </p>
+        <GithubStats />
         <h1 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
           Current Projects
         </h1>
@@ -63,7 +74,13 @@ export default function Projects() {
           image="/images/citrushack.png"
           children={[
             "Create your Zen. This is the Founder's Edition of the Citrushack website written by me. It's to illustrate my version of the project. Citrushack is scheduled for April 9th to 11th 2021. Everyone is welcome to join ",
-            <a href="https://citrushack.com" target="_blank" className="underline">here</a>,
+            <a
+              href="https://citrushack.com"
+              target="_blank"
+              className="underline text-link-light dark:text-link-dark"
+            >
+              here
+            </a>,
             "!",
           ]}
           href="https://citrushack-fe.vercel.app"
@@ -105,6 +122,12 @@ export default function Projects() {
           title="Cutiehack"
           category="Hackathon"
         />
+        <h1 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
+          Keyboards
+        </h1>
+        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
+          Stay tuned!
+        </p>
       </div>
     </Container>
   );

@@ -27,7 +27,7 @@ export default function Home() {
           Here are some of the projects that I am currently working on. Check
           out my other{" "}
           <Link href="/projects">
-            <a className="text-link-light dark:text-link-dark underline">
+            <a className="underline text-link-light dark:text-link-dark">
               projects
             </a>
           </Link>{" "}
@@ -37,7 +37,13 @@ export default function Home() {
           image="/images/citrushack.png"
           children={[
             "Create your Zen. This is the Founder's Edition of the Citrushack website written by me. It's to illustrate my version of the project. Citrushack is scheduled for April 9th to 11th 2021. Everyone is welcome to join ",
-            <a href="https://citrushack.com" target="_blank" className="underline">here</a>,
+            <a
+              href="https://citrushack.com"
+              target="_blank"
+              className="underline text-link-light dark:text-link-dark"
+            >
+              here
+            </a>,
             "!",
           ]}
           href="https://citrushack-fe.vercel.app"
