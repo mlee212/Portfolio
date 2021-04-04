@@ -9,8 +9,8 @@ export default function ProjectCard({
 }) {
   return (
     <figure
-      className="flex bg-card-light dark:bg-card-dark border-2 border-card-light
-       dark:border-card-dark p-6 rounded-lg mb-4 transition duration-300 ease-in-out hover-hover:hover:shadow-lg"
+      className="flex-1 bg-shade-light border-accent-light border-opacity-10
+       dark:border-card-dark p-6 rounded-lg shadow-2xl"
     >
       <div className="space-y-4">
         <figcaption className="font-medium flex items-center">
@@ -22,18 +22,18 @@ export default function ProjectCard({
             />
           </div>
           <div className="pl-4">
-            <div className="text-sm text-text-light dark:text-text-dark uppercase">
+            <div className="text-sm uppercase text-accent-light dark:text-accent-dark">
               {category}
             </div>
             <a href={href} rel="noreferrer" rel="noopener" target="_blank">
-              <div className="flex items-center text-lg text-link-light dark:text-link-dark hover:underline">
+              <div className="flex items-center text-lg text-shade-dark underline">
                 {title}
               </div>
             </a>
           </div>
         </figcaption>
         <blockquote>
-          <p className="md:text-lg text-md text-text-light dark:text-text-dark">
+          <p className="md:text-lg text-md text-shade-dark">
             {children}
           </p>
         </blockquote>

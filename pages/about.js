@@ -14,7 +14,7 @@ export default function More() {
         <h1 className="font-bold text-3xl md:text-5xl pb-4 text-title-light dark:text-title-dark">
           What I'm About.
         </h1>
-        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
+        <p className="text-shade-dark dark:text-shade-light mb-4 md:text-lg text-md">
           I'm a frontend web developer based in Southern California 😎 studying
           Computer Science at the University of California at Riverside.
           <br />
@@ -32,18 +32,18 @@ export default function More() {
         <h3 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
           My Music
         </h3>
-        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
+        <p className="text-shade-dark dark:text-shade-light mb-4 md:text-lg text-md">
           Here are the top ten songs I've been listening to, updated daily.
         </p>
         <TopTracks />
         <h3 className="font-bold text-2xl md:text-4xl mt-8 mb-4 text-title-light dark:text-title-dark">
           Dashboard
         </h3>
-        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
+        <p className="text-shade-dark dark:text-shade-light mb-4 md:text-lg text-md">
           My Github dashboard tracking my Github statistics.
         </p>
         <GithubStats />
-        <p className="text-text-light dark:text-text-dark my-4 md:text-lg text-md">
+        <p className="text-shade-dark dark:text-shade-light my-4 md:text-lg text-md">
           Find something we have in common? Let's talk about it. ☕
         </p>
       </div>

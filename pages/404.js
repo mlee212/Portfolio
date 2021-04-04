@@ -15,10 +15,10 @@ export default function Custom404() {
               height={200}
             />
           </div>
-          <h3 className="font-bold text-2xl md:text-4xl pb-4 text-title-light dark:text-title-dark z-10 text-center">
+          <h3 className="font-bold text-2xl md:text-4xl pb-4 text-shade-dark dark:text-shade-light z-10 text-center">
             Did you ever hear the tragedy of Darth Plagueis The Wise?
           </h3>
-          <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md z-10">
+          <p className="text-shade-dark dark:text-shade-light mb-4 md:text-lg text-md z-10">
             I thought not. It’s not a story the Jedi would tell you.
             <br />
             <br /> It’s a Sith legend.
@@ -45,9 +45,9 @@ export default function Custom404() {
 
           <Link href="/">
             <button
-              className="flex items-center text-sm my-4 mx-auto px-4 py-2 bg-card-dark dark:bg-card-light rounded-md
-         font-medium text-subtext-dark dark:text-subtext-light md:text-lg text-md transition duration-400 ease-in-out 
-         transform hover:-translate-y-1 hover:shadow-md"
+              className="flex items-center text-sm my-4 mx-auto px-4 py-2 rounded-md
+         font-medium md:text-lg text-md transition duration-400 ease-in-out 
+         transform hover:-translate-y-1 hover:shadow-md bg-shade-dark dark:bg-shade-light text-shade-light dark:text-shade-dark"
             >
               ← Back to home
             </button>

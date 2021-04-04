@@ -13,13 +13,17 @@ export default function GithubStats() {
       <>
         <div className="md:flex w-full space-y-4 md:space-y-0 md:space-x-4">
           <div className="flex-1 space-y-4">
-            <div className="rounded-lg text-title-light dark:text-title-dark p-6 bg-card-light dark:bg-card-dark">
+            <div
+              className="rounded-lg text-shade-dark p-6 bg-shade-light shadow-xl"
+            >
               <h4 className="font-medium text-md md:text-lg ">Github Stars</h4>
               <p className="text-subtext-light dark:text-subtext-dark">
                 {data ? data.stars : "Loading ⭐"} stars collected.
               </p>
             </div>
-            <div className="rounded-lg text-title-light dark:text-title-dark p-6 bg-card-light dark:bg-card-dark">
+            <div
+              className="rounded-lg text-shade-dark p-6 bg-shade-light shadow-xl"
+            >
               <h4 className="font-medium text-md md:text-lg">
                 Github Followers
               </h4>
@@ -29,13 +33,17 @@ export default function GithubStats() {
             </div>
           </div>
           <div className="flex-1 space-y-4">
-            <div className="rounded-lg text-title-light dark:text-title-dark p-6 bg-card-light dark:bg-card-dark">
+            <div
+              className="rounded-lg text-shade-dark p-6 bg-shade-light shadow-xl"
+            >
               <h4 className="font-medium text-md md:text-lg">Repos Starred</h4>
               <p className="text-subtext-light dark:text-subtext-dark">
                 {data ? data.starred : "Loading 📚"} repos saved.
               </p>
             </div>
-            <div className="rounded-lg text-title-light dark:text-title-dark p-6 bg-card-light dark:bg-card-dark">
+            <div
+              className="rounded-lg text-shade-dark p-6 bg-shade-light shadow-xl"
+            >
               <h4 className="font-medium text-md md:text-lg">Organizations</h4>
               <p className="text-subtext-light dark:text-subtext-dark">
                 {data ? data.orgsCont : "Loading 🧑‍💻"} orgs contributed to.

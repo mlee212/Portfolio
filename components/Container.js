@@ -9,6 +9,16 @@ import { MoonIcon, SunIcon } from "../public/images/icons/icons.js";
 
 export const siteTitle = "Rajbir Johar | Portfolio";
 
+const NavLink = ({ destination, title }) => {
+  return (
+    <ActiveLink activeClassName="active" href={destination}>
+      <a className="nav-link px-3 py-2 text-shade-dark dark:text-shade-light">
+        {title}
+      </a>
+    </ActiveLink>
+  );
+};
+
 export default function Container({ children }) {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -35,8 +45,8 @@ export default function Container({ children }) {
   return (
     <html lang="en">
       <body
-        className="transition duration-300 ease-in-out 
-           bg-primary-light dark:bg-primary-dark"
+        className="transition duration-100 ease-in-out 
+           bg-shade-light dark:bg-shade-dark"
       >
         <Head>
           <link
@@ -139,20 +149,21 @@ export default function Container({ children }) {
         <nav
           className="sticky-nav sticky flex justify-center items-center  
         w-full p-6 pb-0 my-0 md:my-8 mx-auto transition duration-100 ease-in-out 
-          bg-primary-light dark:bg-primary-dark"
+          bg-shade-light dark:bg-shade-dark"
         >
           <div
-            className={`w-full max-w-4xl flex items-center justify-between transition duration-300 ease-in-out border-b-2 pb-6 ${
+            className={`w-full max-w-4xl flex items-center justify-between transition duration-100 ease-in-out border-b-2 pb-6 ${
               scroll
-                ? "border-border-light dark:border-border-dark"
-                : "border-primary-light dark:border-primary-dark"
+                ? "border-accent-light dark:border-accent-dark border-opacity-10"
+                : "border-shade-light dark:border-shade-dark"
             }`}
           >
             <div className="h-9 w-9 relative cursor-pointer">
               <button
                 aria-label="Toggle Dark Mode"
                 type="button"
-                className="flex items-center justify-center h-9 w-9 bg-card-light dark:bg-card-dark rounded-md"
+                className="flex items-center justify-center h-9 w-9 bg-accent-light
+                 dark:bg-accent-dark rounded-md"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
                 {mounted && (
@@ -161,7 +172,7 @@ export default function Container({ children }) {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="h-4 w-4 text-text-light dark:text-text-dark"
+                    className="h-4 w-4 text-shade-light"
                   >
                     {theme === "dark" ? <SunIcon /> : <MoonIcon />}
                   </svg>
@@ -169,26 +180,14 @@ export default function Container({ children }) {
               </button>
             </div>
             <div className="space-x-2">
-              <ActiveLink activeClassName="active" href="/">
-                <a className="nav-link px-3 py-2 text-link-light dark:text-link-dark">
-                  Home
-                </a>
-              </ActiveLink>
-              <ActiveLink activeClassName="active" href="/projects">
-                <a className="nav-link px-3 py-2 text-link-light dark:text-link-dark">
-                  Projects
-                </a>
-              </ActiveLink>
-              <ActiveLink activeClassName="active" href="/about">
-                <a className="nav-link px-3 py-2 text-link-light dark:text-link-dark">
-                  About
-                </a>
-              </ActiveLink>
+              <NavLink destination="/" title="Home" />
+              <NavLink destination="/projects" title="Projects" />
+              <NavLink destination="/about" title="About" />
             </div>
           </div>
         </nav>
 
-        <main className="flex flex-col w-full max-w-4xl mx-auto p-6">
+        <main className="flex flex-col w-full mx-auto p-6 text-shade-dark dark:text-shade-light">
           {children}
           <Footer />
         </main>
