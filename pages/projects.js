@@ -7,7 +7,8 @@ const Badge = ({ child }) => {
   return (
     <button
       type="button"
-      class="shadow-lg bg-shade-light dark:bg-darkcard text-shade-dark dark:text-shade-light p-2 m-1 rounded items-center"
+      className="p-2 m-1 rounded items-center hover-hover:hover:bg-gray-200 bg-gray-100 
+      dark:bg-gray-700 hover-hover:dark:hover:bg-gray-600 transition duration-300 ease-in-out"
     >
       {child}
     </button>
@@ -21,127 +22,60 @@ export default function Projects() {
         <title>{siteTitle}</title>
       </Head>
       <div className="max-w-2xl mx-auto">
-        <h1 className="font-bold text-3xl md:text-5xl pb-4 text-title-light dark:text-title-dark">
-          Projects
-        </h1>
-        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
-          <span className="font-medium">
-            Here is a collection of my best work where I demonstrate my skills
-            as a developer and a creator.
-          </span>{" "}
-          You can also see a more detailed view on my{" "}
-          <a
-            className="text-link-light dark:text-link-dark underline"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/r-jo"
-          >
-            Github
-          </a>
-          . Some of the languages, frameworks, and libraries I currently use
-          are:
-        </p>
-        <div className="text-center">
-          <Badge child="Next JS" />
-          <Badge child="React JS" />
-          <Badge child="Javascript" />
-          <Badge child="HTML5" />
-          <Badge child="CSS3" />
-          <Badge child="Git" />
-          <Badge child="Yarn" />
-          <Badge child="NPM" />
-          <Badge child="Chakra UI" />
-          <Badge child="Tailwind CSS" />
-          <Badge child="C++" />
-          <Badge child="REST" />
-          <Badge child="Styled Components" />
-        </div>
-        <h3 className="font-bold text-2xl md:text-4xl my-4 text-title-light dark:text-title-dark">
-          Dashboard
-        </h3>
-        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
-          My Github dashboard tracking my Github statistics.
-        </p>
-        <GithubStats />
-        <h1 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
-          Current Projects
-        </h1>
-        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
-          {" "}
-          Here are some of the projects that I am currently working on.
-        </p>
-        <ProjectCard
-          image="/images/citrushack.png"
-          children={[
-            "Create your Zen. This is the Founder's Edition of the Citrushack website written by me. It's to illustrate my version of the project. Citrushack is scheduled for April 9th to 11th 2021. Everyone is welcome to join ",
+        <section>
+          <h1 className="font-bold text-3xl md:text-5xl my-4 text-title-light dark:text-title-dark">
+            Projects
+          </h1>
+          <p className="my-4 md:text-lg text-md">
+            <span className="font-medium">
+              Here is a collection of my best work where I demonstrate my skills
+              as a developer and a creator.
+            </span>{" "}
+            You can also see a more detailed view on my{" "}
             <a
-              href="https://citrushack.com"
+              className="text-link-light dark:text-link-dark underline"
               target="_blank"
-              className="underline text-link-light dark:text-link-dark"
+              rel="noopener noreferrer"
+              href="https://github.com/r-jo"
             >
-              here
-            </a>,
-            "!",
-          ]}
-          href="https://citrushack-fe.vercel.app"
-          title="Citrushack"
-          category="Hackathon"
-        />
-        <ProjectCard
-          image="/images/biohack2021.png"
-          children="The website used by hundreds of students to interact and participate in the annual Biohack hackathon. Coming Spring 2021."
-          href="https://biohackucrdemo.vercel.app"
-          title="Biohack"
-          category="Hackathon"
-        />
-        <ProjectCard
-          image="/images/habitle.png"
-          children="A minimal and powerful web app that generates a heatmap to visual progress to promote a positive and consistent lifestyle."
-          href="https://habitle.com/#/"
-          title="Habitle"
-          category="Personal Project"
-        />
-        <h1 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
-          Finished Projects
-        </h1>
-        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
-          {" "}
-          Here are my finished projects.
-        </p>
-        <ProjectCard
-          image="/images/terminal.png"
-          children="Rho Shell is aimed to replicate the standard functions of a shell using a Command Line Interface (CLI), written primarily in C++. It can perform most of the basic and common commands of a terminal."
-          href="https://github.com/r-jo/rhoshell"
-          title="Rho Shell"
-          category="Personal Project"
-        />
-        <ProjectCard
-          image="/images/cutiehack2020.png"
-          children="The website used by 500+ students to interact with and participate in the annual Cutiehack hackathon. Co-led the effort on UI/UX and frontend to provide a seamless and easy-to-use interface."
-          href="https://cutiehack.io"
-          title="Cutiehack"
-          category="Hackathon"
-        />
-        <h1 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
-          Keyboards
-        </h1>
-        <p className="text-text-light dark:text-text-dark mb-4 md:text-lg text-md">
-          Stay tuned!
-        </p>
-      </div>
-      <div className="max-w-3xl mx-auto flex md:flex-row md:space-x-4 md:space-y-0 flex-col space-x-0 space-y-4 my-10">
-        <div className="flex flex-col flex-1 space-y-4">
-          <figure
-            className="md:flex flex-col justify-center hidden 
-            flex-1 bg-accent-dark text-shade-light text-center  
-            p-6 rounded-lg shadow-2xl"
-          >
-            <h1 className="font-bold md:text-lg text-md">Skills</h1>
-            <h2 className="md:text-lg text-md">
-              These projects taught me team building, as well encouraged
-              personal growth.
-            </h2>
-          </figure>
+              Github
+            </a>
+            . Some of the languages, frameworks, and libraries I currently use
+            are:
+          </p>
+          <div className="text-center">
+            <Badge child="Next JS" />
+            <Badge child="React JS" />
+            <Badge child="Javascript" />
+            <Badge child="HTML5" />
+            <Badge child="CSS3" />
+            <Badge child="Git" />
+            <Badge child="Yarn" />
+            <Badge child="NPM" />
+            <Badge child="Chakra UI" />
+            <Badge child="Tailwind CSS" />
+            <Badge child="C++" />
+            <Badge child="REST" />
+            <Badge child="Styled Components" />
+          </div>
+        </section>
+        <section className="my-16">
+          <h3 className="font-bold text-2xl md:text-4xl my-4 text-title-light dark:text-title-dark">
+            Dashboard
+          </h3>
+          <p className="my-4 md:text-lg text-md">
+            My Github dashboard tracking my Github statistics.
+          </p>
+          <GithubStats />
+        </section>
+        <section className="my-16">
+          <h1 className="font-bold text-2xl md:text-4xl my-4 text-title-light dark:text-title-dark">
+            Current Projects
+          </h1>
+          <p className="my-4 md:text-lg text-md">
+            {" "}
+            Here are some of the projects that I am currently working on.
+          </p>
           <ProjectCard
             image="/images/citrushack.png"
             children={[
@@ -149,7 +83,7 @@ export default function Projects() {
               <a
                 href="https://citrushack.com"
                 target="_blank"
-                className="underline"
+                className="underline text-link-light dark:text-link-dark"
               >
                 here
               </a>,
@@ -160,38 +94,12 @@ export default function Projects() {
             category="Hackathon"
           />
           <ProjectCard
-            image="/images/cutiehack2020.png"
-            children="The website used by 500+ students to interact with and participate in the annual Cutiehack hackathon. Co-led the effort on UI/UX and frontend to provide a seamless and easy-to-use interface."
-            href="https://cutiehack.io"
-            title="Cutiehack"
-            category="Hackathon"
-          />
-        </div>
-        <div className="flex-1 space-y-4">
-          <ProjectCard
             image="/images/biohack2021.png"
             children="The website used by hundreds of students to interact and participate in the annual Biohack hackathon. Coming Spring 2021."
-            href="https://biohackdemo.vercel.app"
+            href="https://biohackucrdemo.vercel.app"
             title="Biohack"
             category="Hackathon"
           />
-          <ProjectCard
-            image="/images/terminal.png"
-            children="Rho Shell is aimed to replicate the standard functions of a shell using a Command Line Interface (CLI), written primarily in C++. It can perform most of the basic and common commands of a terminal."
-            href="https://github.com/r-jo/rhoshell"
-            title="Rho Shell"
-            category="Personal Project"
-          />
-          <figure
-            className="md:flex flex-col justify-center hidden 
-            flex-1 bg-accent-light dark:bg-accent-light text-shade-light text-center  
-            p-6 rounded-lg shadow-2xl"
-          >
-            <h1 className="font-bold md:text-lg text-md">Motivation</h1>
-            <h2 className="md:text-lg text-md">
-              I treat each project as a better iteration of the last.
-            </h2>
-          </figure>
           <ProjectCard
             image="/images/habitle.png"
             children="A minimal and powerful web app that generates a heatmap to visual progress to promote a positive and consistent lifestyle."
@@ -199,9 +107,39 @@ export default function Projects() {
             title="Habitle"
             category="Personal Project"
           />
-        </div>
+        </section>
+        <section className="my-16">
+          <h1 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
+            Finished Projects
+          </h1>
+          <p className="my-4 md:text-lg text-md">
+            {" "}
+            Here are my finished projects.
+          </p>
+          <ProjectCard
+            image="/images/terminal.png"
+            children="Rho Shell is aimed to replicate the standard functions of a shell using a Command Line Interface (CLI), written primarily in C++. It can perform most of the basic and common commands of a terminal."
+            href="https://github.com/r-jo/rhoshell"
+            title="Rho Shell"
+            category="Personal Project"
+          />
+          <ProjectCard
+            image="/images/cutiehack2020.png"
+            children="The website used by 500+ students to interact with and participate in the annual Cutiehack hackathon. Co-led the effort on UI/UX and frontend to provide a seamless and easy-to-use interface."
+            href="https://cutiehack.io"
+            title="Cutiehack"
+            category="Hackathon"
+          />
+        </section>
+        <section>
+          <h1 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
+            Keyboards
+          </h1>
+          <p className="my-4 md:text-lg text-md">
+            Stay tuned!
+          </p>
+        </section>
       </div>
-      <div className="max-w-3xl mx-auto flex md:flex-row md:space-x-4 md:space-y-0 flex-col space-x-0 space-y-4"></div>
     </Container>
   );
 }

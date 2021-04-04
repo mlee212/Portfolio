@@ -12,7 +12,7 @@ export const siteTitle = "Rajbir Johar | Portfolio";
 const NavLink = ({ destination, title }) => {
   return (
     <ActiveLink activeClassName="active" href={destination}>
-      <a className="nav-link px-3 py-2 text-shade-dark dark:text-shade-light">
+      <a className="nav-link px-3 py-2 text-gray-800 dark:text-gray-50">
         {title}
       </a>
     </ActiveLink>
@@ -45,8 +45,8 @@ export default function Container({ children }) {
   return (
     <html lang="en">
       <body
-        className="transition duration-100 ease-in-out 
-           bg-shade-light dark:bg-shade-dark"
+        className="transition duration-300 ease-in-out 
+           bg-gray-50 dark:bg-gray-800"
       >
         <Head>
           <link
@@ -149,21 +149,22 @@ export default function Container({ children }) {
         <nav
           className="sticky-nav sticky flex justify-center items-center  
         w-full p-6 pb-0 my-0 md:my-8 mx-auto transition duration-300 ease-in-out 
-          bg-primary-light dark:bg-primary-dark"
+          bg-gray-50 dark:bg-gray-800"
         >
           <div
-            className={`w-full max-w-4xl flex items-center justify-between transition duration-100 ease-in-out border-b-2 pb-6 ${
-              scroll
-                ? "border-accent-light border-opacity-10 dark:border-darkcard dark:border-opacity-100"
-                : "border-shade-light dark:border-shade-dark"
-            }`}
+            className={`w-full max-w-4xl flex items-center justify-between transition
+             duration-300 ease-in-out border-b-2 pb-6 ${
+               scroll
+                 ? "border-gray-100 dark:border-gray-700"
+                 : "border-gray-50 dark:border-gray-800"
+             }`}
           >
             <div className="h-9 w-9 relative cursor-pointer">
               <button
                 aria-label="Toggle Dark Mode"
                 type="button"
-                className="flex items-center justify-center h-9 w-9 bg-accent-light
-                 dark:bg-accent-dark rounded-md"
+                className="flex items-center justify-center h-9 w-9 bg-opacity-100
+                 hover-hover:hover:bg-gray-200 bg-gray-100 dark:bg-gray-700 hover-hover:dark:hover:bg-gray-600 transition duration-300 ease-in-out rounded-md"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
                 {mounted && (
@@ -172,7 +173,7 @@ export default function Container({ children }) {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="h-4 w-4 text-shade-light"
+                    className="h-4 w-4 text-gray-800 dark:text-gray-50"
                   >
                     {theme === "dark" ? <SunIcon /> : <MoonIcon />}
                   </svg>
@@ -187,7 +188,7 @@ export default function Container({ children }) {
           </div>
         </nav>
 
-        <main className="flex flex-col w-full mx-auto p-6 text-shade-dark dark:text-shade-light">
+        <main className="flex flex-col w-full mx-auto p-6 text-gray-800 dark:text-gray-50">
           {children}
           <Footer />
         </main>
