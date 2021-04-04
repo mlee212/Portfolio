@@ -148,8 +148,8 @@ export default function Container({ children }) {
         </Head>
         <nav
           className="sticky-nav sticky flex justify-center items-center  
-        w-full p-6 pb-0 my-0 md:my-8 mx-auto transition duration-100 ease-in-out 
-          bg-shade-light dark:bg-shade-dark"
+        w-full p-6 pb-0 my-0 md:my-8 mx-auto transition duration-300 ease-in-out 
+          bg-primary-light dark:bg-primary-dark"
         >
           <div
             className={`w-full max-w-4xl flex items-center justify-between transition duration-100 ease-in-out border-b-2 pb-6 ${

@@ -9,8 +9,8 @@ export default function ProjectCard({
 }) {
   return (
     <figure
-      className="flex-1 bg-shade-light dark:bg-darkcard border-accent-light border-opacity-10
-       dark:border-card-dark p-6 rounded-lg shadow-2xl"
+      className="flex hover-hover:hover:bg-card-light hover-hover:dark:hover:bg-card-dark border-2 border-card-light
+       dark:border-card-dark p-6 rounded-lg mb-4 transition duration-300 ease-in-out"
     >
       <div className="space-y-4">
         <figcaption className="font-medium flex items-center">
