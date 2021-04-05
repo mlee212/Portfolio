@@ -39,15 +39,16 @@ export default function Custom404() {
             others from death, but not himself.
             <br />
             <br />
-            Anyways, you've reached the 404, the end of the Jedi territory...I
+            Anyways, you've reached order number 66, the end of the Jedi...I
             suggest you go back before you succumb to the Dark Side.
           </p>
 
           <Link href="/">
             <button
-              className="flex items-center text-sm my-4 mx-auto px-4 py-2 rounded-md
-         font-medium md:text-lg text-md transition duration-400 ease-in-out 
-         transform hover:-translate-y-1 hover:shadow-md bg-shade-dark dark:bg-shade-light text-shade-light dark:text-shade-dark"
+              className="flex items-center text-sm my-8 mx-auto px-4 py-2
+              bg-card-light dark:bg-card-dark hover-hover:hover:bg-cardbright-light
+              hover-hover:dark:hover:bg-cardbright-dark rounded-md md:text-lg 
+              text-md transition duration-300 ease-in-out"
             >
               ← Back to home
             </button>
