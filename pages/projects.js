@@ -7,8 +7,8 @@ const Badge = ({ child }) => {
   return (
     <button
       type="button"
-      className="p-2 m-1 rounded items-center hover-hover:hover:bg-gray-200 bg-gray-100 
-      dark:bg-gray-700 hover-hover:dark:hover:bg-gray-600 transition duration-300 ease-in-out"
+      className="cursor-default p-2 m-1 rounded items-center bg-card-light 
+      dark:bg-card-dark transition duration-300 ease-in-out"
     >
       {child}
     </button>

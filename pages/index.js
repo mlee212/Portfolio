@@ -14,7 +14,7 @@ export default function Home() {
       <div className="max-w-2xl mx-auto">
         <section>
           <h1 className="font-bold text-3xl md:text-5xl my-4 text-title-light dark:text-title-dark">
-            Hello! I'm <span className="">Rajbir</span>.
+            Hello! I'm <span className="text-brand">Rajbir</span>.
           </h1>
           <h2 className="font-medium my-4 md:text-lg text-md">
             Frontend Developer <br />

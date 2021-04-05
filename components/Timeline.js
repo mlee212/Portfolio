@@ -14,13 +14,14 @@ import {
 
 const Divider = () => {
   return (
-    <div className="border-b-2 border-gray-100 dark:border-gray-700 w-full my-8 transition duration-300 ease-in-out" />
+    <div className="border-b-2 border-border-light dark:border-border-dark
+     w-full my-8 transition duration-300 ease-in-out" />
   );
 };
 
 const Year = ({ children }) => {
   return (
-    <h3 className="text-lg md:text-xl font-bold mb-4  text-title-light dark:text-title-dark">
+    <h3 className="text-lg md:text-xl font-bold mb-4 text-title-light dark:text-title-dark">
       {children}
     </h3>
   );
@@ -44,7 +45,7 @@ const Step = ({ title, children, icon }) => {
           {title}
         </p>
       </div>
-      <p className="md:text-lg text-md ml-6 mt-2 text-gray-500 dark:text-gray-300">
+      <p className="md:text-lg text-md ml-6 mt-2 text-text-light dark:text-text-dark text-opacity-80">
         {children}
       </p>
     </li>
@@ -171,8 +172,10 @@ export default function Timeline() {
       ) : (
         <button
           type="button"
-          className="flex items-center text-sm my-8 mx-auto px-4 py-2 bg-gray-100 dark:bg-gray-700 hover-hover:hover:bg-gray-200
-          hover-hover:dark:hover:bg-gray-600 rounded-md md:text-lg text-md transition duration-300 ease-in-out"
+          className="flex items-center text-sm my-8 mx-auto px-4 py-2
+           bg-card-light dark:bg-card-dark hover-hover:hover:bg-cardbright-light
+           hover-hover:dark:hover:bg-cardbright-dark rounded-md md:text-lg 
+           text-md transition duration-300 ease-in-out"
           onClick={() => showFullTimeline(true)}
         >
           See More

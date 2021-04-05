@@ -13,13 +13,13 @@ export default function GithubStats() {
       <>
         <div className="md:flex w-full space-y-4 md:space-y-0 md:space-x-4 ">
           <div className="flex-1 space-y-4">
-            <div className="rounded-lg p-6 bg-gray-100 dark:bg-gray-700 transition duration-300 ease-in-out">
+            <div className="rounded-lg p-6 bg-card-light dark:bg-card-dark transition duration-300 ease-in-out">
               <h4 className="font-medium text-md md:text-lg ">Github Stars</h4>
               <p className="text-gray-500 dark:text-gray-300">
                 {data ? data.stars : "Loading ⭐"} stars collected.
               </p>
             </div>
-            <div className="rounded-lg p-6 bg-gray-100 dark:bg-gray-700 transition duration-300 ease-in-out">
+            <div className="rounded-lg p-6 bg-card-light dark:bg-card-dark transition duration-300 ease-in-out">
               <h4 className="font-medium text-md md:text-lg">
                 Github Followers
               </h4>
@@ -29,13 +29,13 @@ export default function GithubStats() {
             </div>
           </div>
           <div className="flex-1 space-y-4">
-            <div className="rounded-lg p-6 bg-gray-100 dark:bg-gray-700 transition duration-300 ease-in-out">
+            <div className="rounded-lg p-6 bg-card-light dark:bg-card-dark transition duration-300 ease-in-out">
               <h4 className="font-medium text-md md:text-lg">Repos Starred</h4>
               <p className="text-gray-500 dark:text-gray-300">
                 {data ? data.starred : "Loading 📚"} repos saved.
               </p>
             </div>
-            <div className="rounded-lg p-6 bg-gray-100 dark:bg-gray-700 transition duration-300 ease-in-out">
+            <div className="rounded-lg p-6 bg-card-light dark:bg-card-dark transition duration-300 ease-in-out">
               <h4 className="font-medium text-md md:text-lg">Organizations</h4>
               <p className="text-gray-500 dark:text-gray-300">
                 {data ? data.orgsCont : "Loading 🧑‍💻"} orgs contributed to.

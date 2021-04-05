@@ -46,7 +46,7 @@ export default function Container({ children }) {
     <html lang="en">
       <body
         className="transition duration-300 ease-in-out 
-           bg-gray-50 dark:bg-gray-800"
+           bg-primary-light dark:bg-primary-dark"
       >
         <Head>
           <link
@@ -149,14 +149,14 @@ export default function Container({ children }) {
         <nav
           className="sticky-nav sticky flex justify-center items-center  
         w-full p-6 pb-0 my-0 md:my-8 mx-auto transition duration-300 ease-in-out 
-          bg-gray-50 dark:bg-gray-800"
+        bg-primary-light dark:bg-primary-dark"
         >
           <div
             className={`w-full max-w-4xl flex items-center justify-between transition
              duration-300 ease-in-out border-b-2 pb-6 ${
                scroll
-                 ? "border-gray-100 dark:border-gray-700"
-                 : "border-gray-50 dark:border-gray-800"
+                 ? "border-border-light dark:border-border-dark"
+                 : "border-primary-light dark:border-primary-dark"
              }`}
           >
             <div className="h-9 w-9 relative cursor-pointer">
@@ -164,7 +164,8 @@ export default function Container({ children }) {
                 aria-label="Toggle Dark Mode"
                 type="button"
                 className="flex items-center justify-center h-9 w-9 bg-opacity-100
-                 hover-hover:hover:bg-gray-200 bg-gray-100 dark:bg-gray-700 hover-hover:dark:hover:bg-gray-600 transition duration-300 ease-in-out rounded-md"
+                 hover-hover:hover:bg-cardbright-light bg-card-light dark:bg-card-dark
+                  hover-hover:dark:hover:bg-cardbright-dark transition duration-300 ease-in-out rounded-md"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
                 {mounted && (
@@ -188,7 +189,7 @@ export default function Container({ children }) {
           </div>
         </nav>
 
-        <main className="flex flex-col w-full mx-auto p-6 text-gray-800 dark:text-gray-50">
+        <main className="flex flex-col w-full mx-auto p-6 text-text-light dark:text-text-dark">
           {children}
           <Footer />
         </main>
