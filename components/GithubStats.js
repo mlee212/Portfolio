@@ -15,7 +15,7 @@ export default function GithubStats() {
           <div className="flex-1 space-y-4">
             <div className="rounded-lg p-6 bg-card-light dark:bg-card-dark transition duration-300 ease-in-out">
               <h4 className="font-medium text-md md:text-lg ">Github Stars</h4>
-              <p className="text-gray-500 dark:text-gray-300">
+              <p className="text-text-light dark:text-text-dark text-opacity-70">
                 {data ? data.stars : "Loading ⭐"} stars collected.
               </p>
             </div>
@@ -23,7 +23,7 @@ export default function GithubStats() {
               <h4 className="font-medium text-md md:text-lg">
                 Github Followers
               </h4>
-              <p className="text-gray-500 dark:text-gray-300">
+              <p className="text-text-light dark:text-text-dark text-opacity-70">
                 {data ? data.followers : "Loading 👨‍💻"} followers acquired.
               </p>
             </div>
@@ -31,13 +31,13 @@ export default function GithubStats() {
           <div className="flex-1 space-y-4">
             <div className="rounded-lg p-6 bg-card-light dark:bg-card-dark transition duration-300 ease-in-out">
               <h4 className="font-medium text-md md:text-lg">Repos Starred</h4>
-              <p className="text-gray-500 dark:text-gray-300">
+              <p className="text-text-light dark:text-text-dark text-opacity-70">
                 {data ? data.starred : "Loading 📚"} repos saved.
               </p>
             </div>
             <div className="rounded-lg p-6 bg-card-light dark:bg-card-dark transition duration-300 ease-in-out">
               <h4 className="font-medium text-md md:text-lg">Organizations</h4>
-              <p className="text-gray-500 dark:text-gray-300">
+              <p className="text-text-light dark:text-text-dark text-opacity-70">
                 {data ? data.orgsCont : "Loading 🧑‍💻"} orgs contributed to.
               </p>
             </div>
