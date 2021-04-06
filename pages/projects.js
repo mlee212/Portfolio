@@ -23,10 +23,10 @@ export default function Projects() {
       </Head>
       <div className="max-w-2xl mx-auto">
         <section>
-          <h1 className="font-bold text-3xl md:text-5xl my-4 text-title-light dark:text-title-dark">
+          <h1 className="font-bold text-3xl md:text-5xl text-title-light dark:text-title-dark">
             Projects
           </h1>
-          <p className="my-4 md:text-lg text-md">
+          <p className="my-2 mb-6 md:text-lg text-md">
             <span className="font-medium">
               Here is a collection of my best work where I demonstrate my skills
               as a developer and a creator.
@@ -60,19 +60,19 @@ export default function Projects() {
           </div>
         </section>
         <section className="my-16">
-          <h3 className="font-bold text-2xl md:text-4xl my-4 text-title-light dark:text-title-dark">
+          <h3 className="font-bold text-2xl md:text-4xl text-title-light dark:text-title-dark">
             Dashboard
           </h3>
-          <p className="my-4 md:text-lg text-md">
+          <p className="my-2 mb-6 md:text-lg text-md">
             My Github dashboard tracking my Github statistics.
           </p>
           <GithubStats />
         </section>
         <section className="my-16">
-          <h1 className="font-bold text-2xl md:text-4xl my-4 text-title-light dark:text-title-dark">
+          <h1 className="font-bold text-2xl md:text-4xl text-title-light dark:text-title-dark">
             Current Projects
           </h1>
-          <p className="my-4 md:text-lg text-md">
+          <p className="my-2 mb-6 md:text-lg text-md">
             {" "}
             Here are some of the projects that I am currently working on.
           </p>
@@ -109,10 +109,10 @@ export default function Projects() {
           />
         </section>
         <section className="my-16">
-          <h1 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
+          <h1 className="font-bold text-2xl md:text-4xl text-title-light dark:text-title-dark">
             Finished Projects
           </h1>
-          <p className="my-4 md:text-lg text-md">
+          <p className="my-2 mb-6 md:text-lg text-md">
             {" "}
             Here are my finished projects.
           </p>
@@ -132,10 +132,10 @@ export default function Projects() {
           />
         </section>
         <section>
-          <h1 className="font-bold text-2xl md:text-4xl  my-4 text-title-light dark:text-title-dark">
+          <h1 className="font-bold text-2xl md:text-4xl text-title-light dark:text-title-dark">
             Keyboards
           </h1>
-          <p className="my-4 md:text-lg text-md">
+          <p className="my-2 mb-6 md:text-lg text-md">
             Stay tuned!
           </p>
         </section>
