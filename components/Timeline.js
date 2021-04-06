@@ -172,7 +172,7 @@ export default function Timeline() {
       ) : (
         <button
           type="button"
-          className="flex items-center text-sm my-8 mx-auto px-4 py-2
+          className="flex items-center mx-auto px-4 py-2
            bg-card-light dark:bg-card-dark hover-hover:hover:bg-cardbright-light
            hover-hover:dark:hover:bg-cardbright-dark rounded-md md:text-lg 
            text-md transition duration-300 ease-in-out"

@@ -35,7 +35,7 @@ export default function More() {
           Here are the top ten songs I've been listening to, updated daily.
         </p>
         <TopTracks />
-        <p className="text-text-light dark:text-text-dark my-4 md:text-lg text-md">
+        <p className="text-text-light dark:text-text-dark mt-6 md:text-lg text-md">
           Find something we have in common? Let's talk about it. ☕
         </p>
       </div>

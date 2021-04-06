@@ -189,7 +189,7 @@ export default function Container({ children }) {
           </div>
         </nav>
 
-        <main className="flex flex-col w-full mx-auto p-6 text-text-light dark:text-text-dark">
+        <main className="flex flex-col w-full mx-auto px-6 text-text-light dark:text-text-dark">
           {children}
           <Footer />
         </main>

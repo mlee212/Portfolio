@@ -6,7 +6,7 @@ export default function Custom404() {
   return (
     <Container>
       <div className="flex flex-col justify-center items-center">
-        <div className="max-w-3xl mx-auto flex flex-col justify-center items-center px-6">
+        <div className="max-w-3xl mx-auto flex flex-col justify-center items-center">
           <div className="flex z-0 opacity-10 py-2">
             <Image
               src="/images/deathstar.png"
@@ -45,7 +45,7 @@ export default function Custom404() {
 
           <Link href="/">
             <button
-              className="flex items-center text-sm my-8 mx-auto px-4 py-2
+              className="flex items-center text-sm mt-2 mx-auto px-4 py-2
               bg-card-light dark:bg-card-dark hover-hover:hover:bg-cardbright-light
               hover-hover:dark:hover:bg-cardbright-dark rounded-md md:text-lg 
               text-md transition duration-300 ease-in-out"

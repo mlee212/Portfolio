@@ -49,21 +49,21 @@ export const Footer = () => {
           </div>
         </div>
         <div className="flex-1">
-          <p className="font-medium text-lg my-2">Don't be a stranger.</p>
+          <p className="font-medium md:text-lg text-md text-lg my-2">Don't be a stranger.</p>
           <p className="text-text-light dark:text-text-dark text-opacity-80 md:text-lg text-md">
             I don't bite anything except really good food. I'm always up for
             making new friends.
           </p>
         </div>
         <div className="flex-1 md:ml-4">
-          <p className="font-medium text-lg my-2">Privacy first.</p>
+          <p className="font-medium md:text-lg text-md text-lg my-2">Privacy first.</p>
           <p className="text-text-light dark:text-text-dark text-opacity-80 md:text-lg text-md">
             This site only uses local storage for the theme. It does not track
             anything you do.
           </p>
         </div>
       </div>
-      <div className="w-full text-center text-text-light dark:text-text-dark text-opacity-80">
+      <div className="md:text-lg text-md w-full text-center text-text-light dark:text-text-dark text-opacity-80">
         <p>2021 © Rajbir Johar</p>
       </div>
     </footer>

@@ -11,7 +11,7 @@ export default function ProjectCard({
     <figure
       className="flex bg-card-light hover-hover:hover:bg-cardbright-light
       dark:bg-card-dark hover-hover:dark:hover:bg-cardbright-dark p-6 rounded-lg
-       mb-4 transition duration-300 ease-in-out"
+       mb-6 transition duration-300 ease-in-out"
     >
       <div className="space-y-4">
         <figcaption className="font-medium flex items-center">
