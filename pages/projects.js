@@ -83,6 +83,8 @@ export default function Projects() {
               <a
                 href="https://citrushack.com"
                 target="_blank"
+                rel="noopener"
+                rel="noreferrer"
                 className="underline text-link-light dark:text-link-dark"
               >
                 here

@@ -39,15 +39,17 @@ export default function Home() {
           <ProjectCard
             image="/images/citrushack.png"
             children={[
-              "Create your Zen. This is the Founder's Edition of the Citrushack website written by me. It's to illustrate my version of the project. Citrushack is scheduled for April 9th to 11th 2021. Everyone is welcome to join ",
+              "Create your Zen. This is the Founder's Edition of the Citrus Hack website written by me. It's to illustrate my version of the project. Citrus Hack is scheduled for April 9th to 11th 2021. Everyone is welcome to join here at the official ",
               <a
                 href="https://citrushack.com"
                 target="_blank"
+                rel="noopener"
+                rel="noreferrer"
                 className="underline text-link-light dark:text-link-dark"
               >
-                here
+                Citrus Hack
               </a>,
-              "!",
+              " website.",
             ]}
             href="https://citrushack-fe.vercel.app"
             title="Citrushack"
@@ -55,7 +57,7 @@ export default function Home() {
           />
           <ProjectCard
             image="/images/biohack2021.png"
-            children="The website used by hundreds of students to interact and participate in the annual Biohack hackathon. Coming Spring 2021."
+            children="Scrapbook your idea for healthcare using code. This project is for the official BioHack 2021 hackathon scheduled in May. Everyone is welcome to join."
             href="https://biohackdemo.vercel.app"
             title="Biohack"
             category="Hackathon"
