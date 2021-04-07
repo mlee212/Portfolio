@@ -6,8 +6,8 @@ export default function Custom404() {
   return (
     <Container>
       <div className="flex flex-col justify-center items-center">
-        <div className="max-w-3xl mx-auto flex flex-col justify-center items-center">
-          <div className="flex z-0 opacity-10 py-2">
+        <div className="max-w-2xl mx-auto flex flex-col justify-center items-center">
+          <div className="flex z-0 opacity-50 dark:opacity-100 py-2">
             <Image
               src="/images/deathstar.png"
               alt="Death Star"
@@ -15,10 +15,10 @@ export default function Custom404() {
               height={200}
             />
           </div>
-          <h3 className="font-bold text-2xl md:text-4xl pb-4 text-shade-dark dark:text-shade-light z-10 text-center">
+          <h3 className="font-bold text-2xl md:text-4xl pb-4 text-gray-900 dark:text-gray-50 z-10 text-center leading-loose">
             Did you ever hear the tragedy of Darth Plagueis The Wise?
           </h3>
-          <p className="text-shade-dark dark:text-shade-light mb-4 md:text-lg text-md z-10">
+          <p>
             I thought not. It’s not a story the Jedi would tell you.
             <br />
             <br /> It’s a Sith legend.
@@ -45,10 +45,9 @@ export default function Custom404() {
 
           <Link href="/">
             <button
-              className="flex items-center text-sm mt-2 mx-auto px-4 py-2
-              bg-card-light dark:bg-card-dark hover-hover:hover:bg-cardbright-light
-              hover-hover:dark:hover:bg-cardbright-dark rounded-md md:text-lg 
-              text-md transition duration-300 ease-in-out"
+              className="flex items-center mx-auto px-3 py-1 mt-4
+              bg-black dark:bg-white hover:bg-opacity-80 text-white dark:text-black
+              rounded-md text-md transition duration-300 ease-in-out"
             >
               ← Back to home
             </button>

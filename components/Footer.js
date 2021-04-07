@@ -4,7 +4,7 @@ import Link from "next/link";
 const RouteLink = ({ title, destination }) => {
   return (
     <Link href={destination}>
-      <a className="md:text-lg text-md no-underline hover:underline">{title}</a>
+      <a className="text-md no-underline hover:underline text-gray-900 dark:text-gray-50">{title}</a>
     </Link>
   );
 };
@@ -12,7 +12,7 @@ const RouteLink = ({ title, destination }) => {
 const ExtLink = ({ title, destination }) => {
   return (
     <a
-      className="md:text-lg text-md no-underline hover:underline"
+      className="text-md no-underline hover:underline text-gray-900 dark:text-gray-50"
       target="_blank"
       rel="noopener noreferrer"
       href={destination}
@@ -24,10 +24,10 @@ const ExtLink = ({ title, destination }) => {
 
 export const Footer = () => {
   return (
-    <footer className="max-w-4xl w-full border-t-2 border-border-light dark:border-border-dark py-6 my-8 mx-auto transition duration-300 ease-in-out">
-      <div className="md:flex space-y-8 md:space-y-0 py-4">
+    <footer className="w-full border-t border-gray-200 dark:border-border-dark p-6 mx-auto transition duration-300 ease-in-out text-gray-500 dark:text-gray-400 text-md leading-7">
+      <div className="max-w-4xl mx-auto md:flex space-y-8 md:space-y-0">
         <div className="flex-1">
-          <p className="font-medium text-lg text-title-light dark:text-title-dark my-2">
+          <p className="font-medium text-lg text-gray-900 dark:text-gray-50 my-2">
             Find me elsewhere.
           </p>
           <div className="flex flex-col md:flex-row md:space-x-16 md:space-y-0 space-y-2">
@@ -49,21 +49,21 @@ export const Footer = () => {
           </div>
         </div>
         <div className="flex-1">
-          <p className="font-medium md:text-lg text-md text-lg my-2">Don't be a stranger.</p>
-          <p className="text-text-light dark:text-text-dark text-opacity-80 md:text-lg text-md">
+          <p className="font-medium text-md text-lg my-2 text-gray-900 dark:text-gray-50">Don't be a stranger.</p>
+          <p>
             I don't bite anything except really good food. I'm always up for
             making new friends.
           </p>
         </div>
         <div className="flex-1 md:ml-4">
-          <p className="font-medium md:text-lg text-md text-lg my-2">Privacy first.</p>
-          <p className="text-text-light dark:text-text-dark text-opacity-80 md:text-lg text-md">
+          <p className="font-medium text-md text-lg my-2 text-gray-900 dark:text-gray-50">Privacy first.</p>
+          <p>
             This site only uses local storage for the theme. It does not track
             anything you do.
           </p>
         </div>
       </div>
-      <div className="md:text-lg text-md w-full text-center text-text-light dark:text-text-dark text-opacity-80">
+      <div className="text-center">
         <p>2021 © Rajbir Johar</p>
       </div>
     </footer>

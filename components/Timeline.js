@@ -14,14 +14,16 @@ import {
 
 const Divider = () => {
   return (
-    <div className="border-b-2 border-border-light dark:border-border-dark
-     w-full my-8 transition duration-300 ease-in-out" />
+    <div
+      className="border-b border-gray-200 dark:border-border-dark
+     w-full my-4 transition duration-300 ease-in-out"
+    />
   );
 };
 
 const Year = ({ children }) => {
   return (
-    <h3 className="text-lg md:text-xl font-bold mb-4 text-title-light dark:text-title-dark">
+    <h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-title-dark">
       {children}
     </h3>
   );
@@ -37,15 +39,13 @@ const Step = ({ title, children, icon }) => {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="h-5 w-5 mr-1"
+          className="h-5 w-5 mr-1 text-gray-900 dark:text-title-dark"
         >
           {icon}
         </svg>
-        <p className="font-medium md:text-lg text-md mt-1">
-          {title}
-        </p>
+        <h2 className="font-medium md:text-lg text-md text-gray-900 dark:text-title-dark">{title}</h2>
       </div>
-      <p className="md:text-lg text-md ml-6 mt-2 text-text-light dark:text-text-dark text-opacity-80">
+      <p className="ml-6">
         {children}
       </p>
     </li>
@@ -172,10 +172,9 @@ export default function Timeline() {
       ) : (
         <button
           type="button"
-          className="flex items-center mx-auto px-4 py-2
-           bg-card-light dark:bg-card-dark hover-hover:hover:bg-cardbright-light
-           hover-hover:dark:hover:bg-cardbright-dark rounded-md md:text-lg 
-           text-md transition duration-300 ease-in-out"
+          className="flex items-center mx-auto px-3 py-1
+           bg-black dark:bg-white hover:bg-opacity-80 text-white dark:text-black
+           rounded-md text-md transition duration-300 ease-in-out"
           onClick={() => showFullTimeline(true)}
         >
           See More
