@@ -59,7 +59,7 @@ export default function Home() {
             image="/images/biohack2021.png"
             children="Scrapbook your idea for healthcare using code. This project is for the official BioHack 2021 hackathon scheduled in May. Everyone is welcome to join."
             href="https://biohackdemo.vercel.app"
-            title="Biohack"
+            title="BioHack"
             category="Hackathon"
           />
           <ProjectCard
