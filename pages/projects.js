@@ -97,9 +97,9 @@ export default function Projects() {
           />
           <ProjectCard
             image="/images/biohack2021.png"
-            children="The website used by hundreds of students to interact and participate in the annual Biohack hackathon. Coming Spring 2021."
+            children="Scrapbook your idea for healthcare using code. This project is for the official BioHack 2021 hackathon scheduled in May. Everyone is welcome to join."
             href="https://biohackucrdemo.vercel.app"
-            title="Biohack"
+            title="BioHack"
             category="Hackathon"
           />
           <ProjectCard
@@ -127,9 +127,9 @@ export default function Projects() {
           />
           <ProjectCard
             image="/images/cutiehack2020.png"
-            children="The website used by 500+ students to interact with and participate in the annual Cutiehack hackathon. Co-led the effort on UI/UX and frontend to provide a seamless and easy-to-use interface."
+            children="The website used by 500+ students to interact with and participate in the annual Cutie Hack hackathon. Co-led the effort on UI/UX and frontend to provide a seamless and easy-to-use interface."
             href="https://cutiehack.io"
-            title="Cutiehack"
+            title="Cutie Hack"
             category="Hackathon"
           />
         </section>
