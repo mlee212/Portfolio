@@ -7,7 +7,7 @@ const Badge = ({ child }) => {
   return (
     <button
       type="button"
-      className="cursor-default p-2 m-1 rounded items-center bg-card-light 
+      className="cursor-default px-2 py-1 m-1 rounded-md items-center bg-gray-200 
       dark:bg-card-dark transition duration-300 ease-in-out"
     >
       {child}
@@ -26,7 +26,7 @@ export default function Projects() {
           <h1 className="font-bold text-3xl md:text-5xl text-title-light dark:text-title-dark">
             Projects
           </h1>
-          <p className="my-2 mb-6 md:text-lg text-md">
+          <p className="my-2 mb-6 text-md">
             <span className="font-medium">
               Here is a collection of my best work where I demonstrate my skills
               as a developer and a creator.
@@ -63,7 +63,7 @@ export default function Projects() {
           <h3 className="font-bold text-2xl md:text-4xl text-title-light dark:text-title-dark">
             Dashboard
           </h3>
-          <p className="my-2 mb-6 md:text-lg text-md">
+          <p className="my-2 mb-6 text-md">
             My Github dashboard tracking my Github statistics.
           </p>
           <GithubStats />
@@ -72,14 +72,14 @@ export default function Projects() {
           <h1 className="font-bold text-2xl md:text-4xl text-title-light dark:text-title-dark">
             Current Projects
           </h1>
-          <p className="my-2 mb-6 md:text-lg text-md">
+          <p className="my-2 mb-6 text-md">
             {" "}
             Here are some of the projects that I am currently working on.
           </p>
           <ProjectCard
             image="/images/citrushack.png"
             children={[
-              "Create your Zen. This is the Founder's Edition of the Citrushack website written by me. It's to illustrate my version of the project. Citrushack is scheduled for April 9th to 11th 2021. Everyone is welcome to join ",
+              "Create your Zen. Citrus Hack is scheduled for April 9th to 11th 2021. Everyone is welcome to join here at the official ",
               <a
                 href="https://citrushack.com"
                 target="_blank"
@@ -87,18 +87,18 @@ export default function Projects() {
                 rel="noreferrer"
                 className="underline text-link-light dark:text-link-dark"
               >
-                here
+                Citrus Hack
               </a>,
-              "!",
+              " website.",
             ]}
             href="https://citrushack-fe.vercel.app"
-            title="Citrushack"
+            title="Citrus Hack"
             category="Hackathon"
           />
           <ProjectCard
             image="/images/biohack2021.png"
-            children="Scrapbook your idea for healthcare using code. This project is for the official BioHack 2021 hackathon scheduled in May. Everyone is welcome to join."
-            href="https://biohackucrdemo.vercel.app"
+            children="Scrapbook your idea for healthcare using code. The official BioHack 2021 hackathon is scheduled in May. Everyone is welcome to join."
+            href="https://biohackdemo.vercel.app"
             title="BioHack"
             category="Hackathon"
           />
@@ -114,7 +114,7 @@ export default function Projects() {
           <h1 className="font-bold text-2xl md:text-4xl text-title-light dark:text-title-dark">
             Finished Projects
           </h1>
-          <p className="my-2 mb-6 md:text-lg text-md">
+          <p className="my-2 mb-6 text-md">
             {" "}
             Here are my finished projects.
           </p>
@@ -137,7 +137,7 @@ export default function Projects() {
           <h1 className="font-bold text-2xl md:text-4xl text-title-light dark:text-title-dark">
             Keyboards
           </h1>
-          <p className="my-2 mb-6 md:text-lg text-md">
+          <p className="my-2 mb-6 text-md">
             Stay tuned!
           </p>
         </section>

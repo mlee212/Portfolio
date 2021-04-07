@@ -8,7 +8,7 @@ module.exports = {
         current: "currentColor",
         primary: {
           light: "#F4F3F0",
-          dark: "#232528",
+          dark: "#101014",
         },
         accent: {
           light: "#6F8E97",
@@ -16,15 +16,15 @@ module.exports = {
         },
         card: {
           light: "#e9e7e1",
-          dark: "#2f3236",
+          dark: "#16171d",
         },
         cardbright: {
           light: "#e3e1dc",
-          dark: "#3b3e43",
+          dark: "#16171d",
         },
         border: {
           light: "#e9e7e1",
-          dark: "#2f3236",
+          dark: "#16171d",
         },
         title: {
           light: "#232528",
