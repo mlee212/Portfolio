@@ -23,7 +23,7 @@ export default function ProjectCard({
             />
           </div>
           <div className="pl-4">
-            <div className="text-sm uppercase text-accent-light dark:text-accent-dark">
+            <div className="text-sm uppercase text-opacity-60">
               {category}
             </div>
             <a href={href} rel="noreferrer" rel="noopener" target="_blank">
