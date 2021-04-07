@@ -38,33 +38,21 @@ export default function Home() {
           </p>
           <ProjectCard
             image="/images/citrushack.png"
-            children={[
-              "Create your Zen. Citrus Hack is scheduled for April 9th to 11th 2021. Everyone is welcome to join here at the official ",
-              <a
-                href="https://citrushack.com"
-                target="_blank"
-                rel="noopener"
-                rel="noreferrer"
-                className="underline text-gray-900 dark:text-gray-50"
-              >
-                Citrus Hack
-              </a>,
-              " website.",
-            ]}
+            children="Create your Zen. Scheduled for April 9th to 11th 2021."
             href="https://citrushack-fe.vercel.app"
             title="Citrus Hack"
             category="Hackathon"
           />
           <ProjectCard
             image="/images/biohack2021.png"
-            children="Scrapbook your idea for healthcare using code. The official BioHack 2021 hackathon is scheduled in May. Everyone is welcome to join."
+            children="Scrapbook your idea for healthcare using code. Scheduled in May. Join now."
             href="https://biohackdemo.vercel.app"
             title="BioHack"
             category="Hackathon"
           />
           <ProjectCard
             image="/images/habitle.png"
-            children="A minimal and powerful web app that generates a heatmap to visual progress to promote a positive and consistent lifestyle."
+            children="A minimal and powerful web app that generates a heatmap to visualize progress."
             href="https://habitle.com/#/"
             title="Habitle"
             category="Personal Project"

@@ -7,7 +7,7 @@ const Badge = ({ child }) => {
   return (
     <button
       type="button"
-      className="cursor-default px-2 py-1 m-1 rounded-md items-center bg-gray-200 
+      className="cursor-default px-2 py-1 m-1 rounded-md items-center bg-gray-100 
       dark:bg-card-dark transition duration-300 ease-in-out"
     >
       {child}
@@ -78,33 +78,21 @@ export default function Projects() {
           </p>
           <ProjectCard
             image="/images/citrushack.png"
-            children={[
-              "Create your Zen. Citrus Hack is scheduled for April 9th to 11th 2021. Everyone is welcome to join here at the official ",
-              <a
-                href="https://citrushack.com"
-                target="_blank"
-                rel="noopener"
-                rel="noreferrer"
-                className="underline text-link-light dark:text-link-dark"
-              >
-                Citrus Hack
-              </a>,
-              " website.",
-            ]}
+            children="Create your Zen. Scheduled for April 9th to 11th 2021."
             href="https://citrushack-fe.vercel.app"
             title="Citrus Hack"
             category="Hackathon"
           />
           <ProjectCard
             image="/images/biohack2021.png"
-            children="Scrapbook your idea for healthcare using code. The official BioHack 2021 hackathon is scheduled in May. Everyone is welcome to join."
+            children="Scrapbook your idea for healthcare using code. Scheduled in May. Join now."
             href="https://biohackdemo.vercel.app"
             title="BioHack"
             category="Hackathon"
           />
           <ProjectCard
             image="/images/habitle.png"
-            children="A minimal and powerful web app that generates a heatmap to visual progress to promote a positive and consistent lifestyle."
+            children="A minimal and powerful web app that generates a heatmap to visualize progress."
             href="https://habitle.com/#/"
             title="Habitle"
             category="Personal Project"
@@ -114,20 +102,17 @@ export default function Projects() {
           <h1 className="font-bold text-2xl md:text-4xl text-title-light dark:text-title-dark">
             Finished Projects
           </h1>
-          <p className="my-2 mb-6 text-md">
-            {" "}
-            Here are my finished projects.
-          </p>
+          <p className="my-2 mb-6 text-md"> Here are my finished projects.</p>
           <ProjectCard
             image="/images/terminal.png"
-            children="Rho Shell is aimed to replicate the standard functions of a shell using a Command Line Interface (CLI), written primarily in C++. It can perform most of the basic and common commands of a terminal."
+            children="A Command Line Interface (CLI), written primarily in C++."
             href="https://github.com/r-jo/rhoshell"
             title="Rho Shell"
             category="Personal Project"
           />
           <ProjectCard
             image="/images/cutiehack2020.png"
-            children="The website used by 500+ students to interact with and participate in the annual Cutie Hack hackathon. Co-led the effort on UI/UX and frontend to provide a seamless and easy-to-use interface."
+            children="The website used by 500+ students to interact with and participate in the annual Cutie Hack hackathon."
             href="https://cutiehack.io"
             title="Cutie Hack"
             category="Hackathon"
@@ -137,9 +122,7 @@ export default function Projects() {
           <h1 className="font-bold text-2xl md:text-4xl text-title-light dark:text-title-dark">
             Keyboards
           </h1>
-          <p className="my-2 mb-6 text-md">
-            Stay tuned!
-          </p>
+          <p className="my-2 mb-6 text-md">Stay tuned!</p>
         </section>
       </div>
     </Container>
