@@ -8,14 +8,11 @@ A collection of my neat projects and ideas that I've finished and am currently w
 
 ### Features
 
-#### Perfect Score on Google Lighthouse
-
-![Google Lighthouse Score](/images/googlelighthousescore.png)
-
-#### Follows Accessibility Rules
-
-- All anchors and images have a description/alt attribute
-- html and body has all required meta tags and attributes
+- Uses Next.JS :D
+- Uses Tailwind CSS. Most components are modular.
+- Has seamless light/dark mode.
+- Uses modern image formats and size compression.
+- It is my passion project.
 
 ### Notes
 
