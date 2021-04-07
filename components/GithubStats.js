@@ -28,7 +28,7 @@ export default function GithubStats() {
               </p>
             </div>
           </div>
-          <div className="flex-1 space-y-4">
+          <div className="flex-1 space-y-6">
             <div className="rounded-lg p-6 bg-card-light dark:bg-card-dark transition duration-300 ease-in-out">
               <h4 className="font-medium text-md md:text-lg">Repos Starred</h4>
               <p className="text-text-light dark:text-text-dark text-opacity-70">
