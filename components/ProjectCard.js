@@ -11,7 +11,7 @@ export default function ProjectCard({
 }) {
   return (
     <figure
-      className="flex ring-1 ring-gray-200 dark:ring-border-dark md:p-6 p-4 rounded-lg
+      className="flex bg-gray-100 dark:bg-card-dark md:p-6 p-4 rounded-lg
        mb-4 transition duration-300 ease-in-out"
     >
       <div className="space-y-4">
