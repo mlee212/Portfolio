@@ -1,13 +1,13 @@
 import Image from "next/image";
-import { RightArrow } from "../public/images/icons/icons.js";
 
 export default function ProjectCard({
   title,
-  category,
   children,
   image,
-  href,
   demo,
+  repo,
+  demotitle,
+  repotitle,
 }) {
   return (
     <figure
@@ -20,26 +20,28 @@ export default function ProjectCard({
             <Image src={image} alt="Product Logo" layout="fill" />
           </div>
           <div className="flex-1 pl-4">
-            <h1 className="font-medium text-lg text-gray-900 dark:text-gray-50">{title}</h1>
+            <h1 className="font-medium text-lg text-gray-900 dark:text-gray-50">
+              {title}
+            </h1>
             <p>{children}</p>
             <div className="flex space-x-6 font-medium">
               <a
-                href={href}
+                href={demo}
                 rel="noreferrer"
                 rel="noopener"
                 target="_blank"
-                className="flex items-center space-x-1 text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300"
+                className="text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300"
               >
-                <span>Demo</span> <RightArrow />
+                <span className="flex items-center">{demotitle}</span> 
               </a>
               <a
-                href={href}
+                href={repo}
                 rel="noreferrer"
                 rel="noopener"
                 target="_blank"
                 className="flex items-center space-x-1 text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 leading-relaxed"
               >
-                <span>Repo</span> <RightArrow />
+                <span className="flex items-center">{repotitle}</span> 
               </a>
             </div>
           </div>

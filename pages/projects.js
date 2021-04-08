@@ -2,6 +2,7 @@ import Head from "next/head";
 import Container, { siteTitle } from "../components/Container";
 import ProjectCard from "../components/ProjectCard";
 import GithubStats from "../components/GithubStats";
+import { RightArrow } from "../public/images/icons/icons.js";
 
 const Badge = ({ child }) => {
   return (
@@ -79,23 +80,29 @@ export default function Projects() {
           <ProjectCard
             image="/images/citrushack.png"
             children="Create your Zen. Scheduled for April 9th to 11th 2021."
-            href="https://citrushack-fe.vercel.app"
+            demo="https://citrushack-fe.vercel.app"
+            repo="https://github.com/r-jo/citrushack-fe"
             title="Citrus Hack"
             category="Hackathon"
+            demotitle={["Demo",<RightArrow />]}
+            repotitle={["Repo",<RightArrow />]}
           />
           <ProjectCard
             image="/images/biohack2021.png"
             children="Scrapbook your idea for healthcare using code. Scheduled in May. Join now."
-            href="https://biohackdemo.vercel.app"
+            demo="https://biohackdemo.vercel.app"
+            repo="https://github.com/BioHack-UCR/Biohack2021"
             title="BioHack"
-            category="Hackathon"
+            demotitle={["Demo",<RightArrow />]}
+            repotitle={["Repo",<RightArrow />]}
           />
           <ProjectCard
             image="/images/habitle.png"
             children="A minimal and powerful web app that generates a heatmap to visualize progress."
-            href="https://habitle.com/#/"
+            demo="https://habitle.com/#/"
             title="Habitle"
             category="Personal Project"
+            demotitle={["Demo",<RightArrow />]}
           />
         </section>
         <section className="my-16">
@@ -106,16 +113,20 @@ export default function Projects() {
           <ProjectCard
             image="/images/terminal.png"
             children="A Command Line Interface (CLI), written primarily in C++."
-            href="https://github.com/r-jo/rhoshell"
+            demo="https://github.com/r-jo/rhoshell"
             title="Rho Shell"
             category="Personal Project"
+            demotitle={["Repo",<RightArrow />]}
           />
           <ProjectCard
             image="/images/cutiehack2020.png"
             children="The website used by 500+ students to interact with and participate in the annual Cutie Hack hackathon."
-            href="https://cutiehack.io"
+            demo="https://cutiehack.io"
+            repo="https://github.com/citrushack/CutieHack2020Frontend"
             title="Cutie Hack"
             category="Hackathon"
+            demotitle={["Demo",<RightArrow />]}
+            repotitle={["Repo",<RightArrow />]}
           />
         </section>
         <section>
