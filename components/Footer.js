@@ -24,7 +24,7 @@ const ExtLink = ({ title, destination }) => {
 
 export const Footer = () => {
   return (
-    <footer className="w-full border-t border-gray-200 dark:border-border-dark p-6 mx-auto transition duration-300 ease-in-out text-gray-500 dark:text-gray-400 text-md leading-7">
+    <footer className="w-full border-t border-gray-200 dark:border-border-dark px-6 py-10 mx-auto transition duration-300 ease-in-out text-gray-500 dark:text-gray-400 text-md leading-7">
       <div className="max-w-4xl mx-auto md:flex space-y-8 md:space-y-0">
         <div className="flex-1">
           <p className="font-medium text-lg text-gray-900 dark:text-gray-50 my-2">

@@ -152,7 +152,7 @@ export default function Container({ children }) {
         <nav
           className="sticky-nav sticky flex justify-center items-center  
         w-full p-6 pb-0 mx-auto transition duration-300 ease-in-out 
-        bg-white dark:bg-primary-dark border-b border-gray-200 dark:border-border-dark"
+        bg-white dark:bg-primary-dark border-b border-gray-200 dark:border-primary-dark shadow-md dark:shadow-xl"
         >
           <div className="w-full max-w-4xl flex items-center justify-between pb-6">
             <div className="h-9 w-9 relative cursor-pointer">

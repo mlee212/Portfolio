@@ -39,13 +39,26 @@ export default function Home() {
           </p>
           <ProjectCard
             image="/images/citrushack.png"
-            children="Create your Zen. Scheduled for April 9th to 11th 2021."
+            children={[
+              "Create your Zen. Scheduled for April 9th to 11th 2021. Check out the official ",
+              <a
+                href="https://citrushack.com"
+                rel="noreferrer"
+                rel="noopener"
+                target="_blank"
+                className="underline"
+              >
+                Citrus Hack
+              </a>,
+
+              " website!",
+            ]}
             demo="https://citrushack-fe.vercel.app"
             repo="https://github.com/r-jo/citrushack-fe"
             title="Citrus Hack"
             category="Hackathon"
-            demotitle={["Demo",<RightArrow />]}
-            repotitle={["Repo",<RightArrow />]}
+            demotitle={["Demo", <RightArrow />]}
+            repotitle={["Repo", <RightArrow />]}
           />
           <ProjectCard
             image="/images/biohack2021.png"
@@ -53,8 +66,8 @@ export default function Home() {
             demo="https://biohackucr.com"
             repo="https://github.com/BioHack-UCR/Biohack2021"
             title="BioHack"
-            demotitle={["Demo",<RightArrow />]}
-            repotitle={["Repo",<RightArrow />]}
+            demotitle={["Demo", <RightArrow />]}
+            repotitle={["Repo", <RightArrow />]}
           />
           <ProjectCard
             image="/images/habitle.png"
@@ -62,7 +75,7 @@ export default function Home() {
             demo="https://habitle.com/#/"
             title="Habitle"
             category="Personal Project"
-            demotitle={["Demo",<RightArrow />]}
+            demotitle={["Demo", <RightArrow />]}
           />
         </section>
         <section>
