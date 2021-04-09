@@ -14,10 +14,10 @@ export default function Home() {
       </Head>
       <div className="max-w-2xl mx-auto">
         <section>
-          <h1 className="font-bold text-3xl md:text-5xl text-gray-900 dark:text-gray-50">
-            Hello! I'm <span className="dark:text-brand">Rajbir</span>.
+          <h1 className="font-bold text-3xl md:text-5xl text-red-400 dark:text-red-300">
+            Hello! I'm Rajbir.
           </h1>
-          <h2 className="font-medium my-2 mb-6">
+          <h2 className="font-medium text-gray-900 dark:text-gray-50 my-2 mb-6">
             Frontend Developer <br />
             Based in Southern California
           </h2>
@@ -46,7 +46,7 @@ export default function Home() {
                 rel="noreferrer"
                 rel="noopener"
                 target="_blank"
-                className="underline"
+                className="underline text-gray-900 dark:text-gray-50"
               >
                 Citrus Hack
               </a>,

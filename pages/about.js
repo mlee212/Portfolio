@@ -10,7 +10,7 @@ export default function More() {
         <title>{siteTitle}</title>
       </Head>
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto">
-        <h1 className="font-bold text-3xl md:text-5xl pb-4 text-gray-900 dark:text-gray-50">
+        <h1 className="font-bold text-3xl md:text-5xl pb-4 text-yellow-300 dark:text-yellow-200">
           What I'm About.
         </h1>
         <p>
