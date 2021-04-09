@@ -50,7 +50,7 @@ export default function Home() {
           <ProjectCard
             image="/images/biohack2021.png"
             children="Scrapbook your idea for healthcare using code. Scheduled in May. Join now."
-            demo="https://biohackdemo.vercel.app"
+            demo="https://biohackucr.com"
             repo="https://github.com/BioHack-UCR/Biohack2021"
             title="BioHack"
             demotitle={["Demo",<RightArrow />]}
