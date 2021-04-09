@@ -11,10 +11,7 @@ export const siteTitle = "Rajbir Johar | Portfolio";
 
 const NavLink = ({ destination, title }) => {
   return (
-    <ActiveLink
-      activeClassName="active"
-      href={destination}
-    >
+    <ActiveLink activeClassName="active" href={destination}>
       <a className="nav-link px-3 py-2 font-medium text-gray-900 dark:text-gray-50">
         {title}
       </a>
@@ -150,16 +147,18 @@ export default function Container({ children }) {
           <meta name="og:title" content={siteTitle} />
         </Head>
         <nav
-          className="sticky-nav sticky flex justify-center items-center  
+          className={`sticky-nav md:mt-8 mt-0 sticky flex justify-center items-center  
         w-full p-6 pb-0 mx-auto transition duration-300 ease-in-out 
-        bg-white dark:bg-primary-dark border-b border-gray-200 dark:border-primary-dark shadow-md dark:shadow-xl"
+        bg-white dark:bg-primary-dark dark:border-primary-dark ${
+          scroll ? "shadow-md dark:shadow-xl" : "shadow-none"
+        }`}
         >
           <div className="w-full max-w-4xl flex items-center justify-between pb-6">
             <div className="h-9 w-9 relative cursor-pointer">
               <button
                 aria-label="Toggle Dark Mode"
                 type="button"
-                className="flex items-center justify-center h-8 w-8 bg-gray-200 dark:bg-card-dark hover:bg-gray-300 dark:hover:bg-cardbright-dark
+                className="flex items-center justify-center h-8 w-8 bg-gray-100 dark:bg-card-dark hover:bg-gray-200 dark:hover:bg-cardbright-dark
                  transition duration-300 ease-in-out rounded-md"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
@@ -184,7 +183,7 @@ export default function Container({ children }) {
           </div>
         </nav>
 
-        <main className="flex flex-col w-full mx-auto mt-12 p-6 text-gray-500 dark:text-gray-400 text-md leading-7">
+        <main className="flex flex-col w-full mx-auto md:mt-12 mt-4 p-6 text-gray-500 dark:text-gray-400 text-md leading-7">
           {children}
         </main>
         <Footer />
