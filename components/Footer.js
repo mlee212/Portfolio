@@ -63,7 +63,7 @@ export const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="text-center">
+      <div className="mt-8 text-center">
         <p>2021 © Rajbir Johar</p>
       </div>
     </footer>
