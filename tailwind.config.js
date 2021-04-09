@@ -8,23 +8,23 @@ module.exports = {
         current: "currentColor",
         primary: {
           light: "#F4F3F0",
-          dark: "#101014",
+          dark: "#212121",
         },
         accent: {
           light: "#6F8E97",
-          dark: "#7C7373",
+          dark: "#333",
         },
         card: {
           light: "#e9e7e1",
-          dark: "#16171d",
+          dark: "#333",
         },
         cardbright: {
           light: "#e3e1dc",
-          dark: "#16171d",
+          dark: "#444",
         },
         border: {
           light: "#e9e7e1",
-          dark: "#16171d",
+          dark: "#333",
         },
         title: {
           light: "#232528",
