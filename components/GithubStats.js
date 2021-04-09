@@ -11,7 +11,7 @@ export default function GithubStats() {
   } else
     return (
       <>
-        <div className="md:flex w-full space-y-6 md:space-y-0 md:space-x-4 ">
+        <div className="md:flex w-full space-y-4 md:space-y-0 md:space-x-4">
           <div className="flex-1 space-y-4">
             <div className="rounded-lg p-6 bg-gray-100 dark:bg-card-dark transition duration-300 ease-in-out">
               <h4 className="font-medium text-gray-900 dark:text-gray-50">Github Stars</h4>

@@ -24,7 +24,7 @@ export default function Projects() {
       </Head>
       <div className="max-w-2xl mx-auto">
         <section>
-          <h1 className="font-bold text-3xl md:text-5xl text-title-light dark:text-title-dark">
+          <h1 className="font-bold text-3xl md:text-5xl text-blue-400 dark:text-blue-300">
             Projects
           </h1>
           <p className="my-2 mb-6 text-md">
@@ -86,7 +86,7 @@ export default function Projects() {
                 rel="noreferrer"
                 rel="noopener"
                 target="_blank"
-                className="underline"
+                className="underline text-gray-900 dark:text-gray-50"
               >
                 Citrus Hack
               </a>,
