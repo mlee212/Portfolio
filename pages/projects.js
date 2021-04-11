@@ -27,7 +27,7 @@ export default function Projects() {
           <h1 className="font-bold text-3xl md:text-5xl text-blue-400 dark:text-blue-300">
             Projects
           </h1>
-          <p className="my-2 mb-6 text-md">
+          <p className="my-2 mb-6">
             <span className="font-medium">
               Here is a collection of my best work where I demonstrate my skills
               as a developer and a creator.
