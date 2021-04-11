@@ -9,22 +9,24 @@ export default function More() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto">
-        <h1 className="font-bold text-3xl md:text-5xl pb-4 text-yellow-300 dark:text-yellow-200">
+      <div className="max-w-2xl mx-auto">
+        <h1 className="font-bold text-3xl md:text-5xl text-yellow-300 dark:text-yellow-200">
           What I'm About.
         </h1>
-        <p>
+        <p className="my-2">
           I'm a frontend web developer based in Southern California 😎 studying
           Computer Science at the University of California at Riverside.
-          <br />
-          <br /> I'm currently working on Citrushack, the largest hackathon
-          offered by UCR. More updates soon to come!
-          <br />
-          <br />
+        </p>
+        <p className="my-2">
+          I'm currently working on Citrushack, the largest hackathon offered by
+          UCR. More updates soon to come!
+        </p>
+        <p className="my-2">
           If I'm not coding, you can catch me perfecting the art of the grilled
           cheese 🥪 or building bespoke keyboards ⌨️. I'm typing on my Iron165
-          (my favorite board ever) with lubricated cream switches. <br />
-          <br />
+          (my favorite board ever) with lubricated cream switches.
+        </p>
+        <p className="my-2">
           You can also find me currently playing through <i>The Last of Us 2</i>
           .
         </p>
