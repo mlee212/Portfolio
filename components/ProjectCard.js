@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { RightArrow } from "../public/images/icons/icons.js";
 
 export default function ProjectCard({
   title,
@@ -11,8 +12,8 @@ export default function ProjectCard({
 }) {
   return (
     <figure
-      className="flex bg-gray-100 dark:bg-card-dark md:p-6 p-4 rounded-lg
-       mb-4 transition duration-300 ease-in-out"
+      className="flex bg-shadow-800 md:p-6 p-4 rounded-lg
+       mb-4 transition duration-300 ease-in-out hover:bg-shadow-700"
     >
       <div className="space-y-4">
         <figcaption className="flex items-center">
@@ -20,28 +21,34 @@ export default function ProjectCard({
             <Image src={image} alt="Product Logo" layout="fill" />
           </div>
           <div className="flex-1 pl-4">
-            <h1 className="font-medium text-lg text-gray-900 dark:text-gray-50">
+            <h1 className="font-medium text-lg text-shadow-100">
               {title}
             </h1>
-            <p>{children}</p>
-            <div className="flex space-x-6 font-medium">
+            <p className="text-shadow-200">{children}</p>
+            <div className="flex font-medium space-x-6">
               <a
                 href={demo}
                 rel="noreferrer"
                 rel="noopener"
                 target="_blank"
-                className="text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300"
+                className="text-red-400 hover:text-red-300"
               >
-                <span className="flex items-center">{demotitle}</span> 
+                <span className="flex items-center">
+                  Demo
+                  <RightArrow />
+                </span>
               </a>
               <a
                 href={repo}
                 rel="noreferrer"
                 rel="noopener"
                 target="_blank"
-                className="flex items-center space-x-1 text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 leading-relaxed"
+                className="flex items-center text-gray-300 hover:text-gray-100"
               >
-                <span className="flex items-center">{repotitle}</span> 
+                <span className="flex items-center">
+                  Repo
+                  <RightArrow />
+                </span>
               </a>
             </div>
           </div>

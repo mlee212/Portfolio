@@ -13,20 +13,11 @@ import {
 } from "../public/images/icons/icons.js";
 
 const Divider = () => {
-  return (
-    <div
-      className="border-b border-gray-200 dark:border-border-dark
-     w-full my-4 transition duration-300 ease-in-out"
-    />
-  );
+  return <div className="border-b-2 border-shadow-700 w-full my-4" />;
 };
 
 const Year = ({ children }) => {
-  return (
-    <h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-title-dark">
-      {children}
-    </h3>
-  );
+  return <h3 className="text-xl font-bold text-shadow-100">{children}</h3>;
 };
 
 const Step = ({ title, children, icon }) => {
@@ -39,15 +30,15 @@ const Step = ({ title, children, icon }) => {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="h-5 w-5 mr-1 text-gray-900 dark:text-title-dark"
+          className="h-5 w-5 mr-1"
         >
           {icon}
         </svg>
-        <h2 className="font-medium md:text-lg text-md text-gray-900 dark:text-title-dark">{title}</h2>
+        <h2 className="font-medium md:text-lg text-md text-shadow-100">
+          {title}
+        </h2>
       </div>
-      <p className="ml-6">
-        {children}
-      </p>
+      <p className="ml-6 text-shadow-200">{children}</p>
     </li>
   );
 };
@@ -127,7 +118,7 @@ export default function Timeline() {
 
   return (
     <>
-      <h3 className="font-bold text-2xl md:text-4xl my-4 text-title-light dark:text-title-dark">
+      <h3 className="font-bold text-4xl md:text-5xl my-4 text-shadow-100">
         Experiences
       </h3>
       <Year>2021</Year>
@@ -172,9 +163,8 @@ export default function Timeline() {
       ) : (
         <button
           type="button"
-          className="flex items-center mx-auto px-3 py-1
-           bg-black dark:bg-white hover:bg-opacity-80 text-white dark:text-black
-           rounded-md text-md transition duration-300 ease-in-out"
+          className="flex items-center mx-auto px-3 py-1 text-shadow-200 mt-6 mb-2
+          bg-shadow-700 hover:bg-shadow-600 rounded-md text-md transition duration-300 ease-in-out"
           onClick={() => showFullTimeline(true)}
         >
           See More

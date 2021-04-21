@@ -10,10 +10,10 @@ export default function More() {
         <title>{siteTitle}</title>
       </Head>
       <div className="max-w-2xl mx-auto">
-        <h1 className="font-bold text-3xl md:text-5xl text-yellow-300 dark:text-yellow-200">
+        <h1 className="font-bold text-4xl md:text-5xl text-red-400">
           What I'm About.
         </h1>
-        <p className="my-2">
+        <p className="mt-4">
           I'm a frontend web developer based in Southern California 😎 studying
           Computer Science at the University of California at Riverside.
         </p>
@@ -26,11 +26,11 @@ export default function More() {
           cheese 🥪 or building bespoke keyboards ⌨️. I'm typing on my Iron165
           (my favorite board ever) with lubricated cream switches.
         </p>
-        <p className="my-2">
+        <p className="mb-16">
           You can also find me currently playing through <i>The Last of Us 2</i>
           .
         </p>
-        <h3 className="font-bold text-2xl md:text-4xl my-4 text-gray-900 dark:text-gray-50">
+        <h3 className="font-bold text-3xl md:text-4xl my-4 text-shadow-100">
           My Music
         </h3>
         <p className="mb-4">

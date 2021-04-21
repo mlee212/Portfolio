@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { motion } from "framer-motion";
 import Head from "next/head";
 import ActiveLink from "./ActiveLink";
 
@@ -12,9 +13,7 @@ export const siteTitle = "Rajbir Johar | Portfolio";
 const NavLink = ({ destination, title }) => {
   return (
     <ActiveLink activeClassName="active" href={destination}>
-      <a className="nav-link px-3 py-2 font-medium text-gray-900 dark:text-gray-50">
-        {title}
-      </a>
+      <a className="nav-link px-3 py-2 text-shadow-300 font-medium">{title}</a>
     </ActiveLink>
   );
 };
@@ -44,10 +43,7 @@ export default function Container({ children }) {
 
   return (
     <html lang="en">
-      <body
-        className="transition duration-300 ease-in-out 
-           dark:bg-primary-dark"
-      >
+      <body className="bg-shadow-900">
         <Head>
           <link
             rel="apple-touch-icon-precomposed"
@@ -147,18 +143,21 @@ export default function Container({ children }) {
           <meta name="og:title" content={siteTitle} />
         </Head>
         <nav
-          className={`sticky-nav md:mt-8 mt-0 sticky flex justify-center items-center  
-        w-full p-6 pb-0 mx-auto transition duration-300 ease-in-out 
-        bg-white dark:bg-primary-dark dark:border-primary-dark ${
-          scroll ? "shadow-md dark:shadow-xl" : "shadow-none"
-        }`}
+          className="sticky-nav md:mt-8 mt-0 sticky flex justify-center items-center 
+        w-full p-6 pb-0 mx-auto bg-shadow-900"
+          //   className={`sticky-nav md:mt-8 mt-0 sticky flex justify-center items-center
+          // w-full p-6 pb-0 mx-auto transition duration-300 ease-in-out
+          // bg-white dark:bg-shadow-900 dark:border-shadow-800 ${
+          //   scroll ? "shadow-md dark:shadow-xl" : "shadow-none"
+          // }`}
         >
-          <div className="w-full max-w-4xl flex items-center justify-between pb-6">
+          <div className="w-full max-w-4xl flex items-center justify-end pb-6">
             <div className="h-9 w-9 relative cursor-pointer">
-              <button
+              {/* <button
                 aria-label="Toggle Dark Mode"
                 type="button"
-                className="flex items-center justify-center h-8 w-8 bg-gray-100 dark:bg-card-dark hover:bg-gray-200 dark:hover:bg-cardbright-dark
+                className="flex items-center justify-center h-8 w-8 bg-gray-100 dark:bg-shadow-700
+                 hover:bg-gray-200 dark:hover:bg-shadow-600
                  transition duration-300 ease-in-out rounded-md"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
@@ -168,24 +167,25 @@ export default function Container({ children }) {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    className="h-4 w-4 text-text-light dark:text-text-dark"
+                    className="h-4 w-4 text-black dark:text-shadow-100"
                   >
                     {theme === "dark" ? <SunIcon /> : <MoonIcon />}
                   </svg>
                 )}
-              </button>
+              </button> */}
             </div>
-            <div className="space-x-2">
+            <div className="space-x-2 flex">
               <NavLink destination="/" title="Home" />
               <NavLink destination="/projects" title="Projects" />
               <NavLink destination="/about" title="About" />
             </div>
           </div>
         </nav>
-
-        <main className="flex flex-col w-full mx-auto md:mt-12 mt-4 p-6 text-gray-500 dark:text-gray-400 text-md leading-7">
-          {children}
-        </main>
+        <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
+          <main className="flex flex-col w-full mx-auto md:mt-12 mt-4 p-6 text-shadow-200 text-md leading-7">
+            {children}
+          </main>
+        </motion.div>
         <Footer />
       </body>
     </html>
