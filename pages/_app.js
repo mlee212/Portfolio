@@ -10,7 +10,7 @@ function App({ Component, pageProps, router }) {
   return (
     <ThemeProvider attribute="class">
       <Navigation />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence>
         <Component {...pageProps} key={router.route} />;
       </AnimatePresence>
       <Footer />
