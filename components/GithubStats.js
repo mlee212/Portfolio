@@ -15,7 +15,7 @@ const Stat = ({ title, data, caption }) => {
       <Link href="https://github.com/r-jo" passHref={true}>
         <a target="_blank" rel="noopener noreferrer">
           <div
-            className="rounded-lg p-6 bg-gray-100 hover-hover:hover:bg-gray-200 hover-hover:dark:bg-shadow-800 dark:hover:bg-shadow-700
+            className="rounded-lg p-6 bg-gray-100 hover-hover:hover:bg-gray-200 dark:bg-shadow-800 hover-hover:dark:hover:bg-shadow-700
     transition duration-300 ease-in-out"
           >
             <h4 className="font-medium text-gray-900 dark:text-shadow-100">
