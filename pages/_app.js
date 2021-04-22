@@ -1,10 +1,19 @@
+import React from "react";
 import "../styles/global.css";
 import { ThemeProvider } from "next-themes";
+import { AnimatePresence } from "framer-motion";
 
-function App({ Component, pageProps }) {
+import { Navigation } from "../components/Navigation";
+import { Footer } from "../components/Footer";
+
+function App({ Component, pageProps, router }) {
   return (
-    <ThemeProvider>
-      <Component {...pageProps} />;
+    <ThemeProvider attribute="class">
+      <Navigation />
+      <AnimatePresence exitBeforeEnter>
+        <Component {...pageProps} key={router.route} />;
+      </AnimatePresence>
+      <Footer />
     </ThemeProvider>
   );
 }

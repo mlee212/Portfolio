@@ -2,18 +2,26 @@ import useSWR from "swr";
 import fetcher from "../lib/fetcher";
 import Loader from "./GithubLoader";
 import react, { useState } from "react";
+import { motion } from "framer-motion";
 
 const Stat = ({ title, data, caption }) => {
   return (
-    <div
-      className="rounded-lg p-6 bg-shadow-800
-    transition duration-300 ease-in-out hover:bg-shadow-700"
-    >
-      <h4 className="font-medium text-shadow-100">{title}</h4>
-      <p className="font-medium text-shadow-200">
-        {data} <span className="font-normal text-shadow-300">{caption}</span>
-      </p>
-    </div>
+    <motion.div whileHover={{ scale: 1.025 }} whileTap={{ scale: 1 }}>
+      <div
+        className="rounded-lg p-6 bg-gray-100 hover:bg-gray-200 dark:bg-shadow-800 dark:hover:bg-shadow-700
+    transition duration-300 ease-in-out"
+      >
+        <h4 className="font-medium text-gray-900 dark:text-shadow-100">
+          {title}
+        </h4>
+        <p className="font-medium text-gray-800 dark:text-shadow-200">
+          {data}{" "}
+          <span className="font-normal text-gray-700 dark:text-shadow-300">
+            {caption}
+          </span>
+        </p>
+      </div>
+    </motion.div>
   );
 };
 

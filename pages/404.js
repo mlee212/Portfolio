@@ -1,13 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import Container from "../components/Container";
+import { motion } from "framer-motion";
 
 export default function Custom404() {
   return (
     <Container>
       <div className="flex flex-col">
         <div className="max-w-2xl mx-auto flex flex-col">
-          <div className="dark:opacity-100 py-2 flex items-center justify-center">
+          <div className="opacity-10 dark:opacity-100 py-2 flex items-center justify-center">
             <Image
               src="/images/deathstar.png"
               alt="Death Star"
@@ -49,9 +50,8 @@ export default function Custom404() {
 
           <Link href="/">
             <button
-              className="flex items-center mx-auto px-3 py-1
-              bg-black dark:bg-shadow-700 dark:hover:bg-shadow-600 text-white dark:text-shadow-200
-              rounded-md text-md transition duration-300 ease-in-out mb-2"
+              className="flex items-center mx-auto px-3 py-1 text-gray-800 dark:text-shadow-200 mb-2
+              bg-gray-100 hover:bg-gray-200 dark:bg-shadow-700 dark:hover:bg-shadow-600 rounded-md text-md transition duration-300 ease-in-out"
             >
               ← Back to home
             </button>
