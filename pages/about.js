@@ -39,7 +39,6 @@ export default function More() {
           My Music
         </h3>
         <p>Here are the top ten songs I've been listening to, updated daily.</p>
-        <NowPlaying />
         <TopTracks />
         <p className="mt-6">
           Find something we have in common? Let's talk about it. ☕
