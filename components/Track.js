@@ -5,7 +5,7 @@ export default function Track(track) {
       <div
         className="flex flex-row items-baseline mb-2 max-w-3xl rounded-md
      w-full justify-items-center bg-gray-100 hover-hover:hover:shadow-xl dark:bg-shadow-800
-     hover-hover:dark:hover:bg-shadow-700 px-0 md:px-4 py-4 transition duration-300 ease-in-out"
+     hover-hover:dark:hover:bg-shadow-700 px-0 p-4 transition duration-300 ease-in-out"
       >
         <p>{track.ranking}</p>
         <div className="flex flex-col pl-3">
