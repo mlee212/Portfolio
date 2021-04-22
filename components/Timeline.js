@@ -13,11 +13,17 @@ import {
 } from "../public/images/icons/icons.js";
 
 const Divider = () => {
-  return <div className="border-b-2 border-gray-100 dark:border-shadow-700 w-full my-4" />;
+  return (
+    <div className="border-b-2 border-gray-100 dark:border-shadow-700 w-full my-4" />
+  );
 };
 
 const Year = ({ children }) => {
-  return <h3 className="text-xl font-bold text-gray-900 dark:text-shadow-100">{children}</h3>;
+  return (
+    <h3 className="text-xl font-bold text-gray-900 dark:text-shadow-100">
+      {children}
+    </h3>
+  );
 };
 
 const Step = ({ title, children, icon }) => {
