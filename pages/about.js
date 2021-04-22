@@ -12,7 +12,7 @@ export default function More() {
         <title>{siteTitle}</title>
       </Head>
       <div className="max-w-2xl mx-auto">
-        <h1 className="mb-4 font-bold text-4xl md:text-5xl text-blue-400 dark:text-red-400">
+        <h1 className="mb-4 font-bold text-4xl md:text-5xl text-blue-500 dark:text-red-400">
           What I'm About.
         </h1>
         <div className="space-y-2">
@@ -38,7 +38,7 @@ export default function More() {
         <h3 className="mt-16 mb-4 font-bold text-3xl md:text-4xl my-4 text-gray-900 dark:text-shadow-100">
           My Music
         </h3>
-        <p>Here are the top ten songs I've been listening to, updated daily.</p>
+        <p className="mb-6">Here are the top ten songs I've been listening to, updated daily.</p>
         <TopTracks />
         <p className="mt-6">
           Find something we have in common? Let's talk about it. ☕
