@@ -12,7 +12,7 @@ const ActiveLink = ({ children, activeClassName, ...props }) => {
       ? "text-gray-900 dark:text-shadow-100 nav-link px-3 py-2 font-medium"
       : child.props.className;
 
-  return <Link {...props}>{React.cloneElement(child, { className })}</Link>;
+  return <Link {...props} scroll={false}>{React.cloneElement(child, { className })}</Link>;
 };
 
 ActiveLink.propTypes = {
