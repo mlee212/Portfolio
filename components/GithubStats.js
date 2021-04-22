@@ -2,35 +2,28 @@ import useSWR from "swr";
 import fetcher from "../lib/fetcher";
 import Loader from "./GithubLoader";
 import react, { useState } from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
 
 const Stat = ({ title, data, caption }) => {
   return (
-    <motion.div
-      whileHover={{ scale: 1.025 }}
-      whileTap={{ scale: 1 }}
-      transition={{ duration: 0.3 }}
+    <div
+      className="rounded-lg p-6 bg-gray-100 hover-hover:hover:shadow-xl dark:bg-shadow-800
+        hover-hover:dark:hover:bg-shadow-700 transition duration-300 ease-in-out"
     >
-      <Link href="https://github.com/r-jo" passHref={true}>
-        <a target="_blank" rel="noopener noreferrer">
-          <div
-            className="rounded-lg p-6 bg-gray-100 hover-hover:hover:bg-gray-200 dark:bg-shadow-800 hover-hover:dark:hover:bg-shadow-700
-    transition duration-300 ease-in-out"
-          >
-            <h4 className="font-medium text-gray-900 dark:text-shadow-100">
-              {title}
-            </h4>
-            <p className="font-medium text-gray-800 dark:text-shadow-200">
-              {data}{" "}
-              <span className="font-normal text-gray-400 dark:text-shadow-300">
-                {caption}
-              </span>
-            </p>
-          </div>
-        </a>
-      </Link>
-    </motion.div>
+      <a
+        href="https://github.com/r-jo"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-medium text-blue-500 dark:text-red-400 hover:underline"
+      >
+        {title}
+      </a>
+      <p className="font-medium text-gray-800 dark:text-shadow-200">
+        {data}{" "}
+        <span className="font-normal text-gray-400 dark:text-shadow-300">
+          {caption}
+        </span>
+      </p>
+    </div>
   );
 };
 

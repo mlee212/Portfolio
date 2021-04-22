@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <div className="max-w-2xl mx-auto">
         <section>
-          <h1 className="font-bold text-4xl md:text-5xl text-blue-400 dark:text-red-400">
+          <h1 className="font-bold text-4xl md:text-5xl text-blue-500 dark:text-red-400">
             Hello! I'm Rajbir.
           </h1>
           <h2 className="font-medium text-gray-900 dark:text-shadow-100 mt-4">
@@ -30,7 +30,7 @@ export default function Home() {
             Here are some of the projects that I am currently working on. Check
             out my other{" "}
             <Link href="/projects">
-              <a className="underline text-gray-900 dark:text-shadow-100">
+              <a className="text-blue-500 dark:text-red-400 hover:underline">
                 projects
               </a>
             </Link>{" "}
@@ -39,22 +39,22 @@ export default function Home() {
           <ProjectCard
             image="/images/citrushack.png"
             children={[
-              "Create your Zen. Scheduled for April 9th to 11th 2021. Check out the official ",
+              "Create your Zen. Scheduled for April 9th to 11th 2021. Check out the ",
               <a
                 href="https://citrushack.com"
                 rel="noreferrer"
                 rel="noopener"
                 target="_blank"
-                className="underline text-gray-900 dark:text-shadow-100"
+                className="text-blue-500 dark:text-red-400 hover:underline"
               >
-                Citrus Hack
+                official Citrus Hack
               </a>,
 
               " website!",
             ]}
             demo="https://citrushack-fe.vercel.app"
             repo="https://github.com/r-jo/citrushack-fe"
-            title="Citrus Hack"
+            title="Citrus Hack FE"
             category="Hackathon"
           />
           <ProjectCard

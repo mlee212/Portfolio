@@ -6,7 +6,11 @@ import { motion } from "framer-motion";
 
 const Badge = ({ child }) => {
   return (
-    <motion.button whileHover={{ scale: 1.075 }} whileTap={{ scale: 1 }} transition={{ duration: 0.3 }}>
+    <motion.button
+      whileHover={{ scale: 1.045 }}
+      whileTap={{ scale: 1 }}
+      transition={{ duration: 0.3 }}
+    >
       <button
         className="cursor-default px-2 py-1 m-1 rounded-md items-center bg-gray-100 hover:bg-gray-200
      dark:bg-shadow-800 dark:hover:bg-shadow-700 transition duration-300 ease-in-out"
@@ -25,7 +29,7 @@ export default function Projects() {
       </Head>
       <div className="max-w-2xl mx-auto">
         <section>
-          <h1 className="font-bold text-4xl md:text-5xl text-blue-400 dark:text-red-400">
+          <h1 className="font-bold text-4xl md:text-5xl text-blue-500 dark:text-red-400">
             Projects
           </h1>
           <p className="my-2 mt-4">
@@ -35,7 +39,7 @@ export default function Projects() {
             </span>{" "}
             You can also see a more detailed view on my{" "}
             <a
-              className="text-gray-900 dark:text-shadow-100 underline"
+              className="text-blue-500 dark:text-red-400 hover:underline"
               target="_blank"
               rel="noopener noreferrer"
               href="https://github.com/r-jo"
@@ -46,7 +50,7 @@ export default function Projects() {
             are:
           </p>
           <div className="text-center">
-            <Badge child="Next JS" />
+            <Badge child="Next JS"/>
             <Badge child="React JS" />
             <Badge child="Javascript" />
             <Badge child="HTML5" />
@@ -107,7 +111,7 @@ export default function Projects() {
                 rel="noreferrer"
                 rel="noopener"
                 target="_blank"
-                className="underline text-gray-900 dark:text-shadow-100"
+                className="text-blue-500 dark:text-red-400 text-gray-900 dark:text-shadow-100"
               >
                 Citrus Hack
               </a>,
