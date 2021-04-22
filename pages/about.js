@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Container, { siteTitle } from "../components/Container";
 import TopTracks from "../components/TopTracks";
+import NowPlaying from "../components/NowPlaying";
 import { motion } from "framer-motion";
 
 export default function More() {
@@ -38,6 +39,7 @@ export default function More() {
           My Music
         </h3>
         <p>Here are the top ten songs I've been listening to, updated daily.</p>
+        <NowPlaying />
         <TopTracks />
         <p className="mt-6">
           Find something we have in common? Let's talk about it. ☕

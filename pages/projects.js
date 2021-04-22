@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Badge = ({ child }) => {
   return (
-    <motion.button whileHover={{ scale: 1.075 }} whileTap={{ scale: 1 }}>
+    <motion.button whileHover={{ scale: 1.075 }} whileTap={{ scale: 1 }} transition={{ duration: 0.3 }}>
       <button
         className="cursor-default px-2 py-1 m-1 rounded-md items-center bg-gray-100 hover:bg-gray-200
      dark:bg-shadow-800 dark:hover:bg-shadow-700 transition duration-300 ease-in-out"
