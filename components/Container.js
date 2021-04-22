@@ -107,10 +107,9 @@ export default function Container({ children }) {
           <meta name="og:title" content={siteTitle} />
         </Head>
         <motion.main
-          initial={{ y: 5, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 5, opacity: 0 }}
-          transition={{ duration: 0.2 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{duration: 0.3}}
         >
           <main className="flex flex-col w-full mx-auto md:mt-12 mt-4 p-6 text-gray-800 dark:text-shadow-200 text-md leading-7 transition duration-300 ease-in-out">
             {children}
