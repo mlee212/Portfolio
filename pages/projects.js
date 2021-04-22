@@ -2,15 +2,18 @@ import Head from "next/head";
 import Container, { siteTitle } from "../components/Container";
 import ProjectCard from "../components/ProjectCard";
 import GithubStats from "../components/GithubStats";
-import { RightArrow } from "../public/images/icons/icons.js";
+import { motion } from "framer-motion";
 
 const Badge = ({ child }) => {
   return (
-    <button
-      className="cursor-default px-2 py-1 m-1 rounded-md items-center bg-shadow-800 transition duration-300 ease-in-out hover:bg-shadow-700"
-    >
-      {child}
-    </button>
+    <motion.button whileHover={{ scale: 1.075 }} whileTap={{ scale: 1 }}>
+      <button
+        className="cursor-default px-2 py-1 m-1 rounded-md items-center bg-gray-100 hover:bg-gray-200
+     dark:bg-shadow-800 dark:hover:bg-shadow-700 transition duration-300 ease-in-out"
+      >
+        {child}
+      </button>
+    </motion.button>
   );
 };
 
@@ -22,7 +25,7 @@ export default function Projects() {
       </Head>
       <div className="max-w-2xl mx-auto">
         <section>
-          <h1 className="font-bold text-4xl md:text-5xl text-red-400">
+          <h1 className="font-bold text-4xl md:text-5xl text-blue-400 dark:text-red-400">
             Projects
           </h1>
           <p className="my-2 mt-4">
@@ -32,7 +35,7 @@ export default function Projects() {
             </span>{" "}
             You can also see a more detailed view on my{" "}
             <a
-              className="text-shadow-100 underline"
+              className="text-gray-900 dark:text-shadow-100 underline"
               target="_blank"
               rel="noopener noreferrer"
               href="https://github.com/r-jo"
@@ -59,7 +62,7 @@ export default function Projects() {
           </div>
         </section>
         <section className="my-16">
-          <h3 className="font-bold text-3xl md:text-4xl text-shadow-100">
+          <h3 className="font-bold text-3xl md:text-4xl text-gray-900 dark:text-shadow-100">
             Dashboard
           </h3>
           <p className="my-2 mb-6 text-md">
@@ -68,7 +71,7 @@ export default function Projects() {
           <GithubStats />
         </section>
         <section className="my-16">
-          <h3 className="font-bold text-3xl md:text-4xl text-shadow-100">
+          <h3 className="font-bold text-3xl md:text-4xl text-gray-900 dark:text-shadow-100">
             Current Projects
           </h3>
           <p className="my-2 mb-6 text-md">
@@ -81,8 +84,6 @@ export default function Projects() {
             demo="https://biohackucr.com"
             repo="https://github.com/BioHack-UCR/Biohack2021"
             title="BioHack"
-            demotitle={["Demo", <RightArrow />]}
-            repotitle={["Repo", <RightArrow />]}
           />
           <ProjectCard
             image="/images/habitle.png"
@@ -90,11 +91,10 @@ export default function Projects() {
             demo="https://habitle.com/#/"
             title="Habitle"
             category="Personal Project"
-            demotitle={["Demo", <RightArrow />]}
           />
         </section>
         <section className="my-16">
-          <h3 className="font-bold text-3xl md:text-4xl text-shadow-100">
+          <h3 className="font-bold text-3xl md:text-4xl text-gray-900 dark:text-shadow-100">
             Finished Projects
           </h3>
           <p className="my-2 mb-6 text-md"> Here are my finished projects.</p>
@@ -107,7 +107,7 @@ export default function Projects() {
                 rel="noreferrer"
                 rel="noopener"
                 target="_blank"
-                className="underline text-shadow-100"
+                className="underline text-gray-900 dark:text-shadow-100"
               >
                 Citrus Hack
               </a>,
@@ -118,8 +118,6 @@ export default function Projects() {
             repo="https://github.com/r-jo/citrushack-fe"
             title="Citrus Hack"
             category="Hackathon"
-            demotitle={["Demo", <RightArrow />]}
-            repotitle={["Repo", <RightArrow />]}
           />
           <ProjectCard
             image="/images/terminal.png"
@@ -127,7 +125,6 @@ export default function Projects() {
             demo="https://github.com/r-jo/rhoshell"
             title="Rho Shell"
             category="Personal Project"
-            demotitle={["Repo", <RightArrow />]}
           />
           <ProjectCard
             image="/images/cutiehack2020.png"
@@ -136,12 +133,10 @@ export default function Projects() {
             repo="https://github.com/citrushack/CutieHack2020Frontend"
             title="Cutie Hack"
             category="Hackathon"
-            demotitle={["Demo", <RightArrow />]}
-            repotitle={["Repo", <RightArrow />]}
           />
         </section>
         <section>
-          <h1 className="font-bold text-3xl md:text-4xl text-shadow-100">
+          <h1 className="font-bold text-3xl md:text-4xl text-gray-900 dark:text-shadow-100">
             Keyboards
           </h1>
           <p className="mt-2 text-md">Stay tuned!</p>

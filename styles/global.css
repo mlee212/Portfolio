@@ -26,7 +26,7 @@ html {
   transition: color 100ms ease-in-out !important;
 }
 .nav-link:hover {
-  color: #dee3ea !important;
+  
 }
 .active {
   font-weight: bold !important;

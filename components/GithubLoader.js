@@ -1,9 +1,9 @@
 //Skeleton Loader for Github cards
 const Skeleton = () => {
   return (
-    <div className="rounded-lg p-6 bg-shadow-800 transition duration-300 ease-in-out">
-      <div className="animate-pulse bg-shadow-700 rounded-md h-6 w-1/2 mb-2"></div>
-      <div className="animate-pulse bg-shadow-700 rounded-md h-6 w-2/3"></div>
+    <div className="rounded-lg p-6 bg-gray-100 dark:bg-shadow-800 transition duration-300 ease-in-out">
+      <div className="animate-pulse bg-gray-300 dark:bg-shadow-700 rounded-md h-6 w-1/2 mb-2"></div>
+      <div className="animate-pulse bg-gray-300 dark:bg-shadow-700 rounded-md h-6 w-2/3"></div>
     </div>
   );
 };

@@ -1,49 +1,13 @@
-import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
-import { motion } from "framer-motion";
 import Head from "next/head";
-import ActiveLink from "./ActiveLink";
 
-import { Footer } from "./Footer";
-
-import { MoonIcon, SunIcon } from "../public/images/icons/icons.js";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const siteTitle = "Rajbir Johar | Portfolio";
 
-const NavLink = ({ destination, title }) => {
-  return (
-    <ActiveLink activeClassName="active" href={destination}>
-      <a className="nav-link px-3 py-2 text-shadow-300 font-medium">{title}</a>
-    </ActiveLink>
-  );
-};
-
 export default function Container({ children }) {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-  const [scroll, setScroll] = useState(false);
-
-  const changeNav = () => {
-    if (window.scrollY >= 1) {
-      setScroll(true);
-    } else {
-      setScroll(false);
-    }
-  };
-
-  // After mounting, we have access to the theme
-  useEffect(() => setMounted(true), []);
-
-  useEffect(function mount() {
-    window.addEventListener("scroll", changeNav);
-    return function unMount() {
-      window.removeEventListener("scroll", changeNav);
-    };
-  });
-
   return (
     <html lang="en">
-      <body className="bg-shadow-900">
+      <body className="bg-white dark:bg-shadow-900 transition duration-300 ease-in-out">
         <Head>
           <link
             rel="apple-touch-icon-precomposed"
@@ -142,51 +106,16 @@ export default function Container({ children }) {
 
           <meta name="og:title" content={siteTitle} />
         </Head>
-        <nav
-          className="sticky-nav md:mt-8 mt-0 sticky flex justify-center items-center 
-        w-full p-6 pb-0 mx-auto bg-shadow-900"
-          //   className={`sticky-nav md:mt-8 mt-0 sticky flex justify-center items-center
-          // w-full p-6 pb-0 mx-auto transition duration-300 ease-in-out
-          // bg-white dark:bg-shadow-900 dark:border-shadow-800 ${
-          //   scroll ? "shadow-md dark:shadow-xl" : "shadow-none"
-          // }`}
+        <motion.main
+          initial={{ y: 5, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 5, opacity: 0 }}
+          transition={{ duration: 0.2 }}
         >
-          <div className="w-full max-w-4xl flex items-center justify-end pb-6">
-            <div className="h-9 w-9 relative cursor-pointer">
-              {/* <button
-                aria-label="Toggle Dark Mode"
-                type="button"
-                className="flex items-center justify-center h-8 w-8 bg-gray-100 dark:bg-shadow-700
-                 hover:bg-gray-200 dark:hover:bg-shadow-600
-                 transition duration-300 ease-in-out rounded-md"
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              >
-                {mounted && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className="h-4 w-4 text-black dark:text-shadow-100"
-                  >
-                    {theme === "dark" ? <SunIcon /> : <MoonIcon />}
-                  </svg>
-                )}
-              </button> */}
-            </div>
-            <div className="space-x-2 flex">
-              <NavLink destination="/" title="Home" />
-              <NavLink destination="/projects" title="Projects" />
-              <NavLink destination="/about" title="About" />
-            </div>
-          </div>
-        </nav>
-        <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
-          <main className="flex flex-col w-full mx-auto md:mt-12 mt-4 p-6 text-shadow-200 text-md leading-7">
+          <main className="flex flex-col w-full mx-auto md:mt-12 mt-4 p-6 text-gray-800 dark:text-shadow-200 text-md leading-7 transition duration-300 ease-in-out">
             {children}
           </main>
-        </motion.div>
-        <Footer />
+        </motion.main>
       </body>
     </html>
   );
