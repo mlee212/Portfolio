@@ -5,13 +5,34 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { MoonIcon, SunIcon } from "../public/images/icons/icons.js";
 
+const item = {
+  hidden: { opacity: 0, y: -20 },
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.2,
+    },
+  },
+};
+
 const NavLink = ({ destination, title }) => {
   return (
-    <ActiveLink activeClassName="active" href={destination}>
-      <a className="nav-link px-3 py-2 text-gray-400 hover:text-gray-900 dark:text-shadow-300 dark:hover:text-shadow-100 font-medium transition duration-300 ease-in-out">
-        {title}
-      </a>
-    </ActiveLink>
+    <motion.div variants={item}>
+      <ActiveLink activeClassName="active" href={destination}>
+        <a className="nav-link px-3 py-2 text-gray-400 hover:text-gray-900 dark:text-shadow-300 dark:hover:text-shadow-100 font-medium transition duration-300 ease-in-out">
+          {title}
+        </a>
+      </ActiveLink>
+    </motion.div>
   );
 };
 
@@ -49,33 +70,39 @@ export const Navigation = () => {
       // }`}
     >
       <div className="w-full max-w-4xl flex items-center justify-between pb-6">
-        <div className="h-9 w-9 relative cursor-pointer">
-          <button
-            aria-label="Toggle Dark Mode"
-            type="button"
-            className="flex items-center justify-center h-8 w-8 bg-gray-100 dark:bg-shadow-700
+        <motion.nav variants={container} initial="hidden" animate="show">
+          <div className="h-9 w-9 relative cursor-pointer">
+            <motion.div variants={item}>
+              <button
+                aria-label="Toggle Dark Mode"
+                type="button"
+                className="flex items-center justify-center h-8 w-8 bg-gray-100 dark:bg-shadow-700
                  hover:bg-gray-200 dark:hover:bg-shadow-600
                  transition duration-300 ease-in-out rounded-md"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          >
-            {mounted && (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="h-4 w-4 text-gray-800 dark:text-shadow-100"
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
-                {theme === "dark" ? <SunIcon /> : <MoonIcon />}
-              </svg>
-            )}
-          </button>
-        </div>
-        <div className="space-x-2 flex">
-          <NavLink destination="/" title="Home" />
-          <NavLink destination="/projects" title="Projects" />
-          <NavLink destination="/about" title="About" />
-        </div>
+                {mounted && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    className="h-4 w-4 text-gray-800 dark:text-shadow-100"
+                  >
+                    {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+                  </svg>
+                )}
+              </button>
+            </motion.div>
+          </div>
+        </motion.nav>
+        <motion.nav variants={container} initial="hidden" animate="show">
+          <div className="space-x-2 flex">
+            <NavLink destination="/" title="Home" />
+            <NavLink destination="/projects" title="Projects" />
+            <NavLink destination="/about" title="About" />
+          </div>
+        </motion.nav>
       </div>
     </nav>
   );
