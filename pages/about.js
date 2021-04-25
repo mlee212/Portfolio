@@ -28,7 +28,7 @@ export default function More() {
             If I am not coding, you can catch me perfecting the art of the
             grilled cheese 🥪 or building bespoke keyboards ⌨️. I'm typing on my{" "}
             <Link href="https://smithrune.com" passHref>
-              <a className="text-teal-500 dark:text-red-400 hover:underline">
+              <a className="text-teal-600 dark:text-red-400 hover:underline">
                 Iron165
               </a>
             </Link>{" "}
