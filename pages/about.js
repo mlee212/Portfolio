@@ -11,7 +11,7 @@ export default function More() {
         <title>{siteTitle}</title>
       </Head>
       <div className="max-w-2xl mx-auto">
-        <h1 className="mb-4 font-bold text-4xl md:text-5xl text-teal-600 dark:text-red-400">
+        <h1 className="mb-4 font-bold text-4xl md:text-5xl text-teal-500 dark:text-red-400">
           What I'm About.
         </h1>
         <div className="space-y-2">
@@ -28,7 +28,7 @@ export default function More() {
             If I am not coding, you can catch me perfecting the art of the
             grilled cheese 🥪 or building bespoke keyboards ⌨️. I'm typing on my{" "}
             <Link href="https://smithrune.com" passHref>
-              <a className="text-blue-500 dark:text-red-400 hover:underline">
+              <a className="text-teal-600 dark:text-red-400 hover:underline">
                 Iron165
               </a>
             </Link>{" "}

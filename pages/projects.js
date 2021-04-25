@@ -29,7 +29,7 @@ export default function Projects() {
       </Head>
       <div className="max-w-2xl mx-auto">
         <section>
-          <h1 className="font-bold text-4xl md:text-5xl text-teal-600 dark:text-red-400">
+          <h1 className="font-bold text-4xl md:text-5xl text-teal-500 dark:text-red-400">
             Projects
           </h1>
           <p className="my-2 mt-4">
@@ -39,7 +39,7 @@ export default function Projects() {
             </span>{" "}
             You can also see a more detailed view on my{" "}
             <a
-              className="text-blue-500 dark:text-red-400 hover:underline"
+              className="text-teal-600 dark:text-red-400 hover:underline"
               target="_blank"
               rel="noopener noreferrer"
               href="https://github.com/r-jo"
@@ -104,15 +104,15 @@ export default function Projects() {
           <ProjectCard
             image="/images/citrushack.png"
             children={[
-              "Create your Zen. Scheduled for April 9th to 11th 2021. Check out the official ",
+              "Create your Zen. Check out the ",
               <a
                 href="https://citrushack.com"
                 rel="noreferrer"
                 rel="noopener"
                 target="_blank"
-                className="text-blue-500 dark:text-red-400 text-gray-900 dark:text-shadow-100"
+                className="text-teal-600 dark:text-red-400"
               >
-                Citrus Hack
+                official Citrus Hack
               </a>,
 
               " website!",

@@ -21,9 +21,9 @@ const Stat = ({ title, data, caption }) => {
       >
         {title}
       </a>
-      <p className="font-medium text-gray-800 dark:text-shadow-200">
+      <p className="font-medium">
         {data}{" "}
-        <span className="font-normal text-gray-400 dark:text-shadow-300">
+        <span className="font-normal">
           {caption}
         </span>
       </p>
