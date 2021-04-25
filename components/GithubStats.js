@@ -9,6 +9,7 @@ const Stat = ({ title, data, caption }) => {
     <motion.div
       whileHover={{ scale: 1.025 }}
       whileTap={{ scale: 1 }}
+      transition={{ duration: 0.02 }}
       className="rounded-lg p-6 bg-gray-100 hover-hover:hover:bg-gray-200 dark:bg-shadow-800
         hover-hover:dark:hover:bg-shadow-700 transition duration-200 ease-in-out"
     >
