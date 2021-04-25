@@ -140,10 +140,10 @@ export default function Projects() {
           />
         </section>
         <section>
-          <h1 className="font-bold text-3xl md:text-4xl text-gray-900 dark:text-shadow-100">
+          <h1 className="mt-16 mb-4 font-bold text-3xl md:text-4xl my-4 text-gray-900 dark:text-shadow-100">
             Keyboards
           </h1>
-          <p className="mt-2 text-md">Stay tuned!</p>
+          <p>Stay tuned! Thocky boards incoming.</p>
         </section>
       </div>
     </Container>

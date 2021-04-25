@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const RouteLink = ({ title, destination }) => {
   return (
-    <Link href={destination}>
+    <Link href={destination} passHref>
       <a className="text-md text-blue-500 dark:text-red-400 hover:underline">
         {title}
       </a>

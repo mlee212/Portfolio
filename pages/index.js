@@ -4,19 +4,8 @@ import Link from "next/link";
 import Container, { siteTitle } from "../components/Container";
 import ProjectCard from "../components/ProjectCard";
 import Timeline from "../components/Timeline";
-import { motion } from "framer-motion";
 
 export default function Home() {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delay: 0.25,
-      },
-    },
-  };
   return (
     <Container main>
       <Head>
@@ -47,43 +36,41 @@ export default function Home() {
             </Link>{" "}
             here.
           </p>
-            <motion.div variants={container} initial="hidden" animate="show">
-              <ProjectCard
-                image="/images/citrushack.png"
-                children={[
-                  "Create your Zen. Scheduled for April 9th to 11th 2021. Check out the ",
-                  <a
-                    href="https://citrushack.com"
-                    rel="noreferrer"
-                    rel="noopener"
-                    target="_blank"
-                    className="text-blue-500 dark:text-red-400 hover:underline"
-                  >
-                    official Citrus Hack
-                  </a>,
+          <ProjectCard
+            image="/images/citrushack.png"
+            children={[
+              "Create your Zen. Scheduled for April 9th to 11th 2021. Check out the ",
+              <a
+                href="https://citrushack.com"
+                rel="noreferrer"
+                rel="noopener"
+                target="_blank"
+                className="text-blue-500 dark:text-red-400 hover:underline"
+              >
+                official Citrus Hack
+              </a>,
 
-                  " website!",
-                ]}
-                demo="https://citrushack-fe.vercel.app"
-                repo="https://github.com/r-jo/citrushack-fe"
-                title="Citrus Hack FE"
-                category="Hackathon"
-              />
-              <ProjectCard
-                image="/images/biohack2021.png"
-                children="Scrapbook your idea for healthcare using code. Scheduled in May. Join now."
-                demo="https://biohackucr.com"
-                repo="https://github.com/BioHack-UCR/Biohack2021"
-                title="BioHack"
-              />
-              <ProjectCard
-                image="/images/habitle.png"
-                children="A minimal and powerful web app that generates a heatmap to visualize progress."
-                demo="https://habitle.com/#/"
-                title="Habitle"
-                category="Personal Project"
-              />
-            </motion.div>
+              " website!",
+            ]}
+            demo="https://citrushack-fe.vercel.app"
+            repo="https://github.com/r-jo/citrushack-fe"
+            title="Citrus Hack FE"
+            category="Hackathon"
+          />
+          <ProjectCard
+            image="/images/biohack2021.png"
+            children="Scrapbook your idea for healthcare using code. Scheduled in May. Join now."
+            demo="https://biohackucr.com"
+            repo="https://github.com/BioHack-UCR/Biohack2021"
+            title="BioHack"
+          />
+          <ProjectCard
+            image="/images/habitle.png"
+            children="A minimal and powerful web app that generates a heatmap to visualize progress."
+            demo="https://habitle.com/#/"
+            title="Habitle"
+            category="Personal Project"
+          />
         </section>
         <section>
           <Timeline />
