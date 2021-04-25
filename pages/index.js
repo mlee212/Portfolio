@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <div className="max-w-2xl mx-auto">
         <section>
-          <h1 className="font-bold text-4xl md:text-5xl text-teal-600 dark:text-red-400">
+          <h1 className="font-bold text-4xl md:text-5xl text-teal-500 dark:text-red-400">
             Hello! I'm Rajbir.
           </h1>
           <h2 className="font-medium text-gray-900 dark:text-shadow-100 mt-4">
@@ -41,7 +41,7 @@ export default function Home() {
             key={project.id}
             image="/images/citrushack.png"
             children={[
-              "Create your Zen. Scheduled for April 9th to 11th 2021. Check out the ",
+              "Create your Zen. Check out the ",
               <a
                 href="https://citrushack.com"
                 rel="noreferrer"
