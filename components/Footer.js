@@ -4,7 +4,7 @@ import Link from "next/link";
 const RouteLink = ({ title, destination }) => {
   return (
     <Link href={destination} passHref>
-      <a className="text-md text-blue-500 dark:text-red-400 hover:underline">
+      <a className="text-md text-teal-600 dark:text-red-400 hover:underline">
         {title}
       </a>
     </Link>
@@ -14,7 +14,7 @@ const RouteLink = ({ title, destination }) => {
 const ExtLink = ({ title, destination }) => {
   return (
     <a
-      className="text-md text-blue-500 dark:text-red-400 hover:underline"
+      className="text-md text-teal-600 dark:text-red-400 hover:underline"
       target="_blank"
       rel="noopener noreferrer"
       href={destination}

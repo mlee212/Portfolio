@@ -14,7 +14,7 @@ export default function Track(track) {
       <p>{track.ranking}</p>
       <div className="flex flex-col pl-3">
         <a
-          className="font-medium truncate w-60 sm:w-96 md:w-full text-md text-blue-500 dark:text-red-400 hover:underline"
+          className="font-medium truncate w-60 sm:w-96 md:w-full text-md text-teal-600 dark:text-red-400 hover:underline"
           href={track.songUrl}
           target="_blank"
           rel="noopener noreferrer"

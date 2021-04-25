@@ -6,6 +6,7 @@ import ProjectCard from "../components/ProjectCard";
 import Timeline from "../components/Timeline";
 
 export default function Home() {
+  const project = [1, 2, 3];
   return (
     <Container main>
       <Head>
@@ -13,7 +14,7 @@ export default function Home() {
       </Head>
       <div className="max-w-2xl mx-auto">
         <section>
-          <h1 className="font-bold text-4xl md:text-5xl text-blue-500 dark:text-red-400">
+          <h1 className="font-bold text-4xl md:text-5xl text-teal-600 dark:text-red-400">
             Hello! I'm Rajbir.
           </h1>
           <h2 className="font-medium text-gray-900 dark:text-shadow-100 mt-4">
@@ -29,14 +30,15 @@ export default function Home() {
             {" "}
             Here are some of the projects that I am currently working on. Check
             out my other{" "}
-            <Link href="/projects">
-              <a className="text-blue-500 dark:text-red-400 hover:underline">
+            <Link href="/projects" passHref>
+              <a className="text-teal-600 dark:text-red-400 hover:underline">
                 projects
               </a>
             </Link>{" "}
             here.
           </p>
           <ProjectCard
+            key={project.id}
             image="/images/citrushack.png"
             children={[
               "Create your Zen. Scheduled for April 9th to 11th 2021. Check out the ",
@@ -45,29 +47,29 @@ export default function Home() {
                 rel="noreferrer"
                 rel="noopener"
                 target="_blank"
-                className="text-blue-500 dark:text-red-400 hover:underline"
+                className="text-teal-600 dark:text-red-400 hover:underline"
               >
                 official Citrus Hack
               </a>,
 
               " website!",
             ]}
-            demo="https://citrushack-fe.vercel.app"
-            repo="https://github.com/r-jo/citrushack-fe"
+            href="https://citrushack-fe.vercel.app"
             title="Citrus Hack FE"
             category="Hackathon"
           />
           <ProjectCard
+            key={project.id}
             image="/images/biohack2021.png"
             children="Scrapbook your idea for healthcare using code. Scheduled in May. Join now."
-            demo="https://biohackucr.com"
-            repo="https://github.com/BioHack-UCR/Biohack2021"
+            href="https://biohackucr.com"
             title="BioHack"
           />
           <ProjectCard
+            key={project.id}
             image="/images/habitle.png"
             children="A minimal and powerful web app that generates a heatmap to visualize progress."
-            demo="https://habitle.com/#/"
+            href="https://habitle.com/#/"
             title="Habitle"
             category="Personal Project"
           />

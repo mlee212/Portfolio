@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import ActiveLink from "./ActiveLink";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { MoonIcon, SunIcon } from "../public/images/icons/icons.js";
 
@@ -18,8 +18,7 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.2,
+      staggerChildren: 0.1,
     },
   },
 };

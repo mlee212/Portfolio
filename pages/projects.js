@@ -29,7 +29,7 @@ export default function Projects() {
       </Head>
       <div className="max-w-2xl mx-auto">
         <section>
-          <h1 className="font-bold text-4xl md:text-5xl text-blue-500 dark:text-red-400">
+          <h1 className="font-bold text-4xl md:text-5xl text-teal-600 dark:text-red-400">
             Projects
           </h1>
           <p className="my-2 mt-4">
@@ -85,14 +85,13 @@ export default function Projects() {
           <ProjectCard
             image="/images/biohack2021.png"
             children="Scrapbook your idea for healthcare using code. Scheduled in May. Join now."
-            demo="https://biohackucr.com"
-            repo="https://github.com/BioHack-UCR/Biohack2021"
+            href="https://biohackucr.com"
             title="BioHack"
           />
           <ProjectCard
             image="/images/habitle.png"
             children="A minimal and powerful web app that generates a heatmap to visualize progress."
-            demo="https://habitle.com/#/"
+            href="https://habitle.com/#/"
             title="Habitle"
             category="Personal Project"
           />
@@ -118,23 +117,21 @@ export default function Projects() {
 
               " website!",
             ]}
-            demo="https://citrushack-fe.vercel.app"
-            repo="https://github.com/r-jo/citrushack-fe"
+            href="https://citrushack-fe.vercel.app"
             title="Citrus Hack"
             category="Hackathon"
           />
           <ProjectCard
             image="/images/terminal.png"
             children="A Command Line Interface (CLI), written primarily in C++."
-            demo="https://github.com/r-jo/rhoshell"
+            href="https://github.com/r-jo/rhoshell"
             title="Rho Shell"
             category="Personal Project"
           />
           <ProjectCard
             image="/images/cutiehack2020.png"
             children="The website used by 500+ students to interact with and participate in the annual Cutie Hack hackathon."
-            demo="https://cutiehack.io"
-            repo="https://github.com/citrushack/CutieHack2020Frontend"
+            href="https://cutiehack.io"
             title="Cutie Hack"
             category="Hackathon"
           />
