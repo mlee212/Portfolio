@@ -17,7 +17,7 @@ const Stat = ({ title, data, caption }) => {
         href="https://github.com/r-jo"
         target="_blank"
         rel="noopener noreferrer"
-        className="font-medium text-blue-500 dark:text-red-400 hover:underline"
+        className="font-medium text-teal-600 dark:text-red-400 hover:underline"
       >
         {title}
       </a>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function ProjectCard({ title, children, image, href }) {
@@ -21,7 +22,7 @@ export default function ProjectCard({ title, children, image, href }) {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-lg text-blue-500 dark:text-red-400 hover:underline cursor-pointer"
+              className="font-medium text-lg text-teal-600 dark:text-red-400 hover:underline cursor-pointer"
             >
               {title}
             </a>

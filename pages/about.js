@@ -11,7 +11,7 @@ export default function More() {
         <title>{siteTitle}</title>
       </Head>
       <div className="max-w-2xl mx-auto">
-        <h1 className="mb-4 font-bold text-4xl md:text-5xl text-blue-500 dark:text-red-400">
+        <h1 className="mb-4 font-bold text-4xl md:text-5xl text-teal-600 dark:text-red-400">
           What I'm About.
         </h1>
         <div className="space-y-2">
