@@ -4,7 +4,6 @@ import Link from "next/link";
 import Container, { siteTitle } from "../components/Container";
 import ProjectCard from "../components/ProjectCard";
 import Timeline from "../components/Timeline";
-import { motion } from "framer-motion";
 
 export default function Home() {
   const container = {
@@ -47,7 +46,6 @@ export default function Home() {
             </Link>{" "}
             here.
           </p>
-            <motion.div variants={container} initial="hidden" animate="show">
               <ProjectCard
                 image="/images/citrushack.png"
                 children={[
@@ -83,7 +81,6 @@ export default function Home() {
                 title="Habitle"
                 category="Personal Project"
               />
-            </motion.div>
         </section>
         <section>
           <Timeline />

@@ -28,7 +28,7 @@ const NavLink = ({ destination, title }) => {
   return (
     <motion.div variants={item}>
       <ActiveLink activeClassName="active" href={destination}>
-        <a className="nav-link px-3 py-2 text-gray-400 hover:text-gray-900 dark:text-shadow-300 dark:hover:text-shadow-100 font-medium transition duration-300 ease-in-out">
+        <a className="nav-link px-3 py-2 text-gray-500 hover:text-gray-900 dark:text-shadow-200 dark:hover:text-shadow-100 font-medium transition duration-300 ease-in-out">
           {title}
         </a>
       </ActiveLink>

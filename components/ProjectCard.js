@@ -2,19 +2,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function ProjectCard({ title, children, image, href }) {
-  const item = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-    },
-  };
-
   return (
     <motion.div
       whileHover={{ scale: 1.015 }}
       whileTap={{ scale: 1 }}
       transition={{ duration: 0.2 }}
-      variants={item}
     >
       <figure
         className="flex bg-gray-100 hover-hover:hover:bg-gray-200 dark:bg-shadow-800

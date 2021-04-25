@@ -1,6 +1,7 @@
 // Full Credit to Lee Robinson
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 import {
   HatIcon,
@@ -12,23 +13,44 @@ import {
   BoltIcon,
 } from "../public/images/icons/icons.js";
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.03,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
+
 const Divider = () => {
   return (
-    <div className="border-b-2 border-gray-100 dark:border-shadow-700 w-full my-4" />
+    <motion.div
+      variants={item}
+      className="border-b-2 border-gray-100 dark:border-shadow-700 w-full my-4"
+    />
   );
 };
 
 const Year = ({ children }) => {
   return (
-    <h3 className="text-xl font-bold text-gray-900 dark:text-shadow-100">
+    <motion.h3
+      variants={item}
+      className="text-xl font-bold text-gray-900 dark:text-shadow-100"
+    >
       {children}
-    </h3>
+    </motion.h3>
   );
 };
 
 const Step = ({ title, children, icon }) => {
   return (
-    <li className="my-4">
+    <motion.li variants={item} className="my-4">
       <div className="flex items-center">
         <span className="sr-only">Icon</span>
         <svg
@@ -45,12 +67,12 @@ const Step = ({ title, children, icon }) => {
         </h2>
       </div>
       <p className="ml-6 text-gray-800 dark:text-shadow-200">{children}</p>
-    </li>
+    </motion.li>
   );
 };
 
 const FullTimeline = () => (
-  <>
+  <motion.div variants={container} initial="hidden" animate="show">
     <Divider />
     <Year>2019</Year>
     <ul>
@@ -116,7 +138,7 @@ const FullTimeline = () => (
         Yes, haha.
       </Step>
     </ul>
-  </>
+  </motion.div>
 );
 
 export default function Timeline() {
