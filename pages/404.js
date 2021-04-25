@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import Container from "../components/Container";
-import { motion } from "framer-motion";
 
 export default function Custom404() {
   return (

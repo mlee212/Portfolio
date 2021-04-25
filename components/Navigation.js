@@ -60,7 +60,10 @@ export const Navigation = () => {
   });
 
   return (
-    <nav
+    <motion.nav
+      variants={container}
+      initial="hidden"
+      animate="show"
       className="sticky-nav md:mt-8 mt-0 sticky flex justify-center items-center 
         w-full p-6 pb-0 mx-auto bg-white dark:bg-shadow-900 transition duration-300 ease-in-out"
       //   className={`sticky-nav md:mt-8 mt-0 sticky flex justify-center items-center
@@ -70,40 +73,35 @@ export const Navigation = () => {
       // }`}
     >
       <div className="w-full max-w-4xl flex items-center justify-between pb-6">
-        <motion.nav variants={container} initial="hidden" animate="show">
-          <div className="h-9 w-9 relative cursor-pointer">
-            <motion.div variants={item}>
-              <button
-                aria-label="Toggle Dark Mode"
-                type="button"
-                className="flex items-center justify-center h-8 w-8 bg-gray-100 dark:bg-shadow-700
+        <div className="h-9 w-9 relative cursor-pointer">
+          <motion.button
+            variants={item}
+            aria-label="Toggle Dark Mode"
+            type="button"
+            className="flex items-center justify-center h-8 w-8 bg-gray-100 dark:bg-shadow-700
                  hover:bg-gray-200 dark:hover:bg-shadow-600
                  transition duration-300 ease-in-out rounded-md"
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          >
+            {mounted && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="h-4 w-4 text-gray-800 dark:text-shadow-100"
               >
-                {mounted && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className="h-4 w-4 text-gray-800 dark:text-shadow-100"
-                  >
-                    {theme === "dark" ? <SunIcon /> : <MoonIcon />}
-                  </svg>
-                )}
-              </button>
-            </motion.div>
-          </div>
-        </motion.nav>
-        <motion.nav variants={container} initial="hidden" animate="show">
-          <div className="space-x-2 flex">
-            <NavLink destination="/" title="Home" />
-            <NavLink destination="/projects" title="Projects" />
-            <NavLink destination="/about" title="About" />
-          </div>
-        </motion.nav>
+                {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+              </svg>
+            )}
+          </motion.button>
+        </div>
+        <div className="space-x-2 flex">
+          <NavLink destination="/" title="Home" />
+          <NavLink destination="/projects" title="Projects" />
+          <NavLink destination="/about" title="About" />
+        </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };

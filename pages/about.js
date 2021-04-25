@@ -3,7 +3,6 @@ import Head from "next/head";
 import Link from "next/link";
 import Container, { siteTitle } from "../components/Container";
 import TopTracks from "../components/TopTracks";
-import NowPlaying from "../components/NowPlaying";
 
 export default function More() {
   return (
