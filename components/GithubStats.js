@@ -38,7 +38,7 @@ export default function GithubStats() {
     return <Loader show />;
   } else
     return (
-      <div className="md:flex w-full my-4 space-y-4 md:space-y-0 md:space-x-4">
+      <div className="md:flex w-full space-y-4 md:space-y-0 md:space-x-4">
         <div className="flex-1 space-y-4">
           <Stat
             title="Github Stars"
