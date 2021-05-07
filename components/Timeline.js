@@ -41,7 +41,7 @@ const Year = ({ children }) => {
   return (
     <motion.h3
       variants={item}
-      className="text-xl font-bold text-gray-900 dark:text-shadow-100"
+      className="text-xl font-semibold text-gray-900 dark:text-shadow-100"
     >
       {children}
     </motion.h3>
@@ -50,7 +50,7 @@ const Year = ({ children }) => {
 
 const Step = ({ title, children, icon }) => {
   return (
-    <motion.li variants={item} className="my-4">
+    <motion.li variants={item} className="mt-2">
       <div className="flex items-center">
         <span className="sr-only">Icon</span>
         <svg
@@ -62,7 +62,7 @@ const Step = ({ title, children, icon }) => {
         >
           {icon}
         </svg>
-        <h2 className="font-medium md:text-lg text-md text-gray-900 dark:text-shadow-100">
+        <h2 className="font-medium text-lg my-2 text-gray-900 dark:text-shadow-100">
           {title}
         </h2>
       </div>
@@ -142,9 +142,9 @@ export default function Timeline() {
 
   return (
     <>
-      <h3 className="font-bold text-3xl md:text-4xl my-4 text-gray-900 dark:text-shadow-100">
+      <h2 className="mt-8 mb-4 font-semibold text-2xl text-gray-900 dark:text-shadow-100">
         Experiences
-      </h3>
+      </h2>
       <Year>2021</Year>
       <ul>
         <Step title="First Internship" icon={<FireIcon />}>
@@ -158,8 +158,8 @@ export default function Timeline() {
       <Year>2020</Year>
       <ul>
         <Step title="Web dev Lead" icon={<StarIcon />}>
-          I'm now in charge of the development for the vision of UCR's
-          Cutie Hack, Citrus Hack, and Biohack.
+          I'm now in charge of the development for the vision of UCR's Cutie
+          Hack, Citrus Hack, and Biohack.
         </Step>
         <Step title="Started Habitle" icon={<FireIcon />}>
           Due to our negative habits, my colleague Dev Bhatia and I are
@@ -176,8 +176,8 @@ export default function Timeline() {
           I am happy to announce that I will now be attending UC Zoom.
         </Step>
         <Step title="Joined Biohack" icon={<FireIcon />}>
-          I helped develop, design, and launch the 2019 Biohack website
-          (that was supposed to be) used by hundreds of student hackers.
+          I helped develop, design, and launch the 2019 Biohack website (that
+          was supposed to be) used by hundreds of student hackers.
         </Step>
       </ul>
 

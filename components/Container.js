@@ -96,7 +96,7 @@ export default function Container({ children }) {
         />
         <meta
           name="description"
-          content="Hello! I'm Rajbir. This is my portfolio for my neat projects and ideas."
+          content="Hey, I'm Rajbir. This is my portfolio for my neat projects and ideas."
         />
         <meta property="og:image" content="/images/icon_logo.png" />
 
@@ -109,7 +109,7 @@ export default function Container({ children }) {
           exit={{ opacity: 0, y: 5 }}
           transition={{ duration: 0.15}}
           layout
-          className="flex flex-col w-full mx-auto md:mt-12 mt-4 p-6 text-gray-800 dark:text-shadow-200 text-md leading-7"
+          className="flex flex-col w-full mx-auto mt-4 p-6 text-gray-800 dark:text-shadow-200 text-md leading-7"
         >
           {children}
         </motion.main>

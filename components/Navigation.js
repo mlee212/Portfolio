@@ -65,7 +65,7 @@ export const Navigation = () => {
       initial="hidden"
       animate="show"
       className="sticky-nav md:mt-8 mt-0 sticky flex justify-center items-center 
-        w-full p-6 pb-0 mx-auto bg-white dark:bg-shadow-900 transition duration-300 ease-in-out"
+        w-full p-4 pb-0 md:p-6 md:pb-0 mx-auto bg-white dark:bg-shadow-900 transition duration-300 ease-in-out"
       //   className={`sticky-nav md:mt-8 mt-0 sticky flex justify-center items-center
       // w-full p-6 pb-0 mx-auto transition duration-300 ease-in-out
       // bg-white dark:bg-shadow-900 dark:border-shadow-800 ${
