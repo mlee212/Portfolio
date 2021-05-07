@@ -21,6 +21,22 @@ const Badge = ({ child }) => {
   );
 };
 
+const Heading = () => {
+  return (
+    <h1 className="mb-4 font-bold text-3xl text-teal-400 dark:text-red-400">
+      Projects
+    </h1>
+  );
+};
+
+const Subheading = ({ children }) => {
+  return (
+    <h2 className="mt-8 mb-4 font-semibold text-2xl text-gray-900 dark:text-shadow-100">
+      {children}
+    </h2>
+  );
+};
+
 export default function Projects() {
   return (
     <Container main>
@@ -28,121 +44,100 @@ export default function Projects() {
         <title>{siteTitle}</title>
       </Head>
       <div className="max-w-2xl mx-auto">
-        <section>
-          <h1 className="font-bold text-4xl md:text-5xl text-teal-400 dark:text-red-400">
-            Projects
-          </h1>
-          <p className="my-2 mt-4">
-            <span className="font-medium">
-              Here is a collection of my best work where I demonstrate my skills
-              as a developer and a creator.
-            </span>{" "}
-            You can also see a more detailed view on my{" "}
-            <a
-              className="text-teal-600 dark:text-red-400 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/r-jo"
-            >
-              Github
-            </a>
-            . Some of the languages, frameworks, and libraries I currently use
-            are:
-          </p>
-          <div className="text-center">
-            <Badge child="Next JS"/>
-            <Badge child="React JS" />
-            <Badge child="Javascript" />
-            <Badge child="HTML5" />
-            <Badge child="CSS3" />
-            <Badge child="Git" />
-            <Badge child="Yarn" />
-            <Badge child="NPM" />
-            <Badge child="Chakra UI" />
-            <Badge child="Tailwind CSS" />
-            <Badge child="C++" />
-            <Badge child="REST" />
-            <Badge child="Node JS" />
-            <Badge child="Styled Components" />
-          </div>
-        </section>
-        <section className="my-16">
-          <h3 className="font-bold text-3xl md:text-4xl text-gray-900 dark:text-shadow-100">
-            Dashboard
-          </h3>
-          <p className="my-2 mb-6 text-md">
-            My Github dashboard tracking my Github statistics.
-          </p>
-          <GithubStats />
-        </section>
-        <section className="my-16">
-          <h3 className="font-bold text-3xl md:text-4xl text-gray-900 dark:text-shadow-100">
-            Current Projects
-          </h3>
-          <p className="my-2 mb-6 text-md">
-            {" "}
-            Here are some of the projects that I am currently working on.
-          </p>
-          <ProjectCard
-            image="/images/biohack2021.png"
-            children="Scrapbook your idea for healthcare using code. Scheduled in May. Join now."
-            href="https://biohackucr.com"
-            title="BioHack"
-          />
-          <ProjectCard
-            image="/images/habitle.png"
-            children="A minimal and powerful web app that generates a heatmap to visualize progress."
-            href="https://habitle.com/#/"
-            title="Habitle"
-            category="Personal Project"
-          />
-        </section>
-        <section className="my-16">
-          <h3 className="font-bold text-3xl md:text-4xl text-gray-900 dark:text-shadow-100">
-            Finished Projects
-          </h3>
-          <p className="my-2 mb-6 text-md"> Here are my finished projects.</p>
-          <ProjectCard
-            image="/images/citrushack.png"
-            children={[
-              "Create your Zen. Check out the ",
-              <a
-                href="https://citrushack.com"
-                rel="noreferrer"
-                rel="noopener"
-                target="_blank"
-                className="text-teal-600 dark:text-red-400"
-              >
-                official Citrus Hack
-              </a>,
+        <Heading />
+        <p>
+          <span className="font-medium">
+            Here is a collection of my best work where I demonstrate my skills
+            as a developer and a creator.
+          </span>{" "}
+          You can also see a more detailed view on my{" "}
+          <a
+            className="text-teal-600 dark:text-red-400 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/r-jo"
+          >
+            Github
+          </a>
+          . Some of the languages, frameworks, and libraries I currently use
+          are:
+        </p>
+        <div className="text-center my-4">
+          <Badge child="Next JS" />
+          <Badge child="React JS" />
+          <Badge child="Javascript" />
+          <Badge child="HTML5" />
+          <Badge child="CSS3" />
+          <Badge child="Git" />
+          <Badge child="Yarn" />
+          <Badge child="NPM" />
+          <Badge child="Chakra UI" />
+          <Badge child="Tailwind CSS" />
+          <Badge child="C++" />
+          <Badge child="REST" />
+          <Badge child="Node JS" />
+          <Badge child="Styled Components" />
+        </div>
 
-              " website!",
-            ]}
-            href="https://citrushack-fe.vercel.app"
-            title="Citrus Hack"
-            category="Hackathon"
-          />
-          <ProjectCard
-            image="/images/terminal.png"
-            children="A Command Line Interface (CLI), written primarily in C++."
-            href="https://github.com/r-jo/rhoshell"
-            title="Rho Shell"
-            category="Personal Project"
-          />
-          <ProjectCard
-            image="/images/cutiehack2020.png"
-            children="The website used by 500+ students to interact with and participate in the annual Cutie Hack hackathon."
-            href="https://cutiehack.io"
-            title="Cutie Hack"
-            category="Hackathon"
-          />
-        </section>
-        <section>
-          <h1 className="mt-16 mb-4 font-bold text-3xl md:text-4xl my-4 text-gray-900 dark:text-shadow-100">
-            Keyboards
-          </h1>
-          <p>Stay tuned! Thocky boards incoming.</p>
-        </section>
+        <Subheading children="Dashboard" />
+        <p className=" text-md">
+          My Github dashboard tracking my Github statistics.
+        </p>
+        <GithubStats />
+        <Subheading children="Current Projects" />
+        <p>Here are some of the projects that I am currently working on.</p>
+        <ProjectCard
+          image="/images/biohack2021.png"
+          children="Scrapbook your idea for healthcare using code. Scheduled in May. Join now."
+          href="https://biohackucr.com"
+          title="BioHack"
+        />
+        <ProjectCard
+          image="/images/habitle.png"
+          children="A minimal and powerful web app that generates a heatmap to visualize progress."
+          href="https://habitle.com/#/"
+          title="Habitle"
+          category="Personal Project"
+        />
+
+        <Subheading children="Finished Projects" />
+        <p>Here are my finished projects.</p>
+        <ProjectCard
+          image="/images/citrushack.png"
+          children={[
+            "Create your Zen. Check out the ",
+            <a
+              href="https://citrushack.com"
+              rel="noreferrer"
+              rel="noopener"
+              target="_blank"
+              className="text-teal-600 dark:text-red-400"
+            >
+              official Citrus Hack
+            </a>,
+
+            " website!",
+          ]}
+          href="https://citrushack-fe.vercel.app"
+          title="Citrus Hack"
+          category="Hackathon"
+        />
+        <ProjectCard
+          image="/images/terminal.png"
+          children="A Command Line Interface (CLI), written primarily in C++."
+          href="https://github.com/r-jo/rhoshell"
+          title="Rho Shell"
+          category="Personal Project"
+        />
+        <ProjectCard
+          image="/images/cutiehack2020.png"
+          children="The website used by 500+ students to interact with and participate in the annual Cutie Hack hackathon."
+          href="https://cutiehack.io"
+          title="Cutie Hack"
+          category="Hackathon"
+        />
+        <Subheading children="Keyboards" />
+        <p>Stay tuned! Thocky boards incoming.</p>
       </div>
     </Container>
   );
