@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 export default function Track(track) {
   return (
     <motion.div
-      whileHover={{ scale: 1.035 }}
+      whileHover={{ scale: 1.015 }}
       whileTap={{ scale: 1 }}
-      transition={{ duration: 0.02 }}
+      transition={{ duration: 0.015 }}
       className="flex flex-row items-baseline mb-2 max-w-3xl rounded-md
                     w-full bg-gray-100 dark:bg-shadow-800 hover-hover:hover:bg-gray-200 
-                    hover-hover:dark:hover:bg-shadow-700 p-4 transition duration-200 ease-in-out"
+                    hover-hover:dark:hover:bg-shadow-700 p-4 transition duration-150 ease-in-out"
     >
       <p>{track.ranking}</p>
       <div className="flex flex-col pl-3">

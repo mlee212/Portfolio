@@ -11,13 +11,13 @@ export default function More() {
         <title>{siteTitle}</title>
       </Head>
       <div className="max-w-2xl mx-auto">
-        <h1 className="mb-4 font-bold text-4xl md:text-5xl text-teal-500 dark:text-red-400">
+        <h1 className="mb-4 font-bold text-4xl md:text-5xl text-teal-400 dark:text-red-400">
           What I'm About.
         </h1>
         <div className="space-y-2">
           <p>
-            You found my corner of the internet 😄. Learn about how I want to make the web a
-            beautiful place.
+            You found my corner of the internet 😄. Learn about how I want to
+            make the web a beautiful place.
           </p>
           <p>
             I am a Junior at the University of California, Riverside studying
@@ -35,8 +35,7 @@ export default function More() {
             (my favorite board ever) with lubricated cream switches.
           </p>
           <p>
-            You can also find me currently playing through{" "}
-            <i>Spiderman: Miles Morales</i>.
+            You can also find me currently playing through <i>Returnal</i>.
           </p>
           <p>I'm always up for a conversation. Feel free to hit me up. 🤙</p>
         </div>
@@ -51,8 +50,33 @@ export default function More() {
           Setup and Snippets
         </h3>
         <p>
-          Coming soon! Learn more about how I stay productive.
+          <i>In progress.</i>
         </p>
+        <h3 className="my-4 text-xl font-bold text-gray-900 dark:text-shadow-100">
+          Hardware
+        </h3>
+        <ul className="list-disc list-inside">
+          <li>2019 Macbook Pro 16"</li>
+          <li>2018 iPad Pro 11"</li>
+          <li>Dell U2720Q</li>
+        </ul>
+        <h3 className="my-4 text-xl font-bold text-gray-900 dark:text-shadow-100">
+          Keyboards
+        </h3>
+        <ul className="list-disc list-inside">
+          <li>Iron165 Plum with a brass plate and cream switches</li>
+          <li>Vega65 White with a polycarbonate plate and gateron ink switches</li>
+          <li>Think6.5 v2 PC with an FR4 plate and durock switches</li>
+        </ul>
+        <i>(linear gang)</i>
+        <h3 className="my-4 text-xl font-bold text-gray-900 dark:text-shadow-100">
+          Software
+        </h3>
+        <ul className="list-disc list-inside">
+          <li>Visual Studio Code</li>
+          <li>Notion</li>
+          <li>Spotify</li>
+        </ul>
       </div>
     </Container>
   );

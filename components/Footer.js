@@ -35,10 +35,11 @@ export const Footer = () => {
           <div className="flex flex-col md:flex-row md:space-x-16 md:space-y-0 space-y-2">
             <div className="flex flex-col space-y-2">
               <RouteLink title="Home" destination="/" />
+              <RouteLink title="Projects" destination="/projects" />
               <RouteLink title="About" destination="/about" />
-              <ExtLink title="Github" destination="https://github.com/r-jo" />
             </div>
             <div className="flex flex-col space-y-2">
+              <ExtLink title="Github" destination="https://github.com/r-jo" />
               <ExtLink
                 title="LinkedIn"
                 destination="https://www.linkedin.com/in/rajbirjohar/"
@@ -69,7 +70,7 @@ export const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="text-center mb-6">
+      <div className="text-center mb-12">
         <p>2021 © Rajbir Johar</p>
       </div>
     </footer>

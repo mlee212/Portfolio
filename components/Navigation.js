@@ -18,7 +18,7 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.15,
     },
   },
 };
@@ -27,7 +27,8 @@ const NavLink = ({ destination, title }) => {
   return (
     <motion.div variants={item}>
       <ActiveLink activeClassName="active" href={destination}>
-        <a className="nav-link px-3 py-2 hover:text-gray-700 dark:text-shadow-200 dark:hover:text-shadow-100 font-medium transition duration-300 ease-in-out">
+        <a className="nav-link px-3 py-2 hover:text-gray-700 dark:text-shadow-200 dark:hover:text-shadow-100 
+        font-medium transition duration-150 ease-in-out">
           {title}
         </a>
       </ActiveLink>

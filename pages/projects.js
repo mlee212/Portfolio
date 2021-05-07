@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 const Badge = ({ child }) => {
   return (
     <motion.button
-      whileHover={{ scale: 1.045 }}
+      whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 1 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.15 }}
     >
       <button
         className="cursor-default px-2 py-1 m-1 rounded-md items-center bg-gray-100 hover:bg-gray-200
-     dark:bg-shadow-800 dark:hover:bg-shadow-700 transition duration-300 ease-in-out"
+     dark:bg-shadow-800 dark:hover:bg-shadow-700 transition duration-150 ease-in-out"
       >
         {child}
       </button>
@@ -29,7 +29,7 @@ export default function Projects() {
       </Head>
       <div className="max-w-2xl mx-auto">
         <section>
-          <h1 className="font-bold text-4xl md:text-5xl text-teal-500 dark:text-red-400">
+          <h1 className="font-bold text-4xl md:text-5xl text-teal-400 dark:text-red-400">
             Projects
           </h1>
           <p className="my-2 mt-4">
@@ -62,6 +62,7 @@ export default function Projects() {
             <Badge child="Tailwind CSS" />
             <Badge child="C++" />
             <Badge child="REST" />
+            <Badge child="Node JS" />
             <Badge child="Styled Components" />
           </div>
         </section>

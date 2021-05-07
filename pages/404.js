@@ -21,7 +21,7 @@ export default function Custom404() {
           >
             Did you ever hear the tragedy of Darth Plagueis The Wise?
           </h3>
-          <p className="my-2 mt-6">
+          <p className="my-2">
             I thought not. It’s not a story the Jedi would tell you.
           </p>
           <p className="my-2"> It’s a Sith legend.</p>
