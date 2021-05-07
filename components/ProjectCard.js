@@ -10,11 +10,11 @@ export default function ProjectCard({ title, children, image, href }) {
       transition={{ duration: 0.015 }}
       className="flex bg-gray-100 hover-hover:hover:bg-gray-200 dark:bg-shadow-800
        hover-hover:dark:hover:bg-shadow-700 p-4 rounded-lg
-       my-4 transition duration-150 ease-in-out"
+       mb-4 transition duration-150 ease-in-out"
     >
       <div className="space-y-4">
         <figcaption className="flex items-center">
-          <div className="w-16 h-16 md:w-24 md:h-24 relative flex md:items-start">
+          <div className="w-16 h-16 md:w-28 md:h-28 relative flex md:items-start">
             <Image src={image} alt="Product Logo" layout="fill" />
           </div>
           <div className="flex-1 pl-4">

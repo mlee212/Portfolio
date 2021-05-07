@@ -34,7 +34,7 @@ export default function Loader({ show }) {
       variants={container}
       initial="hidden"
       animate="show"
-      className="md:flex w-full my-4 space-y-4 md:space-y-0 md:space-x-4"
+      className="md:flex w-full space-y-4 md:space-y-0 md:space-x-4"
     >
       <div className="flex-1 space-y-4">
         <Skeleton />

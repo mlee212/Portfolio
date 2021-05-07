@@ -52,7 +52,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="flex-1">
-          <p className="font-medium text-lg my-2 text-gray-900 dark:text-shadow-100">
+          <p className="font-medium text-md text-lg my-2 text-gray-900 dark:text-shadow-100">
             Don't be a stranger.
           </p>
           <p>
@@ -61,7 +61,7 @@ export const Footer = () => {
           </p>
         </div>
         <div className="flex-1 md:ml-4">
-          <p className="font-medium text-lg my-2 text-gray-900 dark:text-shadow-100">
+          <p className="font-medium text-md text-lg my-2 text-gray-900 dark:text-shadow-100">
             Privacy first.
           </p>
           <p>
@@ -70,7 +70,7 @@ export const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="text-center pb-12">
+      <div className="text-center mb-12">
         <p>2021 © Rajbir Johar</p>
       </div>
     </footer>
