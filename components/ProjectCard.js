@@ -7,10 +7,10 @@ export default function ProjectCard({ title, children, image, href }) {
     <motion.figure
       whileHover={{ scale: 1.015 }}
       whileTap={{ scale: 1 }}
-      transition={{ duration: 0.02 }}
+      transition={{ duration: 0.015 }}
       className="flex bg-gray-100 hover-hover:hover:bg-gray-200 dark:bg-shadow-800
        hover-hover:dark:hover:bg-shadow-700 p-4 rounded-lg
-       mb-4 transition duration-200 ease-in-out"
+       mb-4 transition duration-150 ease-in-out"
     >
       <div className="space-y-4">
         <figcaption className="flex items-center">

@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <div className="max-w-2xl mx-auto">
         <section>
-          <h1 className="font-bold text-4xl md:text-5xl text-teal-500 dark:text-red-400">
+          <h1 className="font-bold text-4xl md:text-5xl text-teal-400 dark:text-red-400">
             Hello! I'm Rajbir.
           </h1>
           <h2 className="font-medium text-gray-900 dark:text-shadow-100 mt-4">
