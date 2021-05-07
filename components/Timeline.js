@@ -76,16 +76,19 @@ const FullTimeline = () => (
     <Divider />
     <Year>2019</Year>
     <ul>
-      <Step title="Decided on Web Development" icon={<StarIcon />}>
-        I hated algorithms but loved designing. One day I woke up and decided I
-        would be a professional pixel pusher.
+      <Step title="Started Web Development" icon={<StarIcon />}>
+        Around this time, I discovered where my two passions, coding and art,
+        collide. I spent all day pushing pixels. My first portfolio iteration
+        was a horrible mash of animations and fancy fonts haha.
       </Step>
-      <Step title="Built my First Portfolio" icon={<FireIcon />}>
-        And it was straight up ugly.
+      <Step title="Joined Citrushack" icon={<FireIcon />}>
+        Developed, designed, and launched the 2019 Citrushack hackathon website
+        which was used by hundreds of student hackers. This was also the largest
+        hackathon offered by my university.
       </Step>
-      <Step title="Joined Cutie Hack" icon={<FireIcon />}>
+      <Step title="Joined Cutiehack" icon={<FireIcon />}>
         On a whim, I attended my very first team meeting to launch the website
-        for 2019 Cutie Hack.
+        for the 2019 Cutiehack hackathon.
       </Step>
     </ul>
     <Divider />
@@ -107,31 +110,32 @@ const FullTimeline = () => (
     <Year>2017</Year>
     <ul>
       <Step title="Built my First Computer" icon={<BoltIcon />}>
-        I forgot to plug in the power button cables and freaked out when it
-        would not turn on.
+        I installed my Ryzen 3 2200g into my brand new motherboard. I forgot to
+        plug in the power button cables and freaked out when it would not turn
+        on.
       </Step>
     </ul>
     <Divider />
     <Year>2015</Year>
     <ul>
       <Step title="Jailbroke my First iPhone" icon={<BoltIcon />}>
-        ...and bricked it.
+        ...And subsequently bricked it thanks to a rogue Cydia tweak.
       </Step>
     </ul>
     <Divider />
     <Year>2012</Year>
     <ul>
-      <Step title="Broke my PSP" icon={<SadIcon />}>
-        I decided that I was smart enough to complete a full internal transplant
-        of my playstation. It turns out a small lack of experience can break
-        things.
+      <Step title="Broke my First Game Console" icon={<SadIcon />}>
+        It was my first time holding a Playstation Portable and it was my
+        favorite thing in the world. I would take it everywhere with me. I ended
+        up trying to take it apart and cracked the screen :(.
       </Step>
     </ul>
     <Divider />
     <Year>2000</Year>
     <ul>
       <Step title="Born" icon={<CakeIcon />}>
-        Haha, yes.
+        Yes, haha.
       </Step>
     </ul>
   </motion.div>
@@ -147,11 +151,9 @@ export default function Timeline() {
       </h3>
       <Year>2021</Year>
       <ul>
-        <Step title="First Internship" icon={<FireIcon />}>
-          Accepted a position at a promising startup as a frontend developer.
-        </Step>
-        <Step title="First Roadtrip" icon={<BoltIcon />}>
-          Crossed the border from CA to AZ.
+        <Step title="New Year, New Me" icon={<BoltIcon />}>
+          Here's to another year with new opportunities, hard classes, and fun
+          experiences.
         </Step>
       </ul>
       <Divider />
@@ -159,25 +161,28 @@ export default function Timeline() {
       <ul>
         <Step title="Web dev Lead" icon={<StarIcon />}>
           I'm now in charge of the development for the vision of UCR's
-          Cutie Hack, Citrus Hack, and Biohack.
+          Cutiehack, Citrushack, and Biohack.
         </Step>
         <Step title="Started Habitle" icon={<FireIcon />}>
-          Due to our negative habits, my colleague Dev Bhatia and I are
+          As a collaboration project, my colleague Dev Bhatia and I are
           developing a web app that helps people develop positive habits by
           visualizing their progress.
         </Step>
         <Step title="Started my Junior Year" icon={<HatIcon />}>
-          Half way there!
+          Half way there! I'm looking forward to more challenging classes in an
+          even more challenging enviroment.
         </Step>
         <Step title="Finished All my Math Classes" icon={<HatIcon />}>
           No more!
         </Step>
-        <Step title="Online Classes Begin" icon={<SadIcon />}>
-          I am happy to announce that I will now be attending UC Zoom.
+        <Step title="UC Zoom" icon={<SadIcon />}>
+          The COVID-19 Pandemic shifted all of our classes online and we had to
+          adapt using video calling and online only platforms.
         </Step>
         <Step title="Joined Biohack" icon={<FireIcon />}>
-          I helped develop, design, and launch the 2019 Biohack website
-          (that was supposed to be) used by hundreds of student hackers.
+          I took a major role as part of the four-man team to develop the
+          website for the Biohack hackathon. (I think you can sense a trend
+          here.)
         </Step>
       </ul>
 

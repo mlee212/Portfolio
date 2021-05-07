@@ -11,7 +11,7 @@ const Stat = ({ title, data, caption }) => {
       whileTap={{ scale: 1 }}
       transition={{ duration: 0.02 }}
       className="rounded-lg p-6 bg-gray-100 hover-hover:hover:bg-gray-200 dark:bg-shadow-800
-        hover-hover:dark:hover:bg-shadow-700 transition duration-150 ease-in-out"
+        hover-hover:dark:hover:bg-shadow-700 transition duration-200 ease-in-out"
     >
       <a
         href="https://github.com/r-jo"
