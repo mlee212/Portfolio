@@ -11,7 +11,7 @@ const Skeleton = () => {
   return (
     <motion.div
       variants={item}
-      className="flex flex-col items-baseline py-4 border-b border-gray-100 dark:border-stormcloud w-full"
+      className="flex flex-col items-baseline py-2 w-full"
     >
       <div className="animate-pulse bg-gray-200 dark:bg-stormcloud rounded-md h-6 w-1/3 mb-2"></div>
       <div className="animate-pulse bg-gray-200 dark:bg-stormcloud rounded-md h-6 w-1/2"></div>
