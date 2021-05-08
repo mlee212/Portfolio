@@ -32,19 +32,19 @@ const Divider = () => {
   return (
     <motion.div
       variants={item}
-      className="border-b-2 border-gray-100 dark:border-shadow-700 w-full my-4"
+      className="border-b border-gray-100 dark:border-shadow-700 w-full my-4"
     />
   );
 };
 
 const Year = ({ children }) => {
   return (
-    <motion.h3
+    <motion.h2
       variants={item}
-      className="text-xl font-bold text-gray-900 dark:text-shadow-100"
+      className="text-lg font-bold"
     >
       {children}
-    </motion.h3>
+    </motion.h2>
   );
 };
 
@@ -62,11 +62,11 @@ const Step = ({ title, children, icon }) => {
         >
           {icon}
         </svg>
-        <h2 className="font-medium md:text-lg text-md text-gray-900 dark:text-shadow-100">
+        <h3 className="font-medium text-md">
           {title}
-        </h2>
+        </h3>
       </div>
-      <p className="ml-6 text-gray-800 dark:text-shadow-200">{children}</p>
+      <p className="ml-6">{children}</p>
     </motion.li>
   );
 };
@@ -146,7 +146,7 @@ export default function Timeline() {
 
   return (
     <>
-      <h3 className="font-bold text-3xl md:text-4xl my-4 text-gray-900 dark:text-shadow-100">
+      <h3 className="font-bold text-2xl my-4 text-gray-900 dark:text-shadow-100">
         Experiences
       </h3>
       <Year>2021</Year>

@@ -27,7 +27,8 @@ const NavLink = ({ destination, title }) => {
   return (
     <motion.div variants={item}>
       <ActiveLink activeClassName="active" href={destination}>
-        <a className="nav-link px-3 py-2 hover:text-gray-700 dark:text-shadow-200 dark:hover:text-shadow-100 font-medium transition duration-300 ease-in-out">
+        <a className="nav-link text-gray-500 hover:text-black
+         dark:text-shadow-200 dark:hover:text-shadow-100 transition duration-300 ease-in-out">
           {title}
         </a>
       </ActiveLink>
@@ -63,23 +64,24 @@ export const Navigation = () => {
       variants={container}
       initial="hidden"
       animate="show"
-      className="sticky-nav md:mt-8 mt-0 sticky flex justify-center items-center 
-        w-full p-6 pb-0 mx-auto bg-white dark:bg-shadow-900 transition duration-300 ease-in-out"
+      className="sticky-nav sticky flex md:mt-10 mt-0 justify-center
+      items-center w-full mx-auto bg-white dark:bg-shadow-900 
+      transition duration-300 ease-in-out"
       //   className={`sticky-nav md:mt-8 mt-0 sticky flex justify-center items-center
       // w-full p-6 pb-0 mx-auto transition duration-300 ease-in-out
       // bg-white dark:bg-shadow-900 dark:border-shadow-800 ${
       //   scroll ? "shadow-md dark:shadow-xl" : "shadow-none"
       // }`}
     >
-      <div className="w-full max-w-4xl flex items-center justify-between pb-6">
+      <div className="w-full max-w-3xl flex items-center justify-between p-6">
         <div className="h-9 w-9 relative cursor-pointer">
           <motion.button
             variants={item}
             aria-label="Toggle Dark Mode"
             type="button"
-            className="flex items-center justify-center h-8 w-8 bg-gray-100 dark:bg-shadow-700
-                 hover:bg-gray-200 dark:hover:bg-shadow-600
-                 transition duration-300 ease-in-out rounded-md"
+            className="flex items-center justify-center h-8 w-8 
+                 transition duration-300 ease-in-out rounded-md
+                 bg-gray-100 hover:bg-gray-200"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
             {mounted && (
@@ -95,7 +97,7 @@ export const Navigation = () => {
             )}
           </motion.button>
         </div>
-        <div className="space-x-2 flex">
+        <div className="space-x-4 flex">
           <NavLink destination="/" title="Home" />
           <NavLink destination="/projects" title="Projects" />
           <NavLink destination="/about" title="About" />
