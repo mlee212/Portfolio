@@ -27,8 +27,8 @@ const NavLink = ({ destination, title }) => {
   return (
     <motion.div variants={item}>
       <ActiveLink activeClassName="active" href={destination}>
-        <a className="nav-link text-gray-500 hover:text-black
-         dark:text-shadow-200 dark:hover:text-shadow-100 transition duration-300 ease-in-out">
+        <a className="nav-link text-boulder hover:text-thunder 
+        dark:text-mobster dark:hover:text-cararra transition duration-300 ease-in-out">
           {title}
         </a>
       </ActiveLink>
@@ -64,8 +64,8 @@ export const Navigation = () => {
       variants={container}
       initial="hidden"
       animate="show"
-      className="sticky-nav sticky flex md:mt-10 mt-0 justify-center
-      items-center w-full mx-auto bg-white dark:bg-shadow-900 
+      className="sticky-nav sticky flex md:mt-8 mt-0 justify-center
+      items-center w-full mx-auto bg-cararra dark:bg-thunder
       transition duration-300 ease-in-out"
       //   className={`sticky-nav md:mt-8 mt-0 sticky flex justify-center items-center
       // w-full p-6 pb-0 mx-auto transition duration-300 ease-in-out
@@ -81,7 +81,7 @@ export const Navigation = () => {
             type="button"
             className="flex items-center justify-center h-8 w-8 
                  transition duration-300 ease-in-out rounded-md
-                 bg-gray-100 hover:bg-gray-200"
+                 bg-lilac dark:bg-stormcloud"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
             {mounted && (
@@ -90,7 +90,7 @@ export const Navigation = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                className="h-4 w-4 text-gray-800 dark:text-shadow-100"
+                className="h-4 w-4 text-thunder dark:text-cararra"
               >
                 {theme === "dark" ? <SunIcon /> : <MoonIcon />}
               </svg>

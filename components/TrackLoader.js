@@ -11,12 +11,10 @@ const Skeleton = () => {
   return (
     <motion.div
       variants={item}
-      className="items-baseline rounded-md flex flex-col
-        w-full bg-gray-100 dark:bg-shadow-800 
-     max-w-3xl w-full justify-items-center p-4 mb-2"
+      className="flex flex-col items-baseline py-4 border-b border-gray-100 dark:border-stormcloud w-full"
     >
-      <div className="animate-pulse bg-gray-300 dark:bg-shadow-700 rounded-md h-6 w-1/3 mb-2"></div>
-      <div className="animate-pulse bg-gray-300 dark:bg-shadow-700 rounded-md h-6 w-1/2"></div>
+      <div className="animate-pulse bg-gray-200 dark:bg-stormcloud rounded-md h-6 w-1/3 mb-2"></div>
+      <div className="animate-pulse bg-gray-200 dark:bg-stormcloud rounded-md h-6 w-1/2"></div>
     </motion.div>
   );
 };

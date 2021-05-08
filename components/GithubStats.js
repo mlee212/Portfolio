@@ -2,32 +2,22 @@ import useSWR from "swr";
 import fetcher from "../lib/fetcher";
 import Loader from "./GithubLoader";
 import react, { useState } from "react";
-import { motion } from "framer-motion";
 
 const Stat = ({ title, data, caption }) => {
   return (
-    <motion.div
-      whileHover={{ scale: 1.025 }}
-      whileTap={{ scale: 1 }}
-      transition={{ duration: 0.02 }}
-      className="rounded-lg p-6 bg-gray-100 hover-hover:hover:bg-gray-200 dark:bg-shadow-800
-        hover-hover:dark:hover:bg-shadow-700 transition duration-200 ease-in-out"
+    <a
+      href="https://github.com/r-jo"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group"
     >
-      <a
-        href="https://github.com/r-jo"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-medium text-teal-600 dark:text-red-400 hover:underline"
-      >
-        {title}
-      </a>
-      <p className="font-medium">
-        {data}{" "}
-        <span className="font-normal">
-          {caption}
-        </span>
-      </p>
-    </motion.div>
+      <div className="rounded-lg p-6 bg-lilac dark:bg-stormcloud mb-4">
+        <h4 className="group-hover:underline font-medium">{title}</h4>
+        <p className="font-medium">
+          {data} <span className="font-normal">{caption}</span>
+        </p>
+      </div>
+    </a>
   );
 };
 

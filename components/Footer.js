@@ -6,8 +6,8 @@ const NavLink = ({ destination, title }) => {
   return (
     <ActiveLink activeClassName="active" href={destination}>
       <a
-        className="nav-link text-gray-500 hover:text-black
-         dark:text-shadow-200 dark:hover:text-shadow-100 transition duration-300 ease-in-out"
+        className="nav-link text-boulder hover:text-thunder
+         dark:text-mobster dark:hover:text-cararra transition duration-300 ease-in-out"
       >
         {title}
       </a>
@@ -18,8 +18,8 @@ const NavLink = ({ destination, title }) => {
 const ExtLink = ({ title, destination }) => {
   return (
     <a
-      className="text-gray-500 hover:text-black
-      dark:text-shadow-200 dark:hover:text-shadow-100 transition duration-300 ease-in-out"
+      className="text-boulder hover:text-thunder
+      dark:text-mobster dark:hover:text-cararra transition duration-300 ease-in-out"
       target="_blank"
       rel="noopener noreferrer"
       href={destination}
@@ -33,8 +33,8 @@ export const Footer = () => {
   return (
     <footer className="p-6 pb-24 mx-auto max-w-3xl leading-7">
       <div className="flex-1">
-        <h2 className="font-bold text-2xl">Elsewhere</h2>
-        <p className="my-2 mb-4">I don't bite anything but really good food.</p>
+        <h2 className="font-bold text-2xl text-thunder dark:text-cararra">Elsewhere</h2>
+        <p className="my-2 mb-4">I don't bite anything except really good food.</p>
         <div className="flex flex-col md:flex-row md:space-x-4 md:space-y-0 space-y-2">
           <NavLink destination="/" title="Home" />
           <NavLink destination="/projects" title="Projects" />
