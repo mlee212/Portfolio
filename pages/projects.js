@@ -4,129 +4,74 @@ import ProjectCard from "../components/ProjectCard";
 import GithubStats from "../components/GithubStats";
 import { motion } from "framer-motion";
 
-const Badge = ({ child }) => {
-  return (
-    <motion.button
-      whileHover={{ scale: 1.045 }}
-      whileTap={{ scale: 1 }}
-      transition={{ duration: 0.3 }}
-    >
-      <button
-        className="cursor-default px-2 py-1 m-1 rounded-md items-center bg-gray-100 hover:bg-gray-200
-     dark:bg-shadow-800 dark:hover:bg-shadow-700 transition duration-300 ease-in-out"
-      >
-        {child}
-      </button>
-    </motion.button>
-  );
-};
-
 export default function Projects() {
   return (
     <Container main>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div className="max-w-2xl mx-auto">
-        <section>
-          <h1 className="font-bold text-4xl md:text-5xl text-teal-500 dark:text-red-400">
-            Projects
-          </h1>
-          <p className="my-2 mt-4">
-            <span className="font-medium">
-              Here is a collection of my best work where I demonstrate my skills
-              as a developer and a creator.
-            </span>{" "}
-            You can also see a more detailed view on my{" "}
-            <a
-              className="text-teal-600 dark:text-red-400 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/r-jo"
-            >
-              Github
-            </a>
-            . Some of the languages, frameworks, and libraries I currently use
-            are:
-          </p>
-          <div className="text-center">
-            <Badge child="Next JS"/>
-            <Badge child="React JS" />
-            <Badge child="Javascript" />
-            <Badge child="HTML5" />
-            <Badge child="CSS3" />
-            <Badge child="Git" />
-            <Badge child="Yarn" />
-            <Badge child="NPM" />
-            <Badge child="Chakra UI" />
-            <Badge child="Tailwind CSS" />
-            <Badge child="C++" />
-            <Badge child="REST" />
-            <Badge child="Styled Components" />
-          </div>
-        </section>
-        <section className="my-16">
-          <h3 className="font-bold text-3xl md:text-4xl text-gray-900 dark:text-shadow-100">
-            Dashboard
-          </h3>
-          <p className="my-2 mb-6 text-md">
-            My Github dashboard tracking my Github statistics.
-          </p>
-          <GithubStats />
-        </section>
-        <section className="my-16">
-          <h3 className="font-bold text-3xl md:text-4xl text-gray-900 dark:text-shadow-100">
-            Current Projects
-          </h3>
-          <p className="my-2 mb-6 text-md">
-            {" "}
-            Here are some of the projects that I am currently working on.
-          </p>
+      <section>
+        <h1 className="font-bold text-3xl text-mist mb-2">Projects</h1>
+        <p className="mt-4">
+          Here is a collection of my best work where I demonstrate my skills as
+          a <span className="font-medium">developer and a creator.</span> You
+          can also see a more detailed view on my{" "}
+          <a
+            className="text-boulder dark:text-mobster hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/r-jo"
+          >
+            Github
+          </a>
+          .
+        </p>
+      </section>
+      <section className="my-8">
+        <h3 className="font-bold text-2xl mb-2 text-thunder dark:text-cararra">
+          Dashboard
+        </h3>
+        <p className="mb-6">
+          My Github dashboard tracking my Github statistics.
+        </p>
+        <GithubStats />
+      </section>
+      <section className="mb-8">
+        <h3 className="font-bold text-2xl mb-2 text-thunder dark:text-cararra">
+          Current Projects
+        </h3>
+        <p className="mb-6">
+          <i>
+            In progress. Just making sure I am presenting them the way I want it
+            to be seen.
+          </i>
+        </p>
+        <div className="space-y-4">
           <ProjectCard
             image="/images/biohack2021.png"
             children="Scrapbook your idea for healthcare using code. Scheduled in May. Join now."
             href="https://biohackucr.com"
             title="BioHack"
           />
+        </div>
+      </section>
+      <section className="mb-8">
+        <h3 className="font-bold text-2xl mb-2 text-thunder dark:text-cararra">
+          Finished Projects
+        </h3>
+        <p className="mb-6">
+          <i>
+            In progress. Just making sure I am presenting them the way I want it
+            to be seen.
+          </i>
+        </p>
+        <div className="space-y-4">
           <ProjectCard
-            image="/images/habitle.png"
-            children="A minimal and powerful web app that generates a heatmap to visualize progress."
-            href="https://habitle.com/#/"
-            title="Habitle"
-            category="Personal Project"
-          />
-        </section>
-        <section className="my-16">
-          <h3 className="font-bold text-3xl md:text-4xl text-gray-900 dark:text-shadow-100">
-            Finished Projects
-          </h3>
-          <p className="my-2 mb-6 text-md"> Here are my finished projects.</p>
-          <ProjectCard
-            image="/images/citrushack.png"
-            children={[
-              "Create your Zen. Check out the ",
-              <a
-                href="https://citrushack.com"
-                rel="noreferrer"
-                rel="noopener"
-                target="_blank"
-                className="text-teal-600 dark:text-red-400"
-              >
-                official Citrus Hack
-              </a>,
-
-              " website!",
-            ]}
+            image="/images/citrushack2021.png"
+            children="The website used by 700+ students to interact with and participate in the annual Cutie Hack hackathon."
             href="https://citrushack-fe.vercel.app"
             title="Citrus Hack"
             category="Hackathon"
-          />
-          <ProjectCard
-            image="/images/terminal.png"
-            children="A Command Line Interface (CLI), written primarily in C++."
-            href="https://github.com/r-jo/rhoshell"
-            title="Rho Shell"
-            category="Personal Project"
           />
           <ProjectCard
             image="/images/cutiehack2020.png"
@@ -135,14 +80,34 @@ export default function Projects() {
             title="Cutie Hack"
             category="Hackathon"
           />
-        </section>
-        <section>
-          <h1 className="mt-16 mb-4 font-bold text-3xl md:text-4xl my-4 text-gray-900 dark:text-shadow-100">
-            Keyboards
-          </h1>
-          <p>Stay tuned! Thocky boards incoming.</p>
-        </section>
-      </div>
+          <ProjectCard
+            image="/images/habitle.png"
+            children="A minimal and powerful web app that generates a heatmap to visualize progress."
+            href="https://habitle.com/#/"
+            title="Habitle"
+            category="Personal Project"
+          />
+          <ProjectCard
+            image="/images/terminal.png"
+            children="A Command Line Interface (CLI), written primarily in C++."
+            href="https://github.com/r-jo/rhoshell"
+            title="Rho Shell"
+            category="Personal Project"
+          />
+        </div>
+      </section>
+      <section className="mb-8">
+        <h1 className="font-bold text-2xl mb-2 text-thunder dark:text-cararra">
+          Keyboards
+        </h1>
+        <p className="mb-6">Stay tuned! Thocky boards incoming.</p>
+      </section>
+      <section>
+        <h3 className="font-bold text-2xl mb-2 text-thunder dark:text-cararra">
+          Setup and Snippets
+        </h3>
+        <p> Coming soon! Learn more about how I stay productive.</p>
+      </section>
     </Container>
   );
 }

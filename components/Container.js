@@ -102,14 +102,15 @@ export default function Container({ children }) {
 
         <meta name="og:title" content={siteTitle} />
       </Head>
-      <body className="bg-white dark:bg-shadow-900 transition duration-300 ease-in-out">
+      <body className="bg-cararra dark:bg-thunder text-stormcloud dark:text-fog
+       transition duration-300 ease-in-out">
         <motion.main
-          initial={{ opacity: 0, y: 5 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -5 }}
-          transition={{ duration: 0.1 }}
+          initial={{ opacity: 0}}
+          animate={{ opacity: 1}}
+          exit={{ opacity: 0}}
+          transition={{ duration: 0.15 }}
           layout
-          className="flex flex-col w-full mx-auto md:mt-12 mt-4 p-6 text-gray-800 dark:text-shadow-200 text-md leading-7"
+          className="flex flex-col max-w-3xl mx-auto md:mt-12 mt-4 p-6 leading-7"
         >
           {children}
         </motion.main>

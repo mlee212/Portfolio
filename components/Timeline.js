@@ -32,19 +32,16 @@ const Divider = () => {
   return (
     <motion.div
       variants={item}
-      className="border-b-2 border-gray-100 dark:border-shadow-700 w-full my-4"
+      className="border-b border-gray-200 dark:border-stormcloud w-full my-4"
     />
   );
 };
 
 const Year = ({ children }) => {
   return (
-    <motion.h3
-      variants={item}
-      className="text-xl font-bold text-gray-900 dark:text-shadow-100"
-    >
+    <motion.h2 variants={item} className="text-lg font-bold">
       {children}
-    </motion.h3>
+    </motion.h2>
   );
 };
 
@@ -58,15 +55,13 @@ const Step = ({ title, children, icon }) => {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="h-5 w-5 mr-1"
+          className="h-5 w-5 mr-3"
         >
           {icon}
         </svg>
-        <h2 className="font-medium md:text-lg text-md text-gray-900 dark:text-shadow-100">
-          {title}
-        </h2>
+        <h3 className="font-medium text-md">{title}</h3>
       </div>
-      <p className="ml-6 text-gray-800 dark:text-shadow-200">{children}</p>
+      <p className="ml-8">{children}</p>
     </motion.li>
   );
 };
@@ -77,18 +72,14 @@ const FullTimeline = () => (
     <Year>2019</Year>
     <ul>
       <Step title="Started Web Development" icon={<StarIcon />}>
-        Around this time, I discovered where my two passions, coding and art,
-        collide. I spent all day pushing pixels. My first portfolio iteration
-        was a horrible mash of animations and fancy fonts haha.
+        Decided to become a professional pixel pusher.
       </Step>
-      <Step title="Joined Citrushack" icon={<FireIcon />}>
-        Developed, designed, and launched the 2019 Citrushack hackathon website
-        which was used by hundreds of student hackers. This was also the largest
-        hackathon offered by my university.
+      <Step title="Built First Portfolio" icon={<FireIcon />}>
+        Oh boy was it ugly.
       </Step>
       <Step title="Joined Cutiehack" icon={<FireIcon />}>
-        On a whim, I attended my very first team meeting to launch the website
-        for the 2019 Cutiehack hackathon.
+        Introduced to web development and helped design, develop, and deploy the
+        Cutie Hack hackathon website.
       </Step>
     </ul>
     <Divider />
@@ -102,7 +93,7 @@ const FullTimeline = () => (
         title="Moved to University of California, Riverside"
         icon={<HatIcon />}
       >
-        For Computer Science!
+        For Computer Science.
       </Step>
       <Step title="Graduated High School">Peace out high school lunches.</Step>
     </ul>
@@ -110,25 +101,23 @@ const FullTimeline = () => (
     <Year>2017</Year>
     <ul>
       <Step title="Built my First Computer" icon={<BoltIcon />}>
-        I installed my Ryzen 3 2200g into my brand new motherboard. I forgot to
-        plug in the power button cables and freaked out when it would not turn
-        on.
+        Forgot to plug in the power button cables and freaked out when it would
+        not turn on.
       </Step>
     </ul>
     <Divider />
     <Year>2015</Year>
     <ul>
-      <Step title="Jailbroke my First iPhone" icon={<BoltIcon />}>
-        ...And subsequently bricked it thanks to a rogue Cydia tweak.
+      <Step title="Jailbroke my iPhone" icon={<BoltIcon />}>
+        ...and bricked it.
       </Step>
     </ul>
     <Divider />
     <Year>2012</Year>
     <ul>
-      <Step title="Broke my First Game Console" icon={<SadIcon />}>
-        It was my first time holding a Playstation Portable and it was my
-        favorite thing in the world. I would take it everywhere with me. I ended
-        up trying to take it apart and cracked the screen :(.
+      <Step title="Broke my PSP" icon={<SadIcon />}>
+        Thought I was smart enough to undertake a full internal transplant of my
+        playstation.
       </Step>
     </ul>
     <Divider />
@@ -146,43 +135,32 @@ export default function Timeline() {
 
   return (
     <>
-      <h3 className="font-bold text-3xl md:text-4xl my-4 text-gray-900 dark:text-shadow-100">
+      <h3 className="font-bold text-2xl mb-4 text-thunder dark:text-cararra">
         Experiences
       </h3>
       <Year>2021</Year>
       <ul>
-        <Step title="New Year, New Me" icon={<BoltIcon />}>
-          Here's to another year with new opportunities, hard classes, and fun
-          experiences.
+        <Step title="First Internship" icon={<BoltIcon />}>
+          Finally moving up in the world.
+        </Step>
+        <Step title="First Roadtrip" icon={<BoltIcon />}>
+          Crossed the border from CA to AZ.
         </Step>
       </ul>
       <Divider />
       <Year>2020</Year>
       <ul>
         <Step title="Web dev Lead" icon={<StarIcon />}>
-          I'm now in charge of the development for the vision of UCR's
-          Cutiehack, Citrushack, and Biohack.
+          Spearheaded the development for Biohack, Cutie Hack, and Citrus Hack.
         </Step>
         <Step title="Started Habitle" icon={<FireIcon />}>
-          As a collaboration project, my colleague Dev Bhatia and I are
-          developing a web app that helps people develop positive habits by
-          visualizing their progress.
+          Because of my bad habits, I built a tool to promote good ones instead.
         </Step>
-        <Step title="Started my Junior Year" icon={<HatIcon />}>
-          Half way there! I'm looking forward to more challenging classes in an
-          even more challenging enviroment.
-        </Step>
-        <Step title="Finished All my Math Classes" icon={<HatIcon />}>
-          No more!
-        </Step>
-        <Step title="UC Zoom" icon={<SadIcon />}>
-          The COVID-19 Pandemic shifted all of our classes online and we had to
-          adapt using video calling and online only platforms.
+        <Step title="Online Classes" icon={<SadIcon />}>
+          I am happy to announce I will be attending UC Zoom.
         </Step>
         <Step title="Joined Biohack" icon={<FireIcon />}>
-          I took a major role as part of the four-man team to develop the
-          website for the Biohack hackathon. (I think you can sense a trend
-          here.)
+          Helped design, develop, and deploy the Biohack hackathon website.
         </Step>
       </ul>
 
@@ -191,8 +169,9 @@ export default function Timeline() {
       ) : (
         <button
           type="button"
-          className="flex items-center mx-auto px-3 py-1 text-gray-800 dark:text-shadow-200 mt-6 mb-2
-          bg-gray-100 hover:bg-gray-200 dark:bg-shadow-700 dark:hover:bg-shadow-600 rounded-md text-md transition duration-300 ease-in-out"
+          className="flex items-center mx-auto px-3 py-1 text-thunder dark:text-cararra mt-6 mb-2
+          bg-lilac dark:bg-stormcloud rounded-md
+          transition duration-300 ease-in-out"
           onClick={() => showFullTimeline(true)}
         >
           See More

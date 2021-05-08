@@ -10,11 +10,11 @@ const Skeleton = () => {
   return (
     <motion.div
       variants={item}
-      transition={{ duration: 0.02 }}
-      className="rounded-lg p-6 bg-gray-100 dark:bg-shadow-800 transition duration-300 ease-in-out"
+      transition={{ duration: 0.3 }}
+      className="rounded-lg p-6 bg-lilac dark:bg-stormcloud"
     >
-      <div className="animate-pulse bg-gray-300 dark:bg-shadow-700 rounded-md h-6 w-1/2 mb-2"></div>
-      <div className="animate-pulse bg-gray-300 dark:bg-shadow-700 rounded-md h-6 w-2/3"></div>
+      <div className="animate-pulse bg-gray-300 dark:bg-boulder rounded-md h-6 w-1/2 mb-2"></div>
+      <div className="animate-pulse bg-gray-300 dark:bg-boulder rounded-md h-6 w-2/3"></div>
     </motion.div>
   );
 };
@@ -25,7 +25,7 @@ export default function Loader({ show }) {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
       },
     },
   };

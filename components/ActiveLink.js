@@ -9,7 +9,7 @@ const ActiveLink = ({ children, activeClassName, ...props }) => {
 
   const className =
     pathname === props.href
-      ? "text-teal-600 dark:text-red-400 nav-link px-3 py-2 font-medium"
+      ? "text-thunder dark:text-cararra font-medium nav-link"
       : child.props.className;
 
   return <Link {...props}>{React.cloneElement(child, { className })}</Link>;
