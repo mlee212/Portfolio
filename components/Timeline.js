@@ -169,8 +169,7 @@ export default function Timeline() {
       ) : (
         <button
           type="button"
-          className="flex items-center mx-auto px-3 py-1 
-          text-thunder dark:text-cararra mt-6 mb-2
+          className="flex items-center mx-auto px-3 py-1 text-thunder dark:text-cararra mt-6 mb-2
           bg-lilac dark:bg-stormcloud rounded-md
           transition duration-300 ease-in-out"
           onClick={() => showFullTimeline(true)}
