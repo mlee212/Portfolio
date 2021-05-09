@@ -69,7 +69,7 @@ export default function Projects() {
           </i>
         </p>
         <div className="flex md:flex-row flex-col md:space-x-4">
-          <div className="flex flex-col md:flex-1">
+          <div className="flex flex-col flex-1">
             <ProjectCard
               image="/images/citrushack2021.png"
               children="Used by 700+ students to participate during 2021 Citrus Hack."
