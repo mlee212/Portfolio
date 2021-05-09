@@ -2,24 +2,24 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Container, { siteTitle } from "../components/Container";
-import ProjectCard from "../components/ProjectCard";
 
 export default function Home() {
   return (
     <Container main>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Rajbir Johar | Home</title>
       </Head>
       <section>
         <h1 className="font-bold text-3xl text-mist">Rajbir Johar</h1>
-
         <h2 className="font-medium mt-4">
           Frontend Developer <br />
           Based in Southern California
         </h2>
       </section>
       <section className="mt-8">
-        <h3 className="font-bold text-2xl text-thunder dark:text-cararra">About</h3>
+        <h3 className="font-bold text-2xl text-thunder dark:text-cararra">
+          About
+        </h3>
         <div className="my-2 mt-4 space-y-2">
           <p>
             You found my corner of the internet. Learn about how I want to make

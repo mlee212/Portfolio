@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <Container main>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Rajbir Johar | Projects</title>
       </Head>
       <section>
         <h1 className="font-bold text-3xl text-mist mb-2">Projects</h1>
@@ -46,13 +46,16 @@ export default function Projects() {
             to be seen.
           </i>
         </p>
-        <div className="space-y-4">
-          <ProjectCard
-            image="/images/biohack2021.png"
-            children="Scrapbook your idea for healthcare using code. Scheduled in May. Join now."
-            href="https://biohackucr.com"
-            title="BioHack"
-          />
+        <div className="flex md:flex-row flex-col md:space-x-4">
+          <div className="flex flex-col md:flex-1">
+            <ProjectCard
+              image="/images/icon_logo.png"
+              children="Instagram but for cars. Coming soon."
+              title="Auto Exposure"
+              category="Project"
+            />
+          </div>
+          <div className="flex flex-col md:flex-1"></div>
         </div>
       </section>
       <section className="mb-8">
@@ -65,35 +68,45 @@ export default function Projects() {
             to be seen.
           </i>
         </p>
-        <div className="space-y-4">
-          <ProjectCard
-            image="/images/citrushack2021.png"
-            children="The website used by 700+ students to interact with and participate in the annual Cutie Hack hackathon."
-            href="https://citrushack-fe.vercel.app"
-            title="Citrus Hack"
-            category="Hackathon"
-          />
-          <ProjectCard
-            image="/images/cutiehack2020.png"
-            children="The website used by 500+ students to interact with and participate in the annual Cutie Hack hackathon."
-            href="https://cutiehack.io"
-            title="Cutie Hack"
-            category="Hackathon"
-          />
-          <ProjectCard
-            image="/images/habitle.png"
-            children="A minimal and powerful web app that generates a heatmap to visualize progress."
-            href="https://habitle.com/#/"
-            title="Habitle"
-            category="Personal Project"
-          />
-          <ProjectCard
-            image="/images/terminal.png"
-            children="A Command Line Interface (CLI), written primarily in C++."
-            href="https://github.com/r-jo/rhoshell"
-            title="Rho Shell"
-            category="Personal Project"
-          />
+        <div className="flex md:flex-row flex-col md:space-x-4">
+          <div className="flex flex-col md:flex-1">
+            <ProjectCard
+              image="/images/citrushack2021.png"
+              children="Used by 700+ students to participate during 2021 Citrus Hack."
+              href="https://citrushack-fe.vercel.app"
+              title="Citrus Hack"
+              category="Hackathon"
+            />
+            <ProjectCard
+              image="/images/cutiehack2020.png"
+              children="Used by 500+ students to participate during 2020 Cutie Hack."
+              href="https://cutiehack.io"
+              title="Cutie Hack"
+              category="Hackathon"
+            />
+            <ProjectCard
+              image="/images/biohack2021.png"
+              children="Used by 100+ students to participate during 2021 Biohack."
+              href="https://biohackucr.com"
+              title="BioHack"
+            />
+          </div>
+          <div className="flex flex-col flex-1">
+            <ProjectCard
+              image="/images/habitle.png"
+              children="A minimal web app that generates a heatmap to visualize progress."
+              href="https://habitle.com/#/"
+              title="Habitle"
+              category="Personal Project"
+            />
+            <ProjectCard
+              image="/images/terminal.png"
+              children="A Command Line Interface (CLI), written primarily in C++."
+              href="https://github.com/r-jo/rhoshell"
+              title="Rho Shell"
+              category="Personal Project"
+            />
+          </div>
         </div>
       </section>
       <section className="mb-8">

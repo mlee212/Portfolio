@@ -9,7 +9,7 @@ export default function More() {
   return (
     <Container main>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Rajbir Johar | About</title>
       </Head>
       <section>
         <h1 className="font-bold text-3xl text-mist">Interests</h1>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ProjectCard({ title, children, image, href }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="group">
+    <a href={href} target="_blank" rel="noopener noreferrer" className="group ">
       <figure
         className=" p-6 rounded-lg mb-4 flex bg-lilac dark:bg-stormcloud"
       >
@@ -14,7 +14,7 @@ export default function ProjectCard({ title, children, image, href }) {
               <Image src={image} alt="Product Logo" layout="fill" />
             </div>
             <div className="flex-1 pl-4">
-              <h4 className="font-medium group-hover:underline">{title}</h4>
+              <h4 className="font-medium hover-hover:group-hover:underline">{title}</h4>
               <p>{children}</p>
             </div>
           </figcaption>
