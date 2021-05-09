@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <Container main>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Rajbir Johar | Projects</title>
       </Head>
       <section>
         <h1 className="font-bold text-3xl text-mist mb-2">Projects</h1>

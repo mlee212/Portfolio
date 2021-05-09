@@ -7,7 +7,7 @@ export default function Custom404() {
   return (
     <Container>
       <Head>
-        <title>Uh oh</title>
+        <title>Rajbir Johar | Uh oh</title>
       </Head>
       <section>
         <h1 className="font-bold text-3xl text-mist">

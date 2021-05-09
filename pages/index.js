@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Container main>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Rajbir Johar | Home</title>
       </Head>
       <section>
         <h1 className="font-bold text-3xl text-mist">Rajbir Johar</h1>
