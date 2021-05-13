@@ -54,16 +54,18 @@ export default function ProjectList() {
     <div>
       <div className="py-4">
         <input
-          className="border-2 border-fog dark:border-boulder w-full
+          className="form-input border-2 border-fog dark:border-boulder w-full
            bg-lilac dark:bg-stormcloud h-10 px-5 rounded-md text-md 
-           focus:border-stormcloud dark:focus:border-fog 
            focus:outline-none placeholder-stormcloud dark:placeholder-fog"
           type="search"
           name="search"
           placeholder="Search"
           onChange={(e) => setSearchValue(e.target.value)}
         />
-        <button type="submit" className="absolute right-0 top-0 mt-5 mr-4"></button>
+        <button
+          type="submit"
+          className="absolute right-0 top-0 mt-5 mr-4"
+        ></button>
       </div>
       {!filteredProjects.length &&
         "What!? Look's like you tried to find something I haven't created yet."}
