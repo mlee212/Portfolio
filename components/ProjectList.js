@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import useSWR from "swr";
 import fetcher from "../lib/fetcher";
 import ProjectCard from "./ProjectCard";
+import { SearchIcon } from "../public/images/icons/icons";
 
 export default function ProjectList() {
   const [searchValue, setSearchValue] = useState("");
@@ -18,11 +19,11 @@ export default function ProjectList() {
         <div className="py-4">
           <input
             className="border-2 border-fog dark:border-boulder w-full
-            bg-lilac dark:bg-stormcloud h-10 px-5 rounded-md text-md  
+            bg-lilac dark:bg-stormcloud py-2 px-4 rounded-md text-md  
             focus:outline-none placeholder-stormcloud dark:placeholder-fog"
             type="search"
             name="search"
-            placeholder="Search"
+            placeholder="Search using name, description, or language"
           />
           <button
             type="submit"
@@ -31,6 +32,20 @@ export default function ProjectList() {
         </div>
         <ProjectCard
           key="loading-1"
+          name="Loading..."
+          star_count="Still loading..."
+          desc="Hold on..."
+          language="Nearly there..."
+        ></ProjectCard>
+        <ProjectCard
+          key="loading-2"
+          name="Loading..."
+          star_count="Still loading..."
+          desc="Hold on..."
+          language="Nearly there..."
+        ></ProjectCard>
+        <ProjectCard
+          key="loading-3"
           name="Loading..."
           star_count="Still loading..."
           desc="Hold on..."
@@ -52,20 +67,20 @@ export default function ProjectList() {
 
   return (
     <div>
-      <div className="py-4">
+      <div className="py-4 flex">
         <input
           className="form-input border-2 border-fog dark:border-boulder w-full
-           bg-lilac dark:bg-stormcloud py-2 px-4 rounded-md text-md 
+           bg-lilac dark:bg-stormcloud py-2 pl-4 rounded-md text-md 
            focus:outline-none placeholder-stormcloud dark:placeholder-fog"
           type="search"
           name="search"
-          placeholder="Search"
+          placeholder="Search using name, description, or language."
           onChange={(e) => setSearchValue(e.target.value)}
         />
         <button
           type="submit"
-          className="absolute right-0 top-0 mt-5 mr-4"
-        ></button>
+          className="absolute top-10 right-10 mt-5 mr-4"
+        >test</button>
       </div>
       {!filteredProjects.length &&
         "What!? Look's like you tried to find something I haven't created yet."}
