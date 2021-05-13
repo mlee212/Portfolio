@@ -80,7 +80,7 @@ export default function ProjectList() {
         <button
           type="submit"
           className="absolute top-10 right-10 mt-5 mr-4"
-        >test</button>
+        ></button>
       </div>
       {!filteredProjects.length &&
         "What!? Look's like you tried to find something I haven't created yet."}
