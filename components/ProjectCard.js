@@ -31,7 +31,7 @@ export default function ProjectCard({
             </svg>
           </span>
         </div>
-        <p className="pr-0 md:pr-12">{desc}</p>
+        <p className="mr-0 md:mr-24">{desc}</p>
         <p className="font-medium text-mist">{language}</p>
       </div>
     </a>

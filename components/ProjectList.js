@@ -55,7 +55,7 @@ export default function ProjectList() {
       <div className="py-4">
         <input
           className="form-input border-2 border-fog dark:border-boulder w-full
-           bg-lilac dark:bg-stormcloud h-10 px-5 rounded-md text-md 
+           bg-lilac dark:bg-stormcloud py-2 px-4 rounded-md text-md 
            focus:outline-none placeholder-stormcloud dark:placeholder-fog"
           type="search"
           name="search"
