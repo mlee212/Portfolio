@@ -10,10 +10,11 @@ const Skeleton = () => {
   return (
     <motion.div
       variants={item}
-      className="rounded-lg p-6 bg-lilac dark:bg-stormcloud mb-4"
+      className="rounded-lg bg-cararra dark:bg-thunder border-2 border-lilac dark:border-stormcloud p-4 mb-4"
     >
-      <div className="animate-pulse bg-gray-300 dark:bg-boulder rounded-md h-6 w-1/2 mb-2"></div>
-      <div className="animate-pulse bg-gray-300 dark:bg-boulder rounded-md h-6 w-2/3"></div>
+      <div className="animate-pulse bg-lilac dark:bg-stormcloud rounded-md h-6 w-1/2 mb-2"></div>
+      <div className="animate-pulse bg-lilac dark:bg-stormcloud rounded-md h-6 w-2/3 mb-2"></div>
+      <div className="animate-pulse bg-lilac dark:bg-stormcloud rounded-md h-6 w-1/4"></div>
     </motion.div>
   );
 };
@@ -33,16 +34,13 @@ export default function Loader({ show }) {
       variants={container}
       initial="hidden"
       animate="show"
-      className="md:flex w-full space-y-4 md:space-y-0 md:space-x-4 mb-4"
+      className="w-full space-y-4 mb-4"
     >
-      <div className="flex-1 space-y-4">
-        <Skeleton />
-        <Skeleton />
-      </div>
-      <div className="flex-1 space-y-4">
-        <Skeleton />
-        <Skeleton />
-      </div>
+      <Skeleton />
+      <Skeleton />
+      <Skeleton />
+      <Skeleton />
+      <Skeleton />
     </motion.div>
   ) : null;
 }
