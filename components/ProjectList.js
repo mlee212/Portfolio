@@ -19,7 +19,7 @@ export default function ProjectList() {
       <div>
         <div className="py-4">
           <input
-            className="border-2 border-fog dark:border-boulder w-full
+            className="input-form border-2 border-fog dark:border-boulder w-full
             bg-lilac dark:bg-stormcloud py-2 rounded-md text-md  
             focus:outline-none placeholder-stormcloud dark:placeholder-fog"
             type="search"
@@ -71,7 +71,7 @@ export default function ProjectList() {
     <div>
       <div className="my-4">
         <input
-          className="border-2 border-fog dark:border-boulder w-full
+          className="input-form border-2 border-fog dark:border-boulder w-full
            bg-lilac dark:bg-stormcloud py-2 rounded-md text-md 
            focus:outline-none placeholder-stormcloud dark:placeholder-fog"
           type="search"
