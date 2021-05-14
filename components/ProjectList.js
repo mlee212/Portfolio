@@ -23,7 +23,8 @@ export default function ProjectList() {
             type="text"
             placeholder="Not yet..."
             className="px-4 py-2 border-2 border-fog dark:border-boulder
-            block w-full focus:outline-none rounded-md bg-lilac dark:bg-stormcloud placeholder-stormcloud dark:placeholder-fog"
+            block w-full focus:outline-none rounded-md bg-lilac dark:bg-stormcloud
+             placeholder-stormcloud dark:placeholder-fog"
           />
           <svg
             className="absolute right-3 top-3 h-5 w-5 text-stormcloud dark:text-fog"
@@ -63,8 +64,9 @@ export default function ProjectList() {
           type="text"
           onChange={(e) => setSearchValue(e.target.value)}
           placeholder="Search my projects"
-          className="px-4 py-2 border-2 border-fog dark:border-boulder
-          block w-full rounded-md bg-lilac dark:bg-stormcloud placeholder-stormcloud dark:placeholder-fog"
+          className="input-form px-4 py-2 border-2 border-fog dark:border-boulder
+           block w-full rounded-md bg-lilac
+           dark:bg-stormcloud placeholder-boulder"
         />
         <svg
           className="absolute right-3 top-3 h-5 w-5 text-stormcloud dark:text-fog"
