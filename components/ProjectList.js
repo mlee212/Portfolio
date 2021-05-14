@@ -17,19 +17,29 @@ export default function ProjectList() {
   if (!data)
     return (
       <div>
-        <div className="my-4">
+        <div className="relative w-full mb-4">
           <input
-            className="input-form border-2 border-fog dark:border-boulder w-full
-            bg-lilac dark:bg-stormcloud py-2 rounded-md text-md  
-            focus:outline-none placeholder-stormcloud dark:placeholder-fog"
-            type="search"
-            name="search"
+            aria-label="Not yet..."
+            type="text"
             placeholder="Not yet..."
+            className="px-4 py-2 border-2 border-fog dark:border-boulder
+           focus:outline-none focus:ring-0 focus:border-none block w-full 
+           rounded-md bg-lilac dark:bg-stormcloud placeholder-mobster dark:placeholder-boulder"
           />
-          <button
-            type="submit"
-            className="absolute right-0 top-0 mt-5 mr-4"
-          ></button>
+          <svg
+            className="absolute right-3 top-3 h-5 w-5 text-mobster dark:text-boulder"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
         </div>
         <Loader show />
       </div>
@@ -48,33 +58,18 @@ export default function ProjectList() {
 
   return (
     <div>
-      {/* <div className="my-4">
-        <input
-          className="input-form border-2 border-fog dark:border-boulder w-full
-           bg-lilac dark:bg-stormcloud py-2 rounded-md text-md 
-           focus:outline-none placeholder-stormcloud dark:placeholder-fog"
-          type="search"
-          name="search"
-          placeholder="Search my projects."
-          onChange={(e) => setSearchValue(e.target.value)}
-        />
-        <button
-          type="submit"
-          className="absolute top-10 right-10 mt-5 mr-4"
-        ></button>
-      </div> */}
       <div className="relative w-full mb-4">
         <input
-          aria-label="Search articles"
+          aria-label="Search my projects"
           type="text"
           onChange={(e) => setSearchValue(e.target.value)}
-          placeholder="Search articles"
+          placeholder="Search my projects"
           className="px-4 py-2 border-2 border-fog dark:border-boulder
-           focus:ring-blue-400 focus:border-blue-400 block w-full 
-           rounded-md bg-lilac dark:bg-stormcloud text-stormcloud dark:text-fog"
+          focus:outline-none focus:ring-boulder focus:border-boulder dark:focus:ring-fog dark:focus:border-fog
+          block w-full rounded-md bg-lilac dark:bg-stormcloud placeholder-mobster dark:placeholder-boulder"
         />
         <svg
-          className="absolute right-3 top-3 h-5 w-5 text-stormcloud dark:text-fog"
+          className="absolute right-3 top-3 h-5 w-5 text-mobster dark:text-boulder"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
