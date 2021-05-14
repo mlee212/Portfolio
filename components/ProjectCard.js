@@ -17,7 +17,7 @@ export default function ProjectCard({
       >
         <div className="flex justify-between">
           <h1 className="font-medium group-hover:underline">{name}</h1>
-          <span className="flex items-center">
+          <span className="flex items-center font-medium">
             {star_count}
             <span className="sr-only">Icon</span>
             <svg
@@ -25,13 +25,15 @@ export default function ProjectCard({
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              className="h-4 w-4 ml-1"
+              className="h-5 w-5 ml-1"
             >
               <StarIcon />
             </svg>
           </span>
         </div>
-        <p className="mr-0 md:mr-24">{desc}</p>
+        <div className="mr-0 md:mr-24">
+          <p>{desc}</p>
+        </div>
         <p className="font-medium text-mist">{language}</p>
       </div>
     </a>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import useSWR from "swr";
 import fetcher from "../lib/fetcher";
 import ProjectCard from "./ProjectCard";
+import Loader from "./ProjectLoader";
 import { SearchIcon } from "../public/images/icons/icons";
 
 export default function ProjectList() {
@@ -23,34 +24,35 @@ export default function ProjectList() {
             focus:outline-none placeholder-stormcloud dark:placeholder-fog"
             type="search"
             name="search"
-            placeholder="Search using name, description, or language"
+            placeholder="Not yet..."
           />
           <button
             type="submit"
             className="absolute right-0 top-0 mt-5 mr-4"
           ></button>
         </div>
-        <ProjectCard
+        <Loader show />
+        {/* <ProjectCard
           key="loading-1"
           name="Loading..."
           star_count="Still loading..."
           desc="Hold on..."
           language="Nearly there..."
-        ></ProjectCard>
+        />
         <ProjectCard
           key="loading-2"
           name="Loading..."
           star_count="Still loading..."
           desc="Hold on..."
           language="Nearly there..."
-        ></ProjectCard>
+        />
         <ProjectCard
           key="loading-3"
           name="Loading..."
           star_count="Still loading..."
           desc="Hold on..."
           language="Nearly there..."
-        ></ProjectCard>
+        /> */}
       </div>
     );
 
@@ -74,7 +76,7 @@ export default function ProjectList() {
            focus:outline-none placeholder-stormcloud dark:placeholder-fog"
           type="search"
           name="search"
-          placeholder="Search using name, description, or language."
+          placeholder="Search my projects."
           onChange={(e) => setSearchValue(e.target.value)}
         />
         <button
@@ -83,7 +85,7 @@ export default function ProjectList() {
         ></button>
       </div>
       {!filteredProjects.length &&
-        "What!? Look's like you tried to find something I haven't created yet."}
+        "What!? It seems like you tried to find something I haven't created yet."}
       {filteredProjects.map((p) => (
         <ProjectCard
           key={p.name}
@@ -92,7 +94,7 @@ export default function ProjectList() {
           href={p.url}
           desc={p.description}
           language={p.language}
-        ></ProjectCard>
+        />
       ))}
     </div>
   );

@@ -13,8 +13,8 @@ const Skeleton = () => {
       variants={item}
       className="flex flex-col items-baseline py-2 w-full"
     >
-      <div className="animate-pulse bg-gray-200 dark:bg-stormcloud rounded-md h-6 w-1/3 mb-2"></div>
-      <div className="animate-pulse bg-gray-200 dark:bg-stormcloud rounded-md h-6 w-1/2"></div>
+      <div className="animate-pulse bg-lilac dark:bg-stormcloud rounded-md h-6 w-1/3 mb-2"></div>
+      <div className="animate-pulse bg-lilac dark:bg-stormcloud rounded-md h-6 w-1/2"></div>
     </motion.div>
   );
 };
