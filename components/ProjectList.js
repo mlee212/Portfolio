@@ -17,7 +17,7 @@ export default function ProjectList() {
   if (!data)
     return (
       <div>
-        <div className="py-4">
+        <div className="my-4">
           <input
             className="input-form border-2 border-fog dark:border-boulder w-full
             bg-lilac dark:bg-stormcloud py-2 rounded-md text-md  
@@ -32,27 +32,6 @@ export default function ProjectList() {
           ></button>
         </div>
         <Loader show />
-        {/* <ProjectCard
-          key="loading-1"
-          name="Loading..."
-          star_count="Still loading..."
-          desc="Hold on..."
-          language="Nearly there..."
-        />
-        <ProjectCard
-          key="loading-2"
-          name="Loading..."
-          star_count="Still loading..."
-          desc="Hold on..."
-          language="Nearly there..."
-        />
-        <ProjectCard
-          key="loading-3"
-          name="Loading..."
-          star_count="Still loading..."
-          desc="Hold on..."
-          language="Nearly there..."
-        /> */}
       </div>
     );
 
