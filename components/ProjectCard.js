@@ -8,11 +8,11 @@ export default function ProjectCard({
   language,
 }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="group">
+    <a href={href} target="_blank" rel="noopener noreferrer">
       <div
         className="border-2 border-lilac dark:border-stormcloud p-4 mb-4 
       rounded-lg hover:shadow-lg hover:border-gray-300 dark:hover:border-boulder
-      transition duration-200 ease-in-out"
+      transition duration-200 ease-in-out group"
       >
         <div className="flex justify-between">
           <h1 className="font-medium group-hover:underline">{name}</h1>
