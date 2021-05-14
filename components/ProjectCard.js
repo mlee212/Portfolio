@@ -11,8 +11,7 @@ export default function ProjectCard({
     <a href={href} target="_blank" rel="noopener noreferrer" className="group">
       <div
         className="border-2 border-lilac dark:border-stormcloud p-4 mb-4 
-      rounded-lg hover-hover:hover:shadow-lg hover-hover:hover:border-gray-300 
-      hover-hover:dark:hover:border-boulder
+      rounded-lg hover:shadow-lg hover:border-gray-300 dark:hover:border-boulder
       transition duration-200 ease-in-out"
       >
         <div className="flex justify-between">
@@ -31,7 +30,7 @@ export default function ProjectCard({
             </svg>
           </span>
         </div>
-        <div className="mr-0 md:mr-24">
+        <div className="pr-0 md:pr-24">
           <p>{desc}</p>
         </div>
         <p className="font-medium text-mist">{language}</p>
