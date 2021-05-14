@@ -23,11 +23,10 @@ export default function ProjectList() {
             type="text"
             placeholder="Not yet..."
             className="px-4 py-2 border-2 border-fog dark:border-boulder
-           focus:outline-none focus:ring-0 focus:border-none block w-full 
-           rounded-md bg-lilac dark:bg-stormcloud placeholder-mobster dark:placeholder-boulder"
+            block w-full focus:outline-none rounded-md bg-lilac dark:bg-stormcloud placeholder-stormcloud dark:placeholder-fog"
           />
           <svg
-            className="absolute right-3 top-3 h-5 w-5 text-mobster dark:text-boulder"
+            className="absolute right-3 top-3 h-5 w-5 text-stormcloud dark:text-fog"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -65,11 +64,10 @@ export default function ProjectList() {
           onChange={(e) => setSearchValue(e.target.value)}
           placeholder="Search my projects"
           className="px-4 py-2 border-2 border-fog dark:border-boulder
-          focus:outline-none focus:ring-boulder focus:border-boulder dark:focus:ring-fog dark:focus:border-fog
-          block w-full rounded-md bg-lilac dark:bg-stormcloud placeholder-mobster dark:placeholder-boulder"
+          block w-full rounded-md bg-lilac dark:bg-stormcloud placeholder-stormcloud dark:placeholder-fog"
         />
         <svg
-          className="absolute right-3 top-3 h-5 w-5 text-mobster dark:text-boulder"
+          className="absolute right-3 top-3 h-5 w-5 text-stormcloud dark:text-fog"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
