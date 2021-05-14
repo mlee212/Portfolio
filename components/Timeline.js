@@ -55,13 +55,13 @@ const Step = ({ title, children, icon }) => {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="h-5 w-5"
+          className="h-5 w-5 mr-1"
         >
           {icon}
         </svg>
         <h3 className="font-medium text-md pl-1">{title}</h3>
       </div>
-      <p className="pl-6">{children}</p>
+      <p className="ml-6">{children}</p>
     </motion.li>
   );
 };
