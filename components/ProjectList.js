@@ -65,8 +65,6 @@ export default function ProjectList() {
           onChange={(e) => setSearchValue(e.target.value)}
           placeholder="Search my projects"
           className="input-form px-4 py-2 border-2 border-fog dark:border-boulder
-          focus:outline-none focus:ring-stormcloud focus:border-stormcloud
-          dark:focus:ring-fog dark:focus:border-fog
            block w-full rounded-md bg-lilac
            dark:bg-stormcloud placeholder-boulder"
         />
