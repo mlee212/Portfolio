@@ -59,7 +59,7 @@ const Step = ({ title, children, icon }) => {
         >
           {icon}
         </svg>
-        <h3 className="font-medium text-md pl-1">{title}</h3>
+        <h3 className="font-medium text-md">{title}</h3>
       </div>
       <p className="ml-6">{children}</p>
     </motion.li>
@@ -95,7 +95,9 @@ const FullTimeline = () => (
       >
         For Computer Science.
       </Step>
-      <Step title="Graduated High School">Peace out high school lunches.</Step>
+      <Step title="Graduated High School" icon={<HatIcon />}>
+        Peace out high school lunches.
+      </Step>
     </ul>
     <Divider />
     <Year>2017</Year>
