@@ -1,7 +1,7 @@
-import Head from "next/head";
-import Link from "next/link";
-import Container from "../components/Container";
-import { LeftArrow } from "../public/images/icons/icons";
+import Head from 'next/head'
+import Link from 'next/link'
+import Container from '../components/Container'
+import { LeftArrow } from '../public/images/icons/icons'
 
 export default function Custom404() {
   return (
@@ -30,5 +30,5 @@ export default function Custom404() {
         </Link>
       </section>
     </Container>
-  );
+  )
 }
