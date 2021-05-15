@@ -1,7 +1,7 @@
 // Full Credit to Lee Robinson
 
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 
 import {
   HatIcon,
@@ -11,7 +11,7 @@ import {
   StarIcon,
   SadIcon,
   BoltIcon,
-} from "../public/images/icons/icons.js";
+} from '../public/images/icons/icons.js'
 
 const container = {
   hidden: { opacity: 0 },
@@ -21,12 +21,12 @@ const container = {
       staggerChildren: 0.03,
     },
   },
-};
+}
 
 const item = {
   hidden: { opacity: 0 },
   show: { opacity: 1 },
-};
+}
 
 const Divider = () => {
   return (
@@ -34,16 +34,16 @@ const Divider = () => {
       variants={item}
       className="border-b border-gray-200 dark:border-stormcloud w-full my-4"
     />
-  );
-};
+  )
+}
 
 const Year = ({ children }) => {
   return (
     <motion.h2 variants={item} className="text-lg font-bold">
       {children}
     </motion.h2>
-  );
-};
+  )
+}
 
 const Step = ({ title, children, icon }) => {
   return (
@@ -63,8 +63,8 @@ const Step = ({ title, children, icon }) => {
       </div>
       <p className="ml-6">{children}</p>
     </motion.li>
-  );
-};
+  )
+}
 
 const FullTimeline = () => (
   <motion.div variants={container} initial="hidden" animate="show">
@@ -86,7 +86,7 @@ const FullTimeline = () => (
     <Year>2018</Year>
     <ul>
       <Step title="Hello World!" icon={<StarIcon />}>
-        I wrote my first line of code{" "}
+        I wrote my first line of code{' '}
         <code>cout &#60;&#60; "Hello World!";</code>
       </Step>
       <Step
@@ -130,10 +130,10 @@ const FullTimeline = () => (
       </Step>
     </ul>
   </motion.div>
-);
+)
 
 export default function Timeline() {
-  const [isShowingFullTimeline, showFullTimeline] = useState(false);
+  const [isShowingFullTimeline, showFullTimeline] = useState(false)
 
   return (
     <>
@@ -194,5 +194,5 @@ export default function Timeline() {
         </button>
       )}
     </>
-  );
+  )
 }

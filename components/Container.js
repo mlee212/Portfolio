@@ -1,8 +1,8 @@
-import Head from "next/head";
+import Head from 'next/head'
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
 
-export const siteTitle = "Rajbir Johar | Portfolio";
+export const siteTitle = 'Rajbir Johar | Portfolio'
 
 export default function Container({ children }) {
   return (
@@ -102,12 +102,14 @@ export default function Container({ children }) {
 
         <meta name="og:title" content={siteTitle} />
       </Head>
-      <body className="bg-cararra dark:bg-thunder text-stormcloud dark:text-fog
-       transition duration-300 ease-in-out">
+      <body
+        className="bg-cararra dark:bg-thunder text-stormcloud dark:text-fog
+       transition duration-300 ease-in-out"
+      >
         <motion.main
-          initial={{ opacity: 0}}
-          animate={{ opacity: 1}}
-          exit={{ opacity: 0}}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           transition={{ duration: 0.15 }}
           layout
           className="flex flex-col max-w-3xl mx-auto md:mt-12 mt-4 p-6 leading-7"
@@ -116,5 +118,5 @@ export default function Container({ children }) {
         </motion.main>
       </body>
     </html>
-  );
+  )
 }

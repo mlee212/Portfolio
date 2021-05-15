@@ -1,7 +1,7 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import Container, { siteTitle } from "../components/Container";
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import Container, { siteTitle } from '../components/Container'
 
 export default function Home() {
   return (
@@ -29,12 +29,12 @@ export default function Home() {
           </p>
           <p>
             If I am not coding, you can catch me perfecting the art of the
-            grilled cheese or building bespoke keyboards. I'm typing on my{" "}
+            grilled cheese or building bespoke keyboards. I'm typing on my{' '}
             <Link href="https://smithrune.com" passHref>
               <a className="text-boulder dark:text-mobster hover:underline">
                 Iron165
               </a>
-            </Link>{" "}
+            </Link>{' '}
             (my favorite board ever) with lubricated cream switches. You can
             also find me currently playing through <i>Returnal</i>.
           </p>
@@ -42,5 +42,5 @@ export default function Home() {
         </div>
       </section>
     </Container>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import Container, { siteTitle } from "../components/Container";
-import TopTracks from "../components/TopTracks";
-import Timeline from "../components/Timeline";
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import Container, { siteTitle } from '../components/Container'
+import TopTracks from '../components/TopTracks'
+import Timeline from '../components/Timeline'
 
 export default function More() {
   return (
@@ -14,7 +14,7 @@ export default function More() {
       <section>
         <h1 className="font-bold text-3xl text-mist">Interests</h1>
         <p className="my-2 mt-4">
-          Get to know more about what I do and what I love outside of work.{" "}
+          Get to know more about what I do and what I love outside of work.{' '}
           <span className="font-medium">Let's be human.</span>
         </p>
       </section>
@@ -31,5 +31,5 @@ export default function More() {
         <TopTracks />
       </section>
     </Container>
-  );
+  )
 }

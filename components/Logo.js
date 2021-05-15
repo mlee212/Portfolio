@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { Box, Button, useColorModeValue, Heading } from "@chakra-ui/core";
+import Link from 'next/link'
+import { Box, Button, useColorModeValue, Heading } from '@chakra-ui/core'
 
 export default function Logo() {
-  const bg = useColorModeValue("gray.100", "#24272d");
+  const bg = useColorModeValue('gray.100', '#24272d')
   return (
     <Link href="/">
       <Box>
@@ -11,5 +11,5 @@ export default function Logo() {
         </Heading>
       </Box>
     </Link>
-  );
+  )
 }

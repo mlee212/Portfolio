@@ -1,4 +1,4 @@
-import { StarIcon } from "../public/images/icons/icons.js";
+import { StarIcon } from '../public/images/icons/icons.js'
 
 export default function ProjectCard({
   name,
@@ -36,5 +36,5 @@ export default function ProjectCard({
         <p className="font-medium text-mist">{language}</p>
       </div>
     </a>
-  );
+  )
 }

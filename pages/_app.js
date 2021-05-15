@@ -1,10 +1,10 @@
-import React from "react";
-import "../styles/global.css";
-import { ThemeProvider } from "next-themes";
-import { AnimatePresence } from "framer-motion";
+import React from 'react'
+import '../styles/global.css'
+import { ThemeProvider } from 'next-themes'
+import { AnimatePresence } from 'framer-motion'
 
-import { Navigation } from "../components/Navigation";
-import { Footer } from "../components/Footer";
+import { Navigation } from '../components/Navigation'
+import { Footer } from '../components/Footer'
 
 function App({ Component, pageProps, router }) {
   return (
@@ -15,7 +15,7 @@ function App({ Component, pageProps, router }) {
       </AnimatePresence>
       <Footer />
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App

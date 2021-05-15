@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import useSWR from "swr";
-import fetcher from "../lib/fetcher";
-import ProjectCard from "./ProjectCard";
-import Loader from "./ProjectLoader";
-import { SearchIcon } from "../public/images/icons/icons";
+import React, { useState } from 'react'
+import useSWR from 'swr'
+import fetcher from '../lib/fetcher'
+import ProjectCard from './ProjectCard'
+import Loader from './ProjectLoader'
+import { SearchIcon } from '../public/images/icons/icons'
 
 export default function ProjectList() {
-  const [searchValue, setSearchValue] = useState("");
-  const { data, error } = useSWR("/api/github", fetcher);
+  const [searchValue, setSearchValue] = useState('')
+  const { data, error } = useSWR('/api/github', fetcher)
   if (error)
     return (
       <div>
         <h1>Error loading projects.</h1>
       </div>
-    );
+    )
   if (!data)
     return (
       <div>
@@ -43,7 +43,7 @@ export default function ProjectList() {
         </div>
         <Loader show />
       </div>
-    );
+    )
 
   const filteredProjects = Object(data.repos)
     .filter(
@@ -54,7 +54,7 @@ export default function ProjectList() {
           .includes(searchValue.toLowerCase()) ||
         project.language?.toLowerCase().includes(searchValue.toLowerCase())
     )
-    .sort((a, b) => Number(b.stars) - Number(a.stars));
+    .sort((a, b) => Number(b.stars) - Number(a.stars))
 
   return (
     <div>
@@ -97,5 +97,5 @@ export default function ProjectList() {
         />
       ))}
     </div>
-  );
+  )
 }

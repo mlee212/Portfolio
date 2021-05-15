@@ -1,5 +1,5 @@
 // Full Credit to Lee Robinson
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
 
 export default function Track(track) {
   return (
@@ -17,5 +17,5 @@ export default function Track(track) {
         <p className="truncate w-60 sm:w-96 md:w-full">{track.artist}</p>
       </div>
     </div>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-import Head from "next/head";
-import Container, { siteTitle } from "../components/Container";
-import ProjectCard from "../components/ProjectCard";
-import GithubStats from "../components/GithubStats";
-import { motion } from "framer-motion";
-import ProjectList from "../components/ProjectList";
+import Head from 'next/head'
+import Container, { siteTitle } from '../components/Container'
+import ProjectCard from '../components/ProjectCard'
+import GithubStats from '../components/GithubStats'
+import { motion } from 'framer-motion'
+import ProjectList from '../components/ProjectList'
 
 export default function Projects() {
   return (
@@ -16,7 +16,7 @@ export default function Projects() {
         <p className="mt-4">
           Here is a collection of my best work where I demonstrate my skills as
           a <span className="font-medium">developer and a creator.</span> You
-          can also see a more detailed view on my{" "}
+          can also see a more detailed view on my{' '}
           <a
             className="text-boulder dark:text-mobster hover:underline"
             target="_blank"
@@ -56,5 +56,5 @@ export default function Projects() {
         <p> Coming soon! Learn more about how I stay productive.</p>
       </section>
     </Container>
-  );
+  )
 }

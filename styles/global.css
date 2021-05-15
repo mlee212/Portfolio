@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://rsms.me/inter/inter.css");
+@import url('https://rsms.me/inter/inter.css');
 html {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
 }
 @supports (font-variation-settings: normal) {
   html {
-    font-family: "Inter var", sans-serif;
+    font-family: 'Inter var', sans-serif;
   }
 }
 .sticky-nav {

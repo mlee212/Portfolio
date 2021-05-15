@@ -1,9 +1,9 @@
-import useSWR from "swr";
+import useSWR from 'swr'
 
-import fetcher from "../lib/fetcher";
+import fetcher from '../lib/fetcher'
 
 export default function NowPlaying() {
-  const { data } = useSWR("/api/now-playing", fetcher);
+  const { data } = useSWR('/api/now-playing', fetcher)
 
   return (
     <div className="flex my-4 w-full">
@@ -28,13 +28,11 @@ export default function NowPlaying() {
             Not Playing
           </p>
         )}
-        <span className="mx-2 text-gray-800 dark:text-shadow-100">
-          {" – "}
-        </span>
+        <span className="mx-2 text-gray-800 dark:text-shadow-100">{' – '}</span>
         <p className="text-gray-400 dark:text-shadow-300 truncate">
-          {data?.artist ?? "Spotify"}
+          {data?.artist ?? 'Spotify'}
         </p>
       </div>
     </div>
-  );
+  )
 }
