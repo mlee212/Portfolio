@@ -31,9 +31,9 @@ The structure follows the typical Next.JS default structure.
 │   │   ├── fetcher.js
 │   │   ├── spotify.js
 │   ├── styles
-│   │   ├── global.js
-│   │   ├── header.module.js
-│   │   ├── layout.module.js
+│   │   ├── global.css
+│   │   ├── header.module.css
+│   │   ├── layout.module.css
 │   │   ├── ...
 │   ├── ...
 ├── develop
