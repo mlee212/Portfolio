@@ -6,6 +6,7 @@
   --gap-half: 0.5rem;
   --gap: 1rem;
   --gap-double: 2rem;
+  --gap-med: 1.5rem;
   --small-gap: 4rem;
   --big-gap: 4rem;
   --main-content: 45rem;
@@ -37,7 +38,7 @@
   --success-lighter: #d3e5ff;
   --success-light: #3291ff;
   --success-default: #0070f3;
-  --success: #0761d1;
+  --success: #3291ff;
   --success-dark: #0761d1;
 
   --header-bg: rgba(19, 20, 21, 0.45);
@@ -56,7 +57,7 @@
   --accent-8: #111;
   --success-lighter: #d3e5ff;
   --success-light: #3291ff;
-  --success: #3291ff;
+  --success: #0070f3;
   --success-default: #0070f3;
   --success-dark: #0761d1;
 
@@ -74,7 +75,7 @@
 }
 
 html {
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 html,
@@ -110,28 +111,23 @@ h5,
 h6 {
   font-family: var(--font-sans);
   font-weight: 600;
-  line-height: 1.75;
 }
 
 h1 {
   font-size: 2.5rem;
-  font-weight: 700;
   line-height: 1;
 }
 
 h2 {
   font-size: 2rem;
-  letter-spacing: -0.69px;
 }
 
 h3 {
   font-size: 1.5rem;
-  letter-spacing: -0.47px;
 }
 
 h4 {
   font-size: 1.25rem;
-  letter-spacing: -0.33px;
 }
 
 hr {
@@ -150,9 +146,10 @@ button {
   border: none;
   margin: 0;
   line-height: inherit;
-  font-size: inherit;
+  font-size: 16px;
 }
 
+a,
 p a,
 a.reset {
   outline: none;
@@ -161,9 +158,15 @@ a.reset {
   font-weight: 500;
 }
 
+p a:hover {
+  text-decoration: underline;
+}
+
 svg {
-  width: 20px;
-  height: 20px;
+  min-width: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  max-height: 20px;
 }
 
 p span {
@@ -181,6 +184,23 @@ a.reset:focus {
 pre,
 code {
   font-family: var(--font-mono);
+  font-size: 15px;
+  background-color: var(--accent-2);
+  padding: 3px 6px;
+  border-radius: var(--radius-sm);
+}
+
+input[type='text'],
+textarea {
+  background-color: var(--accent-1);
+}
+
+input[type='text']:disabled {
+  border-color: var(--accent-2) !important;
+}
+
+input[type='text']:disabled::placeholder {
+  color: var(--accent-3) !important;
 }
 
 .inactive {

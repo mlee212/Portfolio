@@ -62,7 +62,7 @@ export default function Header() {
   return (
     <footer className={styles.footer}>
       <hr />
-      <h4 className={styles.title}>Elsewhere</h4>
+      <h1 className={styles.title}>Elsewhere</h1>
       <div className={styles.actions}>
         <div className={styles.contact}>
           <ExtLink title="Github" destination="https://github.com/r-jo" />

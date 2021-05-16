@@ -5,6 +5,9 @@
 .title {
   margin: 0 0 var(--gap-half) 0;
 }
+.title:hover {
+  text-decoration: underline;
+}
 .rank {
   margin: 0 10px 0 0;
   font-weight: 500;

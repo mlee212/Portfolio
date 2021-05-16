@@ -5,6 +5,24 @@ import styles from '@/styles/dashboard.module.css'
 
 const Stat = ({ title, data, caption }) => {
   return (
+    <a
+      href="https://github.com/r-jo"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={styles.group}
+    >
+      <div className={styles.card}>
+        <p className={styles.title}>{title}</p>
+        <p>
+          <span>{data}</span> {caption}
+        </p>
+      </div>
+    </a>
+  )
+}
+
+const Skeleton = () => {
+  return (
     <div className={styles.card}>
       <p className={styles.title}>
         <a

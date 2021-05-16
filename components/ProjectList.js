@@ -3,6 +3,7 @@ import useSWR from 'swr'
 import fetcher from '@/lib/fetcher'
 import ProjectCard from './ProjectCard'
 import styles from '@/styles/projects.module.css'
+import { SearchIcon } from '@/components/icons/icons'
 
 export default function ProjectList() {
   const [searchValue, setSearchValue] = useState('')
@@ -10,19 +11,28 @@ export default function ProjectList() {
   if (error)
     return (
       <div>
-        <h1>Error loading projects.</h1>
+        <h1>
+          Something went wrong when trying to load the projects. If this error
+          persists, please contact me.
+        </h1>
       </div>
     )
   if (!data)
     return (
-      <div>
-        <input
-          aria-label="Not yet..."
-          type="text"
-          placeholder="Not yet..."
-          className={styles.search}
-        />
-      </div>
+      <>
+        <div className={styles.searchWrapper}>
+          <input
+            aria-label="Disabled Searchbar"
+            type="text"
+            placeholder="Not yet..."
+            className={styles.search}
+            disabled
+          />
+          <svg className={styles.searchIcon}>
+            <SearchIcon />
+          </svg>
+        </div>
+      </>
     )
 
   const filteredProjects = Object(data.repos)
@@ -37,15 +47,19 @@ export default function ProjectList() {
     .sort((a, b) => Number(b.stars) - Number(a.stars))
 
   return (
-    <div>
-      <input
-        aria-label="Search my projects"
-        type="text"
-        onChange={(e) => setSearchValue(e.target.value)}
-        placeholder="Search my projects"
-        className={styles.search}
-      />
-
+    <>
+      <div className={styles.searchWrapper}>
+        <input
+          aria-label="Enabled Searchbar"
+          type="text"
+          onChange={(e) => setSearchValue(e.target.value)}
+          placeholder="Search my projects"
+          className={styles.search}
+        />
+        <svg className={styles.searchIcon}>
+          <SearchIcon />
+        </svg>
+      </div>
       {!filteredProjects.length &&
         "What!? It seems like you tried to find something I haven't created yet."}
       {filteredProjects.map((p) => (
@@ -58,6 +72,6 @@ export default function ProjectList() {
           language={p.language}
         />
       ))}
-    </div>
+    </>
   )
 }

@@ -21,13 +21,13 @@ const Year = ({ children }) => {
 
 const Step = ({ title, children, icon }) => {
   return (
-    <div className={styles.step}>
+    <li className={styles.step}>
       <svg className={styles.icon}>{icon}</svg>
       <div className={styles.info}>
         <h4 className={styles.title}>{title}</h4>
         <p className={styles.content}>{children}</p>
       </div>
-    </div>
+    </li>
   )
 }
 

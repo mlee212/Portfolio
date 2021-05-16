@@ -1,11 +1,13 @@
 .footer {
   margin: var(--small-gap) auto var(--big-gap) auto;
   max-width: var(--main-content);
-  padding: 0 var(--gap);
+  padding: 0 var(--gap-med);
 }
 .title {
   margin-bottom: var(--gap);
   padding-bottom: 0;
+  font-size: 1.25rem;
+  line-height: inherit;
 }
 .button {
   padding: 8px 10px;
@@ -36,6 +38,9 @@
 }
 .external {
   margin: 0 10px;
+}
+.external:hover {
+  text-decoration: underline;
 }
 .external:first-of-type {
   margin-left: 0;

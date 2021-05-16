@@ -10,7 +10,7 @@ export default function Projects() {
       <section>
         <h1>Rajbir Johar</h1>
         <p>
-          I'm a frontend developer, keyboard enthusiast, and creative addict.
+          <span>Frontend Developer based in Southern California.</span>
         </p>
         <p>
           You found my corner of the internet. Learn about how I want to make

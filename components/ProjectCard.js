@@ -9,20 +9,23 @@ export default function ProjectCard({
   language,
 }) {
   return (
-    <div className={styles.card}>
-      <div className={styles.title}>
-        <p>
-          <a href={href} target="_blank" rel="noopener noreferrer">
-            {name}
-          </a>
-        </p>
-        <p className={styles.stars}>
-          {star_count}
-          <StarIcon />
-        </p>
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={styles.group}
+    >
+      <div className={styles.card}>
+        <div className={styles.titleWrapper}>
+          <p className={styles.title}>{name}</p>
+          <p className={styles.stars}>
+            {star_count}
+            <StarIcon />
+          </p>
+        </div>
+        <p className={styles.description}>{desc}</p>
+        <span className={styles.language}>{language}</span>
       </div>
-      <p className={styles.description}>{desc}</p>
-      <span className={styles.language}>{language}</span>
-    </div>
+    </a>
   )
 }
