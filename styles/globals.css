@@ -193,6 +193,9 @@ code {
 input[type='text'],
 textarea {
   background-color: var(--accent-1);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 input[type='text']:disabled {
