@@ -101,7 +101,7 @@ class MyDocument extends Document {
           />
           <meta property="og:image" content="/images/icon_logo.png" />
 
-          <meta name="og:title" content={siteTitle} />
+          <meta name="og:title" content="Rajbir Johar | Portfolio" />
         </Head>
         <body>
           <Main />
