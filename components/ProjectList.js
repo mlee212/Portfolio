@@ -10,12 +10,10 @@ export default function ProjectList() {
   const { data, error } = useSWR('/api/github', fetcher)
   if (error)
     return (
-      <div>
-        <h1>
-          Something went wrong when trying to load the projects. If this error
-          persists, please contact me.
-        </h1>
-      </div>
+      <p>
+        Something went wrong when trying to load the projects. If this error
+        persists, please contact me.
+      </p>
     )
   if (!data)
     return (
