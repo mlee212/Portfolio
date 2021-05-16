@@ -1,0 +1,31 @@
+import Head from 'next/head'
+import Layout from '@/components/Layout'
+import Timeline from '@/components/Timeline'
+import TrackList from '@/components/TrackList'
+
+export default function Interests() {
+  return (
+    <Layout>
+      <Head>
+        <title>Rajbir Johar | Interests</title>
+      </Head>
+      <section>
+        <h1>Interests</h1>
+        <p>
+          There is more to life than sitting in front of a screen all day
+          coding. Here you can learn about where I've gone, what I've done, and
+          why I've done it. I love sharing my notable experiences with others.
+        </p>
+        <p>If anything here interests you, let's talk about it.</p>
+        <h2>Experiences</h2>
+        <Timeline />
+        <h2>Music</h2>
+        <p>
+          Discover my usual rotation. This list consists of the top ten songs
+          that I've been listening to on Spotify.
+        </p>
+        <TrackList />
+      </section>
+    </Layout>
+  )
+}

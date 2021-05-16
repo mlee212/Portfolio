@@ -1,0 +1,15 @@
+.track {
+  display: flex;
+  align-items: flex-start;
+}
+.title {
+  margin: 0 0 var(--gap-half) 0;
+}
+.rank {
+  margin: 0 10px 0 0;
+  font-weight: 500;
+}
+.artist {
+  margin: 0 0 var(--gap) 0;
+  color: var(--accent-6);
+}

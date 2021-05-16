@@ -1,0 +1,19 @@
+.buttonwrapper {
+  width: 100%;
+}
+.button {
+  margin: 0 auto;
+  padding: 8px 12px;
+  background-color: var(--bg);
+  color: var(--success);
+  border: 2px solid var(--success);
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+  cursor: pointer;
+}
+.button:hover {
+  background-color: var(--success);
+  color: #fff;
+}

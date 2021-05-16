@@ -1,0 +1,45 @@
+.footer {
+  margin: var(--small-gap) auto var(--big-gap) auto;
+  max-width: var(--main-content);
+  padding: 0 var(--gap);
+}
+.title {
+  margin-bottom: var(--gap);
+  padding-bottom: 0;
+}
+.button {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-1);
+  color: var(--fg);
+  transition: all var(--transition);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.button:hover {
+  background-color: var(--accent-2);
+}
+.button svg {
+  padding: 0;
+  margin-bottom: -4px;
+  margin-right: 4px;
+}
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact {
+  display: flex;
+}
+.external {
+  margin: 0 10px;
+}
+.external:first-of-type {
+  margin-left: 0;
+}
+.external:last-of-type {
+  margin-right: 0;
+}
