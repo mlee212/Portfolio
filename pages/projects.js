@@ -60,7 +60,7 @@ export default function Projects() {
             not to commit any secret keys from your <code>.env</code> files.
           </i>
         </p>
-        <pre>GITHUB_AUTH_TOKEN=&lt;SECRET-GITHUB-TOKEN&gt;</pre>
+        <pre>GITHUB_AUTH_TOKEN=&lt;SECRET-GH-TOKEN&gt;</pre>
         <p>
           <i>
             Once you've completed the above steps, your copy of this website

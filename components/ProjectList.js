@@ -5,6 +5,15 @@ import ProjectCard from './ProjectCard'
 import styles from '@/styles/projects.module.css'
 import { SearchIcon } from '@/components/icons/icons'
 
+const Skeleton = () => {
+  return (
+    <div className={styles.skeleton}>
+      <p className={styles.dummytitle}></p>
+      <p className={styles.dummydescription}></p>
+    </div>
+  )
+}
+
 export default function ProjectList() {
   const [searchValue, setSearchValue] = useState('')
   const { data, error } = useSWR('/api/github', fetcher)
@@ -30,6 +39,11 @@ export default function ProjectList() {
             <SearchIcon />
           </svg>
         </div>
+        <Skeleton />
+        <Skeleton />
+        <Skeleton />
+        <Skeleton />
+        <Skeleton />
       </>
     )
 

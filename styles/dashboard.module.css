@@ -4,7 +4,8 @@
   grid-row-gap: var(--gap-half);
   grid-column-gap: var(--gap-half);
 }
-.card {
+.card,
+.skeleton {
   border: 2px solid var(--accent-1);
   border-radius: var(--radius);
   padding: 0 var(--gap);
@@ -33,6 +34,32 @@
 
 .description {
   margin: 0 50px 0 0;
+}
+.dummytitle {
+  width: 50%;
+  height: 25px;
+  margin-bottom: 0.5rem !important;
+  animation: pulse 2s infinite;
+  border-radius: var(--radius-sm);
+  background-color: var(--accent-2);
+}
+.dummydescription {
+  width: 75%;
+  height: 25px;
+  animation: pulse 2s infinite;
+  border-radius: var(--radius-sm);
+  background-color: var(--accent-2);
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 960px) {
