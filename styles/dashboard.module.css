@@ -24,7 +24,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0 !important;
+  margin-bottom: -10px !important;
   color: var(--success);
 }
 
@@ -38,7 +38,7 @@
 .dummytitle {
   width: 50%;
   height: 25px;
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0.25em !important;
   animation: pulse 2s infinite;
   border-radius: var(--radius-sm);
   background-color: var(--accent-2);

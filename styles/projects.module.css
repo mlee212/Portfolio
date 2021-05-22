@@ -44,7 +44,7 @@
 
 .language {
   margin: var(--gap-half) 0 var(--gap) 0;
-  background-color: var(--success);
+  background-color: var(--success-default);
   max-width: max-content;
   padding: 0px 8px;
   border-radius: var(--radius-sm);
