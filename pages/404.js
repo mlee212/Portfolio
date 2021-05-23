@@ -8,10 +8,10 @@ export default function Custom404() {
   return (
     <Layout>
       <Head>
-        <title>Rajbir Johar | Uh oh</title>
+        <title>Rajbir Johar | 404</title>
       </Head>
       <section>
-        <h1>How Did You End Up Here?</h1>
+        <h1>What in the World?</h1>
         <p>
           I must have done something gravely wrong for you to find this page.
         </p>

@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <Layout>
       <Head>
-        <title>Rajbir Johar | Portfolio</title>
+        <title>Rajbir Johar | Home</title>
       </Head>
       <section>
         <h1>Rajbir Johar</h1>
