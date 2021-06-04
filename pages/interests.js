@@ -17,14 +17,18 @@ export default function Interests() {
           why I've done it. I love sharing my notable experiences with others.
         </p>
         <p>If anything here interests you, let's talk about it.</p>
-        <h2>Experiences</h2>
-        <Timeline />
         <h2>Music</h2>
         <p>
           Discover my usual rotation. This list consists of the top ten songs
           that I've been listening to on Spotify.
         </p>
         <TrackList />
+        <h2>Experiences</h2>
+        <p>
+          Here are some notable memories, achievements, and failures that I
+          figured would be nice to share.
+        </p>
+        <Timeline />
       </section>
     </Layout>
   )
