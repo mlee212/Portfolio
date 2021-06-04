@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import styles from '@/styles/footer.module.css'
-import { MoonIcon, SunIcon } from '@/components/icons/icons'
+import { MoonIcon, SunIcon, SepiaIcon } from '@/components/icons/icons'
 
 const ExtLink = ({ title, destination }) => {
   return (
@@ -43,7 +43,7 @@ const ThemeChanger = () => {
                 fill="currentColor"
                 stroke="currentColor"
               >
-                <SunIcon />
+                <SepiaIcon />
               </svg>
               Sepia
             </>
