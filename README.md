@@ -51,7 +51,7 @@ The styling is all done via `css modules` to create clean designs and clean code
 
 Imports are done via absolute imports so there is no need to `../../../..` your way back to a parent folder and down another nested folder.
 
-The `master` is for production and the `develop` branch is for staging and developing. When making PRs please make them for the `develop` branch and assign me for code review.
+The `master` is for production and the `staging` branch is for staging and developing. When making PRs please make them for the `develop` branch and assign me for code review.
 
 ## Stack
 
