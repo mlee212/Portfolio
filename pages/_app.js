@@ -102,7 +102,11 @@ function MyApp({ Component, pageProps }) {
 
         <meta name="og:title" content="Rajbir Johar | Portfolio" />
       </Head>
-      <ThemeProvider disableTransitionOnChange defaultTheme="dark">
+      <ThemeProvider
+        disableTransitionOnChange
+        defaultTheme="dark"
+        themes={['pink', 'light', 'dark']}
+      >
         <Header />
         <Component {...pageProps} />
         <Footer />

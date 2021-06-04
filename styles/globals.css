@@ -64,6 +64,26 @@
   --header-bg: hsla(0, 0%, 100%, 0.8);
 }
 
+[data-theme='sepia'] {
+  --bg: #f4ecd8;
+  --fg: #000;
+  --accent-1: #ebe4d1;
+  --accent-2: #dad2c0;
+  --accent-3: #aaa597;
+  --accent-4: #928d81;
+  --accent-5: #79766c;
+  --accent-6: #615e56;
+  --accent-7: #494640;
+  --accent-8: #302f2b;
+  --success-lighter: #d3e5ff;
+  --success-light: #3291ff;
+  --success: #5e454b;
+  --success-default: #5e454b;
+  --success-dark: #0761d1;
+
+  --header-bg: rgba(244, 236, 216, 0.9);
+}
+
 * {
   box-sizing: border-box;
 }

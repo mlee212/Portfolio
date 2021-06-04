@@ -23,11 +23,31 @@ const ThemeChanger = () => {
       aria-label="Toggle Dark Mode"
       type="button"
       className={styles.button}
-      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+      onClick={() =>
+        setTheme(
+          resolvedTheme === 'dark'
+            ? 'sepia'
+            : resolvedTheme === 'sepia'
+            ? 'light'
+            : 'dark'
+        )
+      }
     >
       {mounted && (
         <span>
           {resolvedTheme === 'dark' ? (
+            <>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                stroke="currentColor"
+              >
+                <SunIcon />
+              </svg>
+              Sepia
+            </>
+          ) : resolvedTheme === 'sepia' ? (
             <>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
