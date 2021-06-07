@@ -37,48 +37,6 @@ export default function Projects() {
           the repos I created or forked.
         </p>
         <ProjectList />
-        <h2>Try Yourself</h2>
-        <h3>Environment Variables</h3>
-        <p>
-          <i>
-            Try cloning/forking is repo on your own machine. Then head to Github
-            account settings &gt; Developer Settings &gt; Personal Tokens &gt;
-            Generate New Token. Then check the <span>user box.</span>
-          </i>
-        </p>
-        <p>
-          <i>
-            Then within the root of the project, type{' '}
-            <code>touch .env.local</code> to create a new{' '}
-            <code>.env.local</code> file. Open up the file and paste in your new
-            secret key like shown below without <code>&lt;&gt;</code>.
-          </i>
-        </p>
-        <p>
-          <i>
-            <span>Warning!</span> If you decide to deploy, it is good practice
-            not to commit any secret keys from your <code>.env</code> files.
-          </i>
-        </p>
-        <pre>GITHUB_AUTH_TOKEN=&lt;SECRET-GH-TOKEN&gt;</pre>
-        <p>
-          <i>
-            Once you've completed the above steps, your copy of this website
-            should generate statistics and projects from your own Github
-            profile.
-          </i>
-        </p>
-        <p>
-          <i>Need a correction? Feel free to make a</i>{' '}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/r-jo/Portfolio"
-          >
-            pull request
-          </a>
-          .
-        </p>
       </section>
     </Layout>
   )
