@@ -4,17 +4,14 @@
   padding: 0;
 }
 
-.post {
-  margin-bottom: 50px;
-}
-
 .postTitle {
   margin-bottom: 10px;
   font-size: 1.4rem;
 }
 
 .postTitle a {
-  color: inherit;
+  display: flex;
+  align-items: center;
 }
 
 .postDescription {

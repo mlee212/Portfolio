@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { getDatabase } from '@/lib/notion'
 import Layout from '@/components/Layout'
 import { Text } from '@/components/Text'
+import { RightArrow } from '@/components/icons/icons'
 import styles from '@/styles/readings.module.css'
 
 export const databaseId = process.env.NOTION_DATABASE_ID
@@ -26,15 +27,11 @@ export default function Readings({ posts }) {
                 <h3 className={styles.postTitle}>
                   <Link href={`/${post.id}`}>
                     <a>
-                      <Text text={post.properties.Name.title} />
+                      <Text text={post.properties.Name.title} /> <RightArrow />
                     </a>
                   </Link>
                 </h3>
-
                 <p className={styles.postDescription}>{date}</p>
-                <Link href={`/${post.id}`}>
-                  <a>Read post →</a>
-                </Link>
               </li>
             )
           })}
