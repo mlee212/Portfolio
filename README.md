@@ -22,13 +22,12 @@ The structure follows the typical Next.JS default structure.
 │   │   ├── _document.js
 │   │   ├── api
 │   │   │   ├── github.js
-│   │   │   ├── spotify.js
+│   │   │   ├── nowplaying.js
+│   │   │   ├── toptracks.js
 │   │   ├── ...
-│   ├── components
-│   │   ├── github.js
-│   │   ├── spotify.js
 │   ├── lib
 │   │   ├── fetcher.js
+│   │   ├── notion.js
 │   │   ├── spotify.js
 │   ├── styles
 │   │   ├── global.css
@@ -36,7 +35,7 @@ The structure follows the typical Next.JS default structure.
 │   │   ├── layout.module.css
 │   │   ├── ...
 │   ├── ...
-├── develop
+├── staging
 │   │   ├── pages
 │   │   ├── components
 │   │   ├── lib
@@ -51,10 +50,10 @@ The styling is all done via `css modules` to create clean designs and clean code
 
 Imports are done via absolute imports so there is no need to `../../../..` your way back to a parent folder and down another nested folder.
 
-The `master` is for production and the `staging` branch is for staging and developing. When making PRs please make them for the `develop` branch and assign me for code review.
+The `master` is for production and the `staging` branch is for staging and developing. When making PRs please make them for the `staging` branch and assign me for code review.
 
 ## Stack
 
 <img alt="Next JS" src="https://img.shields.io/badge/nextjs-%23000000.svg?&style=for-the-badge&logo=next.js&logoColor=white"/> <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/> <img alt="ESLint" src="https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white" /> <img alt="GitHub" src="https://img.shields.io/badge/GithHub%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/> <img alt="Spotify" src="https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white" />
 
-This project has been bootstrapped using `yarn create next-app` and makes api calls to Github's and Spotify's public APIs. You will need to place your own secret `TOKENS` in your own `.env.local` file and of course, do not commit your secrets.
+This project has been bootstrapped using `yarn create next-app` and makes api calls to Github's, Notion's, and Spotify's public APIs. You will need to place your own secret `TOKENS` in your own `.env.local` file and of course, do not commit your secrets.
