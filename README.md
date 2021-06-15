@@ -66,7 +66,7 @@ Instructions on how to acquire said `TOKENS` are as followed:
   1. Try cloning/forking is repo on your own machine. Next, head to - Github account settings > Developer Settings > Personal Tokens > Generate New Token. Then check the **user box.**
   2. Then within the root of the project, open up a terminal and type `touch .env.local` to create a new `.env.local` file. Open up the file and paste in your new secret key like shown below without `<>`.
 
-  `GITHUB_AUTH_TOKEN=<SECRET-GH-TOKEN>`
+    `GITHUB_AUTH_TOKEN=<SECRET-GH-TOKEN>`
 
   3. Once you've completed the above steps, your copy of this website should generate statistics and projects from your own Github profile.
 
@@ -89,7 +89,7 @@ Instructions on how to acquire said `TOKENS` are as followed:
   Since we only need to grant access once, we will follow the [Authorization Code Flow](https://developer.spotify.com/documentation/general/guides/authorization-guide/#authorization-code-flow).
 
   8. Use the example URL below to get an idea of what it might look like. Go ahead and swap out the `client_id` and scopes for your own. Then paste this within your browser.
-
+  <br></br>
   ```Javascript
   https://accounts.spotify.com/authorize?client_id=8e94bde7dd
   b84a1f7a0e51bf3bc95be8&response_type=code&redirect_uri=http
@@ -98,13 +98,13 @@ Instructions on how to acquire said `TOKENS` are as followed:
   ```
 
   9. After authorization, you'll be sent back to `redirect_uri`. Within the URL, there is a `code` query parameter. Save the value without `<>`.
-
+  <br></br>
   ```
   http://localhost:3000/callback?code=<NApCCg..BkWtQ>
   ```
-
+  
   10. Afterwards, you will need to retrieve the refresh token by generating a Base64 encoded string containing the client ID and secret you got from earlier. Use this [encoding tool](https://www.base64encode.org) to encode it online. The format should be `client_id:client_secret`. Replace the values with your new encoded string and the `code` parameter from the last step without the `<>`.
-
+<br></br>
   ```
   curl -H "Authorization: Basic <base64 encoded client_id:client_secret>"
   -d grant_type=authorization_code -d code=<code> -d redirect_uri=http%3A
@@ -114,5 +114,7 @@ Instructions on how to acquire said `TOKENS` are as followed:
   11. This returns a JSON response containing a `refresh_token`. This token is valid indefinitely unless you revoke access, so we'll want to save this in an environment variable.
 
   12. Finally, place your `client_id`, `client_secret`, and `refresh_token` within the `.env.local` file.
+  
+  For reference, I followed this wonderful [guide](https://leerob.io/blog/spotify-api-nextjs).
 
 I have included a `.env.example` file which you will just need to rename to `.env.local`.
